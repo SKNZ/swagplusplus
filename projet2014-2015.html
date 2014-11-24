@@ -1,0 +1,219 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<meta name="Author" content="Alain Casali &amp; Marc Laporte">
+   	<title>Mini Projet M3103</title>
+   	<style type="text/css">
+		H1 {
+		   font-family: Helvetica, Arial;
+			font-size: 20 px;
+			color: #003984;
+			text-align: left;
+		}
+		H2 {
+		   font-family: Helvetica, Arial;
+			font-size: 16 px;
+			color: #003984;
+			text-align: left;
+		}
+		td {
+			text-align: center;
+		}
+		body {
+		    font-family: Helvetica, Arial;
+		     font-size: 13px;
+			 color: #323769;
+		} 
+		div.cadreNoir {
+			border : 1px solid Black;
+		}
+		div.def {
+			text-align : left;
+			background-color : #D0FFFF;
+		}
+		b {
+			color: #a03232;
+		}
+		pre {
+		   background: #E8E8E8;
+		   font-size: 12px;
+		}
+	</style>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000EE" text="#000000" vlink="#551A8B" alink="#FF0000">
+
+<h1 style="text-align : center">
+Mini Projet M3103
+</h1>
+
+<h2 style="text-align : center">24 novembre 2014</h2>
+
+<p align="center">
+	© Alain Casali  &nbsp;&nbsp;
+	(<a href="mailto:alain.casali@univ-amu.fr">alain.casali@univ-amu.fr</a>)
+	&nbsp;&nbsp; &amp; &nbsp;&nbsp; Marc Laporte &nbsp;&nbsp; (<a href="mailto:marc.laporte@univ-amu.fr">marc.laporte@univ-amu.fr</a>)
+
+	<br>
+	I.U.T.d'Aix en Provence - Département Informatique
+	<br>
+</p>
+<hr color="#FF0000" width="75%">
+
+<H1>
+	Avant Propos
+</H1>
+Le but de ce projet est de réécrire (partiellement) la classe <code>List</code> fournie par le C++ à l'aide de smart pointers.  
+
+Pour faire ce projet, vous devez être par groupe de quatre ou cinq étudiants (qui doivent déjà être constitués). La répartition des tâches pourrait être la suivante : 
+<ol>
+	<li>Un chef de projet qui fournie une aide au développement génie logiciel des deux autres groupes, ainsi qu'une aide à la rédaction des documentations;
+	<li>Un groupe de deux / trois qui (re)code la classe;
+	<li>Une personne qui fait les tests.
+</ol> 
+
+<hr color="#FF0000" width="75%">
+
+<h1>
+	La classe <code>CList</code> Version 1
+</h1>
+
+<h2>Partie classe</h2>
+De la même manière que la classe <code>list</code> de la <code>STL/C++</code>
+est générique, cette classe est aussi générique. Les mécanismes internes de programmation doivent être masqués pour les utilisateurs, 
+mais vous serez aussi notés sur la qualité de votre implémentation. <br>
+A l'instar du cours en amphi dans lequel la classe <code>CListInt</code> est composée de maillons (noeuds) de la classe <code>CNodeInt</code>, votre classe 
+générique <code>CList</code> doit être composée de maillons de la classe générique <code>CNode</code>. Les pointeurs de chacune des classes devant être remplacés par des smart pointers. 
+Votre classe <code>CList</code> peut être simplement ou doublement chainée et elle peut comporter une ou plusieurs sentinelles. Vous êtes responsable du choix de votre implémentation, 
+mais vous devez le justifier dans votre rapport.
+
+Contrairement à la classe <code>list</code> du C++, définie dans le langage comme suit : 
+<pre>
+	template &lt; class T, class Alloc = allocator&lt;T&gt; &gt; class list;
+</pre> votre classe doit être simplement générique, on suppose que le second paramètre de généricité fait toujours appel à l'allocateur par défaut du C++. <br><br>
+
+En revanche, dans cette première version, vous devez permettre le parcours d'une liste <code>CList</code> via la fonction membre <code>GetSuivant ()</code> (au moins). <br><br>
+
+De plus, vous devez implémenter toutes les fonctions membres (constructeurs et destructeurs inclus) de la classe <code>list</code> qui vous semblent judicieuses 
+(à l'exception de celles faisant appel à des itérateurs - c'est réserver pour la version 2 - et de celles faisant appel à des allocateurs au cas où vous ne l'auriez par compris).
+ Les profils de votre classe doivent être similaires à ceux de la classe d'origine : vous devez uniquement remplacer le mot <code>list</code> par <code>CList</code>. 
+Parmi les différentes normes dispoibles, on n'utilisera que C++11. 
+  <br><br>
+En conséquence, si on regarde les  <a href="http://www.cplusplus.com/reference/list/list/list/">différents constructeurs de la classe list de la STL</a>, on a  :
+<pre>
+explicit list (const allocator_type& alloc = allocator_type()); [1]
+
+
+explicit list (size_type n); [2]
+         list (size_type n, const value_type& val,
+                const allocator_type& alloc = allocator_type()); [3]
+
+template <class InputIterator>
+  list (InputIterator first, InputIterator last,
+         const allocator_type& alloc = allocator_type()); [4]
+
+
+list (const list& x); [5]
+list (const list& x, const allocator_type& alloc); [6]
+
+
+list (list&& x); [7]
+list (list&& x, const allocator_type& alloc); [8]
+
+
+list (initializer_list&lt;value_type&gt; il,
+       const allocator_type& alloc = allocator_type()); [9]
+
+</pre>
+
+Du coup, vous devriez vous retrouvez avec les constructuers suivants : 
+<pre>
+explicit CList (); [1]
+
+
+explicit CList (size_type n); [2]
+         CList (size_type n, const value_type& val); [3]
+
+
+list (const CList& x); [5]
+</pre>
+
+Qu'est ce qui a été fait pour chaque constructeur : <br>
+<ul>
+	<li>on a supprimé la partie concernant l'allocateur (1, 3, 6, 8, 9). Cependant, on ne supprime que la partie "<i>allocateur</i>"  de ces constrcteurs et on garde le reste (1, 2, 3, 5-6)</li>
+	<li>on a supprimé les itérateurs (4);
+	<li>on a supprimé la référence dite <code>rvalue</code> introduite dans C++11 (7, 8) : nous n'avons pas vu ce concept (propre à C++11 et ses successeurs), 
+		donc on ne vous demande pas de l'implémenter;</li>
+	<li>on a supprimé la construction d'objet(s) via agrégat (9) : encore une fois c'est un concept introduit par C++11 qui n'a pas été explicité avant. 
+</ul>
+
+Au final, vous obtenez pratiquement les mêmes constructeurs qu'en C++98. <br><br>
+
+Vous devez  : 
+<ol>
+	<li>ajouter la classe <code>CList</code> à l'espace de nom <code>nsSdD</code>;
+	<li>fournir un code source</li>
+	<li>fournir une documentation doxygen qui ferait palir les sites <a href="http://en.cppreference.com/w/">http://en.cppreference.com/w/</a> 
+		ou <a href="http://www.cplusplus.com">www.cplusplus.com/</a></li>		
+</ol>
+
+<h2>Partie test</h2>
+Vous devez écrire un (ou plusieurs) programme(s) qui teste(nt) votre classe <code>CList</code> avec différents types ou classes du langage ou conçues durant les TPs. Voici une liste non exaustive : 
+ <code>int</code>, <code>CPersonne</code>, <code>CProf</code>, pointeurs, <code>shared_ptr</code>. Vérifer que vous obtenez bien les mêmes résultats qu'avec la classe <code>list</code> du langage. <br><br>
+
+ <b>Modalité de mise en oeuvre : </b><br>
+ <ul>
+ 	<li>n'écrire qu'un seul programme par type / classe  testée</li>
+ 	<li>si votre classe est codée sur plusieurs fichiers, vous devez fournir toutes les sources. Idem pour les heirachies de classes, arborescences, ... </li>
+ 	<li>ne fournir aucun .o, juste du code source</li>
+ 	<li>écrire votre code source dans un format compatible UTF-8</li>
+ 	<li>si vous utiliser un IDE, ne fournir que le code source et le makefile (ou script) qui va bien</li>
+ </ul>
+
+<h1>
+	La classe <code>CList</code> Version 2
+</h1>
+
+<h2>Partie classe</h2>
+Vous devez reprendre votre classe précédente, supprimer la fonction membre <code>GetSuivant ()</code>, implémenter des itérateurs sur cette classe et recoder les autres fonctions membres de la classe 
+<code>list</code> utilisant des itérateurs. Dans notre cas, on se limitera uniquement aux <a href="http://www.cplusplus.com/reference/iterator/ForwardIterator/"><code>forward iterator</code></a>.
+<br><br>
+
+<h2>Partie test</h2>
+
+Même chose que précédemment. 
+
+<h1>Evaluation par les enseignants</h1>
+<ul>
+	<li>Les projets sont à rendre avant le lundi 8 décembre 8h15, passé ce delai plus aucun projet ne sera accepté</li>
+	<li>vous devez mettre vos projets quelque part dans le cloud et envoyer le lien de téléchargement à Marc Laporte et à Alain Casali (email plus haut)</li>
+	<li>lors des deux premières semaines de janvier, vous serez convoqués, si vous le désirez, pour discuter de votre projet pendant une 1/2 heure maximum</li>
+	<li>
+		chaque fonction membre (constructeur, destructeur) rapporte entre 0,5 et 1 point, la qualité de votre <i>"moteur"</i> est notée sur 10, votre documentation aussi sur 10. <br>
+		Si l'ensemble de la promotion travaille comme il faut : les meilleurs groupes (à plus ou moins deux points près) ont 20 et servent de base pour ramener toutes les notes sur 20.
+	</li>
+	<li>
+		Nous allons tester vos programmes de tests avec les bibliothèques fournies par d'autres groupes. En conséquence, soyez rigoureux quant aux noms donnés à vos bibliothèques et programmes. 
+		Essayer, tant que possible, et même si vous heurte, de ne pas utiliser des assertions : le programme plante dès qu'un test n'est pas valide. Et ce n'est pas parce qu'un test
+		n'est pas valide, que les autres ne le sont pas.  
+		<ol>
+			<li>en conséquence, on impose que la blbliothèque à inclure se situe au même endroit que le programme de test
+			<li>tout manquement à cette nomenclature entrainera une perte de point; 
+			<li>si une fonctionalité fonctionne en utilisant votre bibiothèque, mais pas en utilisant celle d'un autre groupe, le groupe qui (1) a mal codé la fonctionalité ou (2) mal conçu son test perd 1 point </li>
+		</ol>
+	</li>
+	<li>
+		Toute absence (individuelle) non justifée lors d'un cours / TD/ TP lié au module M3103 entraine la perte d'un point sur la note finale
+	</li>
+	<li>
+	Copie sur un autre groupe (on ne savait pas comment implémenter telle ou telle fonctionnalité dont on avait besoin pour aller plus loin, on l'a donc copiée sur un autre groupe), plusieurs cas se distinguent :
+	<ol>
+    	<li>si le groupe est clairement nommé, cette fonctionnalité ne sera pas prise en compte dans la notation;
+    	<li>si le groupe est clairement nommé, et qu'il y a une amélioration de la fonctionnalité, (note pour la fonctionnalité / 2 - seulement la moitié du travail a été réalisée);
+    	<li>0 aux deux groupes sinon. 
+    </ol>
+	</li>
+</ul>
+</body>
+</html>
