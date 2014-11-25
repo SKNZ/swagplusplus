@@ -19,7 +19,7 @@
 
 namespace
 {
-    bool iziAssert(bool success, const char* condition, const char* fileName, const int lineNumber, const char* functionName)
+    void iziAssert(bool success, const char* condition, const char* fileName, const int lineNumber, const char* functionName)
     {
         if (!success)
         std::cout << (success ? "\033[32mASSERTION SUCCESS: \n" : "\033[31mASSERTION FAILED: \n")

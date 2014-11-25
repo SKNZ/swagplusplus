@@ -36,9 +36,44 @@ namespace
     class ValueProvider
     {
     public:
-        vector<T> operator ()()
+        vector<T> operator ()(int /*valueCount*/ = 0)
         {
-            throw runtime_error("Value provider for this type has not been provided.");
+            // typeid(T).name() only gives mangled class name, not very clear but still a good indication.
+            throw runtime_error(string("Value provider for type ") + typeid(T).name() + " does not exist.");
+        }
+    };
+
+    template<typename T>
+    class ValueProvider<T*>
+    {
+    public:
+        vector<T*> operator ()(int /*valueCount*/ = 0)
+        {
+            vector<T> array = ValueProvider<T>()();
+            vector<T*> ptrArray;
+            ptrArray.reserve(array.size());
+
+            for (T x : array)
+                ptrArray.push_back(new T(x));
+
+            return ptrArray;
+        }
+    };
+
+    template<typename T>
+    class ValueProvider<shared_ptr<T>>
+    {
+    public:
+        vector<shared_ptr<T>> operator ()(int/* valueCount*/ = 0)
+        {
+            vector<T> array = ValueProvider<T>()();
+            vector<shared_ptr<T>> ptrArray;
+            ptrArray.reserve(array.size());
+
+            for (T x : array)
+                ptrArray.push_back(make_shared<T>(x));
+
+            return ptrArray;
         }
     };
 
@@ -46,16 +81,19 @@ namespace
     class ValueProvider<int>
     {
     public:
-        vector<int> operator ()() noexcept
+        vector<int> operator ()(int valueCount = 0) noexcept
         {
-            int arraySize = rand(0,100);
-            int* array = new int[arraySize];
+            int arraySize = valueCount ? valueCount : rand(10, 100);
+            vector<int> array(arraySize);
+
             array[0] = 0;
             array[1] = std::numeric_limits<int>::max();
             array[2] = std::numeric_limits<int>::min();
 
             for (int i = 3; i < arraySize; ++i)
                 array[i] = std::rand();
+
+            return array;
         }
     };
 
@@ -63,6 +101,7 @@ namespace
     void CreateEmptyList() noexcept
     {
         CTestedList<T> list;
+
         IZI_ASSERT(list.size() == 0);
         IZI_ASSERT(list.empty());
         IZI_ASSERT(list.begin() == list.end());
@@ -71,7 +110,7 @@ namespace
     template<typename T>
     void CreateSizedList() noexcept
     {
-        int listSize = rand(1, 10000);
+        int listSize = rand(1, 10);
 
         CTestedList<T> list(listSize);
 
@@ -86,7 +125,7 @@ namespace
     template<typename T>
     void CreateSizeListWithValue(T value)
     {
-        int listSize = rand(1, 10000);
+        int listSize = rand(1, 10);
 
         CTestedList<T> list(listSize, value);
 
@@ -99,10 +138,24 @@ namespace
     }
 
     template<typename T>
-    void AddItemsToList()
+    void CreateListByCopy() noexcept
     {
-        CTestedList<T> list;
-//        list.push_back();
+        int listSize = rand(1, 10000);
+
+        CTestedList<T> referenceList;
+        for (T x : ValueProvider<T>()(listSize))
+            referenceList.push_back(x);
+
+        CTestedList<T> copiedList(referenceList);
+
+        IZI_ASSERT(referenceList.size() == copiedList.size());
+
+        while (!referenceList.empty())
+        {
+            IZI_ASSERT(referenceList.front() == copiedList.front());
+            referenceList.pop_front();
+            copiedList.pop_front();
+        }
     }
 
     template <typename T>
@@ -111,13 +164,17 @@ namespace
         CreateEmptyList<T>();
         CreateSizedList<T>();
         
-        for (T x : ValueProvider<T>()())
+        for (T x : ValueProvider<T>()(5))
             CreateSizeListWithValue<T>(x);
+
+        CreateListByCopy<T>();
     }
 }
 
 void CTests::RunTests() noexcept
 {
+    cout << "Starting tests..." << endl << endl;
+
     srand(time(NULL));
     RunTemplatedTests<int>();
     RunTemplatedTests<int*>();
@@ -126,4 +183,6 @@ void CTests::RunTests() noexcept
     RunTemplatedTests<TestClass>();
     RunTemplatedTests<TestClass*>();
     RunTemplatedTests<shared_ptr<TestClass>>();
+
+    cout << "Tests done..." << endl << endl;
 }
