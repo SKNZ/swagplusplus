@@ -4,19 +4,42 @@ namespace nsSdD {
     template <class T>
     class CList {
 
-    typedef std::shared_ptr<CNode> CNode_ptr;
     typedef int size_type;
 
     private:
-        CNode_ptr next;
-        CNode_ptr previous;
+        CNodePtr head;
+        CNodePtr tail;
 
     public:
         explicit CList();
         explicit CList(size_type n);
         explicit CList(size_type n, const T& val);
 
-        CNode_ptr getNext() const noexcept;
-        CNode_ptr getPrevious() const noexcept;
+        CNodePtr getHead() const noexcept;
+        CNodePtr getTail() const noexcept;
+
+        template <class T>
+        class CNode {
+
+            typedef std::unique_ptr<CNode> CNodePtr;
+
+        private:
+            T info;
+            CNodePtr m_next;
+            CNodePtr previous;
+
+            CNode(const CNode &);
+            CNode& operator=(const CNode &);
+
+        public:
+            CNode(T info = T(), CNodePtr next = nullptr, CNodePtr previous = nullptr);
+
+            inline T getInfo() const { return m_info; }
+            inline void setInfo(T info) { m_info = info; }
+            inline CNodePtr &getNext() const { return m_next; }
+            inline void setNext(CNodePtr &next) { m_next = next; }
+            inline CNodePtr &getPrevious() const { return m_previous; }
+            inline void setPrevious(CNodePtr &previous) { m_previous = previous; }
+        };
     };
 }
