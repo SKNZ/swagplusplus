@@ -158,7 +158,7 @@ namespace
     }
 
     template<typename T>
-    void CreateSizeListWithValue(T value)
+    void CreateSizeListWithValue(T value) noexcept
     {
         int listSize = rand(1, 10);
 
@@ -214,19 +214,71 @@ namespace
         }
     }
 
+    template<typename T>
+    void Iterate() noexcept
+    {
+        const int listSize = 20;
+
+        CTestedList<T> list;
+        vector<T> dataSet = ValueProvider<T>()(listSize);
+
+        for (int i = 0; i < listSize / 2; ++i)
+            list.push_back(dataSet[i]);
+
+        typename CTestedList<T>::iterator begin = list.begin();
+        typename CTestedList<T>::iterator end = list.end();
+
+        for (; begin != end; ++begin)
+        {
+            IZI_ASSERT(dataSet[distance(list.begin(), begin)] == *begin);
+            *begin = dataSet[distance(list.begin(), begin) + listSize / 2];
+            IZI_ASSERT(*begin == dataSet[distance(list.begin(), begin) + listSize / 2]);
+        }
+
+        IZI_ASSERT(begin == end);
+        IZI_ASSERT(*begin == *end);
+    }
+
+    template<typename T>
+    void ReverseIterate() noexcept
+    {
+        const int listSize = 20;
+
+        CTestedList<T> list;
+        vector<T> dataSet = ValueProvider<T>()(listSize);
+
+        for (int i = 0; i < listSize / 2; ++i)
+            list.push_back(dataSet[i]);
+
+        typename CTestedList<T>::reverse_iterator rbegin = list.rbegin();
+        typename CTestedList<T>::reverse_iterator rend = list.rend();
+
+        for (; rbegin != rend; ++rbegin)
+        {
+            cout << *rbegin << endl;
+            IZI_ASSERT(dataSet[listSize - distance(list.rbegin(), rbegin)] == *rbegin);
+            *rbegin = dataSet[distance(list.rbegin(), rbegin) + listSize / 2];
+            IZI_ASSERT(*rbegin == dataSet[distance(list.rbegin(), rbegin) + listSize / 2]);
+        }
+
+        IZI_ASSERT(rbegin == rend);
+        IZI_ASSERT(*rbegin == *rend);
+    }
+
     template <typename T>
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
         CreateSizedList<T>();
-        
+
         for (T x : ValueProvider<T>()(5))
             CreateSizeListWithValue<T>(x);
 
         CreateListByExplicitCopy<T>();
         CreateListByImplicitCopy<T>();
 
-
+        Iterate<T>();
+        ReverseIterate<T>();
     }
 }
 

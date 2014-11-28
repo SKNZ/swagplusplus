@@ -3,7 +3,7 @@
 #include <list>
 
 #define CTestedList std::list
-//#define CTestedList CList
+//#define CTestedList nsSdD::CList
 
 namespace nsTests
 {
