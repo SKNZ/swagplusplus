@@ -6,6 +6,7 @@
 #include <ctime>
 #include <limits>
 #include <vector>
+#include <string.h>
 
 using namespace nsTests;
 using namespace std;
@@ -24,7 +25,17 @@ namespace
 
         bool operator ==(const TestClass& c)
         {
-            return m_a == c.m_a && m_name == c.m_name; // TODO USE STRCMP
+            return m_a == c.m_a && !strcmp(m_name, c.m_name);
+        }
+
+        int getA()
+        {
+            return m_a;
+        }
+
+        const char* getName()
+        {
+            return m_name;
         }
 
     private:
@@ -92,6 +103,33 @@ namespace
 
             for (int i = 3; i < arraySize; ++i)
                 array[i] = std::rand();
+
+            return array;
+        }
+    };
+
+    template<>
+    class ValueProvider<TestClass>
+    {
+    public:
+        vector<TestClass> operator()(int valueCount = 0) noexcept
+        {
+            int arraySize = valueCount ? valueCount : rand(10, 100);
+            vector<TestClass> array(arraySize);
+
+            array[0] = TestClass(4654, "MARQUE LA PORTE");
+
+            for (int i = 1; i < arraySize; ++i)
+            {
+                int nameSize = rand(10, 20);
+                char* name = new char[nameSize];
+                for (int j = 0; j < nameSize; ++j)
+                    name[j] = rand(65, 90);
+
+                array[i] = TestClass(std::rand(), name);
+
+                cout << array[i].getName() << endl;
+            }
 
             return array;
         }
@@ -176,13 +214,13 @@ void CTests::RunTests() noexcept
     cout << "Starting tests..." << endl << endl;
 
     srand(time(NULL));
-    RunTemplatedTests<int>();
-    RunTemplatedTests<int*>();
-    RunTemplatedTests<shared_ptr<int>>();
+    IZI_CALLTEST(RunTemplatedTests<int>());
+    IZI_CALLTEST(RunTemplatedTests<int*>());
+    IZI_CALLTEST(RunTemplatedTests<shared_ptr<int>>());
 
-    RunTemplatedTests<TestClass>();
-    RunTemplatedTests<TestClass*>();
-    RunTemplatedTests<shared_ptr<TestClass>>();
+    IZI_CALLTEST(RunTemplatedTests<TestClass>());
+    IZI_CALLTEST(RunTemplatedTests<TestClass*>());
+    IZI_CALLTEST(RunTemplatedTests<shared_ptr<TestClass>>());
 
     cout << "Tests done..." << endl << endl;
 }
