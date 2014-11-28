@@ -3,5 +3,5 @@
 using namespace std;
 
 namespace nsSdD {
-    
+    CList::CNode()
 }
