@@ -121,14 +121,11 @@ namespace
 
             for (int i = 1; i < arraySize; ++i)
             {
-                int nameSize = rand(10, 20);
-                char* name = new char[nameSize];
-                for (int j = 0; j < nameSize; ++j)
-                    name[j] = rand(65, 90);
+                string name;
+                for (int j = 0; j < rand(10, 20); ++j)
+                    name += static_cast<char>(rand(65, 90));
 
-                array[i] = TestClass(std::rand(), name);
-
-                cout << array[i].getName() << endl;
+                array[i] = TestClass(std::rand(), name.c_str());
             }
 
             return array;
@@ -176,7 +173,7 @@ namespace
     }
 
     template<typename T>
-    void CreateListByCopy() noexcept
+    void CreateListByExplicitCopy() noexcept
     {
         int listSize = rand(1, 10000);
 
@@ -185,6 +182,27 @@ namespace
             referenceList.push_back(x);
 
         CTestedList<T> copiedList(referenceList);
+
+        IZI_ASSERT(referenceList.size() == copiedList.size());
+
+        while (!referenceList.empty())
+        {
+            IZI_ASSERT(referenceList.front() == copiedList.front());
+            referenceList.pop_front();
+            copiedList.pop_front();
+        }
+    }
+
+    template<typename T>
+    void CreateListByImplicitCopy() noexcept
+    {
+        int listSize = rand(1, 10000);
+
+        CTestedList<T> referenceList;
+        for (T x : ValueProvider<T>()(listSize))
+            referenceList.push_back(x);
+
+        CTestedList<T> copiedList = referenceList;
 
         IZI_ASSERT(referenceList.size() == copiedList.size());
 
@@ -205,7 +223,10 @@ namespace
         for (T x : ValueProvider<T>()(5))
             CreateSizeListWithValue<T>(x);
 
-        CreateListByCopy<T>();
+        CreateListByExplicitCopy<T>();
+        CreateListByImplicitCopy<T>();
+
+
     }
 }
 
