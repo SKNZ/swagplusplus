@@ -5,6 +5,7 @@ namespace nsSdD {
     class CList {
 
     typedef int size_type;
+    typedef std::unique_ptr<CNode> CNodePtr;
 
     private:
         CNodePtr head;
@@ -20,8 +21,6 @@ namespace nsSdD {
 
         template <class T>
         class CNode {
-
-            typedef std::unique_ptr<CNode> CNodePtr;
 
         private:
             T info;
