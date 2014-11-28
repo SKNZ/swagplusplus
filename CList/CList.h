@@ -4,7 +4,8 @@ namespace nsSdD {
     template <class T>
     class CList {
 
-        typedef std::shared_ptr<CNode> CNode_ptr;
+    typedef std::shared_ptr<CNode> CNode_ptr;
+    typedef int size_type;
 
     private:
         CNode_ptr next;
@@ -12,8 +13,8 @@ namespace nsSdD {
 
     public:
         explicit CList();
-        explicit CList(T n);
-        explicit CList(T n, const T& val);
+        explicit CList(size_type n);
+        explicit CList(size_type n, const T& val);
 
         CNode_ptr getNext() const noexcept;
         CNode_ptr getPrevious() const noexcept;
