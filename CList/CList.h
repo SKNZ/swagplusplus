@@ -23,9 +23,9 @@ namespace nsSdD {
         class CNode {
 
         private:
-            T info;
+            T m_info;
             CNodePtr m_next;
-            CNodePtr previous;
+            CNodePtr m_previous;
 
             CNode(const CNode &);
             CNode& operator=(const CNode &);
