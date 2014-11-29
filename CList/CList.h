@@ -3,37 +3,69 @@
 namespace nsSdD {
     template <class T>
     class CList {
-
-    typedef int size_type;
+        
     typedef std::unique_ptr<CNode> CNodePtr;
 
     private:
-        CNodePtr m_head;
-        CNodePtr m_tail;
+        size_t m_size = 0;
+        CNodePtr m_head = NULL;
+        CNodePtr m_tail = NULL;
 
     public:
-        explicit CList() noexcept : m_head(new CNode()), m_tail(new CNode()) {}
+        explicit CList() noexcept: m_head(new CNode(T(), nullptr, nullptr)),
+                                   m_tail(new CNode(T(), nullptr, m_head)) {
+            m_head->setNext(m_tail);
+        }
 
-        explicit CList(size_type n) noexcept
+        explicit CList(size_t n) noexcept
                 : m_head(new CNode(T(), nullptr, nullptr)),
                   m_tail(new CNode(T(), nullptr, m_head)) {
             m_head->setNext(m_tail);
 
-            for(size_type i = 0; i < n; i++) {
-                CNodePtr ptr = new CNode();
-                ptr->setNext(m_head->getNext());
-                ptr->setPrevious(m_head->getNext()->getPrevious());
-                m_head->setNext(ptr);
+            CNodePtr tmp_head = m_head;
+            for(size_t i = 0; i < n; i++) {
+                CNodePtr ptr = new CNode(T(), nullptr, nullptr);
+
+                ptr->setNext(tmp_head->getNext());
+                ptr->setPrevious(tmp_head->getNext()->getPrevious());
+
+                tmp_head->setNext(ptr);
                 m_tail->setPrevious(ptr);
+
+                tmp_head = ptr;
+                ++m_size;
             }
         }
 
-        explicit CList(size_type n, const T& val) noexcept {
-            
+        explicit CList(size_t n, const T& val) noexcept
+                : m_head(new CNode(T(), nullptr, nullptr)),
+                  m_tail(new CNode(T(), nullptr, m_head)) {
+            m_head->setNext(m_tail);
+
+            CNodePtr tmp_head = m_head;
+            for(size_t i = 0; i < n; i++) {
+                CNodePtr ptr = new CNode(T(val), nullptr, nullptr);
+
+                ptr->setNext(tmp_head->getNext());
+                ptr->setPrevious(tmp_head->getNext()->getPrevious());
+
+                tmp_head->setNext(ptr);
+                m_tail->setPrevious(ptr);
+
+                tmp_head = ptr;
+                ++m_size;
+            }
         }
 
         CNodePtr getHead() const noexcept { return m_head; }
         CNodePtr getTail() const noexcept { return m_tail; }
+
+        size_t size() const noexcept { return m_size; }
+        bool empty() const noexcept { return m_size; }
+        T front() { return m_size ? m_head->getNext()->getInfo() : NULL; }
+        T back() { return m_size ? m_tail->getNext()->getInfo() : NULL; }
+
+
 
         template <class T>
         class CNode {
@@ -43,7 +75,6 @@ namespace nsSdD {
             CNodePtr m_previous;
 
             CNode(const CNode &) noexcept {}
-
             CNode& operator=(const CNode &) noexcept {}
 
         public:
