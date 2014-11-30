@@ -13,7 +13,7 @@ using namespace std;
 namespace
 {
     // C++11 c'est bon, mangez en.
-    template<typename T> using Collection = vector<T>;
+    template<typename T> using CCollection = vector<T>;
     template<typename T> using CTestedList = list<T>;
     //template<typename T> using CTestedList = CList<T>;
 
@@ -49,15 +49,15 @@ namespace
         string m_name;
     };
 
-//    std::ostream &operator<<(std::ostream &os, TestClass const &p) {
-//        return os << "PERS. " << p.getName() << ". " << p.getA();
-//    }
+    std::ostream &operator<<(std::ostream &os, TestClass const &p) {
+        return os << "PERS. " << p.getName() << ". " << p.getA();
+    }
 
     template<typename T>
-    class ValueProvider
+    class CValueProvider
     {
     public:
-        Collection<T> operator()(const int /*valueCount*/ = 0)
+        CCollection<T> operator()(const int /*valueCount*/ = 0)
         {
             // typeid(T).name() only gives mangled class name, not very clear but still a good indication.
             throw runtime_error(string("Value provider for type ") + typeid(T).name() + " does not exist.");
@@ -65,13 +65,13 @@ namespace
     };
 
     template<typename T>
-    class ValueProvider<T *>
+    class CValueProvider<T *>
     {
     public:
-        Collection<T *> operator()(const int valueCount = 0)
+        CCollection<T *> operator()(const int valueCount = 0)
         {
-            Collection<T> array = ValueProvider<T>()(valueCount);
-            Collection<T *> ptrArray;
+            CCollection<T> array = CValueProvider<T>()(valueCount);
+            CCollection<T *> ptrArray;
             ptrArray.reserve(array.size());
 
             for (T x : array)
@@ -82,13 +82,13 @@ namespace
     };
 
     template<typename T>
-    class ValueProvider<shared_ptr<T>>
+    class CValueProvider<shared_ptr<T>>
     {
     public:
-        Collection<shared_ptr<T>> operator()(const int valueCount = 0)
+        CCollection<shared_ptr<T>> operator()(const int valueCount = 0)
         {
-            Collection<T> array = ValueProvider<T>()(valueCount);
-            Collection<shared_ptr<T>> ptrArray;
+            CCollection<T> array = CValueProvider<T>()(valueCount);
+            CCollection<shared_ptr<T>> ptrArray;
             ptrArray.reserve(array.size());
 
             for (T x : array)
@@ -99,14 +99,14 @@ namespace
     };
 
     template<>
-    class ValueProvider<int>
+    class CValueProvider<int>
     {
     public:
-        Collection<int> operator()(const int valueCount = 0) noexcept
+        CCollection<int> operator()(const int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
 
-            Collection<int> array(arraySize);
+            CCollection<int> array(arraySize);
 
             array[0] = 0;
             array[1] = std::numeric_limits<int>::max();
@@ -120,13 +120,13 @@ namespace
     };
 
     template<>
-    class ValueProvider<TestClass>
+    class CValueProvider<TestClass>
     {
     public:
-        Collection<TestClass> operator()(const int valueCount = 0) noexcept
+        CCollection<TestClass> operator()(const int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
-            Collection<TestClass> array;
+            CCollection<TestClass> array;
             array.reserve(arraySize);
 
             array.push_back(TestClass(4654, "MARQUE LA PORTE"));
@@ -170,7 +170,7 @@ namespace
     }
 
     template<typename T>
-    void CreateSizeListWithValue(T value) noexcept
+    void CreateSizeListWithValue(const T& value) noexcept
     {
         typename CTestedList<T>::size_type listSize = rand(1, 10);
 
@@ -190,7 +190,7 @@ namespace
         typename CTestedList<T>::size_type listSize = rand(1, 10000);
 
         CTestedList<T> referenceList;
-        for (T x : ValueProvider<T>()(listSize))
+        for (T x : CValueProvider<T>()(listSize))
             referenceList.push_back(x);
 
         CTestedList<T> copiedList(referenceList);
@@ -211,7 +211,7 @@ namespace
         typename CTestedList<T>::size_type listSize = rand(1, 10000);
 
         CTestedList<T> referenceList;
-        for (T x : ValueProvider<T>()(listSize))
+        for (T x : CValueProvider<T>()(listSize))
             referenceList.push_back(x);
 
         CTestedList<T> copiedList = referenceList;
@@ -232,9 +232,9 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        Collection<T> t = ValueProvider<T>()(listSize);
-        Collection<T> originalData(t.begin(), t.begin() + listSize / 2);
-        Collection<T> newData(t.begin() + listSize / 2, t.end());
+        CCollection<T> t = CValueProvider<T>()(listSize);
+        CCollection<T> originalData(t.begin(), t.begin() + listSize / 2);
+        CCollection<T> newData(t.begin() + listSize / 2, t.end());
 
         for (T x : originalData)
             list.push_back(x);
@@ -259,7 +259,7 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        Collection<T> t = ValueProvider<T>()(listSize);
+        CCollection<T> t = CValueProvider<T>()(listSize);
         for (T x : t)
             list.push_back(x);
 
@@ -278,9 +278,9 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        Collection<T> t = ValueProvider<T>()(listSize);
-        Collection<T> originalData(t.begin(), t.begin() + listSize / 2);
-        Collection<T> newData(t.begin() + listSize / 2, t.end());
+        CCollection<T> t = CValueProvider<T>()(listSize);
+        CCollection<T> originalData(t.begin(), t.begin() + listSize / 2);
+        CCollection<T> newData(t.begin() + listSize / 2, t.end());
 
         for (T x : originalData)
             list.push_back(x);
@@ -308,7 +308,7 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        Collection<T> t = ValueProvider<T>()(listSize);
+        CCollection<T> t = CValueProvider<T>()(listSize);
         for (T x : t)
             list.push_back(x);
 
@@ -341,8 +341,10 @@ namespace
         CTestedList<T> list;
 
         IZI_ASSERT(0 == list.size());
+
         list.push_front(T());
         IZI_ASSERT(1 == list.size());
+
         list.pop_back();
         IZI_ASSERT(0 == list.size());
     }
@@ -351,7 +353,7 @@ namespace
     void Front() noexcept
     {
         CTestedList<T> list;
-        Collection<T> data = ValueProvider<T>()();
+        CCollection<T> data = CValueProvider<T>()();
 
         for (T x : data)
             list.push_back(x);
@@ -363,7 +365,7 @@ namespace
     void Back() noexcept
     {
         CTestedList<T> list;
-        Collection<T> data = ValueProvider<T>()();
+        CCollection<T> data = CValueProvider<T>()();
 
         for (T x : data)
             list.push_back(x);
@@ -372,12 +374,252 @@ namespace
     }
 
     template<typename T>
+    void AssignByIterator() noexcept
+    {
+        const int listSize = 10;
+
+        CTestedList<T> list(2 * listSize, T());
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        list.assign(data.cbegin(), data.cend());
+
+        IZI_ASSERT(data.size() == list.size());
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+    }
+
+    template<typename T>
+    void AssignByValue(const T& x) noexcept
+    {
+        const int listSize = 10;
+
+        CTestedList<T> list;
+        list.assign(listSize, x);
+
+        IZI_ASSERT(listSize == list.size());
+        for (T val : list)
+            IZI_ASSERT(val == x);
+    }
+
+    template<typename T>
+    void EmplaceFront() noexcept
+    {
+        CTestedList<pair<T, T>> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.emplace_front(x, x);
+
+        reverse(list.begin(), list.end());
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
+            int i = distance(list.cbegin(), itr);
+            IZI_ASSERT(make_pair(data[i], data[i]) == *itr)
+        }
+
+        IZI_ASSERT(list.size() == data.size());
+    }
+
+    template<typename T>
+    void EmplaceBack() noexcept
+    {
+        CTestedList<pair<T, T>> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.emplace_back(x, x);
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
+            int i = distance(list.cbegin(), itr);
+            IZI_ASSERT(make_pair(data[i], data[i]) == *itr)
+        }
+
+        IZI_ASSERT(list.size() == data.size());
+    }
+
+    template<typename T>
+    void Emplace() noexcept
+    {
+        CTestedList<pair<T, T>> list;
+        CCollection<T> data = CValueProvider<T>()(5);
+
+        list.push_back(make_pair(data[0], data[0]));
+        list.push_back(make_pair(data[1], data[1]));
+        list.push_back(make_pair(data[3], data[3]));
+        list.push_back(make_pair(data[4], data[4]));
+
+        auto itr = list.begin();
+        advance(itr, 2);
+        itr = list.emplace(itr, data[2], data[2]);
+
+        IZI_ASSERT(*itr == make_pair(data[2], data[2]));
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
+            int i = distance(list.cbegin(), itr);
+            IZI_ASSERT(*itr == make_pair(data[i], data[i]));
+        }
+    }
+
+    template<typename T>
+    void PushFront() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.push_front(x);
+
+        reverse(data.begin(), data.end());
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
+            int i = distance(list.cbegin(), itr);
+            IZI_ASSERT(*itr == data[i]);
+        }
+
+        IZI_ASSERT(data.size() == list.size());
+    }
+
+    template<typename T>
+    void PushBack() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
+            int i = distance(list.cbegin(), itr);
+            IZI_ASSERT(*itr == data[i]);
+        }
+
+        IZI_ASSERT(data.size() == list.size());
+    }
+
+    template<typename T>
+    void PopFront() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        for (int i = 0; i < data.size(); ++i)
+        {
+            IZI_ASSERT(list.front() == data[i]);
+            list.pop_front();
+        }
+
+        IZI_ASSERT(list.empty());
+    }
+
+    template<typename T>
+    void PopBack() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        reverse(data.begin(), data.end());
+
+        for (int i = 0; i < data.size(); ++i)
+        {
+            IZI_ASSERT(list.back() == data[i]);
+            list.pop_back();
+        }
+
+        IZI_ASSERT(list.empty());
+    }
+
+    template<typename T>
+    void Insert() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(5);
+
+        list.push_back(data[1]);
+        list.push_back(data[2]);
+        list.push_back(data[4]);
+
+        auto itr = list.begin();
+        itr = list.insert(itr, data[0]);
+
+        IZI_ASSERT(*itr == data[0]);
+        IZI_ASSERT(itr == list.begin());
+
+        advance(itr, 3);
+        itr = list.insert(itr, data[3]);
+        IZI_ASSERT(*itr == data[3]);
+
+        for (itr = list.begin(); itr != list.end(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.begin(), itr)]);
+
+        IZI_ASSERT(list.size() == data.size());
+    }
+
+    template<typename T>
+    void InsertByValue(const T& x) noexcept
+    {
+        const int listSize = rand(0, 20);
+        CTestedList<T> list;
+
+        list.assign(listSize, x);
+
+        for (T val : list)
+            IZI_ASSERT(val == x);
+
+        IZI_ASSERT(list.size() == listSize);
+    }
+
+    template<typename T>
+    void InsertByIterator() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        list.assign(data.cbegin(), data.cend());
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+
+        IZI_ASSERT(list.size() == data.size());
+    }
+
+    template<typename T>
+    void Erase() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        auto itr = list.erase(list.begin());
+        IZI_ASSERT(*itr == data[1]);
+        IZI_ASSERT(itr == list.begin());
+
+        itr = list.erase(--list.end());
+        IZI_ASSERT(itr == list.end());
+
+        IZI_ASSERT(list.size() == data.size() - 2);
+    }
+
+    template<typename T>
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
         CreateSizedList<T>();
 
-        for (T x : ValueProvider<T>()(5))
+        for (T x : CValueProvider<T>()(5))
             CreateSizeListWithValue<T>(x);
 
         CreateListByExplicitCopy<T>();
@@ -390,14 +632,36 @@ namespace
 
         IsEmpty<T>();
         Size<T>();
+
         Front<T>();
         Back<T>();
+
+        AssignByIterator<T>();
+        for (T x : CValueProvider<T>()(5))
+            AssignByValue(x);
+
+        EmplaceFront<T>();
+        EmplaceBack<T>();
+        Emplace<T>();
+
+        PushFront<T>();
+        PushBack<T>();
+
+        PopFront<T>();
+        PopBack<T>();
+
+        Insert<T>();
+        InsertByIterator<T>();
+        for (T x : CValueProvider<T>()(5))
+            InsertByValue<T>(x);
+
+        Erase<T>();
     }
 }
 
 void CTests::RunTests() noexcept
 {
-    cout << "Starting tests..." << endl << endl;
+    cout << "Starting tests..." << endl;
 
     srand(time(NULL));
     IZI_CALLTEST(RunTemplatedTests<int>());
@@ -408,5 +672,5 @@ void CTests::RunTests() noexcept
     IZI_CALLTEST(RunTemplatedTests<TestClass *>());
     IZI_CALLTEST(RunTemplatedTests<shared_ptr<TestClass>>());
 
-    cout << "Tests done..." << endl << endl;
+    cout << "Tests done..." << endl;
 }
