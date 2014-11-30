@@ -15,15 +15,15 @@ namespace nsSdD
         CNodePtr m_tail = nullptr;
 
     public:
-        explicit CList() noexcept : m_head(make_shared<CNODE>(T(), nullptr, nullptr),
-                                    m_tail(make_shared<CNODE>(T(), nullptr, m_head))
+        explicit CList() noexcept : m_head(make_shared<CNode>(T(), nullptr, nullptr),
+                                    m_tail(make_shared<CNode>(T(), nullptr, m_head))
         {
             m_head->setNext(m_tail);
         }
 
         explicit CList(size_t n) noexcept
-                : m_head(make_shared<CNODE>(T(), nullptr, nullptr),
-                  m_tail(make_shared<CNODE>(T(), nullptr, m_head) {
+                : m_head(make_shared<CNode>(T(), nullptr, nullptr),
+                  m_tail(make_shared<CNode>(T(), nullptr, m_head) {
             m_head->setNext(m_tail);
 
             for(size_t i = 0; i < n; i++) {
