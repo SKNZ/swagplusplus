@@ -9,10 +9,10 @@ namespace nsSdD
         class CNode;
 
     private:
-        typedef std::unique_ptr<CNode> CNodePtr;
+        typedef std::shared_ptr<CNode> CNodePtr;
         size_t m_size = 0;
-        CNodePtr m_head = NULL;
-        CNodePtr m_tail = NULL;
+        CNodePtr m_head = nullptr;
+        CNodePtr m_tail = nullptr;
 
     public:
         explicit CList() noexcept: m_head(new CNode(T(), nullptr, nullptr)),
@@ -26,17 +26,15 @@ namespace nsSdD
                   m_tail(new CNode(T(), nullptr, m_head)) {
             m_head->setNext(m_tail);
 
-            CNodePtr tmp_head = m_head;
             for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = new CNode(T(), nullptr, nullptr);
+                CNodePtr ptr ( new CNode(T(), nullptr, nullptr));
 
-                ptr->setNext(tmp_head->getNext());
-                ptr->setPrevious(tmp_head->getNext()->getPrevious());
+                ptr->setNext(m_tail);
+                ptr->setPrevious(m_tail->getPrevious());
 
-                tmp_head->setNext(ptr);
+                m_tail->getPrevious()->setNext(ptr);
                 m_tail->setPrevious(ptr);
 
-                tmp_head = ptr;
                 ++m_size;
             }
         }
@@ -46,18 +44,29 @@ namespace nsSdD
                   m_tail(new CNode(T(), nullptr, m_head)) {
             m_head->setNext(m_tail);
 
-            CNodePtr tmp_head = m_head;
             for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = new CNode(T(val), nullptr, nullptr);
+                CNodePtr ptr ( new CNode(val, nullptr, nullptr));
+                CNodePtr LastCreated ( m_tail->getPrevious());
 
-                ptr->setNext(tmp_head->getNext());
-                ptr->setPrevious(tmp_head->getNext()->getPrevious());
+                ptr->setNext(m_tail);
+                ptr->setPrevious(LastCreated);
 
-                tmp_head->setNext(ptr);
+                LastCreated->setNext(ptr);
                 m_tail->setPrevious(ptr);
 
-                tmp_head = ptr;
                 ++m_size;
+            }
+        }
+
+        CList(const CList<T>& x)
+        {
+            this->m_head = x.getHead();
+            this->m_tail = x.getTail();
+            this->m_size = x.size();
+
+            for(CNodePtr p = x.getHead(); p; p = p->getNext())
+            {
+                CNodePtr temp (new CNode(p->getInfo(),p->getNext(),p->getPrevious()));
             }
         }
 
@@ -68,6 +77,7 @@ namespace nsSdD
         bool empty() const noexcept { return m_size; }
         T front() { return m_size ? m_head->getNext()->getInfo() : NULL; }
         T back() { return m_size ? m_tail->getNext()->getInfo() : NULL; }
+
 
         class CNode {
         private:
@@ -87,9 +97,9 @@ namespace nsSdD
 
             inline T getInfo() const noexcept { return m_info; }
             inline void setInfo(T info) noexcept { m_info = info; }
-            inline CNodePtr &getNext() const noexcept { return m_next; }
+            inline CNodePtr & getNext()  noexcept { return m_next; }
             inline void setNext(CNodePtr &next) noexcept { m_next = next; }
-            inline CNodePtr &getPrevious() const noexcept { return m_previous; }
+            inline CNodePtr & getPrevious()  noexcept { return m_previous; }
             inline void setPrevious(CNodePtr &previous) noexcept { m_previous = previous; }
         };
     };
