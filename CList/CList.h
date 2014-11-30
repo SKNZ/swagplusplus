@@ -15,19 +15,19 @@ namespace nsSdD
         CNodePtr m_tail = nullptr;
 
     public:
-        explicit CList() noexcept : m_head(make_shared<CNode>(T(), nullptr, nullptr),
-                                    m_tail(make_shared<CNode>(T(), nullptr, m_head))
+        explicit CList() noexcept : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
+                                    m_tail(std::make_shared<CNode>(T(), nullptr, m_head))
         {
             m_head->setNext(m_tail);
         }
 
         explicit CList(size_t n) noexcept
-                : m_head(make_shared<CNode>(T(), nullptr, nullptr),
-                  m_tail(make_shared<CNode>(T(), nullptr, m_head) {
+                : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
+                  m_tail(std::make_shared<CNode>(T(), nullptr, m_head)) {
             m_head->setNext(m_tail);
 
             for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = make_shared<CNode>(T(), nullptr, nullptr);
+                CNodePtr ptr = std::make_shared<CNode>(T(), nullptr, nullptr);
 
                 ptr->setNext(m_tail);
                 ptr->setPrevious(m_tail->getPrevious());
@@ -40,12 +40,12 @@ namespace nsSdD
         }
 
         explicit CList(size_t n, const T& val) noexcept
-                : m_head(make_shared<CNode>(T(), nullptr, nullptr),
-                  m_tail(make_shared<CNode>(T(), nullptr, m_head) {
+                : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
+                  m_tail(std::make_shared<CNode>(T(), nullptr, m_head)) {
             m_head->setNext(m_tail);
 
             for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = make_shared<CNode>(val, nullptr, nullptr);
+                CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
                 CNodePtr LastCreated = m_tail->getPrevious();
 
                 ptr->setNext(m_tail);
@@ -66,7 +66,7 @@ namespace nsSdD
 
             for(CNodePtr p = x.getHead(); p; p = p->getNext())
             {
-                CNodePtr temp = make_shared<CNode>(p->getInfo(),p->getNext(),p->getPrevious());
+                CNodePtr temp = std::make_shared<CNode>(p->getInfo(),p->getNext(),p->getPrevious());
             }
         }
 

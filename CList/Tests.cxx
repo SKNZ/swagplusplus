@@ -7,13 +7,18 @@
 #include <limits>
 #include <vector>
 #include <algorithm>
-#include <string.h>
+#include <string>
 
 using namespace nsTests;
 using namespace std;
 
 namespace
 {
+    // C++11 c'est bon, mangez en.
+    template<typename T> using Collection = vector<T>;
+    template<typename T> using CTestedList = list<T>;
+    //template<typename T> using CTestedList = CList<T>;
+
     int rand(int min, int max)
     {
         return min + (std::rand() % (max - min + 1));
@@ -52,7 +57,7 @@ namespace
     class ValueProvider
     {
     public:
-        vector<T> operator ()(int /*valueCount*/ = 0)
+        Collection<T> operator ()(const int /*valueCount*/ = 0)
         {
             // typeid(T).name() only gives mangled class name, not very clear but still a good indication.
             throw runtime_error(string("Value provider for type ") + typeid(T).name() + " does not exist.");
@@ -63,10 +68,10 @@ namespace
     class ValueProvider<T*>
     {
     public:
-        vector<T*> operator ()(int /*valueCount*/ = 0)
+        Collection<T*> operator ()(const int valueCount = 0)
         {
-            vector<T> array = ValueProvider<T>()();
-            vector<T*> ptrArray;
+            Collection<T> array = ValueProvider<T>()(valueCount);
+            Collection<T*> ptrArray;
             ptrArray.reserve(array.size());
 
             for (T x : array)
@@ -80,10 +85,10 @@ namespace
     class ValueProvider<shared_ptr<T>>
     {
     public:
-        vector<shared_ptr<T>> operator ()(int/* valueCount*/ = 0)
+        Collection<shared_ptr<T>> operator ()(const int valueCount = 0)
         {
-            vector<T> array = ValueProvider<T>()();
-            vector<shared_ptr<T>> ptrArray;
+            Collection<T> array = ValueProvider<T>()(valueCount);
+            Collection<shared_ptr<T>> ptrArray;
             ptrArray.reserve(array.size());
 
             for (T x : array)
@@ -97,11 +102,11 @@ namespace
     class ValueProvider<int>
     {
     public:
-        vector<int> operator ()(int valueCount = 0) noexcept
+        Collection<int> operator ()(const int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
-            cout << "TProv " << valueCount << " " << arraySize << endl;
-            vector<int> array(arraySize);
+
+            Collection<int> array(arraySize);
 
             array[0] = 0;
             array[1] = std::numeric_limits<int>::max();
@@ -118,20 +123,21 @@ namespace
     class ValueProvider<TestClass>
     {
     public:
-        vector<TestClass> operator()(int valueCount = 0) noexcept
+        Collection<TestClass> operator()(const int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
-            vector<TestClass> array(arraySize);
+            Collection<TestClass> array;
+            array.reserve(arraySize);
 
-            array[0] = TestClass(4654, "MARQUE LA PORTE");
+            array.push_back(TestClass(4654, "MARQUE LA PORTE"));
 
-            for (int i = 1; i < arraySize; ++i)
+            for (int i = array.size(); i < arraySize; ++i)
             {
                 string name;
                 for (int j = 0; j < rand(10, 20); ++j)
                     name += static_cast<char>(rand(66, 89));
 
-                array[i] = TestClass(rand(0, 30), name);
+                array.push_back(TestClass(rand(0, 30), name));
             }
 
             return array;
@@ -226,9 +232,9 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        vector<T> t = ValueProvider<T>()(listSize);
-        vector<T> originalData(t.begin(), t.begin() + listSize / 2);
-        vector<T> newData(t.begin() + listSize / 2, t.end());
+        Collection<T> t = ValueProvider<T>()(listSize);
+        Collection<T> originalData(t.begin(), t.begin() + listSize / 2);
+        Collection<T> newData(t.begin() + listSize / 2, t.end());
 
         for (T x : originalData)
             list.push_back(x);
@@ -253,7 +259,7 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        vector<T> t = ValueProvider<T>()(listSize);
+        Collection<T> t = ValueProvider<T>()(listSize);
         for (T x : t)
             list.push_back(x);
 
@@ -272,11 +278,9 @@ namespace
         const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        vector<T> t = ValueProvider<T>()(listSize);
-        vector<T> originalData(t.begin(), t.begin() + listSize / 2);
-        vector<T> newData(t.begin() + listSize / 2, t.end());
-
-        cout << listSize << " " << t.size() << " " << originalData.size() << " " << newData.size() << endl;
+        Collection<T> t = ValueProvider<T>()(listSize);
+        Collection<T> originalData(t.begin(), t.begin() + listSize / 2);
+        Collection<T> newData(t.begin() + listSize / 2, t.end());
 
         for (T x : originalData)
             list.push_back(x);
@@ -300,10 +304,11 @@ namespace
 
     template<typename T>
     void ReverseConstIterate() noexcept
-    {const typename CTestedList<T>::size_type listSize = 20;
+    {
+        const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
-        vector<T> t = ValueProvider<T>()(listSize);
+        Collection<T> t = ValueProvider<T>()(listSize);
         for (T x : t)
             list.push_back(x);
 
@@ -316,6 +321,54 @@ namespace
             IZI_ASSERT(t[distance(list.crbegin(), crbegin)] == *crbegin);
 
         IZI_ASSERT(crbegin == crend);
+    }
+
+    template<typename T>
+    void IsEmpty() noexcept
+    {
+        CTestedList<T> list;
+
+        IZI_ASSERT(list.empty());
+        list.push_back(T());
+        IZI_ASSERT(!list.empty());
+        list.pop_front();
+        IZI_ASSERT(list.empty());
+    }
+
+    template<typename T>
+    void Size() noexcept
+    {
+        CTestedList<T> list;
+
+        IZI_ASSERT(0 == list.size());
+        list.push_front(T());
+        IZI_ASSERT(1 == list.size());
+        list.pop_back();
+        IZI_ASSERT(0 == list.size());
+    }
+
+    template<typename T>
+    void Front() noexcept
+    {
+        CTestedList<T> list;
+        Collection<T> data = ValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        IZI_ASSERT(list.front() == *data.begin());
+    }
+
+    template<typename T>
+    void Back() noexcept
+    {
+        CTestedList<T> list;
+        Collection<T> data = ValueProvider<T>()();
+
+        for (T x : data)
+            list.push_back(x);
+
+        IZI_ASSERT(list.back() == *--data.end());
     }
 
     template <typename T>
@@ -334,6 +387,11 @@ namespace
         ConstIterate<T>();
         ReverseIterate<T>();
         ReverseConstIterate<T>();
+
+        IsEmpty<T>();
+        Size<T>();
+        Front<T>();
+        Back<T>();
     }
 }
 

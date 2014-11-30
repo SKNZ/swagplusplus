@@ -2,9 +2,6 @@
 
 #include <list>
 
-#define CTestedList std::list
-//#define CTestedList nsSdD::CList
-
 namespace nsTests
 {
     class CTests
