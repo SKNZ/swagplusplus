@@ -44,9 +44,9 @@ namespace
         string m_name;
     };
 
-    std::ostream &operator<<(std::ostream &os, TestClass const &p) {
-        return os << "PERS. " << p.getName() << ". " << p.getA();
-    }
+//    std::ostream &operator<<(std::ostream &os, TestClass const &p) {
+//        return os << "PERS. " << p.getName() << ". " << p.getA();
+//    }
 
     template<typename T>
     class ValueProvider
