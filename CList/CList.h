@@ -1,19 +1,23 @@
 #include <memory>
 
-namespace nsSdD {
+namespace nsSdD
+{
     template <class T>
-    class CList {
-        
-    typedef std::unique_ptr<CNode> CNodePtr;
+    class CList
+    {
+    public:
+        class CNode;
 
     private:
+        typedef std::unique_ptr<CNode> CNodePtr;
         size_t m_size = 0;
         CNodePtr m_head = NULL;
         CNodePtr m_tail = NULL;
 
     public:
         explicit CList() noexcept: m_head(new CNode(T(), nullptr, nullptr)),
-                                   m_tail(new CNode(T(), nullptr, m_head)) {
+                                   m_tail(new CNode(T(), nullptr, m_head))
+        {
             m_head->setNext(m_tail);
         }
 
@@ -65,9 +69,6 @@ namespace nsSdD {
         T front() { return m_size ? m_head->getNext()->getInfo() : NULL; }
         T back() { return m_size ? m_tail->getNext()->getInfo() : NULL; }
 
-
-
-        template <class T>
         class CNode {
         private:
             T m_info;
