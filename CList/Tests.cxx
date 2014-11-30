@@ -6,6 +6,7 @@
 #include <ctime>
 #include <limits>
 #include <vector>
+#include <algorithm>
 #include <string.h>
 
 using namespace nsTests;
@@ -21,27 +22,31 @@ namespace
     class TestClass
     {
     public:
-        TestClass(int a = 0, const char* name = "ALAIN CASALOL") noexcept : m_a(a), m_name(name) { }
+        TestClass(int a = 0, const string& name = "ALAIN CASALOL") noexcept : m_a(a), m_name(name) { }
 
-        bool operator ==(const TestClass& c)
+        bool operator ==(const TestClass& c) const noexcept
         {
-            return m_a == c.m_a && !strcmp(m_name, c.m_name);
+            return m_a == c.m_a && m_name == c.m_name;
         }
 
-        int getA()
+        int getA() const noexcept
         {
             return m_a;
         }
 
-        const char* getName()
+        string getName() const noexcept
         {
             return m_name;
         }
 
     private:
         int m_a;
-        const char* m_name;
+        string m_name;
     };
+
+    std::ostream &operator<<(std::ostream &os, TestClass const &p) {
+        return os << "PERS. " << p.getName() << ". " << p.getA();
+    }
 
     template<typename T>
     class ValueProvider
@@ -95,6 +100,7 @@ namespace
         vector<int> operator ()(int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
+            cout << "TProv " << valueCount << " " << arraySize << endl;
             vector<int> array(arraySize);
 
             array[0] = 0;
@@ -123,9 +129,9 @@ namespace
             {
                 string name;
                 for (int j = 0; j < rand(10, 20); ++j)
-                    name += static_cast<char>(rand(65, 90));
+                    name += static_cast<char>(rand(66, 89));
 
-                array[i] = TestClass(std::rand(), name.c_str());
+                array[i] = TestClass(rand(0, 30), name);
             }
 
             return array;
@@ -220,23 +226,44 @@ namespace
         const int listSize = 20;
 
         CTestedList<T> list;
-        vector<T> dataSet = ValueProvider<T>()(listSize);
+        vector<T> t = ValueProvider<T>()(listSize);
+        vector<T> originalData(t.begin(), t.begin() + listSize / 2);
+        vector<T> newData(t.begin() + listSize / 2, t.end());
 
-        for (int i = 0; i < listSize / 2; ++i)
-            list.push_back(dataSet[i]);
+        for (T x : originalData)
+            list.push_back(x);
 
         typename CTestedList<T>::iterator begin = list.begin();
         typename CTestedList<T>::iterator end = list.end();
 
         for (; begin != end; ++begin)
         {
-            IZI_ASSERT(dataSet[distance(list.begin(), begin)] == *begin);
-            *begin = dataSet[distance(list.begin(), begin) + listSize / 2];
-            IZI_ASSERT(*begin == dataSet[distance(list.begin(), begin) + listSize / 2]);
+            int i = distance(list.begin(), begin);
+            IZI_ASSERT(originalData[i] == *begin);
+            *begin = newData[i];
+            IZI_ASSERT(newData[i] == *begin);
         }
 
         IZI_ASSERT(begin == end);
-        IZI_ASSERT(*begin == *end);
+    }
+
+    template<typename T>
+    void ConstIterate() noexcept
+    {
+        const int listSize = 20;
+
+        CTestedList<T> list;
+        vector<T> t = ValueProvider<T>()(listSize);
+        for (T x : t)
+            list.push_back(x);
+
+        typename CTestedList<T>::const_iterator cbegin = list.cbegin();
+        typename CTestedList<T>::const_iterator cend = list.cend();
+
+        for (; cbegin != cend; ++cbegin)
+            IZI_ASSERT(t[distance(list.cbegin(), cbegin)] == *cbegin);
+
+        IZI_ASSERT(cbegin == cend);
     }
 
     template<typename T>
@@ -245,24 +272,50 @@ namespace
         const int listSize = 20;
 
         CTestedList<T> list;
-        vector<T> dataSet = ValueProvider<T>()(listSize);
+        vector<T> t = ValueProvider<T>()(listSize);
+        vector<T> originalData(t.begin(), t.begin() + listSize / 2);
+        vector<T> newData(t.begin() + listSize / 2, t.end());
 
-        for (int i = 0; i < listSize / 2; ++i)
-            list.push_back(dataSet[i]);
+        cout << listSize << " " << t.size() << " " << originalData.size() << " " << newData.size() << endl;
+
+        for (T x : originalData)
+            list.push_back(x);
+
+        reverse(originalData.begin(), originalData.end());
+        reverse(newData.begin(), newData.end());
 
         typename CTestedList<T>::reverse_iterator rbegin = list.rbegin();
         typename CTestedList<T>::reverse_iterator rend = list.rend();
 
         for (; rbegin != rend; ++rbegin)
         {
-            cout << *rbegin << endl;
-            IZI_ASSERT(dataSet[listSize - distance(list.rbegin(), rbegin)] == *rbegin);
-            *rbegin = dataSet[distance(list.rbegin(), rbegin) + listSize / 2];
-            IZI_ASSERT(*rbegin == dataSet[distance(list.rbegin(), rbegin) + listSize / 2]);
+            int i = distance(list.rbegin(), rbegin);
+            IZI_ASSERT(originalData[i] == *rbegin);
+            *rbegin = newData[i];
+            IZI_ASSERT(newData[i] == *rbegin);
         }
 
         IZI_ASSERT(rbegin == rend);
-        IZI_ASSERT(*rbegin == *rend);
+    }
+
+    template<typename T>
+    void ReverseConstIterate() noexcept
+    {const int listSize = 20;
+
+        CTestedList<T> list;
+        vector<T> t = ValueProvider<T>()(listSize);
+        for (T x : t)
+            list.push_back(x);
+
+        reverse(t.begin(), t.end());
+
+        typename CTestedList<T>::const_reverse_iterator crbegin = list.crbegin();
+        typename CTestedList<T>::const_reverse_iterator crend = list.crend();
+
+        for (; crbegin != crend; ++crbegin)
+            IZI_ASSERT(t[distance(list.crbegin(), crbegin)] == *crbegin);
+
+        IZI_ASSERT(crbegin == crend);
     }
 
     template <typename T>
@@ -278,7 +331,9 @@ namespace
         CreateListByImplicitCopy<T>();
 
         Iterate<T>();
+        ConstIterate<T>();
         ReverseIterate<T>();
+        ReverseConstIterate<T>();
     }
 }
 
