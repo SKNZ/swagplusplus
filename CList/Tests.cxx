@@ -151,7 +151,7 @@ namespace
     template<typename T>
     void CreateSizedList() noexcept
     {
-        int listSize = rand(1, 10);
+        typename CTestedList<T>::size_type listSize = rand(1, 10);
 
         CTestedList<T> list(listSize);
 
@@ -166,7 +166,7 @@ namespace
     template<typename T>
     void CreateSizeListWithValue(T value) noexcept
     {
-        int listSize = rand(1, 10);
+        typename CTestedList<T>::size_type listSize = rand(1, 10);
 
         CTestedList<T> list(listSize, value);
 
@@ -181,7 +181,7 @@ namespace
     template<typename T>
     void CreateListByExplicitCopy() noexcept
     {
-        int listSize = rand(1, 10000);
+        typename CTestedList<T>::size_type listSize = rand(1, 10000);
 
         CTestedList<T> referenceList;
         for (T x : ValueProvider<T>()(listSize))
@@ -202,7 +202,7 @@ namespace
     template<typename T>
     void CreateListByImplicitCopy() noexcept
     {
-        int listSize = rand(1, 10000);
+        typename CTestedList<T>::size_type listSize = rand(1, 10000);
 
         CTestedList<T> referenceList;
         for (T x : ValueProvider<T>()(listSize))
@@ -223,7 +223,7 @@ namespace
     template<typename T>
     void Iterate() noexcept
     {
-        const int listSize = 20;
+        const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
         vector<T> t = ValueProvider<T>()(listSize);
@@ -250,7 +250,7 @@ namespace
     template<typename T>
     void ConstIterate() noexcept
     {
-        const int listSize = 20;
+        const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
         vector<T> t = ValueProvider<T>()(listSize);
@@ -269,7 +269,7 @@ namespace
     template<typename T>
     void ReverseIterate() noexcept
     {
-        const int listSize = 20;
+        const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
         vector<T> t = ValueProvider<T>()(listSize);
@@ -300,7 +300,7 @@ namespace
 
     template<typename T>
     void ReverseConstIterate() noexcept
-    {const int listSize = 20;
+    {const typename CTestedList<T>::size_type listSize = 20;
 
         CTestedList<T> list;
         vector<T> t = ValueProvider<T>()(listSize);
