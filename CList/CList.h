@@ -2,7 +2,7 @@
 
 namespace nsSdD
 {
-    template <class T>
+    template <typename T>
     class CList
     {
     public:
@@ -15,69 +15,37 @@ namespace nsSdD
         CNodePtr m_tail = nullptr;
 
     public:
-        explicit CList() noexcept : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
-                                    m_tail(std::make_shared<CNode>(T(), nullptr, m_head))
-        {
-            m_head->setNext(m_tail);
+        explicit CList() noexcept;
+
+        explicit CList(size_t n) noexcept;
+
+        explicit CList(size_t n, const T& val) noexcept;
+
+        CList(const CList<T>& x) noexcept;
+
+        CNodePtr getHead() const noexcept {
+            return m_head;
         }
 
-        explicit CList(size_t n) noexcept
-                : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
-                  m_tail(std::make_shared<CNode>(T(), nullptr, m_head)) {
-            m_head->setNext(m_tail);
-
-            for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = std::make_shared<CNode>(T(), nullptr, nullptr);
-
-                ptr->setNext(m_tail);
-                ptr->setPrevious(m_tail->getPrevious());
-
-                m_tail->getPrevious()->setNext(ptr);
-                m_tail->setPrevious(ptr);
-
-                ++m_size;
-            }
+        CNodePtr getTail() const noexcept {
+            return m_tail;
         }
 
-        explicit CList(size_t n, const T& val) noexcept
-                : m_head(std::make_shared<CNode>(T(), nullptr, nullptr)),
-                  m_tail(std::make_shared<CNode>(T(), nullptr, m_head)) {
-            m_head->setNext(m_tail);
-
-            for(size_t i = 0; i < n; i++) {
-                CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
-                CNodePtr LastCreated = m_tail->getPrevious();
-
-                ptr->setNext(m_tail);
-                ptr->setPrevious(LastCreated);
-
-                LastCreated->setNext(ptr);
-                m_tail->setPrevious(ptr);
-
-                ++m_size;
-            }
+        size_t size() const noexcept {
+            return m_size;
         }
 
-        CList(const CList<T>& x)
-        {
-            this->m_head = x.getHead();
-            this->m_tail = x.getTail();
-            this->m_size = x.size();
-
-            for(CNodePtr p = x.getHead(); p; p = p->getNext())
-            {
-                CNodePtr temp = std::make_shared<CNode>(p->getInfo(),p->getNext(),p->getPrevious());
-            }
+        bool empty() const noexcept {
+            return m_size;
         }
 
-        CNodePtr getHead() const noexcept { return m_head; }
-        CNodePtr getTail() const noexcept { return m_tail; }
+        T& front() noexcept {
+            return m_head->getNext()->getInfo();
+        }
 
-        size_t size() const noexcept { return m_size; }
-        bool empty() const noexcept { return m_size; }
-        T front() { return m_size ? m_head->getNext()->getInfo() : NULL; }
-        T back() { return m_size ? m_tail->getNext()->getInfo() : NULL; }
-
+        T& back() noexcept{
+            return m_tail->getNext()->getInfo();
+        }
 
         class CNode {
         private:
