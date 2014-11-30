@@ -2,12 +2,10 @@
 #include "IziAssert.h"
 
 #include <memory>
-#include <cstdlib>
 #include <ctime>
 #include <limits>
 #include <vector>
 #include <algorithm>
-#include <string>
 
 using namespace nsTests;
 using namespace std;
@@ -27,9 +25,11 @@ namespace
     class TestClass
     {
     public:
-        TestClass(int a = 0, const string& name = "ALAIN CASALOL") noexcept : m_a(a), m_name(name) { }
+        TestClass(int a = 0, const string &name = "ALAIN CASALOL") noexcept : m_a(a), m_name(name)
+        {
+        }
 
-        bool operator ==(const TestClass& c) const noexcept
+        bool operator==(const TestClass &c) const noexcept
         {
             return m_a == c.m_a && m_name == c.m_name;
         }
@@ -57,7 +57,7 @@ namespace
     class ValueProvider
     {
     public:
-        Collection<T> operator ()(const int /*valueCount*/ = 0)
+        Collection<T> operator()(const int /*valueCount*/ = 0)
         {
             // typeid(T).name() only gives mangled class name, not very clear but still a good indication.
             throw runtime_error(string("Value provider for type ") + typeid(T).name() + " does not exist.");
@@ -65,13 +65,13 @@ namespace
     };
 
     template<typename T>
-    class ValueProvider<T*>
+    class ValueProvider<T *>
     {
     public:
-        Collection<T*> operator ()(const int valueCount = 0)
+        Collection<T *> operator()(const int valueCount = 0)
         {
             Collection<T> array = ValueProvider<T>()(valueCount);
-            Collection<T*> ptrArray;
+            Collection<T *> ptrArray;
             ptrArray.reserve(array.size());
 
             for (T x : array)
@@ -85,7 +85,7 @@ namespace
     class ValueProvider<shared_ptr<T>>
     {
     public:
-        Collection<shared_ptr<T>> operator ()(const int valueCount = 0)
+        Collection<shared_ptr<T>> operator()(const int valueCount = 0)
         {
             Collection<T> array = ValueProvider<T>()(valueCount);
             Collection<shared_ptr<T>> ptrArray;
@@ -102,7 +102,7 @@ namespace
     class ValueProvider<int>
     {
     public:
-        Collection<int> operator ()(const int valueCount = 0) noexcept
+        Collection<int> operator()(const int valueCount = 0) noexcept
         {
             int arraySize = valueCount ? valueCount : rand(10, 100);
 
@@ -371,7 +371,7 @@ namespace
         IZI_ASSERT(list.back() == *--data.end());
     }
 
-    template <typename T>
+    template<typename T>
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
@@ -401,11 +401,11 @@ void CTests::RunTests() noexcept
 
     srand(time(NULL));
     IZI_CALLTEST(RunTemplatedTests<int>());
-    IZI_CALLTEST(RunTemplatedTests<int*>());
+    IZI_CALLTEST(RunTemplatedTests<int *>());
     IZI_CALLTEST(RunTemplatedTests<shared_ptr<int>>());
 
     IZI_CALLTEST(RunTemplatedTests<TestClass>());
-    IZI_CALLTEST(RunTemplatedTests<TestClass*>());
+    IZI_CALLTEST(RunTemplatedTests<TestClass *>());
     IZI_CALLTEST(RunTemplatedTests<shared_ptr<TestClass>>());
 
     cout << "Tests done..." << endl << endl;
