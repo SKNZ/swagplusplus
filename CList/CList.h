@@ -81,6 +81,8 @@ namespace nsSdD
 
             del->setPrevious(nullptr);
             del->setNext(nullptr);
+
+            --m_size;
         }
 
         void push_front(const T& x)
@@ -91,6 +93,8 @@ namespace nsSdD
             add->setPrevious(m_head);
             add->getNext()->setPrevious(add);
             m_head->setNext(add);
+
+            ++m_size;
         }
 
         void pop_front()
@@ -102,6 +106,8 @@ namespace nsSdD
 
             del->setPrevious(nullptr);
             del->setNext(nullptr);
+
+            --m_size;
         }
 
         class CNode
