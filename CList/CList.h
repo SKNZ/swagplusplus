@@ -68,7 +68,17 @@ namespace nsSdD
 
         void pop_front();
 
+        void emplace(CNodePtr Prec , T val);
 
+        void erase(CNodePtr del);
+
+        void swap(CList& x);
+
+        void resize (unsigned n);
+
+        void resize (unsigned n, const T& val);
+
+        void clear() noexcept;
 
         class CNode
         {
