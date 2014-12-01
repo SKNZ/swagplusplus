@@ -1,3 +1,4 @@
+
 #include "CList.h"
 
 using namespace std;
@@ -86,3 +87,72 @@ void CList<T>::assign(unsigned n, const T &val)
         }
     }
 }
+
+template<typename T>
+void CList::emplace_front(T val)
+{
+    CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
+
+    ptr->setPrevious(m_head);
+    ptr->setNext(m_head->getNext());
+
+    (m_head->getNext())->setPrevious(ptr);
+
+    m_head->setNext(ptr);
+}
+
+void CList::pop_front()
+{
+    CNodePtr del = m_head->getNext();
+    m_head->setNext(del->getNext());
+
+    (del->getNext())->setPrevious(m_head);
+
+    del->setPrevious(nullptr);
+    del->setNext(nullptr);
+
+    --m_size;
+}
+
+template<typename T>
+void CList::push_front(const T &x)
+{
+    CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
+
+    add->setNext(m_head->getNext());
+    add->setPrevious(m_head);
+    add->getNext()->setPrevious(add);
+    m_head->setNext(add);
+
+    ++m_size;
+}
+
+template<typename T>
+void CList::push_back(const T &x)
+{
+    CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
+    CNodePtr LastCreated = m_tail->getPrevious();
+
+    add->setNext(m_tail);
+    add->setPrevious(LastCreated);
+
+    LastCreated->setNext(add);
+    m_tail->setPrevious(add);
+
+    ++m_size;
+}
+
+void CList::pop_back()
+{
+    CNodePtr del = m_tail->getPrevious();
+    m_tail->setPrevious(del->getPrevious());
+
+    del->getPrevious()->setNext(m_tail);
+
+    del->setPrevious(nullptr);
+    del->setNext(nullptr);
+
+    --m_size;
+}
+
+

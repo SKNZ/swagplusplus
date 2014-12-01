@@ -58,57 +58,17 @@ namespace nsSdD
 
         void assign (unsigned n, const T& val);
 
-        void push_back(const T& x)
-        {
-            CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
-            CNodePtr LastCreated = m_tail->getPrevious();
+        void emplace_front(T val);
 
-            add->setNext(m_tail);
-            add->setPrevious(LastCreated);
+        void push_back(const T& x);
 
-            LastCreated->setNext(add);
-            m_tail->setPrevious(add);
+        void pop_back();
 
-            ++m_size;
-        }
+        void push_front(const T& x);
 
-        void pop_back()
-        {
-            CNodePtr del = m_tail->getPrevious();
-            m_tail->setPrevious(del->getPrevious());
+        void pop_front();
 
-            del->getPrevious()->setNext(m_tail);
 
-            del->setPrevious(nullptr);
-            del->setNext(nullptr);
-
-            --m_size;
-        }
-
-        void push_front(const T& x)
-        {
-            CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
-
-            add->setNext(m_head->getNext());
-            add->setPrevious(m_head);
-            add->getNext()->setPrevious(add);
-            m_head->setNext(add);
-
-            ++m_size;
-        }
-
-        void pop_front()
-        {
-            CNodePtr del = m_head->getNext();
-            m_head->setNext(del->getNext());
-
-            (del->getNext())->setPrevious(m_head);
-
-            del->setPrevious(nullptr);
-            del->setNext(nullptr);
-
-            --m_size;
-        }
 
         class CNode
         {
