@@ -56,6 +56,8 @@ namespace nsSdD
             return m_tail->getNext()->getInfo();
         }
 
+        void assign (unsigned n, const T& val);
+
         class CNode
         {
         private:
@@ -111,6 +113,8 @@ namespace nsSdD
             {
                 m_previous = previous;
             }
+
+
         };
     };
 }

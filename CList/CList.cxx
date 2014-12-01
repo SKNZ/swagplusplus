@@ -65,3 +65,24 @@ CList<T>::CList(const CList<T> &x) noexcept
         CNodePtr temp = std::make_shared<CNode>(p->getInfo(), p->getNext(), p->getPrevious());
     }
 }
+
+template<typename T>
+void CList<T>::assign(unsigned n, const T &val)
+{
+    if (this->size() == 0)
+    {
+        for (size_t i = 0; i < n; i++)
+        {
+            CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
+            CNodePtr LastCreated = m_tail->getPrevious();
+
+            ptr->setNext(m_tail);
+            ptr->setPrevious(LastCreated);
+
+            LastCreated->setNext(ptr);
+            m_tail->setPrevious(ptr);
+
+            ++m_size;
+        }
+    }
+}
