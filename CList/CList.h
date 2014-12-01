@@ -1,3 +1,6 @@
+#ifndef _CLIST_H_
+#define _CLIST_H_
+
 #include <memory>
 
 namespace nsSdD
@@ -111,3 +114,5 @@ namespace nsSdD
         };
     };
 }
+
+#endif
