@@ -17,6 +17,7 @@ namespace nsSdD
         CNodePtr m_head = nullptr;
         CNodePtr m_tail = nullptr;
 
+
     public:
         explicit CList() noexcept;
 
@@ -78,6 +79,13 @@ namespace nsSdD
 
         void clear() noexcept;
 
+        void remove(const T& val );
+
+        void reverse() noexcept;
+
+        template <class Predicate>
+        void remove_if (Predicate pred);
+
         class CNode
         {
         private:
@@ -114,9 +122,9 @@ namespace nsSdD
                 m_info = info;
             }
 
-            inline CNodePtr &getNext()  noexcept
+            inline CNodePtr getNext()  noexcept
             {
-                return m_next;
+                    return m_next;
             }
 
             inline void setNext(CNodePtr &next) noexcept
@@ -124,9 +132,9 @@ namespace nsSdD
                 m_next = next;
             }
 
-            inline CNodePtr &getPrevious()  noexcept
+            inline CNodePtr getPrevious()  noexcept
             {
-                return m_previous;
+                    return m_previous;
             }
 
             inline void setPrevious(CNodePtr &previous) noexcept

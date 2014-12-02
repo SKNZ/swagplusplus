@@ -230,9 +230,8 @@ void CList<T>::swap(nsSdD::CList<T> &x)
 
     size_t tmp = m_size;
     m_size = x.size();
-    /*
-        /!\ resize x /!\
-    */
+
+    x.m_size = this->m_size;
 }
 
 template<typename T>
@@ -242,4 +241,51 @@ void CList<T>::clear()
     m_tail->setPrevious(m_head);
 
     m_size = 0;
+}
+
+template<typename T>
+void CList<T>::remove(const T& val)
+{
+    for (CNodePtr a = m_head; a; a = a->getNext())
+    {
+        if (a->getInfo() == val)
+        {
+            (a->getPrevious())->setNext(a->getNext());
+            (a->getNext())->setPrevious(a->getPrevious());
+            a->setNext(nullptr);
+            a->setPrevious(nullptr);
+            return;
+        }
+    }
+}
+
+template <class Predicate>
+template<typename T>
+void CList<T>::remove_if (Predicate pred)
+{
+    for (CNodePtr a = m_head; a; a = a->getNext())
+    {
+        if (! pred(a))
+        {
+            (a->getPrevious())->setNext(a->getNext());
+            (a->getNext())->setPrevious(a->getPrevious());
+            a->setNext(nullptr);
+            a->setPrevious(nullptr);
+        }
+    }
+}
+
+template<typename T>
+void CList<T>::reverse()
+{
+    //TO CHECK
+    CNodePtr tmp = m_head;
+    CNodePtr tmp2 = m_tail;
+
+    m_tail->setNext(tmp->getNext());
+    m_tail->setPrevious(nullptr);
+
+    m_head->setPrevious(tmp2->getPrevious());
+    m_head->setNext(nullptr);
+
 }
