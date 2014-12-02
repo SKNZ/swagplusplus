@@ -74,9 +74,7 @@ namespace nsSdD
 
         void swap(CList& x);
 
-        void resize (unsigned n);
-
-        void resize (unsigned n, const T& val);
+        void resize (unsigned n, const T& val = T());
 
         void clear() noexcept;
 

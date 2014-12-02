@@ -89,7 +89,7 @@ void CList<T>::assign(unsigned n, const T &val)
 }
 
 template<typename T>
-void CList::emplace_front(T val)
+void CList<T>::emplace_front(T val)
 {
     CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
 
@@ -99,9 +99,12 @@ void CList::emplace_front(T val)
     (m_head->getNext())->setPrevious(ptr);
 
     m_head->setNext(ptr);
+
+    ++m_size;
 }
 
-void CList::pop_front()
+template<typename T>
+void CList<T>::pop_front()
 {
     CNodePtr del = m_head->getNext();
     m_head->setNext(del->getNext());
@@ -115,7 +118,7 @@ void CList::pop_front()
 }
 
 template<typename T>
-void CList::push_front(const T &x)
+void CList<T>::push_front(const T &x)
 {
     CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
 
@@ -128,7 +131,7 @@ void CList::push_front(const T &x)
 }
 
 template<typename T>
-void CList::push_back(const T &x)
+void CList<T>::push_back(const T &x)
 {
     CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
     CNodePtr LastCreated = m_tail->getPrevious();
@@ -142,7 +145,8 @@ void CList::push_back(const T &x)
     ++m_size;
 }
 
-void CList::pop_back()
+template<typename T>
+void CList<T>::pop_back()
 {
     CNodePtr del = m_tail->getPrevious();
     m_tail->setPrevious(del->getPrevious());
@@ -155,4 +159,87 @@ void CList::pop_back()
     --m_size;
 }
 
+template<typename T>
+void CList<T>::emplace(CNodePtr Prec, T val)
+{
+    CNodePtr add = make_shared<CNode>(val, Prec, Prec->getNext());
 
+    Prec->getNext()->setPrevious(add);
+    Prec->setNext(add);
+
+    ++m_size;
+}
+
+template<typename T>
+void CList<T>::erase(CNodePtr del)
+{
+    del->getNext()->setPrevious(del->getPrevious());
+    del->getPrevious()->setNext(del->getNext());
+
+    del->setPrevious(nullptr);
+    del->setNext(nullptr);
+
+    --m_size;
+}
+
+template<typename T>
+void CList<T>::resize(unsigned n, const T& val /*= T()*/)
+{
+    if(m_size == n)
+        return;
+
+    if(m_size > n)
+    {
+        CNodePtr ptr = m_head;
+        for(size_t i = 0; i < n; ++i)
+            ptr = ptr->getNext();
+
+        ptr->setNext(m_tail);
+        m_tail->setPrevious(ptr);
+
+        m_size = n;
+
+        return;
+    }
+
+    CNodePtr ptr = m_head;
+    for(size_t i = 0; i < m_size; ++i)
+        ptr = ptr->getNext();
+
+    for(size_t i = 0; i < n - m_size; ++i)
+    {
+        CNodePtr add = make_shared<CNode>(val, ptr, ptr->getNext());
+        ptr->setNext(add);
+        m_tail->setPrevious(add);
+        ptr = add;
+    }
+
+    m_size = n;
+}
+
+template<typename T>
+void CList<T>::swap(nsSdD::CList<T> &x)
+{
+    CNodePtr ptr = m_head;
+    m_head->setNext(x.getHead()->getNext());
+    x.getHead()->setNext(ptr->getNext());
+
+    ptr = m_tail;
+    m_tail->setPrevious(x.getTail()->getPrevious());
+    x.getTail()->setPrevious(ptr->getPrevious());
+
+    size_t tmp = m_size;
+    m_size = x.size();
+    /*
+        /!\ resize x /!\
+    */
+}
+
+template<typename T>
+void CList<T>::clear()
+{
+    m_head->setNext(m_tail);
+    m_tail->setPrevious(m_head);
+
+    m_size = 0;
+}
