@@ -259,7 +259,8 @@ void CList<T>::remove(const T& val) noexcept
     }
 }
 
-template<class Predicate, typename T>
+template<typename T>
+template<class Predicate>
 void CList<T>::remove_if(Predicate pred) noexcept
 {
     for (CNodePtr a = m_head; a; a = a->getNext())
