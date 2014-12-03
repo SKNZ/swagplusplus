@@ -68,7 +68,7 @@ CList<T>::CList(const CList<T> &x) noexcept
 }
 
 template<typename T>
-void CList<T>::assign(unsigned n, const T &val)
+void CList<T>::assign(unsigned n, const T &val) noexcept
 {
     if (this->size() == 0)
     {
@@ -89,7 +89,7 @@ void CList<T>::assign(unsigned n, const T &val)
 }
 
 template<typename T>
-void CList<T>::emplace_front(T val)
+void CList<T>::emplace_front(T val) noexcept
 {
     CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
 
@@ -104,7 +104,7 @@ void CList<T>::emplace_front(T val)
 }
 
 template<typename T>
-void CList<T>::pop_front()
+void CList<T>::pop_front() noexcept
 {
     CNodePtr del = m_head->getNext();
     m_head->setNext(del->getNext());
@@ -118,7 +118,7 @@ void CList<T>::pop_front()
 }
 
 template<typename T>
-void CList<T>::push_front(const T &x)
+void CList<T>::push_front(const T &x) noexcept
 {
     CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
 
@@ -131,7 +131,7 @@ void CList<T>::push_front(const T &x)
 }
 
 template<typename T>
-void CList<T>::push_back(const T &x)
+void CList<T>::push_back(const T &x) noexcept
 {
     CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
     CNodePtr LastCreated = m_tail->getPrevious();
@@ -146,7 +146,7 @@ void CList<T>::push_back(const T &x)
 }
 
 template<typename T>
-void CList<T>::pop_back()
+void CList<T>::pop_back() noexcept
 {
     CNodePtr del = m_tail->getPrevious();
     m_tail->setPrevious(del->getPrevious());
@@ -160,7 +160,7 @@ void CList<T>::pop_back()
 }
 
 template<typename T>
-void CList<T>::emplace(CNodePtr Prec, T val)
+void CList<T>::emplace(CNodePtr Prec, T val) noexcept
 {
     CNodePtr add = make_shared<CNode>(val, Prec, Prec->getNext());
 
@@ -171,7 +171,7 @@ void CList<T>::emplace(CNodePtr Prec, T val)
 }
 
 template<typename T>
-void CList<T>::erase(CNodePtr del)
+void CList<T>::erase(CNodePtr del) noexcept
 {
     del->getNext()->setPrevious(del->getPrevious());
     del->getPrevious()->setNext(del->getNext());
@@ -183,7 +183,7 @@ void CList<T>::erase(CNodePtr del)
 }
 
 template<typename T>
-void CList<T>::resize(unsigned n, const T& val /*= T()*/)
+void CList<T>::resize(unsigned n, const T& val /*= T()*/) noexcept
 {
     if(m_size == n)
         return;
@@ -218,7 +218,7 @@ void CList<T>::resize(unsigned n, const T& val /*= T()*/)
 }
 
 template<typename T>
-void CList<T>::swap(nsSdD::CList<T> &x)
+void CList<T>::swap(nsSdD::CList<T> &x) noexcept
 {
     CNodePtr ptr = m_head;
     m_head->setNext(x.getHead()->getNext());
@@ -235,7 +235,7 @@ void CList<T>::swap(nsSdD::CList<T> &x)
 }
 
 template<typename T>
-void CList<T>::clear()
+void CList<T>::clear() noexcept
 {
     m_head->setNext(m_tail);
     m_tail->setPrevious(m_head);
@@ -244,7 +244,7 @@ void CList<T>::clear()
 }
 
 template<typename T>
-void CList<T>::remove(const T& val)
+void CList<T>::remove(const T& val) noexcept
 {
     for (CNodePtr a = m_head; a; a = a->getNext())
     {
@@ -259,9 +259,8 @@ void CList<T>::remove(const T& val)
     }
 }
 
-template <class Predicate>
-template<typename T>
-void CList<T>::remove_if (Predicate pred)
+template<class Predicate, typename T>
+void CList<T>::remove_if(Predicate pred) noexcept
 {
     for (CNodePtr a = m_head; a; a = a->getNext())
     {
@@ -276,7 +275,7 @@ void CList<T>::remove_if (Predicate pred)
 }
 
 template<typename T>
-void CList<T>::reverse()
+void CList<T>::reverse() noexcept
 {
     CNodePtr tmp = m_head;
     m_head->setNext(m_tail->getPrevious());

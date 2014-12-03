@@ -57,34 +57,34 @@ namespace nsSdD
             return m_tail->getNext()->getInfo();
         }
 
-        void assign (unsigned n, const T& val);
+        void assign(unsigned n, const T& val) noexcept;
 
-        void emplace_front(T val);
+        void emplace_front(T val) noexcept;
 
-        void push_back(const T& x);
+        void push_back(const T& x) noexcept;
 
-        void pop_back();
+        void pop_back() noexcept;
 
-        void push_front(const T& x);
+        void push_front(const T& x) noexcept;
 
-        void pop_front();
+        void pop_front() noexcept;
 
-        void emplace(CNodePtr Prec , T val);
+        void emplace(CNodePtr Prec , T val) noexcept;
 
-        void erase(CNodePtr del);
+        void erase(CNodePtr del) noexcept;
 
-        void swap(CList& x);
+        void swap(CList& x) noexcept;
 
-        void resize (unsigned n, const T& val = T());
+        void resize(unsigned n, const T& val = T()) noexcept;
 
         void clear() noexcept;
 
-        void remove(const T& val );
+        void remove(const T& val) noexcept;
 
         void reverse() noexcept;
 
-        template <class Predicate>
-        void remove_if (Predicate pred);
+        template<class Predicate>
+        void remove_if(Predicate pred) noexcept;
 
         class CNode
         {
