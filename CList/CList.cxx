@@ -278,14 +278,16 @@ void CList<T>::remove_if (Predicate pred)
 template<typename T>
 void CList<T>::reverse()
 {
-    //TO CHECK
     CNodePtr tmp = m_head;
-    CNodePtr tmp2 = m_tail;
+    m_head->setNext(m_tail->getPrevious());
+    m_tail->setPrevious(tmp->getNext());
 
-    m_tail->setNext(tmp->getNext());
-    m_tail->setPrevious(nullptr);
+    for(size_t i = 0; i < m_size; ++i)
+    {
+        CNodePtr ptr = tmp->getNext()->getPrevious();
+        tmp->getNext()->setPrevious(tmp->getNext()->getNext());
+        tmp->getNext()->setNext(ptr);
 
-    m_head->setPrevious(tmp2->getPrevious());
-    m_head->setNext(nullptr);
-
+        tmp = tmp->getNext();
+    }
 }
