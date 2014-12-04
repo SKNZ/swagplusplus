@@ -214,6 +214,66 @@ namespace nsSdD
 
         };
 
+        class reverse_iterator
+        {
+
+        private:
+            iterator it;
+
+        public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            reverse_iterator(iterator i ) : it(i){}
+            reverse_iterator():it(NULL){}
+            ~const_iterator(){}
+
+            iterator base() const
+            {
+                iterator ittmp = it;
+                return --ittmp;
+            }
+
+            reverse_iterator operator++()
+            {
+                return reverse_iterator(--it);
+            }
+
+            reverse_iterator operator--()
+            {
+                return reverse_iterator(++it);
+            }
+
+            reverse_iterator operator++(int)
+            {
+                reverse_iterator tmp = *this;
+                ++*this;
+                return tmp;
+            }
+
+            reverse_iterator operator--(int)
+            {
+                reverse_iterator tmp = *this;
+                --*this;
+                return tmp;
+            }
+
+            bool operator==(const reverse_iterator & other)
+            {
+                return it == other.it;
+            }
+
+            bool operator!=(const reverse_iterator & other)
+            {
+                return it != other.it;
+            }
+
+        };
+
         iterator begin()
         {
             return iterator(m_head);
@@ -233,6 +293,16 @@ namespace nsSdD
         const_iterator cend() const
         {
             return const_iterator(m_tail);
+        }
+
+        reverse_iterator rbegin()
+        {
+            return reverse_iterator(end());
+        }
+
+        reverse_iterator rend()
+        {
+            return reverse_iterator(begin());
         }
 
         void push_back(const T& x)
