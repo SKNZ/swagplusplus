@@ -132,7 +132,7 @@ namespace nsSdD
 
             T* operator->()
             {
-                return *this;
+                return &this;
             }
 
         };
@@ -209,7 +209,7 @@ namespace nsSdD
 
             const T* operator->()
             {
-                return *this;
+                return &this;
             }
 
         };
@@ -233,16 +233,6 @@ namespace nsSdD
         const_iterator cend() const
         {
             return const_iterator(m_tail);
-        }
-
-        iterator rbegin()
-        {
-            return iterator(m_tail);
-        }
-
-        iterator rend()
-        {
-            return iterator(m_head);
         }
 
         void push_back(const T& x)
