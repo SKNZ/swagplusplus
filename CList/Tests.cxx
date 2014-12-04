@@ -1,5 +1,6 @@
 #include "Tests.h"
 #include "IziAssert.h"
+#include "CList2.h"
 
 #include <memory>
 #include <ctime>
@@ -9,13 +10,14 @@
 
 using namespace nsTests;
 using namespace std;
+using namespace nsSdD;
 
 namespace
 {
     // C++11 c'est bon, mangez en.
     template<typename T> using CCollection = vector<T>;
-    template<typename T> using CTestedList = list<T>;
-    //template<typename T> using CTestedList = CList<T>;
+    //template<typename T> using CTestedList = list<T>;
+    template<typename T> using CTestedList = CList<T>;
 
     int rand(int min, int max)
     {

@@ -63,10 +63,17 @@ namespace nsSdD
 
         class iterator
         {
+
         private:
             CNodePtr node;
 
         public:
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
             iterator(CNodePtr p = nullptr) : node(p){}
             ~iterator(){}
 
@@ -99,7 +106,7 @@ namespace nsSdD
             {
                 if (node->getPrevious() != nullptr)
                 {
-                    node = node->getPrevious()();
+                    node = node->getPrevious();
                 }
                 return(*this);
             }
@@ -118,7 +125,7 @@ namespace nsSdD
                 return(temp);
             }
 
-            T operator*() const
+            T& operator*() const
             {
                 return node->getInfo();
             }
@@ -130,6 +137,82 @@ namespace nsSdD
 
         };
 
+        class const_iterator
+        {
+
+        private:
+            CNodePtr node;
+
+        public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            const_iterator(CNodePtr p = nullptr) : node(p){}
+            ~const_iterator(){}
+
+            const_iterator& operator=(const const_iterator& other)
+            {
+                node = other.node;
+                return (*this);
+            }
+
+            bool operator==(const const_iterator& other)
+            {
+                return(node == other.node);
+            }
+
+            bool operator!=(const const_iterator& other)
+            {
+                return(node != other.node);
+            }
+
+            const_iterator& operator++()
+            {
+                if (node->getNext() != nullptr)
+                {
+                    node = node->getNext();
+                }
+                return(*this);
+            }
+
+            const_iterator& operator--()
+            {
+                if (node->getPrevious() != nullptr)
+                {
+                    node = node->getPrevious();
+                }
+                return(*this);
+            }
+
+            const_iterator& operator++(int)
+            {
+                const_iterator temp(*this);
+                ++(*this);
+                return(temp);
+            }
+
+            const_iterator& operator--(int)
+            {
+                const_iterator temp(*this);
+                --(*this);
+                return(temp);
+            }
+
+            const T operator*() const
+            {
+                return node->getInfo();
+            }
+
+            const T* operator->()
+            {
+                return(&*(CList<T>::const_iterator)*this);
+            }
+
+        };
 
         iterator begin()
         {
@@ -139,6 +222,17 @@ namespace nsSdD
         iterator end()
         {
             return iterator(m_tail);
+        }
+
+
+        const_iterator cbegin() const
+        {
+            return const_iterator(m_head);
+        }
+
+        const_iterator cend() const
+        {
+            return const_iterator(m_tail);
         }
 
         iterator rbegin()
@@ -235,15 +329,6 @@ namespace nsSdD
             }
         };
     };
-
-    template<typename T>
-    int distance(typename CList<T>::iterator first,typename CList<T>::iterator last)
-    {
-        int dist;
-        for (; first != last; ++first)
-            ++dist;
-        return dist;
-    }
 }
 
 
