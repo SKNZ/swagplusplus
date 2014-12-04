@@ -44,7 +44,7 @@ namespace nsSdD
 
         bool empty() const noexcept
         {
-            return m_size;
+            return (bool)m_size;
         }
 
         T &front() noexcept
