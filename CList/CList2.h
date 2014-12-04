@@ -125,14 +125,14 @@ namespace nsSdD
                 return(temp);
             }
 
-            T& operator*() const
+            T operator*() const
             {
                 return node->getInfo();
             }
 
             T* operator->()
             {
-                return &this;
+                return &(operator*());
             }
 
         };
@@ -209,7 +209,7 @@ namespace nsSdD
 
             const T* operator->()
             {
-                return &this;
+                return &(operator*());
             }
 
         };
