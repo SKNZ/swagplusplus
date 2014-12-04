@@ -48,7 +48,7 @@ namespace nsSdD
 
         inline bool empty() const noexcept
         {
-            return m_size;
+            return (bool)m_size;
         }
 
         inline T front() noexcept
@@ -125,7 +125,7 @@ namespace nsSdD
                 return(temp);
             }
 
-            T operator*() const
+            T& operator*() const
             {
                 return node->getInfo();
             }
@@ -230,7 +230,7 @@ namespace nsSdD
 
             reverse_iterator(iterator i ) : it(i){}
             reverse_iterator():it(NULL){}
-            ~const_iterator(){}
+            ~reverse_iterator(){}
 
             iterator base() const
             {
@@ -272,6 +272,76 @@ namespace nsSdD
                 return it != other.it;
             }
 
+            T& operator*() const
+            {
+                return it;
+            }
+
+        };
+
+        class const_reverse_iterator
+        {
+
+            private:
+            iterator it;
+
+            public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            const_reverse_iterator(iterator i ) : it(i){}
+            const_reverse_iterator():it(NULL){}
+            ~const_reverse_iterator(){}
+
+            const_reverse_iterator base() const
+            {
+                const_reverse_iterator ittmp = it;
+                return --ittmp;
+            }
+
+            const_reverse_iterator operator++()
+            {
+                return const_reverse_iterator(--it);
+            }
+
+            const_reverse_iterator operator--()
+            {
+                return const_reverse_iterator(++it);
+            }
+
+            const_reverse_iterator operator++(int)
+            {
+                const_reverse_iterator tmp = *this;
+                ++*this;
+                return tmp;
+            }
+
+            const_reverse_iterator operator--(int)
+            {
+                const_reverse_iterator tmp = *this;
+                --*this;
+                return tmp;
+            }
+
+            bool operator==(const const_reverse_iterator & other)
+            {
+                return it == other.it;
+            }
+
+            bool operator!=(const const_reverse_iterator & other)
+            {
+                return it != other.it;
+            }
+
+            const T& operator*() const
+            {
+                return it;
+            }
+
         };
 
         iterator begin()
@@ -283,7 +353,6 @@ namespace nsSdD
         {
             return iterator(m_tail);
         }
-
 
         const_iterator cbegin() const
         {
@@ -303,6 +372,16 @@ namespace nsSdD
         reverse_iterator rend()
         {
             return reverse_iterator(begin());
+        }
+
+        const_reverse_iterator crbegin()
+        {
+            return const_reverse_iterator(end());
+        }
+
+        const_reverse_iterator crend()
+        {
+            return const_reverse_iterator(begin());
         }
 
         void push_back(const T& x)
