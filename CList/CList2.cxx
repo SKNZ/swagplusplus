@@ -310,3 +310,15 @@ void CList<T>::reverse() noexcept
         tmp = tmp->getNext();
     }
 }
+
+template<typename T>
+void CList::emplace_back(T val)
+{
+    //TODO
+}
+
+template<typename T>
+CList::iterator CList::insert(CList::const_iterator position, T const &val)
+{
+    //TODO
+}

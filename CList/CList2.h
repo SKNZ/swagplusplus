@@ -41,26 +41,6 @@ namespace nsSdD
             return m_tail;
         }
 
-        inline size_t size() const noexcept
-        {
-            return m_size;
-        }
-
-        inline bool empty() const noexcept
-        {
-            return (bool)m_size;
-        }
-
-        inline T front() noexcept
-        {
-            return m_head->getNext()->getInfo();
-        }
-
-        inline T back() noexcept
-        {
-            return m_tail->getNext()->getInfo();
-        }
-
         class iterator
         {
 
@@ -344,6 +324,8 @@ namespace nsSdD
 
         };
 
+        // Iterators
+
         iterator begin()
         {
             return iterator(m_head);
@@ -352,16 +334,6 @@ namespace nsSdD
         iterator end()
         {
             return iterator(m_tail);
-        }
-
-        const_iterator cbegin() const
-        {
-            return const_iterator(m_head);
-        }
-
-        const_iterator cend() const
-        {
-            return const_iterator(m_tail);
         }
 
         reverse_iterator rbegin()
@@ -374,6 +346,16 @@ namespace nsSdD
             return reverse_iterator(begin());
         }
 
+        const_iterator cbegin() const
+        {
+            return const_iterator(m_head);
+        }
+
+        const_iterator cend() const
+        {
+            return const_iterator(m_tail);
+        }
+
         const_reverse_iterator crbegin()
         {
             return const_reverse_iterator(end());
@@ -384,22 +366,52 @@ namespace nsSdD
             return const_reverse_iterator(begin());
         }
 
+        // Capacity
+
+        inline bool empty() const noexcept
+        {
+            return (bool)m_size;
+        }
+
+        inline size_t size() const noexcept
+        {
+            return m_size;
+        }
+
+        // Element access
+
+        inline T front() noexcept
+        {
+            return m_head->getNext()->getInfo();
+        }
+
+        inline T back() noexcept
+        {
+            return m_tail->getNext()->getInfo();
+        }
+
+        // Modifiers
+
         void assign(unsigned n, const T& val) noexcept;
 
         template <class InputIterator>
         void assign(InputIterator first, InputIterator last);
 
-        void emplace_front(T val) noexcept;
+        void emplace_back(T val) noexcept;
 
         void push_back(const T& x) noexcept;
 
         void pop_back() noexcept;
+
+        void emplace_front(T val) noexcept;
 
         void push_front(const T& x) noexcept;
 
         void pop_front() noexcept;
 
         void emplace(CNodePtr Prec , T val) noexcept;
+
+        iterator insert (const_iterator position, const T& val);
 
         void erase(CNodePtr del) noexcept;
 
@@ -409,12 +421,14 @@ namespace nsSdD
 
         void clear() noexcept;
 
-        void remove(const T& val) noexcept;
+        // Operations
 
-        void reverse() noexcept;
+        void remove(const T& val) noexcept;
 
         template<class Predicate>
         void remove_if(Predicate pred) noexcept;
+
+        void reverse() noexcept;
 
     private:
 
