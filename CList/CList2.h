@@ -132,7 +132,7 @@ namespace nsSdD
 
             T* operator->()
             {
-                return(&*(CList<T>::iterator)*this);
+                return *this;
             }
 
         };
@@ -209,7 +209,7 @@ namespace nsSdD
 
             const T* operator->()
             {
-                return(&*(CList<T>::const_iterator)*this);
+                return *this;
             }
 
         };
