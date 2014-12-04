@@ -384,30 +384,34 @@ namespace nsSdD
             return const_reverse_iterator(begin());
         }
 
-        void push_back(const T& x)
-        {
-            CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
-            CNodePtr LastCreated = m_tail->getPrevious();
+        void assign(unsigned n, const T& val) noexcept;
 
-            add->setNext(m_tail);
-            add->setPrevious(LastCreated);
+        void emplace_front(T val) noexcept;
 
-            LastCreated->setNext(add);
-            m_tail->setPrevious(add);
+        void push_back(const T& x) noexcept;
 
-            ++m_size;
-        }
+        void pop_back() noexcept;
 
-        void pop_front()
-        {
-            CNodePtr del = m_head->getNext();
-            m_head->setNext(del->getNext());
+        void push_front(const T& x) noexcept;
 
-            (del->getNext())->setPrevious(m_head);
+        void pop_front() noexcept;
 
-            del->setPrevious(nullptr);
-            del->setNext(nullptr);
-        }
+        void emplace(CNodePtr Prec , T val) noexcept;
+
+        void erase(CNodePtr del) noexcept;
+
+        void swap(CList& x) noexcept;
+
+        void resize(unsigned n, const T& val = T()) noexcept;
+
+        void clear() noexcept;
+
+        void remove(const T& val) noexcept;
+
+        void reverse() noexcept;
+
+        template<class Predicate>
+        void remove_if(Predicate pred) noexcept;
 
     private:
 

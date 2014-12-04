@@ -17,7 +17,6 @@ namespace nsSdD
         CNodePtr m_head = nullptr;
         CNodePtr m_tail = nullptr;
 
-
     public:
         explicit CList() noexcept;
 
