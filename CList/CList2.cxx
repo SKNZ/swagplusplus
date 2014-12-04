@@ -88,6 +88,26 @@ void CList<T>::assign(unsigned n, const T &val) noexcept
 }
 
 template<typename T>
+template<class InputIterator>
+void CList<T>::assign(InputIterator first, InputIterator last)
+{
+    CNodePtr prec = m_head;
+    for(InputIterator tmp = first; tmp <= last; ++tmp)
+    {
+        prec->setNext(tmp);
+
+        CNodePtr add = new CNode(*tmp);
+        add->setPrevious(prec);
+        add->setNext(prec->getNext());
+
+        m_tail->setPrevious(add);
+
+        ++m_size;
+        prec = add;
+    }
+}
+
+template<typename T>
 void CList<T>::emplace_front(T val) noexcept
 {
     CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);

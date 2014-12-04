@@ -386,6 +386,9 @@ namespace nsSdD
 
         void assign(unsigned n, const T& val) noexcept;
 
+        template <class InputIterator>
+        void assign(InputIterator first, InputIterator last);
+
         void emplace_front(T val) noexcept;
 
         void push_back(const T& x) noexcept;
