@@ -629,7 +629,7 @@ namespace
         CreateListByImplicitCopy<T>();
 
         Iterate<T>();
-//        ConstIterate<T>();
+        ConstIterate<T>();
 //        ReverseIterate<T>();
 //        ReverseConstIterate<T>();
 

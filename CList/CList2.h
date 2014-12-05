@@ -343,17 +343,17 @@ namespace nsSdD
 
         reverse_iterator rbegin()
         {
-            return reverse_iterator(end());
+            return CList::reverse_iterator(m_tail->getPrevious());
         }
 
         reverse_iterator rend()
         {
-            return reverse_iterator(begin());
+            return CList::reverse_iterator(m_head);
         }
 
         const_iterator cbegin() const
         {
-            return const_iterator(m_head);
+            return const_iterator(m_head->getNext());
         }
 
         const_iterator cend() const
@@ -363,12 +363,12 @@ namespace nsSdD
 
         const_reverse_iterator crbegin()
         {
-            return const_reverse_iterator(end());
+            return const_reverse_iterator(m_tail->getPrevious());
         }
 
         const_reverse_iterator crend()
         {
-            return const_reverse_iterator(begin());
+            return const_reverse_iterator(m_head);
         }
 
         // Capacity
