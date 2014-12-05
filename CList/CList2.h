@@ -327,12 +327,12 @@ namespace nsSdD
 
         iterator begin()
         {
-            return iterator(m_head);
+            return iterator(m_head->getNext() == m_tail ? nullptr : m_head->getNext());
         }
 
         iterator end()
         {
-            return iterator(m_tail);
+            return iterator(m_tail->getPrevious() == m_head ? nullptr : m_tail->getPrevious());
         }
 
         reverse_iterator rbegin()
@@ -369,7 +369,7 @@ namespace nsSdD
 
         inline bool empty() const noexcept
         {
-            return (bool)m_size;
+            return m_size == 0;
         }
 
         inline size_t size() const noexcept
