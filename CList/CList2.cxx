@@ -312,7 +312,7 @@ void CList<T>::reverse() noexcept
 }
 
 template<typename T>
-void CList::emplace_back(T val)
+void CList<T>::emplace_back(T val) noexcept
 {
     CNodePtr a = make_shared<CNode>(val,m_tail->getPrevious(),m_tail);
     (m_tail->getPrevious())->setNext(a);
@@ -322,7 +322,7 @@ void CList::emplace_back(T val)
 }
 
 template<typename T>
-CList::iterator CList::insert(CList::const_iterator position, T const &val)
+typename CList<T>::iterator CList<T>::insert(typename CList<T>::const_iterator position, T const &val) noexcept
 {
     CNodePtr tmp = make_shared<CNode>(val);
     tmp->setNext(*position);

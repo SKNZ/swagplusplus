@@ -142,7 +142,7 @@ namespace nsSdD
 
             bool operator==(const const_iterator& other)
             {
-                return(node == other.node);
+                return node == other.node;
             }
 
             bool operator!=(const const_iterator& other)
@@ -411,7 +411,7 @@ namespace nsSdD
 
         void emplace(CNodePtr Prec , T val) noexcept;
 
-        iterator insert (const_iterator position, const T& val);
+        iterator insert (const_iterator position, const T& val) noexcept;
 
         void erase(CNodePtr del) noexcept;
 
