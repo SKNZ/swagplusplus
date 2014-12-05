@@ -647,11 +647,11 @@ namespace
 //        EmplaceBack<T>();
 //        Emplace<T>();
 
-//        PushFront<T>();
-//        PushBack<T>();
+        PushFront<T>();
+        PushBack<T>();
 
-//        PopFront<T>();
-//        PopBack<T>();
+        PopFront<T>();
+        PopBack<T>();
 
 //        Insert<T>();
 //        InsertByIterator<T>();
