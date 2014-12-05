@@ -614,6 +614,27 @@ namespace
     }
 
     template<typename T>
+    void Swap() noexcept
+    {
+        const int listSize = 20;
+
+        CTestedList<T> list1(listSize / 2), list2(listSize / 2);
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        copy(data.cbegin(), data.cbegin() + listSize / 2, list1.begin());
+        copy(data.cbegin() + listSize / 2, data.cend(), list2.begin());
+
+        list1.swap(list2);
+
+        for (auto itr = list1.cbegin(); itr != list1.cend(); ++itr)
+            IZI_ASSERT(*itr == data[listSize / 2 + distance(list1.cbegin(), itr)]);
+
+        for (auto itr = list2.cbegin(); itr != list2.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list2.cbegin(), itr)]);
+
+    }
+
+    template<typename T>
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
@@ -656,6 +677,8 @@ namespace
             InsertByValue<T>(x);
 
         Erase<T>();
+
+        Swap<T>();
     }
 }
 
