@@ -182,14 +182,14 @@ namespace nsSdD
                 return(temp);
             }
 
-            const T operator*() const
+            const CNodePtr operator*() const
             {
-                return node->getInfo();
+                return node;
             }
 
-            const T* operator->()
+            const CNodePtr operator->()
             {
-                return &(operator*());
+                return &(node);
             }
 
         };
