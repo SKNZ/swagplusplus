@@ -392,7 +392,7 @@ namespace nsSdD
 
         inline T back() noexcept
         {
-            return m_tail->getNext()->getInfo();
+            return m_tail->getPrevious()->getInfo();
         }
 
         // Modifiers
