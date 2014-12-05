@@ -127,14 +127,23 @@ template<typename T>
 void NSCLIST::pop_front() noexcept
 {
     CNodePtr del = m_head->getNext();
-    m_head->setNext(del->getNext());
+    if(del != m_tail)
+    {
+        CNodePtr a = del->getNext();
+        m_head->setNext(a);
 
-    (del->getNext())->setPrevious(m_head);
+        a->setPrevious(m_head);
 
-    del->setPrevious(nullptr);
-    del->setNext(nullptr);
+        del->setPrevious(nullptr);
+        del->setNext(nullptr);
 
-    --m_size;
+        --m_size;
+    }
+    else
+    {
+        m_size = 0;
+    }
+
 }
 
 template<typename T>
@@ -251,7 +260,7 @@ void NSCLIST::swap(NSCLIST &x) noexcept
     size_t tmp = m_size;
     m_size = x.size();
 
-    x.m_size = this->m_size;
+    x.m_size = tmp;
 }
 
 template<typename T>

@@ -231,7 +231,7 @@ void CList<T>::swap(nsSdD::CList<T> &x) noexcept
     size_t tmp = m_size;
     m_size = x.size();
 
-    x.m_size = this->m_size;
+    x.m_size = tmp;
 }
 
 template<typename T>

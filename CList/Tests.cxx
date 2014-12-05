@@ -248,7 +248,7 @@ namespace
         {
             int i = distance(list.begin(), begin);
             IZI_ASSERT(originalData[i] == *begin);
-            *begin = newData[i];
+            begin = newData[i];
             IZI_ASSERT(newData[i] == *begin);
         }
 
@@ -270,6 +270,7 @@ namespace
 
         for (; cbegin != cend; ++cbegin)
             IZI_ASSERT(t[distance(list.cbegin(), cbegin)] == *cbegin);
+
 
         IZI_ASSERT(cbegin == cend);
     }
@@ -619,15 +620,15 @@ namespace
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
-//        CreateSizedList<T>();
+        CreateSizedList<T>();
 
-//        for (T x : CValueProvider<T>()(5))
-//            CreateSizeListWithValue<T>(x);
+        for (T x : CValueProvider<T>()(5))
+            CreateSizeListWithValue<T>(x);
 //
-//        CreateListByExplicitCopy<T>();
-//        CreateListByImplicitCopy<T>();
+        CreateListByExplicitCopy<T>();
+        CreateListByImplicitCopy<T>();
 //
-//        Iterate<T>();
+        Iterate<T>();
 //        ConstIterate<T>();
 //        ReverseIterate<T>();
 //        ReverseConstIterate<T>();

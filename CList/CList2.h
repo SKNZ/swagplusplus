@@ -62,6 +62,12 @@ namespace nsSdD
                 return (*this);
             }
 
+            iterator& operator=(const T& other)
+            {
+                node->setInfo(other);
+                return (*this);
+            }
+
             bool operator==(const iterator& other)
             {
                 return(node == other.node);
@@ -109,9 +115,9 @@ namespace nsSdD
                 return node->getInfo();
             }
 
-            T* operator->()
+            const CNodePtr operator->()
             {
-                return &(operator*());
+                return &(node);
             }
 
         };
@@ -181,9 +187,9 @@ namespace nsSdD
                 return(temp);
             }
 
-            const CNodePtr operator*() const
+            const T operator*() const
             {
-                return node;
+                return node->getInfo();
             }
 
             const CNodePtr operator->()
@@ -327,12 +333,12 @@ namespace nsSdD
 
         iterator begin()
         {
-            return iterator(m_head->getNext() == m_tail ? nullptr : m_head->getNext());
+            return iterator(m_head->getNext());
         }
 
         iterator end()
         {
-            return iterator(m_tail->getPrevious() == m_head ? nullptr : m_tail->getPrevious());
+            return iterator(m_tail);
         }
 
         reverse_iterator rbegin()
@@ -457,7 +463,7 @@ namespace nsSdD
             {
             }
 
-            inline T getInfo() const noexcept
+            inline T getInfo() noexcept
             {
                 return m_info;
             }
