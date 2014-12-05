@@ -105,7 +105,7 @@ namespace nsSdD
                 return(temp);
             }
 
-            T& operator*() const
+            T operator*() const
             {
                 return node->getInfo();
             }
@@ -252,7 +252,7 @@ namespace nsSdD
                 return it != other.it;
             }
 
-            T& operator*() const
+            iterator& operator*() const
             {
                 return it;
             }
@@ -411,9 +411,9 @@ namespace nsSdD
 
         void emplace(CNodePtr Prec , T val) noexcept;
 
-        iterator insert (const_iterator position, const T& val) noexcept;
+        iterator insert (iterator position, const T& val) noexcept;
 
-        void erase(CNodePtr del) noexcept;
+        void erase(iterator it) noexcept;
 
         void swap(CList& x) noexcept;
 

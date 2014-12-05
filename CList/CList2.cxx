@@ -190,7 +190,7 @@ void CList<T>::emplace(CNodePtr Prec, T val) noexcept
 }
 
 template<typename T>
-void CList<T>::erase(CNodePtr del) noexcept
+void CList<T>::erase(iterator del) noexcept
 {
     del->getNext()->setPrevious(del->getPrevious());
     del->getPrevious()->setNext(del->getNext());
@@ -322,7 +322,7 @@ void CList<T>::emplace_back(T val) noexcept
 }
 
 template<typename T>
-typename CList<T>::iterator CList<T>::insert(typename CList<T>::const_iterator position, T const &val) noexcept
+typename CList<T>::iterator CList<T>::insert(typename CList<T>::iterator position, T const &val) noexcept
 {
     CNodePtr tmp = make_shared<CNode>(val);
     tmp->setNext(*position);
