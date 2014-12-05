@@ -619,45 +619,45 @@ namespace
     void RunTemplatedTests() noexcept
     {
         CreateEmptyList<T>();
-        CreateSizedList<T>();
+//        CreateSizedList<T>();
 
-        for (T x : CValueProvider<T>()(5))
-            CreateSizeListWithValue<T>(x);
-
-        CreateListByExplicitCopy<T>();
-        CreateListByImplicitCopy<T>();
-
-        Iterate<T>();
-        ConstIterate<T>();
-        ReverseIterate<T>();
-        ReverseConstIterate<T>();
-
-        IsEmpty<T>();
-        Size<T>();
-
-        Front<T>();
-        Back<T>();
-
-        AssignByIterator<T>();
-        for (T x : CValueProvider<T>()(5))
-            AssignByValue(x);
-
-        //EmplaceFront<T>();
-        //EmplaceBack<T>();
-        //Emplace<T>();
-
-        PushFront<T>();
-        PushBack<T>();
-
-        PopFront<T>();
-        PopBack<T>();
-
-        Insert<T>();
-        InsertByIterator<T>();
-        for (T x : CValueProvider<T>()(5))
-            InsertByValue<T>(x);
-
-        Erase<T>();
+//        for (T x : CValueProvider<T>()(5))
+//            CreateSizeListWithValue<T>(x);
+//
+//        CreateListByExplicitCopy<T>();
+//        CreateListByImplicitCopy<T>();
+//
+//        Iterate<T>();
+//        ConstIterate<T>();
+//        ReverseIterate<T>();
+//        ReverseConstIterate<T>();
+//
+//        IsEmpty<T>();
+//        Size<T>();
+//
+//        Front<T>();
+//        Back<T>();
+//
+//        AssignByIterator<T>();
+//        for (T x : CValueProvider<T>()(5))
+//            AssignByValue(x);
+//
+//        EmplaceFront<T>();
+//        EmplaceBack<T>();
+//        Emplace<T>();
+//
+//        PushFront<T>();
+//        PushBack<T>();
+//
+//        PopFront<T>();
+//        PopBack<T>();
+//
+//        Insert<T>();
+//        InsertByIterator<T>();
+//        for (T x : CValueProvider<T>()(5))
+//            InsertByValue<T>(x);
+//
+//        Erase<T>();
     }
 }
 

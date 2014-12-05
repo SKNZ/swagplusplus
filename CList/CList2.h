@@ -4,7 +4,6 @@
 #include <iterator>
 #include <memory>
 
-
 namespace nsSdD
 {
     template<typename T>
@@ -491,6 +490,6 @@ namespace nsSdD
     };
 }
 
-
+#include "CList2.hxx"
 
 #endif
