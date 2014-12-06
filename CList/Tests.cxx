@@ -575,7 +575,7 @@ namespace
     template<typename T>
     void InsertByValue(const T& x) noexcept
     {
-        const int listSize = rand(0, 20);
+        const unsigned listSize = rand(0, 20);
         CTestedList<T> list;
 
         list.assign(listSize, x);
@@ -658,8 +658,8 @@ namespace
 
         Insert<T>();
         InsertByIterator<T>();
-//        for (T x : CValueProvider<T>()(5))
-//            InsertByValue<T>(x);
+        for (T x : CValueProvider<T>()(5))
+            InsertByValue<T>(x);
 
         Erase<T>();
     }
