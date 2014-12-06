@@ -4,7 +4,6 @@
 #include <iterator>
 #include <memory>
 
-
 namespace nsSdD
 {
     template<typename T>
@@ -41,38 +40,31 @@ namespace nsSdD
             return m_tail;
         }
 
-        inline size_t size() const noexcept
-        {
-            return m_size;
-        }
-
-        inline bool empty() const noexcept
-        {
-            return m_size;
-        }
-
-        inline T front() noexcept
-        {
-            return m_head->getNext()->getInfo();
-        }
-
-        inline T back() noexcept
-        {
-            return m_tail->getNext()->getInfo();
-        }
-
         class iterator
         {
+
         private:
             CNodePtr node;
 
         public:
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
             iterator(CNodePtr p = nullptr) : node(p){}
             ~iterator(){}
 
             iterator& operator=(const iterator& other)
             {
                 node = other.node;
+                return (*this);
+            }
+
+            iterator& operator=(const T& other)
+            {
+                node->setInfo(other);
                 return (*this);
             }
 
@@ -99,7 +91,7 @@ namespace nsSdD
             {
                 if (node->getPrevious() != nullptr)
                 {
-                    node = node->getPrevious()();
+                    node = node->getPrevious();
                 }
                 return(*this);
             }
@@ -118,22 +110,242 @@ namespace nsSdD
                 return(temp);
             }
 
-            T operator*() const
+            T& operator*() const
             {
-                return node->getInfo();
+                return  node->m_info;
             }
 
-            T* operator->()
+            const CNodePtr operator->()
             {
-                return(&*(CList<T>::iterator)*this);
+                return (node);
+            }
+
+            CNodePtr getNode()
+            {
+                return node;
             }
 
         };
 
+        class const_iterator
+        {
+
+        private:
+            CNodePtr node;
+
+        public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            const_iterator(CNodePtr p = nullptr) : node(p){}
+            ~const_iterator(){}
+
+            const_iterator& operator=(const const_iterator& other)
+            {
+                node = other.node;
+                return (*this);
+            }
+
+            bool operator==(const const_iterator& other)
+            {
+                return node == other.node;
+            }
+
+            bool operator!=(const const_iterator& other)
+            {
+                return(node != other.node);
+            }
+
+            const_iterator& operator++()
+            {
+               // if (node->getNext() != nullptr)
+                {
+                    node = node->getNext();
+                }
+                return(*this);
+            }
+
+            const_iterator& operator--()
+            {
+                if (node->getPrevious() != nullptr)
+                {
+                    node = node->getPrevious();
+                }
+                return(*this);
+            }
+
+            const_iterator& operator++(int)
+            {
+                const_iterator temp(*this);
+                ++(*this);
+                return(temp);
+            }
+
+            const_iterator& operator--(int)
+            {
+                const_iterator temp(*this);
+                --(*this);
+                return(temp);
+            }
+
+            const T operator*() const
+            {
+                return node->getInfo();
+            }
+
+            const CNodePtr operator->()
+            {
+                return node;
+            }
+
+        };
+
+        class reverse_iterator
+        {
+
+        private:
+            iterator it;
+
+        public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            reverse_iterator(iterator i ) : it(i){}
+            reverse_iterator():it(NULL){}
+            ~reverse_iterator(){}
+
+            iterator base() const
+            {
+                iterator ittmp = it;
+                return --ittmp;
+            }
+
+            reverse_iterator operator++()
+            {
+                return reverse_iterator(--it);
+            }
+
+            reverse_iterator operator--()
+            {
+                return reverse_iterator(++it);
+            }
+
+            reverse_iterator operator++(int)
+            {
+                reverse_iterator tmp = *this;
+                ++*this;
+                return tmp;
+            }
+
+            reverse_iterator operator--(int)
+            {
+                reverse_iterator tmp = *this;
+                --*this;
+                return tmp;
+            }
+
+            bool operator==(const reverse_iterator & other)
+            {
+                return it == other.it;
+            }
+
+            bool operator!=(const reverse_iterator & other)
+            {
+                return it != other.it;
+            }
+
+            T& operator*() const
+            {
+                return *it;
+            }
+
+            reverse_iterator& operator=(const T& other)
+            {
+                it->setInfo(other);
+                return (*this);
+            }
+
+
+        };
+
+        class const_reverse_iterator
+        {
+
+            private:
+            const_iterator it;
+
+            public:
+
+            typedef std::forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef int difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            const_reverse_iterator(const_iterator i ) : it(i){}
+            const_reverse_iterator():it(NULL){}
+            ~const_reverse_iterator(){}
+
+            const_reverse_iterator base() const
+            {
+                const_reverse_iterator ittmp = it;
+                return --ittmp;
+            }
+
+            const_reverse_iterator operator++()
+            {
+                return const_reverse_iterator(--it);
+            }
+
+            const_reverse_iterator operator--()
+            {
+                return const_reverse_iterator(++it);
+            }
+
+            const_reverse_iterator operator++(int)
+            {
+                const_reverse_iterator tmp = *this;
+                ++*this;
+                return tmp;
+            }
+
+            const_reverse_iterator operator--(int)
+            {
+                const_reverse_iterator tmp = *this;
+                --*this;
+                return tmp;
+            }
+
+            bool operator==(const const_reverse_iterator & other)
+            {
+                return it == other.it;
+            }
+
+            bool operator!=(const const_reverse_iterator & other)
+            {
+                return it != other.it;
+            }
+
+            const T operator*() const
+            {
+                return *it;
+            }
+
+        };
+
+        // Iterators
 
         iterator begin()
         {
-            return iterator(m_head);
+            return iterator(m_head->getNext());
         }
 
         iterator end()
@@ -141,47 +353,109 @@ namespace nsSdD
             return iterator(m_tail);
         }
 
-        iterator rbegin()
+        reverse_iterator rbegin()
         {
-            return iterator(m_tail);
+            return CList::reverse_iterator(m_tail->getPrevious());
         }
 
-        iterator rend()
+        reverse_iterator rend()
         {
-            return iterator(m_head);
+            return CList::reverse_iterator(m_head);
         }
 
-        void push_back(const T& x)
+        const_iterator cbegin() const
         {
-            CNodePtr add = std::make_shared<CNode>(x, nullptr, nullptr);
-            CNodePtr LastCreated = m_tail->getPrevious();
-
-            add->setNext(m_tail);
-            add->setPrevious(LastCreated);
-
-            LastCreated->setNext(add);
-            m_tail->setPrevious(add);
-
-            ++m_size;
+            return const_iterator(m_head->getNext());
         }
 
-        void pop_front()
+        const_iterator cend() const
         {
-            CNodePtr del = m_head->getNext();
-            m_head->setNext(del->getNext());
-
-            (del->getNext())->setPrevious(m_head);
-
-            del->setPrevious(nullptr);
-            del->setNext(nullptr);
+            return const_iterator(m_tail->getPrevious());
         }
+
+        const_reverse_iterator crbegin()
+        {
+            return const_reverse_iterator(m_tail->getPrevious());
+        }
+
+        const_reverse_iterator crend()
+        {
+            return const_reverse_iterator(m_head);
+        }
+
+        // Capacity
+
+        inline bool empty() const noexcept
+        {
+            return m_size == 0;
+        }
+
+        inline size_t size() const noexcept
+        {
+            return m_size;
+        }
+
+        // Element access
+
+        inline T front() noexcept
+        {
+            return m_head->getNext()->getInfo();
+        }
+
+        inline T back() noexcept
+        {
+            return m_tail->getPrevious()->getInfo();
+        }
+
+        // Modifiers
+
+        void assign(unsigned n, const T& val) noexcept;
+
+        template <class InputIterator>
+        void assign(InputIterator first, InputIterator last);
+
+        void emplace_back(T val) noexcept;
+
+        void push_back(const T& x) noexcept;
+
+        void pop_back() noexcept;
+
+        template <class... Args>
+        void emplace_front(Args&&... val) noexcept;
+
+        void push_front(const T& x) noexcept;
+
+        void pop_front() noexcept;
+
+        void emplace(CNodePtr Prec , T val) noexcept;
+
+        iterator insert (iterator position, const T& val) noexcept;
+
+        iterator erase(iterator del) noexcept;
+
+        void swap(CList& x) noexcept;
+
+        void resize(unsigned n, const T& val = T()) noexcept;
+
+        void clear() noexcept;
+
+        // Operations
+
+        void remove(const T& val) noexcept;
+
+        template<class Predicate>
+        void remove_if(Predicate pred) noexcept;
+
+        void reverse() noexcept;
 
     private:
 
         class CNode
         {
-        private:
+        public:
             T m_info;
+        private:
+
             CNodePtr m_next;
             CNodePtr m_previous;
 
@@ -204,7 +478,7 @@ namespace nsSdD
             {
             }
 
-            inline T getInfo() const noexcept
+            inline T getInfo() noexcept
             {
                 return m_info;
             }
@@ -235,17 +509,8 @@ namespace nsSdD
             }
         };
     };
-
-    template<typename T>
-    int distance(typename CList<T>::iterator first,typename CList<T>::iterator last)
-    {
-        int dist;
-        for (; first != last; ++first)
-            ++dist;
-        return dist;
-    }
 }
 
-
+#include "CList2.hxx"
 
 #endif
