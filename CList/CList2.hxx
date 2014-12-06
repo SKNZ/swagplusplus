@@ -67,6 +67,31 @@ NSCLIST::CList(const NSCLIST &x) noexcept
     }
 }
 
+
+template<typename T>
+template<class InputIterator>
+void NSCLIST::assign(InputIterator first, InputIterator last)
+{
+    CNodePtr prec = m_head;
+    m_size = 0;
+    for (auto tmp = first; tmp < last; tmp++)
+    {
+        CNodePtr add = std::make_shared<CNode>(*tmp);
+
+        prec->setNext(add);
+
+        add->setPrevious(prec);
+        add->setNext(prec->getNext());
+
+        m_tail->setPrevious(add);
+
+        ++m_size;
+        prec = add;
+
+    }
+    m_tail->setPrevious(prec);
+}
+
 template<typename T>
 void NSCLIST::assign(unsigned n, const T &val) noexcept
 {
@@ -88,28 +113,8 @@ void NSCLIST::assign(unsigned n, const T &val) noexcept
     }
 }
 
-template<typename T>
-template<class InputIterator>
-void NSCLIST::assign(InputIterator first, InputIterator last)
-{
-    CNodePtr prec = m_head;
-    for (InputIterator tmp = first; tmp <= last; ++tmp)
-    {
-        prec->setNext(tmp);
-
-        CNodePtr add = new CNode(*tmp);
-        add->setPrevious(prec);
-        add->setNext(prec->getNext());
-
-        m_tail->setPrevious(add);
-
-        ++m_size;
-        prec = add;
-    }
-}
-
-template<typename T>
-void NSCLIST::emplace_front(T val) noexcept
+template <class... Args>
+void NSCLIST::emplace_front(Args&& val) noexcept
 {
     CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
 

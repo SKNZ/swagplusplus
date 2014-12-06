@@ -298,7 +298,7 @@ namespace
         {
             int i = distance(list.rbegin(), rbegin);
             IZI_ASSERT(originalData[i] == *rbegin);
-            *rbegin = newData[i];
+            rbegin = newData[i];
             IZI_ASSERT(newData[i] == *rbegin);
         }
 
@@ -389,13 +389,16 @@ namespace
         IZI_ASSERT(data.size() == list.size());
 
         for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
             IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+        }
+
     }
 
     template<typename T>
     void AssignByValue(const T& x) noexcept
     {
-        const int listSize = 10;
+        const unsigned listSize = 10;
 
         CTestedList<T> list;
         list.assign(listSize, x);
@@ -412,7 +415,7 @@ namespace
         CCollection<T> data = CValueProvider<T>()();
 
         for (T x : data)
-            list.emplace_front(x, x);
+            list.emplace_front(x,x);
 
         reverse(list.begin(), list.end());
 
@@ -630,8 +633,8 @@ namespace
 
         Iterate<T>();
         ConstIterate<T>();
-//        ReverseIterate<T>();
-//        ReverseConstIterate<T>();
+        ReverseIterate<T>();
+        ReverseConstIterate<T>();
 
         IsEmpty<T>();
         Size<T>();
@@ -639,9 +642,9 @@ namespace
         Front<T>();
         Back<T>();
 
-//        AssignByIterator<T>();
-//        for (T x : CValueProvider<T>()(5))
-//            AssignByValue(x);
+        AssignByIterator<T>();
+        for (T x : CValueProvider<T>()(5))
+            AssignByValue(x);
 
 //        EmplaceFront<T>();
 //        EmplaceBack<T>();

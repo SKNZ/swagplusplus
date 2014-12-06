@@ -117,7 +117,7 @@ namespace nsSdD
 
             const CNodePtr operator->()
             {
-                return &(node);
+                return (node);
             }
 
         };
@@ -157,7 +157,7 @@ namespace nsSdD
 
             const_iterator& operator++()
             {
-                if (node->getNext() != nullptr)
+               // if (node->getNext() != nullptr)
                 {
                     node = node->getNext();
                 }
@@ -194,7 +194,7 @@ namespace nsSdD
 
             const CNodePtr operator->()
             {
-                return &(node);
+                return node;
             }
 
         };
@@ -257,10 +257,17 @@ namespace nsSdD
                 return it != other.it;
             }
 
-            iterator& operator*() const
+            T operator*() const
             {
-                return it;
+                return *it;
             }
+
+            reverse_iterator& operator=(const T& other)
+            {
+                it->setInfo(other);
+                return (*this);
+            }
+
 
         };
 
@@ -268,7 +275,7 @@ namespace nsSdD
         {
 
             private:
-            iterator it;
+            const_iterator it;
 
             public:
 
@@ -278,7 +285,7 @@ namespace nsSdD
             typedef T* pointer;
             typedef T& reference;
 
-            const_reverse_iterator(iterator i ) : it(i){}
+            const_reverse_iterator(const_iterator i ) : it(i){}
             const_reverse_iterator():it(NULL){}
             ~const_reverse_iterator(){}
 
@@ -322,9 +329,9 @@ namespace nsSdD
                 return it != other.it;
             }
 
-            const T& operator*() const
+            const T operator*() const
             {
-                return it;
+                return *it;
             }
 
         };
@@ -358,7 +365,7 @@ namespace nsSdD
 
         const_iterator cend() const
         {
-            return const_iterator(m_tail);
+            return const_iterator(m_tail->getPrevious());
         }
 
         const_reverse_iterator crbegin()
@@ -408,7 +415,8 @@ namespace nsSdD
 
         void pop_back() noexcept;
 
-        void emplace_front(T val) noexcept;
+        template <class... Args>
+        void emplace_front(Args&& val) noexcept;
 
         void push_front(const T& x) noexcept;
 
