@@ -206,15 +206,14 @@ void NSCLIST::emplace(CNodePtr Prec, T val) noexcept
 }
 
 template<typename T>
-void NSCLIST::erase(iterator del) noexcept
+typename NSCLIST::iterator NSCLIST::erase(NSCLIST::iterator del) noexcept
 {
     del->getNext()->setPrevious(del->getPrevious());
     del->getPrevious()->setNext(del->getNext());
 
-    del->setPrevious(nullptr);
-    del->setNext(nullptr);
-
     --m_size;
+
+    return NSCLIST::iterator(del->getNext());
 }
 
 template<typename T>

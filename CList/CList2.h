@@ -431,7 +431,7 @@ namespace nsSdD
 
         iterator insert (iterator position, const T& val) noexcept;
 
-        void erase(iterator it) noexcept;
+        iterator erase(iterator del) noexcept;
 
         void swap(CList& x) noexcept;
 
