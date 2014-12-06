@@ -254,13 +254,13 @@ void NSCLIST::resize(unsigned n, const T &val /*= T()*/) noexcept
 template<typename T>
 void NSCLIST::swap(NSCLIST &x) noexcept
 {
-    CNodePtr ptr = m_head;
+    CNodePtr ptr = m_head->getNext();
     m_head->setNext(x.getHead()->getNext());
-    x.getHead()->setNext(ptr->getNext());
+    x.getHead()->setNext(ptr);
 
-    ptr = m_tail;
+    ptr = m_tail->getPrevious();
     m_tail->setPrevious(x.getTail()->getPrevious());
-    x.getTail()->setPrevious(ptr->getPrevious());
+    x.getTail()->setPrevious(ptr);
 
     size_t tmp = m_size;
     m_size = x.size();
