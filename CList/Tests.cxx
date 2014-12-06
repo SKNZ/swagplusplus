@@ -646,7 +646,7 @@ namespace
         for (T x : CValueProvider<T>()(5))
             AssignByValue(x);
 
-        EmplaceFront<T>();
+//        EmplaceFront<T>();
 //        EmplaceBack<T>();
 //        Emplace<T>();
 
@@ -657,7 +657,7 @@ namespace
         PopBack<T>();
 
 //        Insert<T>();
-//        InsertByIterator<T>();
+        InsertByIterator<T>();
 //        for (T x : CValueProvider<T>()(5))
 //            InsertByValue<T>(x);
 
