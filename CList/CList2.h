@@ -110,9 +110,9 @@ namespace nsSdD
                 return(temp);
             }
 
-            T operator*() const
+            T& operator*() const
             {
-                return node->getInfo();
+                return  node->m_info;
             }
 
             const CNodePtr operator->()
@@ -257,7 +257,7 @@ namespace nsSdD
                 return it != other.it;
             }
 
-            T operator*() const
+            T& operator*() const
             {
                 return *it;
             }
@@ -447,8 +447,10 @@ namespace nsSdD
 
         class CNode
         {
-        private:
+        public:
             T m_info;
+        private:
+
             CNodePtr m_next;
             CNodePtr m_previous;
 
