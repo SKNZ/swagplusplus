@@ -416,7 +416,7 @@ namespace nsSdD
         void pop_back() noexcept;
 
         template <class... Args>
-        void emplace_front(Args&& val) noexcept;
+        void emplace_front(Args&&... val) noexcept;
 
         void push_front(const T& x) noexcept;
 

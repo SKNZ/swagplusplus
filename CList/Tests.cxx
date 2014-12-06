@@ -248,7 +248,7 @@ namespace
         {
             int i = distance(list.begin(), begin);
             IZI_ASSERT(originalData[i] == *begin);
-            begin = newData[i];
+            *begin = newData[i];
             IZI_ASSERT(newData[i] == *begin);
         }
 
@@ -298,7 +298,7 @@ namespace
         {
             int i = distance(list.rbegin(), rbegin);
             IZI_ASSERT(originalData[i] == *rbegin);
-            rbegin = newData[i];
+            *rbegin = newData[i];
             IZI_ASSERT(newData[i] == *rbegin);
         }
 
@@ -646,7 +646,7 @@ namespace
         for (T x : CValueProvider<T>()(5))
             AssignByValue(x);
 
-//        EmplaceFront<T>();
+        EmplaceFront<T>();
 //        EmplaceBack<T>();
 //        Emplace<T>();
 

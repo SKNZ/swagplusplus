@@ -113,10 +113,11 @@ void NSCLIST::assign(unsigned n, const T &val) noexcept
     }
 }
 
+template<typename T>
 template <class... Args>
-void NSCLIST::emplace_front(Args&& val) noexcept
+void NSCLIST::emplace_front(Args&&... val) noexcept
 {
-    CNodePtr ptr = std::make_shared<CNode>(val, nullptr, nullptr);
+    CNodePtr ptr = std::make_shared<CNode>(val..., nullptr, nullptr);
 
     ptr->setPrevious(m_head);
     ptr->setNext(m_head->getNext());
