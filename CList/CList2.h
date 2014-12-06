@@ -120,6 +120,11 @@ namespace nsSdD
                 return (node);
             }
 
+            CNodePtr getNode()
+            {
+                return node;
+            }
+
         };
 
         class const_iterator

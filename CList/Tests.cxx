@@ -656,10 +656,10 @@ namespace
         PopFront<T>();
         PopBack<T>();
 
-//        Insert<T>();
+        Insert<T>();
         InsertByIterator<T>();
-//        for (T x : CValueProvider<T>()(5))
-//            InsertByValue<T>(x);
+        for (T x : CValueProvider<T>()(5))
+            InsertByValue<T>(x);
 
 //        Erase<T>();
     }

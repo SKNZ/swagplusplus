@@ -341,10 +341,12 @@ template<typename T>
 typename NSCLIST::iterator NSCLIST::insert(typename NSCLIST::iterator position, T const &val) noexcept
 {
     CNodePtr tmp = std::make_shared<CNode>(val);
-    tmp->setNext(*position);
+    tmp->setNext(position.getNode());
     tmp->setPrevious(position->getPrevious());
     (position->getPrevious())->setNext(tmp);
     position->setPrevious(tmp);
 
     ++m_size;
+
+    return NSCLIST::iterator(tmp);
 }
