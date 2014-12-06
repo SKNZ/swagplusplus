@@ -1,5 +1,6 @@
 #include "Tests.h"
 #include "IziAssert.h"
+#include "CList2.h"
 
 #include <memory>
 #include <ctime>
@@ -9,13 +10,14 @@
 
 using namespace nsTests;
 using namespace std;
+using namespace nsSdD;
 
 namespace
 {
     // C++11 c'est bon, mangez en.
     template<typename T> using CCollection = vector<T>;
-    template<typename T> using CTestedList = list<T>;
-    //template<typename T> using CTestedList = CList<T>;
+    //template<typename T> using CTestedList = list<T>;
+    template<typename T> using CTestedList = CList<T>;
 
     int rand(int min, int max)
     {
@@ -281,6 +283,7 @@ namespace
         for (; cbegin != cend; ++cbegin)
             IZI_ASSERT(t[distance(list.cbegin(), cbegin)] == *cbegin);
 
+
         IZI_ASSERT(cbegin == cend);
     }
 
@@ -398,13 +401,16 @@ namespace
         IZI_ASSERT(data.size() == list.size());
 
         for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        {
             IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+        }
+
     }
 
     template<typename T>
     void AssignByValue(const T& x) noexcept
     {
-        const int listSize = 10;
+        const unsigned listSize = 10;
 
         CTestedList<T> list;
         list.assign(listSize, x);
@@ -421,7 +427,7 @@ namespace
         CCollection<T> data = CValueProvider<T>()();
 
         for (T x : data)
-            list.emplace_front(x, x);
+            list.emplace_front(x,x);
 
         reverse(list.begin(), list.end());
 
@@ -581,7 +587,7 @@ namespace
     template<typename T>
     void InsertByValue(const T& x) noexcept
     {
-        const int listSize = rand(0, 20);
+        const unsigned listSize = rand(0, 20);
         CTestedList<T> list;
 
         list.assign(listSize, x);
@@ -913,9 +919,9 @@ namespace
         for (T x : CValueProvider<T>()(5))
             AssignByValue(x);
 
-        EmplaceFront<T>();
-        EmplaceBack<T>();
-        Emplace<T>();
+//        EmplaceFront<T>();
+//        EmplaceBack<T>();
+//        Emplace<T>();
 
         PushFront<T>();
         PushBack<T>();

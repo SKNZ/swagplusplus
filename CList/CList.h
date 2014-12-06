@@ -17,7 +17,6 @@ namespace nsSdD
         CNodePtr m_head = nullptr;
         CNodePtr m_tail = nullptr;
 
-
     public:
         explicit CList() noexcept;
 
@@ -44,7 +43,7 @@ namespace nsSdD
 
         bool empty() const noexcept
         {
-            return m_size;
+            return (bool)m_size;
         }
 
         T &front() noexcept
