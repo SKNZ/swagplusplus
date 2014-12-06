@@ -34,6 +34,18 @@ namespace
             return m_a == c.m_a && m_name == c.m_name;
         }
 
+        bool operator<(const TestClass &c) const noexcept
+        {
+            if (m_a == c.m_a)
+                return m_name < c.m_name;
+            return m_a < c.m_a;
+        }
+
+        bool operator<=(const TestClass &c) const noexcept
+        {
+            return *this < c || *this == c;
+        }
+
         int getA() const noexcept
         {
             return m_a;
@@ -631,7 +643,247 @@ namespace
 
         for (auto itr = list2.cbegin(); itr != list2.cend(); ++itr)
             IZI_ASSERT(*itr == data[distance(list2.cbegin(), itr)]);
+    }
 
+    template<typename T>
+    void Resize() noexcept
+    {
+        const int listSize = 20;
+
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+        list.resize(listSize / 2);
+
+        IZI_ASSERT(list.size() == listSize / 2);
+
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+
+        list.resize(0);
+        IZI_ASSERT(0 == list.size());
+        IZI_ASSERT(list.cbegin() == list.cend());
+
+        list.resize(listSize);
+        for (T x : list)
+            IZI_ASSERT(x == T());
+        IZI_ASSERT(list.size() == listSize);
+
+        list.resize(0);
+        IZI_ASSERT(0 == list.size());
+        IZI_ASSERT(list.cbegin() == list.cend());
+
+        list.resize(listSize, data[0]);
+        for (T x : list)
+            IZI_ASSERT(x == data[0]);
+        IZI_ASSERT(list.size() == listSize);
+    }
+
+    template<typename T>
+    void Clear() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        list.clear();
+        IZI_ASSERT(0 == list.size());
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+        IZI_ASSERT(list.size() == data.size());
+
+        list.clear();
+        IZI_ASSERT(0 == list.size());
+
+        list.clear();
+        IZI_ASSERT(0 == list.size());
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+        IZI_ASSERT(list.size() == data.size());
+
+        list.clear();
+        IZI_ASSERT(0 == list.size());
+    }
+
+    template<typename T>
+    void SpliceList() noexcept
+    {
+        const int listSize = 20;
+        CTestedList<T> list1, list2;
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        list1.insert(list1.begin(), data.cbegin(), data.cbegin() + listSize / 4);
+        list1.insert(list1.end(), data.cbegin() + listSize / 2, data.cend());
+        list2.insert(list2.begin(), data.cbegin() + listSize / 4, data.cbegin() + listSize / 2);
+
+        IZI_ASSERT(list1.size() == 3 * data.size() / 4);
+        IZI_ASSERT(list2.size() == data.size() / 4);
+
+        auto itr = list1.begin();
+        advance(itr, listSize / 4);
+        list1.splice(itr, list2);
+
+        IZI_ASSERT(list2.empty());
+        IZI_ASSERT(list1.size() == data.size());
+        for (itr = list1.begin(); itr != list1.end(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list1.begin(), itr)]);
+    }
+
+    template<typename T>
+    void SpliceOne() noexcept
+    {
+        const int listSize = 20;
+        CTestedList<T> list1, list2;
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        list2.insert(list2.begin(), data.cbegin(), data.cend());
+
+        for (auto itr = list2.begin(); itr != list2.end();)
+            list1.splice(list1.end(), list2, itr++);
+
+        for (auto itr = list1.begin(); itr != list1.end(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list1.begin(), itr)]);
+
+        IZI_ASSERT(list1.size() == data.size());
+    }
+
+    template<typename T>
+    void SpliceRange() noexcept
+    {
+        const int listSize = 20;
+        CTestedList<T> list1, list2;
+        CCollection<T> data = CValueProvider<T>()(listSize);
+
+        list1.insert(list1.begin(), data.cbegin(), data.cbegin() + listSize / 4);
+        list1.insert(list1.end(), data.cbegin() + listSize / 2, data.cend());
+        list2.insert(list2.begin(), data.cbegin() + listSize / 4, data.cbegin() + listSize / 2);
+
+        IZI_ASSERT(list1.size() == 3 * data.size() / 4);
+        IZI_ASSERT(list2.size() == data.size() / 4);
+
+        auto itr = list1.begin();
+        advance(itr, listSize / 4);
+        list1.splice(itr, list2, list2.begin(), list2.end());
+
+        IZI_ASSERT(list2.empty());
+        IZI_ASSERT(list1.size() == data.size());
+        for (itr = list1.begin(); itr != list1.end(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list1.begin(), itr)]);
+    }
+
+    template<typename T>
+    void Remove() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()();
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+
+        IZI_ASSERT(list.size());
+        for (T x : data)
+            list.remove(x);
+
+        IZI_ASSERT(!list.size());
+    }
+
+    template<typename T>
+    void RemoveIf() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(20);
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+
+        static int i = 0;
+        list.remove_if([data](const T& x) { return !(i++ % 2) || data[3] == x; });
+
+        IZI_ASSERT(9 == list.size());
+    }
+
+    template<typename T>
+    void Unique() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(20);
+
+        unique(data.begin(), data.end()); // Since some of the data might contain duplicates due to pseudo-random
+        for (T x : data)
+            for (int i = 0; i < 3; ++i)
+                list.push_back(x);
+
+        list.unique();
+
+        IZI_ASSERT(list.size() == data.size());
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+    }
+
+    template<typename T>
+    void UniqueWithPredicate() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(20);
+
+        unique(data.begin(), data.end()); // Since some of the data might contain duplicates due to pseudo-random
+
+        for (T x : data)
+            for (int i = 0; i < 3; ++i)
+                list.push_back(x);
+
+        list.unique([](const T& a, const T& b) { return a == b; }); // Better way to test this ?
+
+        IZI_ASSERT(list.size() == data.size());
+        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+            IZI_ASSERT(*itr == data[distance(list.cbegin(), itr)]);
+    }
+
+    template<typename T>
+    void Merge() noexcept
+    {
+        CTestedList<T> list1, list2;
+        CCollection<T> data = CValueProvider<T>()(20);
+
+        sort(data.begin(), data.end());
+
+        for (int i = 0; i < data.size(); i += 2)
+            list1.push_back(data[i]);
+
+        for (int i = 1; i < data.size(); i += 2)
+            list2.push_back(data[i]);
+
+        IZI_ASSERT(list2.size() == list1.size() && list1.size() == data.size() / 2);
+
+        list1.merge(list2);
+
+        IZI_ASSERT(list1.size() == data.size());
+        IZI_ASSERT(list2.empty());
+
+        for (auto itr = list1.cbegin(); itr != --list1.cend();)
+            IZI_ASSERT(*itr <= *++itr)
+    }
+
+    template<typename T>
+    void Sort() noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T>()(20);
+
+        list.insert(list.begin(), data.cbegin(), data.cend());
+        list.sort();
+
+        for (auto itr = list.cbegin(); itr != --list.cend();)
+            IZI_ASSERT(*itr <= *++itr)
+    }
+
+    template<typename T>
+    void Reverse() noexcept
+    {
+        CCollection<T> data = CValueProvider<T>()();
+        CTestedList<T> list(data.cbegin(), data.cend());
+
+        list.reverse();
+        for (auto itrList = list.cbegin(), itrData = data.crbegin(); itrList != list.cend() && itrData != data.crend(); ++itrList, ++itrData)
+            IZI_ASSERT(*itrList == *itrData);
     }
 
     template<typename T>
@@ -679,8 +931,27 @@ namespace
         Erase<T>();
 
         Swap<T>();
-    }
-}
+
+        Resize<T>();
+
+        Clear<T>();
+
+        SpliceList<T>();
+        SpliceOne<T>();
+        SpliceRange<T>();
+
+        Remove<T>();
+        RemoveIf<T>();
+
+        Unique<T>();
+        UniqueWithPredicate<T>();
+
+        Merge<T>();
+
+        Sort<T>();
+
+        Reverse<T>();
+    }}
 
 void CTests::RunTests() noexcept
 {
