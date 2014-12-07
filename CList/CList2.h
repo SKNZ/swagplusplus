@@ -38,10 +38,35 @@ namespace nsSdD
         typedef std::shared_ptr<CNode> CNodePtr;
 
     public:
+
+        /*!
+            @typedef size_type
+            @brief This define a @p size_t. We use it because it's a std::list standard
+         */
         typedef size_t size_type;
+
+        /*!
+            @typedef iterator
+            @brief This define a @p CIterator. We use it to declare a CList iterator
+         */
         typedef CIterator iterator;
+
+        /*!
+            @typedef const_iterator
+            @brief This define a @p CConstIterator. We use it to declare a CList const iterator
+         */
         typedef CConstIterator const_iterator;
+
+        /*!
+            @typedef reverse_iterator
+            @brief This define a @p CReverseIterator. We use it to declare a CList reverse_iterator
+         */
         typedef CReverseIterator reverse_iterator;
+
+        /*!
+            @typedef const_reverse_iterator
+            @brief This define a @p CConstReverseIterator. We use it to declare a CList const reverse iterator
+         */
         typedef CConstReverseIterator const_reverse_iterator;
 
         /*!
