@@ -780,8 +780,8 @@ namespace
         CCollection<T> data = CValueProvider<T> () ();
         CTestedList<T> list (data.cbegin (), data.cend ());
 
-        IZI_ASSERT(list.getHead ()->getInfo () == 0);
-        IZI_ASSERT(list.getTail ()->getInfo () == 0);
+        IZI_ASSERT(list.getHead ()->getInfo () == T ());
+        IZI_ASSERT(list.getTail ()->getInfo () == T ());
 
         auto ptr = list.getHead ();
         for(T x : data)
