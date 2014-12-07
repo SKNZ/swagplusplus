@@ -15,7 +15,7 @@ public:
     {
     }
 
-    CConstIterator (const CConstIterator &) = default;
+    CConstIterator (const CConstIterator &) noexcept = default;
 
     CConstIterator &operator= (const CConstIterator &) noexcept = default;
 
@@ -65,7 +65,7 @@ public:
         return node->getInfo ();
     }
 
-    CNodePtr getNode () noexcept
+    CNodePtr getNode () const noexcept
     {
         return node;
     }

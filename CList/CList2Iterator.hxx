@@ -35,10 +35,10 @@ public:
     }
 
     /*!
-        @fn             CIterator (const CIterator &)
+        @fn             CIterator (const CIterator &) noexcept
         @brief          The copy-constructor for the iterator.
     */
-    CIterator (const CIterator &) = default;
+    CIterator (const CIterator &) noexcept = default;
 
     /*!
        @fn             operator= (const CIterator &) noexcept
@@ -156,12 +156,7 @@ public:
         return node->getInfo ();
     }
 
-    /*!
-       @fn getNode () noexcept
-       @brief The function return the node of the pointer.
-       @return  CNodePtr The node of the pointer.
-    */
-    CNodePtr getNode () noexcept
+    CNodePtr getNode () const noexcept
     {
         return node;
     }
