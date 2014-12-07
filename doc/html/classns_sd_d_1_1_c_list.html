@@ -118,6 +118,9 @@ $(document).ready(function(){initNavTree('classns_sd_d_1_1_c_list.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> is the main class of our work, it's develop in order to be the most close to the original std::list In this idea we choose to make a double-linked list, in that way we can use bidirectional iterator and have a stl compliant <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. During the development process we choose to work in TDD (Test Driven Development) in order to have the least bugs possible.  
+ <a href="classns_sd_d_1_1_c_list.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="HTML/S/28.html">CList.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -135,101 +138,101 @@ Public Types</h2></td></tr>
 <tr class="memdesc:a91d4b6b8c89816da277ee27d32df5478"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code>size_t</code>. We use it because it's a std::list standard.  <a href="#a91d4b6b8c89816da277ee27d32df5478">More...</a><br/></td></tr>
 <tr class="separator:a91d4b6b8c89816da277ee27d32df5478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdaca29586106fc15940d8529f4990f8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a></td></tr>
-<tr class="memdesc:afdaca29586106fc15940d8529f4990f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> iterator.  <a href="#afdaca29586106fc15940d8529f4990f8">More...</a><br/></td></tr>
+<tr class="memdesc:afdaca29586106fc15940d8529f4990f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> iterator.  <a href="#afdaca29586106fc15940d8529f4990f8">More...</a><br/></td></tr>
 <tr class="separator:afdaca29586106fc15940d8529f4990f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae323732a26e507146686556fb775767a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">const_iterator</a></td></tr>
-<tr class="memdesc:ae323732a26e507146686556fb775767a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> const iterator.  <a href="#ae323732a26e507146686556fb775767a">More...</a><br/></td></tr>
+<tr class="memdesc:ae323732a26e507146686556fb775767a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const iterator.  <a href="#ae323732a26e507146686556fb775767a">More...</a><br/></td></tr>
 <tr class="separator:ae323732a26e507146686556fb775767a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5582eb88a5f625ef426f534ea5556311"><td class="memItemLeft" align="right" valign="top">typedef std::reverse_iterator<br class="typebreak"/>
 &lt; <a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a5582eb88a5f625ef426f534ea5556311">reverse_iterator</a></td></tr>
-<tr class="memdesc:a5582eb88a5f625ef426f534ea5556311"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code>CReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> reverse_iterator.  <a href="#a5582eb88a5f625ef426f534ea5556311">More...</a><br/></td></tr>
+<tr class="memdesc:a5582eb88a5f625ef426f534ea5556311"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code>CReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> reverse_iterator.  <a href="#a5582eb88a5f625ef426f534ea5556311">More...</a><br/></td></tr>
 <tr class="separator:a5582eb88a5f625ef426f534ea5556311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f361676af43c355821d20da82ad401"><td class="memItemLeft" align="right" valign="top">typedef std::reverse_iterator<br class="typebreak"/>
 &lt; <a class="el" href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">const_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a43f361676af43c355821d20da82ad401">const_reverse_iterator</a></td></tr>
-<tr class="memdesc:a43f361676af43c355821d20da82ad401"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code>CConstReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> const reverse iterator.  <a href="#a43f361676af43c355821d20da82ad401">More...</a><br/></td></tr>
+<tr class="memdesc:a43f361676af43c355821d20da82ad401"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code>CConstReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const reverse iterator.  <a href="#a43f361676af43c355821d20da82ad401">More...</a><br/></td></tr>
 <tr class="separator:a43f361676af43c355821d20da82ad401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#aad7088db9f8120c6e6c1a2f39022fa8f">CList</a> (const <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>&lt; T &gt; &amp;x) noexcept</td></tr>
-<tr class="memdesc:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy-constructor of the class <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#aad7088db9f8120c6e6c1a2f39022fa8f">More...</a><br/></td></tr>
+<tr class="memdesc:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy-constructor of the class <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#aad7088db9f8120c6e6c1a2f39022fa8f">More...</a><br/></td></tr>
 <tr class="separator:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ae319d81f9a81a4d4aa5427f013fe8dae">CList</a> () noexcept</td></tr>
-<tr class="memdesc:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default of the class <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#ae319d81f9a81a4d4aa5427f013fe8dae">More...</a><br/></td></tr>
+<tr class="memdesc:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default of the class <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ae319d81f9a81a4d4aa5427f013fe8dae">More...</a><br/></td></tr>
 <tr class="separator:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc3fc05ef1e765313814baf2be139c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a0dc3fc05ef1e765313814baf2be139c1">CList</a> (size_t n) noexcept</td></tr>
-<tr class="memdesc:a0dc3fc05ef1e765313814baf2be139c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> of n elements.  <a href="#a0dc3fc05ef1e765313814baf2be139c1">More...</a><br/></td></tr>
+<tr class="memdesc:a0dc3fc05ef1e765313814baf2be139c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements.  <a href="#a0dc3fc05ef1e765313814baf2be139c1">More...</a><br/></td></tr>
 <tr class="separator:a0dc3fc05ef1e765313814baf2be139c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09fd13d9614defdb880fdab1ae0b33ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a09fd13d9614defdb880fdab1ae0b33ca">CList</a> (size_t n, const T &amp;val) noexcept</td></tr>
-<tr class="memdesc:a09fd13d9614defdb880fdab1ae0b33ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> of n elements with <code>T</code> val in each element.  <a href="#a09fd13d9614defdb880fdab1ae0b33ca">More...</a><br/></td></tr>
+<tr class="memdesc:a09fd13d9614defdb880fdab1ae0b33ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements with <code>T</code> val in each element.  <a href="#a09fd13d9614defdb880fdab1ae0b33ca">More...</a><br/></td></tr>
 <tr class="separator:a09fd13d9614defdb880fdab1ae0b33ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplParams" colspan="2">template&lt;class InputIterator &gt; </td></tr>
 <tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a6558a45c50021a28a54ea3e48fd1ed4b">CList</a> (InputIterator first, InputIterator last) noexcept</td></tr>
 <tr class="separator:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac196a16661fe4cba73b339a4e2fcfb73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">CNodePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ac196a16661fe4cba73b339a4e2fcfb73">getHead</a> () const noexcept</td></tr>
-<tr class="memdesc:ac196a16661fe4cba73b339a4e2fcfb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the head of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#ac196a16661fe4cba73b339a4e2fcfb73">More...</a><br/></td></tr>
+<tr class="memdesc:ac196a16661fe4cba73b339a4e2fcfb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the head of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ac196a16661fe4cba73b339a4e2fcfb73">More...</a><br/></td></tr>
 <tr class="separator:ac196a16661fe4cba73b339a4e2fcfb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c986208bf4f4a9ede4731df50ed8d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">CNodePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a05c986208bf4f4a9ede4731df50ed8d0">getTail</a> () const noexcept</td></tr>
-<tr class="memdesc:a05c986208bf4f4a9ede4731df50ed8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a05c986208bf4f4a9ede4731df50ed8d0">More...</a><br/></td></tr>
+<tr class="memdesc:a05c986208bf4f4a9ede4731df50ed8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a05c986208bf4f4a9ede4731df50ed8d0">More...</a><br/></td></tr>
 <tr class="separator:a05c986208bf4f4a9ede4731df50ed8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa388b52d241c12737c4e5b2a36c767c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">begin</a> () noexcept</td></tr>
-<tr class="memdesc:aa388b52d241c12737c4e5b2a36c767c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#aa388b52d241c12737c4e5b2a36c767c3">More...</a><br/></td></tr>
+<tr class="memdesc:aa388b52d241c12737c4e5b2a36c767c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#aa388b52d241c12737c4e5b2a36c767c3">More...</a><br/></td></tr>
 <tr class="separator:aa388b52d241c12737c4e5b2a36c767c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ed05415dfeb92174e030f9de754dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ae1ed05415dfeb92174e030f9de754dc2">end</a> () noexcept</td></tr>
-<tr class="memdesc:ae1ed05415dfeb92174e030f9de754dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#ae1ed05415dfeb92174e030f9de754dc2">More...</a><br/></td></tr>
+<tr class="memdesc:ae1ed05415dfeb92174e030f9de754dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ae1ed05415dfeb92174e030f9de754dc2">More...</a><br/></td></tr>
 <tr class="separator:ae1ed05415dfeb92174e030f9de754dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65cc2b6af1a489f45d2a3354c67fca39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a65cc2b6af1a489f45d2a3354c67fca39">cbegin</a> () const noexcept</td></tr>
-<tr class="memdesc:a65cc2b6af1a489f45d2a3354c67fca39"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a65cc2b6af1a489f45d2a3354c67fca39">More...</a><br/></td></tr>
+<tr class="memdesc:a65cc2b6af1a489f45d2a3354c67fca39"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a65cc2b6af1a489f45d2a3354c67fca39">More...</a><br/></td></tr>
 <tr class="separator:a65cc2b6af1a489f45d2a3354c67fca39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fafea01ba64eb323ebe32e0eb6e6e6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a6fafea01ba64eb323ebe32e0eb6e6e6e">cend</a> () const noexcept</td></tr>
-<tr class="memdesc:a6fafea01ba64eb323ebe32e0eb6e6e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a6fafea01ba64eb323ebe32e0eb6e6e6e">More...</a><br/></td></tr>
+<tr class="memdesc:a6fafea01ba64eb323ebe32e0eb6e6e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a6fafea01ba64eb323ebe32e0eb6e6e6e">More...</a><br/></td></tr>
 <tr class="separator:a6fafea01ba64eb323ebe32e0eb6e6e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a763731bf428359807d4c35f21ed1ac4e"><td class="memItemLeft" align="right" valign="top">std::reverse_iterator&lt; <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a763731bf428359807d4c35f21ed1ac4e">rbegin</a> () noexcept</td></tr>
-<tr class="memdesc:a763731bf428359807d4c35f21ed1ac4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a763731bf428359807d4c35f21ed1ac4e">More...</a><br/></td></tr>
+<tr class="memdesc:a763731bf428359807d4c35f21ed1ac4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a763731bf428359807d4c35f21ed1ac4e">More...</a><br/></td></tr>
 <tr class="separator:a763731bf428359807d4c35f21ed1ac4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a971d1f0ea06ae04c61303705f05a4211"><td class="memItemLeft" align="right" valign="top">std::reverse_iterator&lt; <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a971d1f0ea06ae04c61303705f05a4211">rend</a> () noexcept</td></tr>
-<tr class="memdesc:a971d1f0ea06ae04c61303705f05a4211"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a971d1f0ea06ae04c61303705f05a4211">More...</a><br/></td></tr>
+<tr class="memdesc:a971d1f0ea06ae04c61303705f05a4211"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a971d1f0ea06ae04c61303705f05a4211">More...</a><br/></td></tr>
 <tr class="separator:a971d1f0ea06ae04c61303705f05a4211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a94cede3e75928a314fd6943a07c867"><td class="memItemLeft" align="right" valign="top">std::reverse_iterator<br class="typebreak"/>
 &lt; <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a2a94cede3e75928a314fd6943a07c867">crbegin</a> () noexcept</td></tr>
-<tr class="memdesc:a2a94cede3e75928a314fd6943a07c867"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an const_reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a2a94cede3e75928a314fd6943a07c867">More...</a><br/></td></tr>
+<tr class="memdesc:a2a94cede3e75928a314fd6943a07c867"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an const_reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a2a94cede3e75928a314fd6943a07c867">More...</a><br/></td></tr>
 <tr class="separator:a2a94cede3e75928a314fd6943a07c867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c0b9c73483ef340921ac38aa3674d25"><td class="memItemLeft" align="right" valign="top">std::reverse_iterator<br class="typebreak"/>
 &lt; <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a9c0b9c73483ef340921ac38aa3674d25">crend</a> () noexcept</td></tr>
-<tr class="memdesc:a9c0b9c73483ef340921ac38aa3674d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an const_reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a9c0b9c73483ef340921ac38aa3674d25">More...</a><br/></td></tr>
+<tr class="memdesc:a9c0b9c73483ef340921ac38aa3674d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and return an const_reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a9c0b9c73483ef340921ac38aa3674d25">More...</a><br/></td></tr>
 <tr class="separator:a9c0b9c73483ef340921ac38aa3674d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c0ecbdedb0a8ad28625874f3c11c4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ad9c0ecbdedb0a8ad28625874f3c11c4d">empty</a> () const noexcept</td></tr>
-<tr class="memdesc:ad9c0ecbdedb0a8ad28625874f3c11c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return true if the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> is empty , false otherwise.  <a href="#ad9c0ecbdedb0a8ad28625874f3c11c4d">More...</a><br/></td></tr>
+<tr class="memdesc:ad9c0ecbdedb0a8ad28625874f3c11c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return true if the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> is empty , false otherwise.  <a href="#ad9c0ecbdedb0a8ad28625874f3c11c4d">More...</a><br/></td></tr>
 <tr class="separator:ad9c0ecbdedb0a8ad28625874f3c11c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108494f68c871f0f1e0a337cfe93ab36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a108494f68c871f0f1e0a337cfe93ab36">size</a> () const noexcept</td></tr>
-<tr class="memdesc:a108494f68c871f0f1e0a337cfe93ab36"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a108494f68c871f0f1e0a337cfe93ab36">More...</a><br/></td></tr>
+<tr class="memdesc:a108494f68c871f0f1e0a337cfe93ab36"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a108494f68c871f0f1e0a337cfe93ab36">More...</a><br/></td></tr>
 <tr class="separator:a108494f68c871f0f1e0a337cfe93ab36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2666d99b91b6bf301d3f9a980200c5df"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a2666d99b91b6bf301d3f9a980200c5df">front</a> () const noexcept</td></tr>
-<tr class="memdesc:a2666d99b91b6bf301d3f9a980200c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return value of the first element in the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a2666d99b91b6bf301d3f9a980200c5df">More...</a><br/></td></tr>
+<tr class="memdesc:a2666d99b91b6bf301d3f9a980200c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return value of the first element in the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a2666d99b91b6bf301d3f9a980200c5df">More...</a><br/></td></tr>
 <tr class="separator:a2666d99b91b6bf301d3f9a980200c5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85483872c2daff13f17bdf3327ce7c0"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ab85483872c2daff13f17bdf3327ce7c0">back</a> () const noexcept</td></tr>
-<tr class="memdesc:ab85483872c2daff13f17bdf3327ce7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return value of the last element in the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#ab85483872c2daff13f17bdf3327ce7c0">More...</a><br/></td></tr>
+<tr class="memdesc:ab85483872c2daff13f17bdf3327ce7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return value of the last element in the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ab85483872c2daff13f17bdf3327ce7c0">More...</a><br/></td></tr>
 <tr class="separator:ab85483872c2daff13f17bdf3327ce7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27b48887bd136140f3f79192b79f8897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a27b48887bd136140f3f79192b79f8897">assign</a> (unsigned n, const T &amp;val) noexcept</td></tr>
-<tr class="memdesc:a27b48887bd136140f3f79192b79f8897"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function erase the content and replace the content of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> with the <code>n</code> size and with the <code>val</code> value.  <a href="#a27b48887bd136140f3f79192b79f8897">More...</a><br/></td></tr>
+<tr class="memdesc:a27b48887bd136140f3f79192b79f8897"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function erase the content and replace the content of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with the <code>n</code> size and with the <code>val</code> value.  <a href="#a27b48887bd136140f3f79192b79f8897">More...</a><br/></td></tr>
 <tr class="separator:a27b48887bd136140f3f79192b79f8897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11db16b0200f115876884342e232d8b4"><td class="memTemplParams" colspan="2">template&lt;class InputIterator &gt; </td></tr>
 <tr class="memitem:a11db16b0200f115876884342e232d8b4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a11db16b0200f115876884342e232d8b4">assign</a> (InputIterator <a class="el" href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">begin</a>, InputIterator last) noexcept</td></tr>
 <tr class="separator:a11db16b0200f115876884342e232d8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ea0f842488c5f564430e842ee648348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">push_back</a> (const T &amp;x) noexcept</td></tr>
-<tr class="memdesc:a4ea0f842488c5f564430e842ee648348"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a4ea0f842488c5f564430e842ee648348">More...</a><br/></td></tr>
+<tr class="memdesc:a4ea0f842488c5f564430e842ee648348"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a4ea0f842488c5f564430e842ee648348">More...</a><br/></td></tr>
 <tr class="separator:a4ea0f842488c5f564430e842ee648348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67071b474142b24a096da24db211de4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a67071b474142b24a096da24db211de4b">pop_back</a> () noexcept</td></tr>
-<tr class="memdesc:a67071b474142b24a096da24db211de4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the last element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a67071b474142b24a096da24db211de4b">More...</a><br/></td></tr>
+<tr class="memdesc:a67071b474142b24a096da24db211de4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the last element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a67071b474142b24a096da24db211de4b">More...</a><br/></td></tr>
 <tr class="separator:a67071b474142b24a096da24db211de4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88394296072d50b2547dd843aa4a0069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a88394296072d50b2547dd843aa4a0069">push_front</a> (const T &amp;x) noexcept</td></tr>
-<tr class="memdesc:a88394296072d50b2547dd843aa4a0069"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a88394296072d50b2547dd843aa4a0069">More...</a><br/></td></tr>
+<tr class="memdesc:a88394296072d50b2547dd843aa4a0069"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a88394296072d50b2547dd843aa4a0069">More...</a><br/></td></tr>
 <tr class="separator:a88394296072d50b2547dd843aa4a0069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16e16405d804c9f8c20c61a8acd45ece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a16e16405d804c9f8c20c61a8acd45ece">pop_front</a> () noexcept</td></tr>
-<tr class="memdesc:a16e16405d804c9f8c20c61a8acd45ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the first element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a16e16405d804c9f8c20c61a8acd45ece">More...</a><br/></td></tr>
+<tr class="memdesc:a16e16405d804c9f8c20c61a8acd45ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the first element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a16e16405d804c9f8c20c61a8acd45ece">More...</a><br/></td></tr>
 <tr class="separator:a16e16405d804c9f8c20c61a8acd45ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea73e5cb037f3aab4b5626788ef5e0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#abea73e5cb037f3aab4b5626788ef5e0d">sort</a> () noexcept</td></tr>
-<tr class="memdesc:abea73e5cb037f3aab4b5626788ef5e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> in ascending order.  <a href="#abea73e5cb037f3aab4b5626788ef5e0d">More...</a><br/></td></tr>
+<tr class="memdesc:abea73e5cb037f3aab4b5626788ef5e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> in ascending order.  <a href="#abea73e5cb037f3aab4b5626788ef5e0d">More...</a><br/></td></tr>
 <tr class="separator:abea73e5cb037f3aab4b5626788ef5e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef43a041947820896c05b2107d68abf"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
 <tr class="memitem:acef43a041947820896c05b2107d68abf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#acef43a041947820896c05b2107d68abf">sort</a> (Compare comp) noexcept</td></tr>
@@ -263,13 +266,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac59d9d1e5bbbe59c5cc549800fd2e49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function swap the two CLists .  <a href="#ac59d9d1e5bbbe59c5cc549800fd2e49a">More...</a><br/></td></tr>
 <tr class="separator:ac59d9d1e5bbbe59c5cc549800fd2e49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e9ff3339d35afb16b7f698c9c7f4fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a4e9ff3339d35afb16b7f698c9c7f4fbf">resize</a> (unsigned n, const T &amp;val=T()) noexcept</td></tr>
-<tr class="memdesc:a4e9ff3339d35afb16b7f698c9c7f4fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function resize the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> if the <code>n</code> value is under the current size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> the function delete element at end to reduce at the <code>n</code> size. If you want to expand the size the new element are construct with the <code>val</code> value.  <a href="#a4e9ff3339d35afb16b7f698c9c7f4fbf">More...</a><br/></td></tr>
+<tr class="memdesc:a4e9ff3339d35afb16b7f698c9c7f4fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function resize the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> if the <code>n</code> value is under the current size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> the function delete element at end to reduce at the <code>n</code> size. If you want to expand the size the new element are construct with the <code>val</code> value.  <a href="#a4e9ff3339d35afb16b7f698c9c7f4fbf">More...</a><br/></td></tr>
 <tr class="separator:a4e9ff3339d35afb16b7f698c9c7f4fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc30f88bfb8854dff3fa4544e4bf5450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#abc30f88bfb8854dff3fa4544e4bf5450">clear</a> () noexcept</td></tr>
-<tr class="memdesc:abc30f88bfb8854dff3fa4544e4bf5450"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete all the element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#abc30f88bfb8854dff3fa4544e4bf5450">More...</a><br/></td></tr>
+<tr class="memdesc:abc30f88bfb8854dff3fa4544e4bf5450"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete all the element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#abc30f88bfb8854dff3fa4544e4bf5450">More...</a><br/></td></tr>
 <tr class="separator:abc30f88bfb8854dff3fa4544e4bf5450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55651384c55447be5c4d9edd1565ad1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a55651384c55447be5c4d9edd1565ad1f">remove</a> (const T &amp;val) noexcept</td></tr>
-<tr class="memdesc:a55651384c55447be5c4d9edd1565ad1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete <code>val</code> element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a55651384c55447be5c4d9edd1565ad1f">More...</a><br/></td></tr>
+<tr class="memdesc:a55651384c55447be5c4d9edd1565ad1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete <code>val</code> element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a55651384c55447be5c4d9edd1565ad1f">More...</a><br/></td></tr>
 <tr class="separator:a55651384c55447be5c4d9edd1565ad1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplParams" colspan="2">template&lt;class Predicate &gt; </td></tr>
 <tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a0ad14711538606425a28a357bd1c74bf">remove_if</a> (Predicate pred) noexcept</td></tr>
@@ -281,19 +284,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a497eba2565c12e727bcf512ed31e7b04"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a497eba2565c12e727bcf512ed31e7b04">unique</a> (Predicate pred) noexcept</td></tr>
 <tr class="separator:a497eba2565c12e727bcf512ed31e7b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a987252679b419150d62719f8dabb2ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a987252679b419150d62719f8dabb2ad4">splice</a> (<a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> position, <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> &amp;x) noexcept</td></tr>
-<tr class="memdesc:a987252679b419150d62719f8dabb2ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>.  <a href="#a987252679b419150d62719f8dabb2ad4">More...</a><br/></td></tr>
+<tr class="memdesc:a987252679b419150d62719f8dabb2ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>.  <a href="#a987252679b419150d62719f8dabb2ad4">More...</a><br/></td></tr>
 <tr class="separator:a987252679b419150d62719f8dabb2ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68315c715024cccae8905e92a1c58429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a68315c715024cccae8905e92a1c58429">splice</a> (<a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> position, <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> &amp;x, <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> i) noexcept</td></tr>
-<tr class="memdesc:a68315c715024cccae8905e92a1c58429"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move element <code>i</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>.  <a href="#a68315c715024cccae8905e92a1c58429">More...</a><br/></td></tr>
+<tr class="memdesc:a68315c715024cccae8905e92a1c58429"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move element <code>i</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>.  <a href="#a68315c715024cccae8905e92a1c58429">More...</a><br/></td></tr>
 <tr class="separator:a68315c715024cccae8905e92a1c58429"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34a61185ef426909da583c61f1d3f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ac34a61185ef426909da583c61f1d3f32">splice</a> (<a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> position, <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> &amp;x, <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> first, <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> last) noexcept</td></tr>
-<tr class="memdesc:ac34a61185ef426909da583c61f1d3f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move elements between <code>first</code> and <code>last</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>.  <a href="#ac34a61185ef426909da583c61f1d3f32">More...</a><br/></td></tr>
+<tr class="memdesc:ac34a61185ef426909da583c61f1d3f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move elements between <code>first</code> and <code>last</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>.  <a href="#ac34a61185ef426909da583c61f1d3f32">More...</a><br/></td></tr>
 <tr class="separator:ac34a61185ef426909da583c61f1d3f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f41b4a08e34f5081aaa69a4b00474ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a6f41b4a08e34f5081aaa69a4b00474ec">merge</a> (<a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>&lt; T &gt; &amp;x) noexcept</td></tr>
-<tr class="memdesc:a6f41b4a08e34f5081aaa69a4b00474ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function merge two sorted list <code>x</code> after the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a6f41b4a08e34f5081aaa69a4b00474ec">More...</a><br/></td></tr>
+<tr class="memdesc:a6f41b4a08e34f5081aaa69a4b00474ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function merge two sorted list <code>x</code> after the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a6f41b4a08e34f5081aaa69a4b00474ec">More...</a><br/></td></tr>
 <tr class="separator:a6f41b4a08e34f5081aaa69a4b00474ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60dbb7a753634838fb2f705ce84764f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a60dbb7a753634838fb2f705ce84764f9">reverse</a> () noexcept</td></tr>
-<tr class="memdesc:a60dbb7a753634838fb2f705ce84764f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function reverse the head and the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a60dbb7a753634838fb2f705ce84764f9">More...</a><br/></td></tr>
+<tr class="memdesc:a60dbb7a753634838fb2f705ce84764f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function reverse the head and the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a60dbb7a753634838fb2f705ce84764f9">More...</a><br/></td></tr>
 <tr class="separator:a60dbb7a753634838fb2f705ce84764f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa271b480c0498942afb039342557687"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
 <tr class="memitem:afa271b480c0498942afb039342557687"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#afa271b480c0498942afb039342557687">unique</a> (Compare comp) noexcept</td></tr>
@@ -326,21 +329,22 @@ Private Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab0739217e44245b006ed3de3309d1257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a> = 0</td></tr>
-<tr class="memdesc:ab0739217e44245b006ed3de3309d1257"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#ab0739217e44245b006ed3de3309d1257">More...</a><br/></td></tr>
+<tr class="memdesc:ab0739217e44245b006ed3de3309d1257"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ab0739217e44245b006ed3de3309d1257">More...</a><br/></td></tr>
 <tr class="separator:ab0739217e44245b006ed3de3309d1257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83e265983e0759c7adef0df2dacd26fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">CNodePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a> = nullptr</td></tr>
-<tr class="memdesc:a83e265983e0759c7adef0df2dacd26fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer the head of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a83e265983e0759c7adef0df2dacd26fa">More...</a><br/></td></tr>
+<tr class="memdesc:a83e265983e0759c7adef0df2dacd26fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer the head of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a83e265983e0759c7adef0df2dacd26fa">More...</a><br/></td></tr>
 <tr class="separator:a83e265983e0759c7adef0df2dacd26fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb44cbc02643d0d68ad33e5a0fde388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">CNodePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a> = nullptr</td></tr>
-<tr class="memdesc:a7cb44cbc02643d0d68ad33e5a0fde388"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.  <a href="#a7cb44cbc02643d0d68ad33e5a0fde388">More...</a><br/></td></tr>
+<tr class="memdesc:a7cb44cbc02643d0d68ad33e5a0fde388"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a7cb44cbc02643d0d68ad33e5a0fde388">More...</a><br/></td></tr>
 <tr class="separator:a7cb44cbc02643d0d68ad33e5a0fde388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
 class nsSdD::CList&lt; T &gt;</h3>
 
+<p><a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> is the main class of our work, it's develop in order to be the most close to the original std::list In this idea we choose to make a double-linked list, in that way we can use bidirectional iterator and have a stl compliant <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. During the development process we choose to work in TDD (Test Driven Development) in order to have the least bugs possible. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L23">23</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L31">31</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a850663298aaff5a489b3b99499843c1e"></a>
 <div class="memitem">
@@ -364,7 +368,7 @@ template&lt;typename T&gt; </div>
 
 <p>This define a <code>std::shared_ptr&lt;CNode&gt;</code> like a CNodePtr. We use it to declare the content of the list. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L38">38</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L46">46</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -380,9 +384,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> const iterator. </p>
+<p>This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const iterator. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L58">58</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L66">66</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -398,9 +402,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This define a <code>CConstReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> const reverse iterator. </p>
+<p>This define a <code>CConstReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const reverse iterator. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L70">70</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L78">78</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -416,9 +420,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> iterator. </p>
+<p>This define a <code><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a></code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> iterator. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L52">52</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L60">60</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -434,9 +438,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This define a <code>CReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> reverse_iterator. </p>
+<p>This define a <code>CReverseIterator</code>. We use it to declare a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> reverse_iterator. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L64">64</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L72">72</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +458,7 @@ template&lt;typename T&gt; </div>
 
 <p>This define a <code>size_t</code>. We use it because it's a std::list standard. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L46">46</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L54">54</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -483,7 +487,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is the copy-constructor of the class <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This is the copy-constructor of the class <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">@p</td><td>CList&lt;T&gt; this is the list who want to copy. </td></tr>
@@ -501,8 +505,8 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">push_back</a> (*itr);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_a4ea0f842488c5f564430e842ee648348"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">nsSdD::CList::push_back</a></div><div class="ttdeci">void push_back(const T &amp;x) noexcept</div><div class="ttdoc">This function construct and add x value at the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L186">CList.hxx:186</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,7 +533,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is the default of the class <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This is the default of the class <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">No</td><td>parameters. </td></tr>
@@ -543,8 +547,8 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>-&gt;setNext (<a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -572,10 +576,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> of n elements. </p>
+<p>This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. </td></tr>
   </table>
   </dd>
 </dl>
@@ -590,9 +594,9 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">push_back</a> (T ());</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_a4ea0f842488c5f564430e842ee648348"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">nsSdD::CList::push_back</a></div><div class="ttdeci">void push_back(const T &amp;x) noexcept</div><div class="ttdoc">This function construct and add x value at the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L186">CList.hxx:186</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a91d4b6b8c89816da277ee27d32df5478"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">nsSdD::CList::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">This define a size_t. We use it because it&#39;s a std::list standard. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a91d4b6b8c89816da277ee27d32df5478"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">nsSdD::CList::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">This define a size_t. We use it because it&#39;s a std::list standard. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L54">CList.h:54</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -630,11 +634,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> of n elements with <code>T</code> val in each element. </p>
+<p>This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements with <code>T</code> val in each element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The value we want to insert in the element of <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The value we want to insert in the element of <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -649,9 +653,9 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">push_back</a> (val);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_a4ea0f842488c5f564430e842ee648348"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">nsSdD::CList::push_back</a></div><div class="ttdeci">void push_back(const T &amp;x) noexcept</div><div class="ttdoc">This function construct and add x value at the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L186">CList.hxx:186</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a91d4b6b8c89816da277ee27d32df5478"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">nsSdD::CList::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">This define a size_t. We use it because it&#39;s a std::list standard. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a91d4b6b8c89816da277ee27d32df5478"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">nsSdD::CList::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">This define a size_t. We use it because it&#39;s a std::list standard. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L54">CList.h:54</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -702,8 +706,8 @@ template&lt;class InputIterator &gt; </div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_ae1ed05415dfeb92174e030f9de754dc2"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae1ed05415dfeb92174e030f9de754dc2">nsSdD::CList::end</a></div><div class="ttdeci">CIterator end() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L86">CList.hxx:86</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_aa388b52d241c12737c4e5b2a36c767c3"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">nsSdD::CList::begin</a></div><div class="ttdeci">CIterator begin() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the begin of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L80">CList.hxx:80</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_a27b48887bd136140f3f79192b79f8897"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a27b48887bd136140f3f79192b79f8897">nsSdD::CList::assign</a></div><div class="ttdeci">void assign(unsigned n, const T &amp;val) noexcept</div><div class="ttdoc">This function erase the content and replace the content of the CList with the n size and with the val...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L161">CList.hxx:161</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -742,11 +746,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function erase the content and replace the content of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> with the <code>n</code> size and with the <code>val</code> value. </p>
+<p>This function erase the content and replace the content of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with the <code>n</code> size and with the <code>val</code> value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The value we want to affect on each element of the new <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The value we want to affect on each element of the new <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -833,14 +837,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return value of the last element in the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function return value of the last element in the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>T The value of the last element in the list. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L146">146</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>-&gt;getPrevious ()-&gt;getInfo ();</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -867,15 +871,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L80">80</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (<a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>-&gt;getNext ());</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -902,15 +906,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L92">92</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">const_iterator</a> (<a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>-&gt;getNext ());</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ae323732a26e507146686556fb775767a"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">nsSdD::CList::const_iterator</a></div><div class="ttdeci">CConstIterator const_iterator</div><div class="ttdoc">This define a CConstIterator. We use it to declare a CList const iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L58">CList.h:58</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ae323732a26e507146686556fb775767a"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">nsSdD::CList::const_iterator</a></div><div class="ttdeci">CConstIterator const_iterator</div><div class="ttdoc">This define a CConstIterator. We use it to declare a CList const iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L66">CList.h:66</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -937,15 +941,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return a <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_const_iterator.html">CConstIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L98">98</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">const_iterator</a> (<a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ae323732a26e507146686556fb775767a"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">nsSdD::CList::const_iterator</a></div><div class="ttdeci">CConstIterator const_iterator</div><div class="ttdoc">This define a CConstIterator. We use it to declare a CList const iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L58">CList.h:58</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ae323732a26e507146686556fb775767a"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae323732a26e507146686556fb775767a">nsSdD::CList::const_iterator</a></div><div class="ttdeci">CConstIterator const_iterator</div><div class="ttdoc">This define a CConstIterator. We use it to declare a CList const iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L66">CList.h:66</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -972,7 +976,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function delete all the element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function delete all the element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L255">255</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
@@ -981,9 +985,9 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a> = 0;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1010,8 +1014,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return an const_reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CConstIterator&gt; A const_reverse_iterator who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return an const_reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CConstIterator&gt; A const_reverse_iterator who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L116">116</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
@@ -1044,8 +1048,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return an const_reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CConstIterator&gt; A const_reverse_iterator who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return an const_reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CConstIterator&gt; A const_reverse_iterator who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L122">122</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
@@ -1092,8 +1096,8 @@ template&lt;typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>This function constructs an element with <code>args</code> and place it before the <code>position</code>. </p>
-<p>This function construct an element with <code>args</code> and place at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.</p>
-<p>This function construct an element with <code>args</code> and place at the beginning of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.</p>
+<p>This function construct an element with <code>args</code> and place at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</p>
+<p>This function construct an element with <code>args</code> and place at the beginning of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>The package of arguments you want to use to construct you element. </td></tr>
@@ -1305,14 +1309,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return true if the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> is empty , false otherwise. </p>
-<dl class="section return"><dt>Returns</dt><dd>bool If the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> is empty or not. </dd></dl>
+<p>This function return true if the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> is empty , false otherwise. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool If the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> is empty or not. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L128">128</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a> == 0;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1339,15 +1343,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L86">86</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (<a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1455,14 +1459,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return value of the first element in the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function return value of the first element in the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>T The value of the first element in the list. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L140">140</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>-&gt;getNext ()-&gt;getInfo ();</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1489,14 +1493,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return the head of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function return the head of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>CNodePtr A pointer to the head of the Clist. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L68">68</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1523,14 +1527,60 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function return the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>CNodePtr A pointer to the tail of the Clist. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L74">74</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a40896846d4660f4f76b7078b84e5c7c8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt;T&gt;::<a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="HTML/S/33.html#L318">318</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
+<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ++<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (position.getNode ()-&gt;addBefore (val));</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1577,105 +1627,6 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> that points to the newly inserted element. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a40896846d4660f4f76b7078b84e5c7c8"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt;T&gt;::<a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T const &amp;&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="HTML/S/33.html#L318">318</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
-<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ++<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (position.getNode ()-&gt;addBefore (val));</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="aa423a9841e74ff8ad11c2b41bc1d698e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">size_type</a>&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Inserts <code>n</code> elements <code>val</code> before position <code>position</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where you want to insert the new element. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>A const reference to the element you are adding. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The amount of times the element will be added </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> that points to the first of newly inserted elements. </dd></dl>
 
 </div>
 </div>
@@ -1735,25 +1686,23 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (prevNode-&gt;getNext ());</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L38">CList.h:38</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a9c5fe15f062d696743c99319d4fe1368"></a>
+<a class="anchor" id="aa423a9841e74ff8ad11c2b41bc1d698e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;class InputIterator &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> <a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
+          <td class="memname"><a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -1761,14 +1710,14 @@ template&lt;class InputIterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">InputIterator&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
+          <td class="paramtype"><a class="el" href="classns_sd_d_1_1_c_list.html#a91d4b6b8c89816da277ee27d32df5478">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">InputIterator&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1782,6 +1731,17 @@ template&lt;class InputIterator &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Inserts <code>n</code> elements <code>val</code> before position <code>position</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where you want to insert the new element. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>A const reference to the element you are adding. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The amount of times the element will be added </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> that points to the first of newly inserted elements. </dd></dl>
 
 </div>
 </div>
@@ -1841,11 +1801,55 @@ template&lt;class InputIterator &gt; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">iterator</a> (prevNode-&gt;getNext ());</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_ae1ed05415dfeb92174e030f9de754dc2"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae1ed05415dfeb92174e030f9de754dc2">nsSdD::CList::end</a></div><div class="ttdeci">CIterator end() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L86">CList.hxx:86</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_aa388b52d241c12737c4e5b2a36c767c3"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">nsSdD::CList::begin</a></div><div class="ttdeci">CIterator begin() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the begin of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L80">CList.hxx:80</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L38">CList.h:38</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9c5fe15f062d696743c99319d4fe1368"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a> <a class="el" href="classns_sd_d_1_1_c_list.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structns_sd_d_1_1_c_list_1_1_c_iterator.html">CIterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a class="anchor" id="a6f41b4a08e34f5081aaa69a4b00474ec"></a>
@@ -1872,10 +1876,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function merge two sorted list <code>x</code> after the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function merge two sorted list <code>x</code> after the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The sorted list we want to merge with the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The sorted list we want to merge with the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1914,7 +1918,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function delete the last element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function delete the last element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L193">193</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
@@ -1924,8 +1928,8 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        --<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1952,7 +1956,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function delete the first element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function delete the first element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L169">169</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
@@ -1962,8 +1966,8 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        --<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1991,10 +1995,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">T</td><td>The value we want to insert at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">T</td><td>The value we want to insert at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2004,8 +2008,8 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>-&gt;addBefore (x);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    ++<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2033,10 +2037,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function construct and add <code>x</code> value at the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The value we want to insert at the beginning of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The value we want to insert at the beginning of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2046,8 +2050,8 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>-&gt;addAfter (x);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    ++<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2074,8 +2078,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return an reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CIterator&gt; A reverse_iterator who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return an reverse_iterator to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CIterator&gt; A reverse_iterator who point to the end of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L104">104</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
@@ -2109,11 +2113,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function delete <code>val</code> element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<p>This function delete all element of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> who not respect the <code>pred</code> constraint.</p>
+<p>This function delete <code>val</code> element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<p>This function delete all element of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> who not respect the <code>pred</code> constraint.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The element you want to remove of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The element you want to remove of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pred</td><td>The predicate we want to use to remove the elements who not respect the predicate. </td></tr>
   </table>
   </dd>
@@ -2167,10 +2171,10 @@ template&lt;class Predicate &gt; </div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L38">CList.h:38</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2197,8 +2201,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function construct and return an reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CIterator&gt; A reverse_iterator who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function construct and return an reverse_iterator to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>reverse_iterator&lt;CIterator&gt; A reverse_iterator who point to the begin of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L110">110</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
@@ -2242,10 +2246,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function resize the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> if the <code>n</code> value is under the current size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> the function delete element at end to reduce at the <code>n</code> size. If you want to expand the size the new element are construct with the <code>val</code> value. </p>
+<p>This function resize the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> if the <code>n</code> value is under the current size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> the function delete element at end to reduce at the <code>n</code> size. If you want to expand the size the new element are construct with the <code>val</code> value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The new size we want to have with the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The new size we want to have with the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The val we want to assign to new value if you expand the size. </td></tr>
   </table>
   </dd>
@@ -2275,12 +2279,12 @@ template&lt;typename T&gt; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">push_back</a> (val);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_aa388b52d241c12737c4e5b2a36c767c3"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">nsSdD::CList::begin</a></div><div class="ttdeci">CIterator begin() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the begin of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L80">CList.hxx:80</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_a4ea0f842488c5f564430e842ee648348"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a4ea0f842488c5f564430e842ee648348">nsSdD::CList::push_back</a></div><div class="ttdeci">void push_back(const T &amp;x) noexcept</div><div class="ttdoc">This function construct and add x value at the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L186">CList.hxx:186</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_abc30f88bfb8854dff3fa4544e4bf5450"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#abc30f88bfb8854dff3fa4544e4bf5450">nsSdD::CList::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdoc">This function delete all the element of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L255">CList.hxx:255</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2307,7 +2311,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function reverse the head and the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>This function reverse the head and the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L308">308</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
@@ -2317,9 +2321,9 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    std::swap (<a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>-&gt;getNext (), <a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>-&gt;getPrevious ());</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    std::swap (<a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>, <a class="code" href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">m_head</a>);</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L38">CList.h:38</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2346,14 +2350,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function return the size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>size_type The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </dd></dl>
+<p>This function return the size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>size_type The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L134">134</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2380,7 +2384,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> in ascending order. </p>
+<p>This function the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> in ascending order. </p>
 
 <p>Definition at line <a class="el" href="HTML/S/33.html#L399">399</a> of file <a class="el" href="HTML/S/33.html">CList.hxx</a>.</p>
 <div class="fragment"><div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;{</div>
@@ -2427,7 +2431,7 @@ template&lt;class Compare &gt; </div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                std::iter_swap(i, j);</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_ae1ed05415dfeb92174e030f9de754dc2"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ae1ed05415dfeb92174e030f9de754dc2">nsSdD::CList::end</a></div><div class="ttdeci">CIterator end() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the end of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L86">CList.hxx:86</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L52">CList.h:52</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_afdaca29586106fc15940d8529f4990f8"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#afdaca29586106fc15940d8529f4990f8">nsSdD::CList::iterator</a></div><div class="ttdeci">CIterator iterator</div><div class="ttdoc">This define a CIterator. We use it to declare a CList iterator. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L60">CList.h:60</a></div></div>
 <div class="ttc" id="classns_sd_d_1_1_c_list_html_aa388b52d241c12737c4e5b2a36c767c3"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#aa388b52d241c12737c4e5b2a36c767c3">nsSdD::CList::begin</a></div><div class="ttdeci">CIterator begin() noexcept</div><div class="ttdoc">This function construct and return A CIterator to the begin of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/33.html#L80">CList.hxx:80</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2466,11 +2470,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function move the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>. </p>
+<p>This function move the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where we want to insert the other list. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2517,12 +2521,12 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function move element <code>i</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>. </p>
+<p>This function move element <code>i</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where we want to insert the other list. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The iterator who pointing the element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The iterator who pointing the element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2575,13 +2579,13 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This function move elements between <code>first</code> and <code>last</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> before <code>position</code>. </p>
+<p>This function move elements between <code>first</code> and <code>last</code> from the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where we want to insert the other list. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>The iterator who pointing the first element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>The iterator who pointing the last element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want to add on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>The iterator who pointing the first element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>The iterator who pointing the last element who want to move on the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2615,7 +2619,7 @@ template&lt;typename T &gt; </div>
 <p>This function swap the two CLists . </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a> we want to swap with the current <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want to swap with the current <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2626,9 +2630,9 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    std::swap (x.m_tail, <a class="code" href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">m_tail</a>);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    std::swap (x.m_size, <a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2667,10 +2671,10 @@ template&lt;class Compare &gt; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            --<a class="code" href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">m_size</a>;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;}</div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L474">CList.h:474</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L38">CList.h:38</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L462">CList.h:462</a></div></div>
-<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L468">CList.h:468</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a7cb44cbc02643d0d68ad33e5a0fde388"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a7cb44cbc02643d0d68ad33e5a0fde388">nsSdD::CList::m_tail</a></div><div class="ttdeci">CNodePtr m_tail</div><div class="ttdoc">A pointer the tail of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L482">CList.h:482</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a850663298aaff5a489b3b99499843c1e"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a850663298aaff5a489b3b99499843c1e">nsSdD::CList::CNodePtr</a></div><div class="ttdeci">std::shared_ptr&lt; CNode &gt; CNodePtr</div><div class="ttdoc">This define a std::shared_ptr&lt;CNode&gt; like a CNodePtr. We use it to declare the content of the list...</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L46">CList.h:46</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_ab0739217e44245b006ed3de3309d1257"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#ab0739217e44245b006ed3de3309d1257">nsSdD::CList::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdoc">The size of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L470">CList.h:470</a></div></div>
+<div class="ttc" id="classns_sd_d_1_1_c_list_html_a83e265983e0759c7adef0df2dacd26fa"><div class="ttname"><a href="classns_sd_d_1_1_c_list.html#a83e265983e0759c7adef0df2dacd26fa">nsSdD::CList::m_head</a></div><div class="ttdeci">CNodePtr m_head</div><div class="ttdoc">A pointer the head of the CList. </div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/28.html#L476">CList.h:476</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2759,9 +2763,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>A pointer the head of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>A pointer the head of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L468">468</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L476">476</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -2785,9 +2789,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>The size of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L462">462</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L470">470</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
@@ -2811,15 +2815,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>A pointer the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html">CList</a>. </p>
+<p>A pointer the tail of the <a class="el" href="classns_sd_d_1_1_c_list.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 
-<p>Definition at line <a class="el" href="HTML/S/28.html#L474">474</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/28.html#L482">482</a> of file <a class="el" href="HTML/S/28.html">CList.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/sknz/Development/swagplusplus/CList/<a class="el" href="HTML/S/28.html">CList.h</a></li>
-<li>/home/sknz/Development/swagplusplus/CList/<a class="el" href="HTML/S/33.html">CList.hxx</a></li>
+<li><a class="el" href="HTML/S/28.html">CList.h</a></li>
+<li><a class="el" href="HTML/S/33.html">CList.hxx</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -2827,7 +2831,7 @@ template&lt;typename T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacens_sd_d.html">nsSdD</a></li><li class="navelem"><a class="el" href="classns_sd_d_1_1_c_list.html">CList</a></li>
-    <li class="footer">Generated on Sun Dec 7 2014 22:41:21 for CList by
+    <li class="footer">Generated on Sun Dec 7 2014 22:46:27 for CList by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
