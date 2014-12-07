@@ -6,6 +6,10 @@
 @brief Header to the CList class.
 
 @mainpage Documention for the class "CList"
+
+This class have for goal to approach the most class list from the STL.
+So for this reason we choose to implement a double-linked list and we think it's easier for users to work with double linked list.
+We implement the most part of the list class functions like emplace, insert, ... and we implement iterator to provide a simple way to browse the list.
 */
 
 #pragma once
