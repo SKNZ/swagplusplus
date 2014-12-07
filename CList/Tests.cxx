@@ -588,7 +588,7 @@ namespace
     template<typename T>
     void InsertByValue (const T &x) noexcept
     {
-        const unsigned listSize = rand (0, 20);
+        const typename CTestedList<T>::size_type listSize = rand (0, 20);
         CTestedList<T> list;
 
         list.insert (list.begin (), listSize, x);
@@ -928,8 +928,8 @@ namespace
         for (T x : CValueProvider<T> () (5))
         IZI_SUBTEST(AssignByValue (x));
 
-//        IZI_SUBTEST(EmplaceFront<T>());
-//        IZI_SUBTEST(EmplaceBack<T>());
+        IZI_SUBTEST(EmplaceFront<T> ());
+        IZI_SUBTEST(EmplaceBack<T> ());
         IZI_SUBTEST(Emplace<T> ());
 
         IZI_SUBTEST(PushFront<T> ());
@@ -966,7 +966,7 @@ namespace
 
 //        IZI_SUBTEST(Sort<T>());
 
-//        IZI_SUBTEST(Reverse<T> ());
+        IZI_SUBTEST(Reverse<T> ());
 
         cout << endl;
     }

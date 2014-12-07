@@ -214,12 +214,10 @@ void nsSdD::CList<T>::pop_back () noexcept
 template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (nsSdD::CList<T>::iterator del) noexcept
 {
-    del.getNode ()->getNext ()->setPrevious (del.getNode ()->getPrevious ());
-    del.getNode ()->getPrevious ()->setNext (del.getNode ()->getNext ());
-
+    del.getNode ()->remove ();
     --m_size;
 
-    return nsSdD::CList<T>::iterator (del.getNode ()->getNext ());
+    return iterator (del.getNode ()->getNext ());
 }
 
 template<typename T>
@@ -358,9 +356,7 @@ template<typename T>
 template<typename... Args>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (iterator position, Args &&... args)
 {
-    T newValue (std::forward<Args> (args)...);
-    CNodePtr newNode = position.getNode ()->addBefore (newValue);
-    return iterator (newNode);
+    return insert (position, T (std::forward<Args> (args)...));
 }
 
 template<typename T>

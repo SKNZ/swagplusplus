@@ -110,7 +110,6 @@ namespace nsSdD
         template<class InputIterator>
         CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
 
-
         // Erase
         CIterator erase (CIterator del) noexcept;
 
