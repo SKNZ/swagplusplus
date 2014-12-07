@@ -1,10 +1,10 @@
 #include "Tests.h"
 #include "IziAssert.h"
 #include "CList2.h"
+#include "CTestClass.h"
+#include "CValueProvider.h"
 
 #include <ctime>
-#include <limits>
-#include <vector>
 #include <algorithm>
 
 using namespace nsTests;
@@ -13,163 +13,8 @@ using namespace nsSdD;
 
 namespace
 {
-    // C++11 c'est bon, mangez-en.
-    template<typename T> using CCollection = vector<T>;
     //template<typename T> using CTestedList = list<T>;
     template<typename T> using CTestedList = CList<T>;
-
-    int rand (int min, int max)
-    {
-        return min + (std::rand () % (max - min + 1));
-    }
-
-    class TestClass
-    {
-    public:
-        TestClass (int a = 0, const string &name = "ALAIN CASALOL") noexcept : m_a (a), m_name (name)
-        {
-        }
-
-        bool operator== (const TestClass &c) const noexcept
-        {
-            return m_a == c.m_a && m_name == c.m_name;
-        }
-
-        bool operator< (const TestClass &c) const noexcept
-        {
-            if (m_a == c.m_a)
-                return m_name < c.m_name;
-            return m_a < c.m_a;
-        }
-
-
-        bool operator> (const TestClass &c) const noexcept
-        {
-            if (m_a == c.m_a)
-                return m_name > c.m_name;
-            return m_a > c.m_a;
-        }
-
-        bool operator<= (const TestClass &c) const noexcept
-        {
-            return *this < c || *this == c;
-        }
-
-        bool operator>= (const TestClass &c) const noexcept
-        {
-            return *this > c || *this == c;
-        }
-
-        int getA () const noexcept
-        {
-            return m_a;
-        }
-
-        string getName () const noexcept
-        {
-            return m_name;
-        }
-
-    private:
-        int m_a;
-        string m_name;
-    };
-
-    std::ostream &operator<< (std::ostream &os, TestClass const &p)
-    {
-        return os << "PERS. " << p.getName () << ". " << p.getA ();
-    }
-
-    template<typename T>
-    class CValueProvider
-    {
-    public:
-        CCollection<T> operator() (const int /*valueCount*/ = 0)
-        {
-            // typeid(T).name() only gives mangled class name, not very clear but still a good indication.
-            throw runtime_error (string ("Value provider for type ") + typeid (T).name () + " does not exist.");
-        }
-    };
-
-    template<typename T>
-    class CValueProvider<T *>
-    {
-    public:
-        CCollection<T *> operator() (const int valueCount = 0)
-        {
-            CCollection<T> array = CValueProvider<T> () (valueCount);
-            CCollection<T *> ptrArray;
-            ptrArray.reserve (array.size ());
-
-            for (T x : array)
-                ptrArray.push_back (new T (x));
-
-            return ptrArray;
-        }
-    };
-
-    template<typename T>
-    class CValueProvider<shared_ptr<T>>
-    {
-    public:
-        CCollection<shared_ptr<T>> operator() (const int valueCount = 0)
-        {
-            CCollection<T> array = CValueProvider<T> () (valueCount);
-            CCollection<shared_ptr<T>> ptrArray;
-            ptrArray.reserve (array.size ());
-
-            for (T x : array)
-                ptrArray.push_back (make_shared<T> (x));
-
-            return ptrArray;
-        }
-    };
-
-    template<>
-    class CValueProvider<int>
-    {
-    public:
-        CCollection<int> operator() (const int valueCount = 0) noexcept
-        {
-            int arraySize = valueCount ? valueCount : rand (10, 100);
-
-            CCollection<int> array (arraySize);
-
-            array[0] = 0;
-            array[1] = std::numeric_limits<int>::max ();
-            array[2] = std::numeric_limits<int>::min ();
-
-            for (int i = 3; i < arraySize; ++i)
-                array[i] = std::rand ();
-
-            return array;
-        }
-    };
-
-    template<>
-    class CValueProvider<TestClass>
-    {
-    public:
-        CCollection<TestClass> operator() (const int valueCount = 0) noexcept
-        {
-            int arraySize = valueCount ? valueCount : rand (10, 100);
-            CCollection<TestClass> array;
-            array.reserve (arraySize);
-
-            array.push_back (TestClass (4654, "MARQUE LA PORTE"));
-
-            for (int i = array.size (); i < arraySize; ++i)
-            {
-                string name;
-                for (int j = 0; j < rand (10, 20); ++j)
-                    name += static_cast<char>(rand (66, 89));
-
-                array.push_back (TestClass (rand (0, 30), name));
-            }
-
-            return array;
-        }
-    };
 
     template<typename T>
     void CreateEmptyList () noexcept
@@ -1006,6 +851,7 @@ void CTests::RunTests () noexcept
     cout << "Starting tests..." << endl << endl;
 
     srand (time (NULL));
+
     IZI_CALLTEST(RunTemplatedTests<int> ());
     IZI_CALLTEST(RunTemplatedTests<int *> ());
     IZI_CALLTEST(RunTemplatedTests<shared_ptr<int>> ());
