@@ -3,7 +3,7 @@
 @author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
 @date 08/12/2014
 @version  1.0
-@brief Implementation of the iterator for the CList class.
+@brief Implementation of iterator for the CList class.
 */
 #pragma once
 
@@ -12,9 +12,8 @@
 template<typename T> using CIterBase = std::iterator<std::bidirectional_iterator_tag, T>;
 
 /*!
-    @brief This class is a personnal implementation of iterator for our class CList.
-           We provide the essential function to work with us.
-           We implement bidirectionnal iterator because we choose to use a double-linked list.
+    @brief This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirectional
+           iterators, we implement this on the CIterator class.
  */
 template<typename T>
 struct nsSdD::CList<T>::CIterator : public CIterBase<T>
@@ -30,7 +29,7 @@ public:
     /*!
         @fn             CIterator (CNodePtr p = nullptr) noexcept
         @brief          The default constructor of the iterator for the CList class.
-        @param[in] p    The the node we want to use to construct the iterator.
+        @param[in] p    The p node we want to use to construct the iterator.
     */
     CIterator (CNodePtr p = nullptr) noexcept : node (p)
     {
@@ -62,7 +61,7 @@ public:
 
     /*!
        @fn operator== (const CIterator &other) const noexcept
-       @brief The  operator == who compare the two node and return true if equal and false otherwise.
+       @brief The operator == which compare the two node and return true if equal and false otherwise.
        @param[in] other The value we want to compare.
        @return  bool If the two iterator are equal.
     */
@@ -73,7 +72,7 @@ public:
 
     /*!
        @fn operator!= (const CIterator &other) const noexcept
-       @brief The  operator != who compare the two node and return true if not equal and false otherwise.
+       @brief The  operator != which compare the two node and return true if not equal and false otherwise.
        @param[in] other The value we want to compare.
        @return  bool If the two iterator are not equal.
     */
@@ -84,7 +83,7 @@ public:
 
     /*!
        @fn operator++ () noexcept
-       @brief The  operator ++ who pre-increment the iterator, pass to the next node.
+       @brief The  operator ++ who pre-increment the iterator, gave to the next node.
        @return  CIterator The iterator with the new value.
     */
     CIterator &operator++ () noexcept
@@ -95,7 +94,7 @@ public:
 
     /*!
        @fn operator-- () noexcept
-       @brief The  operator -- who pre-decrement the iterator, pass to the previous node.
+       @brief The  operator -- who pre-decrement the iterator, gave to the previous node.
        @return  CIterator The iterator with the new value.
     */
     CIterator &operator-- () noexcept
@@ -106,8 +105,8 @@ public:
 
     /*!
        @fn operator++ (int) noexcept
-       @brief The  operator ++ who post-increment the iterator, pass to the next node.
-       @return  CIterator The iterator with the old value, but iterator are increment.
+       @brief The  operator ++ who post-increment the iterator, gave to the next node.
+       @return  CIterator The iterator with the old value, but iterator are incremented.
     */
     CIterator operator++ (int) noexcept
     {
@@ -118,8 +117,8 @@ public:
 
     /*!
        @fn operator-- (int) noexcept
-       @brief The  operator -- who post-decrement the iterator, pass to the previous node.
-       @return  CIterator The iterator with the old value, but iterator are decrement.
+       @brief The  operator -- who post-decrement the iterator, gave to the previous node.
+       @return  CIterator The iterator with the old value, but iterator are decremented.
     */
     CIterator operator-- (int) noexcept
     {
@@ -130,7 +129,7 @@ public:
 
     /*!
        @fn operator-> () noexcept
-       @brief The dereferencement operator -> who return the a pointer to the info of the node.
+       @brief The dereferencement operator -> who return the pointer to the info of the node.
        @return  CIterBase<T>::pointer The pointer to the value of the node.
     */
     typename CIterBase<T>::pointer operator-> () noexcept
@@ -159,7 +158,7 @@ public:
     }
 
     /*!
-      @fn getNode () const oexcept
+      @fn getNode () const noexcept
       @brief The function return the node of the pointer.
       @return  CNodePtr The node of the pointer.
    */
