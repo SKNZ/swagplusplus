@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>CList: Documention for the class &quot;CList&quot;</title>
+<title>CList: CTests.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,9 +39,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,7 +60,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -75,15 +79,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Documention for the class "CList" </div>  </div>
+<div class="title">CTests.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The goal of this class is reproduce the behaviour of the STL container std::list. For this reason, we chose to implement a doubly linked list and bidirectional iterators. Doubly linked list are easier to browse and more convenient to use. They have the disavantage of being more complex, however by using two sentinels their complexity is grealt reduced.</p>
-<p>Since our CList is made to be "plug and play" with the std list, we chose to respect their conventions to best of our ability.</p>
-<p>As requested, the Allocator part is not supported. Performance tests have not been run, but we know that our implementation is sub par.</p>
-<p>Thank you for reading this notice. We hope you find our code pleasant ;) </p>
+
+<p>CList tests runner.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;list&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for CTests.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="CTests_8h__incl.png" border="0" usemap="#CTests_8h" alt=""/></div>
+</div>
+</div>
+<p><a href="CTests_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsTests_1_1CTests.html">nsTests::CTests</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CList tests runner. </p>
+<dl class="section author"><dt>Author</dt><dd>Anthony L., Loïck M., Thomas M., Floran N., Loïc P. </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>08/12/2014 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

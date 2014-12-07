@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>CList: Documention for the class &quot;CList&quot;</title>
+<title>CList: CTests.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,9 +39,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,6 +58,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           </span>
         </div>
       </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -77,14 +82,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Documention for the class "CList" </div>  </div>
+<div class="title">CTests.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The goal of this class is reproduce the behaviour of the STL container std::list. For this reason, we chose to implement a doubly linked list and bidirectional iterators. Doubly linked list are easier to browse and more convenient to use. They have the disavantage of being more complex, however by using two sentinels their complexity is grealt reduced.</p>
-<p>Since our CList is made to be "plug and play" with the std list, we chose to respect their conventions to best of our ability.</p>
-<p>As requested, the Allocator part is not supported. Performance tests have not been run, but we know that our implementation is sub par.</p>
-<p>Thank you for reading this notice. We hope you find our code pleasant ;) </p>
-</div></div><!-- contents -->
+<a href="CTests_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacensTests.html">nsTests</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classnsTests_1_1CTests.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classnsTests_1_1CTests.html">CTests</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> RunTests () noexcept;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classnsTests_1_1CTests.html">CTests</a> () = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="namespacensTests_html"><div class="ttname"><a href="namespacensTests.html">nsTests</a></div><div class="ttdef"><b>Definition:</b> CTestClass.h:5</div></div>
+<div class="ttc" id="classnsTests_1_1CTests_html"><div class="ttname"><a href="classnsTests_1_1CTests.html">nsTests::CTests</a></div><div class="ttdef"><b>Definition:</b> CTests.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Mon Dec 8 2014 00:50:31 for CList by &#160;<a href="http://www.doxygen.org/index.html">
