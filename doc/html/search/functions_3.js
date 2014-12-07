@@ -7,5 +7,5 @@ var searchData=
   ['emplacefront',['EmplaceFront',['../namespaceanonymous__namespace_02_tests_8cxx_03.html#af334dd0ae0991cdb06baf5073bc1e3ea',1,'anonymous_namespace{Tests.cxx}']]],
   ['empty',['empty',['../classns_sd_d_1_1_c_list.html#ad9c0ecbdedb0a8ad28625874f3c11c4d',1,'nsSdD::CList']]],
   ['end',['end',['../classns_sd_d_1_1_c_list.html#ae1ed05415dfeb92174e030f9de754dc2',1,'nsSdD::CList']]],
-  ['erase',['erase',['../classns_sd_d_1_1_c_list.html#afe12f69415482120c58b59ae7baaa434',1,'nsSdD::CList::erase(CIterator del) noexcept'],['../classns_sd_d_1_1_c_list.html#a415d73e98c6c65044fbe7c25dd5b81d7',1,'nsSdD::CList::erase(CIterator first, CIterator last) noexcept'],['../namespaceanonymous__namespace_02_tests_8cxx_03.html#a32598d878f4b54166c6ace11d6f44626',1,'anonymous_namespace{Tests.cxx}::Erase()']]]
+  ['erase',['erase',['../classns_sd_d_1_1_c_list.html#afe12f69415482120c58b59ae7baaa434',1,'nsSdD::CList::erase(CIterator del) noexcept'],['../classns_sd_d_1_1_c_list.html#a11cda22711d403a4ae5dbb4a921a03d4',1,'nsSdD::CList::erase(CIterator first, CIterator last) noexcept'],['../namespaceanonymous__namespace_02_tests_8cxx_03.html#a32598d878f4b54166c6ace11d6f44626',1,'anonymous_namespace{Tests.cxx}::Erase()']]]
 ];

@@ -9,35 +9,35 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L468'>m_head</a>            468 CList2.h               CNodePtr m_head = nullptr;</span>
-<span class='curline'><a href='../S/26.html#L10'>m_head</a>             10 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/26.html#L11'>m_head</a>             11 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/26.html#L13'>m_head</a>             13 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L18'>m_head</a>             18 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/26.html#L19'>m_head</a>             19 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/26.html#L21'>m_head</a>             21 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L29'>m_head</a>             29 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/26.html#L30'>m_head</a>             30 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/26.html#L32'>m_head</a>             32 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L40'>m_head</a>             40 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/26.html#L41'>m_head</a>             41 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/26.html#L43'>m_head</a>             43 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L52'>m_head</a>             52 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/26.html#L53'>m_head</a>             53 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/26.html#L55'>m_head</a>             55 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L63'>m_head</a>             63 CList2.hxx         return m_head;</span>
-<span class='curline'><a href='../S/26.html#L75'>m_head</a>             75 CList2.hxx         return iterator (m_head-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L87'>m_head</a>             87 CList2.hxx         return const_iterator (m_head-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L135'>m_head</a>            135 CList2.hxx         return m_head-&gt;getNext ()-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/26.html#L166'>m_head</a>            166 CList2.hxx             m_head-&gt;getNext ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/26.html#L174'>m_head</a>            174 CList2.hxx         m_head-&gt;addAfter (x);</span>
-<span class='curline'><a href='../S/26.html#L242'>m_head</a>            242 CList2.hxx         std::swap (x.m_head, m_head);</span>
-<span class='curline'><a href='../S/26.html#L250'>m_head</a>            250 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L251'>m_head</a>            251 CList2.hxx         m_tail-&gt;setPrevious (m_head);</span>
-<span class='curline'><a href='../S/26.html#L269'>m_head</a>            269 CList2.hxx         for (CNodePtr a = m_head-&gt;getNext (); a != m_tail; a = a-&gt;getNext ())</span>
-<span class='curline'><a href='../S/26.html#L292'>m_head</a>            292 CList2.hxx         for (CNodePtr currNode = m_head-&gt;getNext (); currNode != m_tail; currNode = currNode-&gt;getNext ())</span>
-<span class='curline'><a href='../S/26.html#L303'>m_head</a>            303 CList2.hxx         for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode-&gt;getPrevious ())</span>
-<span class='curline'><a href='../S/26.html#L307'>m_head</a>            307 CList2.hxx         std::swap (m_tail, m_head);</span>
+<span class='curline'><a href='../S/28.html#L468'>m_head</a>            468 CList.h                CNodePtr m_head = nullptr;</span>
+<span class='curline'><a href='../S/34.html#L10'>m_head</a>             10 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/34.html#L11'>m_head</a>             11 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/34.html#L13'>m_head</a>             13 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L18'>m_head</a>             18 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/34.html#L19'>m_head</a>             19 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/34.html#L21'>m_head</a>             21 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L29'>m_head</a>             29 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/34.html#L30'>m_head</a>             30 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/34.html#L32'>m_head</a>             32 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L40'>m_head</a>             40 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/34.html#L41'>m_head</a>             41 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/34.html#L43'>m_head</a>             43 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L52'>m_head</a>             52 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/34.html#L53'>m_head</a>             53 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/34.html#L55'>m_head</a>             55 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L63'>m_head</a>             63 CList.hxx          return m_head;</span>
+<span class='curline'><a href='../S/34.html#L75'>m_head</a>             75 CList.hxx          return iterator (m_head-&gt;getNext ());</span>
+<span class='curline'><a href='../S/34.html#L87'>m_head</a>             87 CList.hxx          return const_iterator (m_head-&gt;getNext ());</span>
+<span class='curline'><a href='../S/34.html#L135'>m_head</a>            135 CList.hxx          return m_head-&gt;getNext ()-&gt;getInfo ();</span>
+<span class='curline'><a href='../S/34.html#L166'>m_head</a>            166 CList.hxx              m_head-&gt;getNext ()-&gt;remove ();</span>
+<span class='curline'><a href='../S/34.html#L174'>m_head</a>            174 CList.hxx          m_head-&gt;addAfter (x);</span>
+<span class='curline'><a href='../S/34.html#L242'>m_head</a>            242 CList.hxx          std::swap (x.m_head, m_head);</span>
+<span class='curline'><a href='../S/34.html#L250'>m_head</a>            250 CList.hxx          m_head-&gt;setNext (m_tail);</span>
+<span class='curline'><a href='../S/34.html#L251'>m_head</a>            251 CList.hxx          m_tail-&gt;setPrevious (m_head);</span>
+<span class='curline'><a href='../S/34.html#L269'>m_head</a>            269 CList.hxx          for (CNodePtr a = m_head-&gt;getNext (); a != m_tail; a = a-&gt;getNext ())</span>
+<span class='curline'><a href='../S/34.html#L292'>m_head</a>            292 CList.hxx          for (CNodePtr currNode = m_head-&gt;getNext (); currNode != m_tail; currNode = currNode-&gt;getNext ())</span>
+<span class='curline'><a href='../S/34.html#L303'>m_head</a>            303 CList.hxx          for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode-&gt;getPrevious ())</span>
+<span class='curline'><a href='../S/34.html#L307'>m_head</a>            307 CList.hxx          std::swap (m_tail, m_head);</span>
 </pre>
 </body>
 </html>

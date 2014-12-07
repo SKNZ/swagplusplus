@@ -1,4 +1,4 @@
-#include "Tests.h"
+#include "CTests.h"
 #include "IziAssert.h"
 #include "CList.h"
 #include "CTestClass.h"

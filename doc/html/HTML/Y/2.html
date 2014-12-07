@@ -9,53 +9,53 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/35.html#L15'>CCollection</a>        15 CValueProvider.h     template&lt;typename T&gt; using CCollection = std::vector&lt;T&gt;;</span>
-<span class='curline'><a href='../S/35.html#L21'>CCollection</a>        21 CValueProvider.h         CCollection&lt;T&gt; operator() (const int /*valueCount*/ = 0)</span>
-<span class='curline'><a href='../S/35.html#L32'>CCollection</a>        32 CValueProvider.h         CCollection&lt;T *&gt; operator() (const int valueCount = 0)</span>
-<span class='curline'><a href='../S/35.html#L34'>CCollection</a>        34 CValueProvider.h             CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
-<span class='curline'><a href='../S/35.html#L35'>CCollection</a>        35 CValueProvider.h             CCollection&lt;T *&gt; ptrArray;</span>
-<span class='curline'><a href='../S/35.html#L49'>CCollection</a>        49 CValueProvider.h         CCollection&lt;std::shared_ptr&lt;T&gt;&gt; operator() (const int valueCount = 0)</span>
-<span class='curline'><a href='../S/35.html#L51'>CCollection</a>        51 CValueProvider.h             CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
-<span class='curline'><a href='../S/35.html#L52'>CCollection</a>        52 CValueProvider.h             CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</span>
-<span class='curline'><a href='../S/35.html#L66'>CCollection</a>        66 CValueProvider.h         CCollection&lt;int&gt; operator() (const int valueCount = 0) noexcept</span>
-<span class='curline'><a href='../S/35.html#L70'>CCollection</a>        70 CValueProvider.h             CCollection&lt;int&gt; array (arraySize);</span>
-<span class='curline'><a href='../S/35.html#L87'>CCollection</a>        87 CValueProvider.h         CCollection&lt;TestClass&gt; operator() (const int valueCount = 0) noexcept</span>
-<span class='curline'><a href='../S/35.html#L90'>CCollection</a>        90 CValueProvider.h             CCollection&lt;TestClass&gt; array;</span>
-<span class='curline'><a href='../S/32.html#L108'>CCollection</a>       108 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L109'>CCollection</a>       109 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
-<span class='curline'><a href='../S/32.html#L110'>CCollection</a>       110 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
-<span class='curline'><a href='../S/32.html#L135'>CCollection</a>       135 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L154'>CCollection</a>       154 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L155'>CCollection</a>       155 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
-<span class='curline'><a href='../S/32.html#L156'>CCollection</a>       156 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
-<span class='curline'><a href='../S/32.html#L184'>CCollection</a>       184 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L229'>CCollection</a>       229 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L241'>CCollection</a>       241 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L255'>CCollection</a>       255 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L285'>CCollection</a>       285 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L305'>CCollection</a>       305 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L323'>CCollection</a>       323 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
-<span class='curline'><a href='../S/32.html#L347'>CCollection</a>       347 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L367'>CCollection</a>       367 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L385'>CCollection</a>       385 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L403'>CCollection</a>       403 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L423'>CCollection</a>       423 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
-<span class='curline'><a href='../S/32.html#L463'>CCollection</a>       463 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L477'>CCollection</a>       477 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L498'>CCollection</a>       498 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L518'>CCollection</a>       518 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L553'>CCollection</a>       553 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L579'>CCollection</a>       579 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L603'>CCollection</a>       603 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L621'>CCollection</a>       621 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/32.html#L644'>CCollection</a>       644 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
-<span class='curline'><a href='../S/32.html#L659'>CCollection</a>       659 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L676'>CCollection</a>       676 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L694'>CCollection</a>       694 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L716'>CCollection</a>       716 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L741'>CCollection</a>       741 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L754'>CCollection</a>       754 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
-<span class='curline'><a href='../S/32.html#L769'>CCollection</a>       769 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L15'>CCollection</a>        15 CValueProvider.h     template&lt;typename T&gt; using CCollection = std::vector&lt;T&gt;;</span>
+<span class='curline'><a href='../S/33.html#L21'>CCollection</a>        21 CValueProvider.h         CCollection&lt;T&gt; operator() (const int /*valueCount*/ = 0)</span>
+<span class='curline'><a href='../S/33.html#L32'>CCollection</a>        32 CValueProvider.h         CCollection&lt;T *&gt; operator() (const int valueCount = 0)</span>
+<span class='curline'><a href='../S/33.html#L34'>CCollection</a>        34 CValueProvider.h             CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
+<span class='curline'><a href='../S/33.html#L35'>CCollection</a>        35 CValueProvider.h             CCollection&lt;T *&gt; ptrArray;</span>
+<span class='curline'><a href='../S/33.html#L49'>CCollection</a>        49 CValueProvider.h         CCollection&lt;std::shared_ptr&lt;T&gt;&gt; operator() (const int valueCount = 0)</span>
+<span class='curline'><a href='../S/33.html#L51'>CCollection</a>        51 CValueProvider.h             CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
+<span class='curline'><a href='../S/33.html#L52'>CCollection</a>        52 CValueProvider.h             CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</span>
+<span class='curline'><a href='../S/33.html#L66'>CCollection</a>        66 CValueProvider.h         CCollection&lt;int&gt; operator() (const int valueCount = 0) noexcept</span>
+<span class='curline'><a href='../S/33.html#L70'>CCollection</a>        70 CValueProvider.h             CCollection&lt;int&gt; array (arraySize);</span>
+<span class='curline'><a href='../S/33.html#L87'>CCollection</a>        87 CValueProvider.h         CCollection&lt;TestClass&gt; operator() (const int valueCount = 0) noexcept</span>
+<span class='curline'><a href='../S/33.html#L90'>CCollection</a>        90 CValueProvider.h             CCollection&lt;TestClass&gt; array;</span>
+<span class='curline'><a href='../S/31.html#L108'>CCollection</a>       108 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L109'>CCollection</a>       109 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
+<span class='curline'><a href='../S/31.html#L110'>CCollection</a>       110 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
+<span class='curline'><a href='../S/31.html#L135'>CCollection</a>       135 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L154'>CCollection</a>       154 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L155'>CCollection</a>       155 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
+<span class='curline'><a href='../S/31.html#L156'>CCollection</a>       156 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
+<span class='curline'><a href='../S/31.html#L184'>CCollection</a>       184 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L229'>CCollection</a>       229 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L241'>CCollection</a>       241 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L255'>CCollection</a>       255 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L285'>CCollection</a>       285 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L305'>CCollection</a>       305 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L323'>CCollection</a>       323 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
+<span class='curline'><a href='../S/31.html#L347'>CCollection</a>       347 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L367'>CCollection</a>       367 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L385'>CCollection</a>       385 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L403'>CCollection</a>       403 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L423'>CCollection</a>       423 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
+<span class='curline'><a href='../S/31.html#L463'>CCollection</a>       463 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L477'>CCollection</a>       477 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L498'>CCollection</a>       498 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L518'>CCollection</a>       518 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L553'>CCollection</a>       553 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L579'>CCollection</a>       579 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L603'>CCollection</a>       603 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L621'>CCollection</a>       621 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/31.html#L644'>CCollection</a>       644 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/31.html#L659'>CCollection</a>       659 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L676'>CCollection</a>       676 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L694'>CCollection</a>       694 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L716'>CCollection</a>       716 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L741'>CCollection</a>       741 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L754'>CCollection</a>       754 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/31.html#L769'>CCollection</a>       769 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
 </pre>
 </body>
 </html>

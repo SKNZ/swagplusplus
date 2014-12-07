@@ -1,10 +1,10 @@
 var hierarchy =
 [
     [ "CConstIterBase", null, [
-      [ "nsSdD::CList< T >::CConstIterator", "structns_sd_d_1_1_c_list_1_1_c_const_iterator.html", null ]
+      [ "nsSdD::CList< T >::CConstIterator< T >", "structns_sd_d_1_1_c_list_1_1_c_const_iterator.html", null ]
     ] ],
     [ "CIterBase", null, [
-      [ "nsSdD::CList< T >::CIterator", "structns_sd_d_1_1_c_list_1_1_c_iterator.html", null ]
+      [ "nsSdD::CList< T >::CIterator< T >", "structns_sd_d_1_1_c_list_1_1_c_iterator.html", null ]
     ] ],
     [ "nsSdD::CList< T >", "classns_sd_d_1_1_c_list.html", null ],
     [ "nsSdD::CList< T >::CNode", "classns_sd_d_1_1_c_list_1_1_c_node.html", null ],

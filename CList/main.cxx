@@ -1,4 +1,4 @@
-#include "Tests.h"
+#include "CTests.h"
 
 
 using namespace nsTests;

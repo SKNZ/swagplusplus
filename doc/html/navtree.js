@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "CList", "index.html", [
-    [ "Documention for the class \"CList\"", "index.html", null ],
+    [ "Documention for the class const_iterartor of \"CList\"", "index.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
