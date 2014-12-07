@@ -1,3 +1,10 @@
+/*!
+@file CValueProvider.h
+@author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
+@date 08/12/2014
+@version  1.0
+@brief Provides semi-random values for tested classes...
+*/
 #pragma once
 
 #include "CTestClass.h"

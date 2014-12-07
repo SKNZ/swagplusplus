@@ -4,8 +4,6 @@
 @date 08/12/2014
 @version  1.0
 @brief Implementation of the const_iterator for the CList class.
-
-@mainpage Documention for the class const_iterartor of "CList"
 */
 
 #pragma once
