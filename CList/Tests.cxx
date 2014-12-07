@@ -971,7 +971,7 @@ namespace
 
         IZI_SUBTEST(SpliceList<T>());
         IZI_SUBTEST(SpliceOne<T>());
-//        IZI_SUBTEST(SpliceRange<T>());
+        IZI_SUBTEST(SpliceRange<T>());
 
         IZI_SUBTEST(Remove<T> ());
         IZI_SUBTEST(RemoveIf<T> ());
