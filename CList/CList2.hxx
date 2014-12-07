@@ -96,25 +96,25 @@ typename nsSdD::CList<T>::const_iterator nsSdD::CList<T>::cend () const noexcept
 template<typename T>
 typename std::reverse_iterator<typename nsSdD::CList<T>::iterator> nsSdD::CList<T>::rbegin () noexcept
 {
-    return std::reverse_iterator<iterator> (begin ());
+    return std::reverse_iterator<iterator> (end ());
 }
 
 template<typename T>
 typename std::reverse_iterator<typename nsSdD::CList<T>::iterator> nsSdD::CList<T>::rend () noexcept
 {
-    return std::reverse_iterator<iterator> (end ());
+    return std::reverse_iterator<iterator> (begin ());
 }
 
 template<typename T>
 typename std::reverse_iterator<typename nsSdD::CList<T>::const_iterator> nsSdD::CList<T>::crbegin () noexcept
 {
-    return std::reverse_iterator<const_iterator> (cbegin ());
+    return std::reverse_iterator<const_iterator> (cend ());
 }
 
 template<typename T>
 typename std::reverse_iterator<typename nsSdD::CList<T>::const_iterator> nsSdD::CList<T>::crend () noexcept
 {
-    return std::reverse_iterator<const_iterator> (cend ());
+    return std::reverse_iterator<const_iterator> (cbegin ());
 }
 
 template<typename T>

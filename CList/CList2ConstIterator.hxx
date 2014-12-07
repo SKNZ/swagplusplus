@@ -11,16 +11,12 @@ private:
 
 public:
     typedef std::bidirectional_iterator_tag iterator_category;
-    typedef T value_type;
+    typedef const T value_type;
     typedef int difference_type;
-    typedef T *pointer;
-    typedef T &reference;
+    typedef T const *pointer;
+    typedef const T &reference;
 
     CConstIterator (CNodePtr p = nullptr) : node (p)
-    {
-    }
-
-    ~CConstIterator ()
     {
     }
 
@@ -40,38 +36,38 @@ public:
         return node != other.node;
     }
 
-    CConstIterator &operator++ ()
+    CConstIterator operator++ ()
     {
         node = node->getNext ();
         return *this;
     }
 
-    CConstIterator &operator-- ()
+    CConstIterator operator-- ()
     {
         node = node->getPrevious ();
         return *this;
     }
 
-    CConstIterator &operator++ (int)
+    CConstIterator operator++ (int)
     {
         node = node->getNext ();
         return *this;
     }
 
-    CConstIterator &operator-- (int)
+    CConstIterator operator-- (int)
     {
         node = node->getPrevious ();
         return *--this;
     }
 
-    const T operator* () const
+    reference operator* () const
     {
         return node->getInfo ();
     }
 
-    const CNodePtr operator-> ()
+    pointer operator-> ()
     {
-        return node;
+        return &node->getInfo ();
     }
 
 };

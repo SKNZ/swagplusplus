@@ -218,6 +218,4 @@ namespace nsSdD
 #include "CList2.hxx"
 #include "CList2Iterator.hxx"
 #include "CList2ConstIterator.hxx"
-#include "CList2ReverseIterator.hxx"
-#include "CList2ConstReverseIterator.hxx"
 #include "CList2Node.hxx"
