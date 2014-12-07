@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 class nsTests::CValueProvider&lt; TestClass &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="HTML/S/31.html#L84">84</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/31.html#L91">91</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a18dfa404ff71ed0594fd0298fb3b1024"></a>
 <div class="memitem">
@@ -150,26 +150,26 @@ class nsTests::CValueProvider&lt; TestClass &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="HTML/S/31.html#L87">87</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordtype">int</span> arraySize = valueCount ? valueCount : <a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (10, 100);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            CCollection&lt;TestClass&gt; array;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            array.reserve (arraySize);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            array.push_back (TestClass (4654, <span class="stringliteral">&quot;MARQUE LA PORTE&quot;</span>));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = array.size (); i &lt; arraySize; ++i)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                std::string name;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (10, 20); ++j)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    name += static_cast&lt;char&gt;(<a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (66, 89));</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                array.push_back (TestClass (<a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (0, 30), name));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> array;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="ttc" id="namespacens_tests_html_af0c5572491abb06a35048cac341fee0a"><div class="ttname"><a href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">nsTests::rand</a></div><div class="ttdeci">int rand(int min, int max)</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/31.html#L9">CValueProvider.h:9</a></div></div>
+<p>Definition at line <a class="el" href="HTML/S/31.html#L94">94</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">int</span> arraySize = valueCount ? valueCount : <a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (10, 100);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            CCollection&lt;TestClass&gt; array;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            array.reserve (arraySize);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            array.push_back (TestClass (4654, <span class="stringliteral">&quot;MARQUE LA PORTE&quot;</span>));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = array.size (); i &lt; arraySize; ++i)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                std::string name;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (10, 20); ++j)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    name += static_cast&lt;char&gt;(<a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (66, 89));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                array.push_back (TestClass (<a class="code" href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">rand</a> (0, 30), name));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> array;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="ttc" id="namespacens_tests_html_af0c5572491abb06a35048cac341fee0a"><div class="ttname"><a href="namespacens_tests.html#af0c5572491abb06a35048cac341fee0a">nsTests::rand</a></div><div class="ttdeci">int rand(int min, int max)</div><div class="ttdef"><b>Definition:</b> <a href="HTML/S/31.html#L16">CValueProvider.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,7 +182,7 @@ class nsTests::CValueProvider&lt; TestClass &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacens_tests.html">nsTests</a></li><li class="navelem"><a class="el" href="classns_tests_1_1_c_value_provider_3_01_test_class_01_4.html">CValueProvider< TestClass ></a></li>
-    <li class="footer">Generated on Sun Dec 7 2014 22:48:58 for CList by
+    <li class="footer">Generated on Sun Dec 7 2014 22:51:16 for CList by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

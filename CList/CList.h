@@ -110,7 +110,7 @@ namespace nsSdD
 
         /*!
             @fn     'template < InputIterator > nsSdD::CList< T >::CList(InputIterator first, InputIterator last) noexcept'
-            @brief  This is the constructor who construct a new CList from two CIterator of another CList.
+            @brief  This is the constructor who construct a new CList from two iterator of another CList.
             @param[in] first This point to the first element who want to copy.
             @param[in] last This point to the last element who want to copy.
          */
@@ -132,62 +132,62 @@ namespace nsSdD
          */
         inline CNodePtr getTail () const noexcept;
 
-        // CIterators
+        // iterators
         /*!
             @fn     begin() noexcept
-            @brief  This function construct and return A CIterator to the begin of the CList.
-            @return CIterator A CIterator who point to the begin of the CList.
+            @brief  This function construct and return A iterator to the begin of the CList.
+            @return iterator A iterator who point to the begin of the CList.
          */
-        CIterator begin () noexcept;
+        iterator begin () noexcept;
 
         /*!
             @fn     end() noexcept
-            @brief  This function construct and return A CIterator to the end of the CList.
-            @return CIterator A CIterator who point to the end of the CList.
+            @brief  This function construct and return A iterator to the end of the CList.
+            @return iterator A iterator who point to the end of the CList.
          */
-        CIterator end () noexcept;
+        iterator end () noexcept;
 
         /*!
             @fn     cbegin() noexcept
-            @brief  This function construct and return a CConstIterator to the begin of the CList.
-            @return CConstIterator A CIterator who point to the begin of the CList.
+            @brief  This function construct and return a const_iterator to the begin of the CList.
+            @return const_iterator A iterator who point to the begin of the CList.
          */
-        CConstIterator cbegin () const noexcept;
+        const_iterator cbegin () const noexcept;
 
         /*!
             @fn     cend() noexcept
-            @brief  This function construct and return a CIterator to the end of the CList.
-            @return CConstIterator A CIterator who point to the end of the CList.
+            @brief  This function construct and return a iterator to the end of the CList.
+            @return const_iterator A iterator who point to the end of the CList.
          */
-        CConstIterator cend () const noexcept;
+        const_iterator cend () const noexcept;
 
         /*!
             @fn     rbegin() noexcept
             @brief  This function construct and return an reverse_iterator to the end of the CList.
-            @return reverse_iterator<CIterator> A reverse_iterator who point to the end of the CList.
+            @return reverse_iterator<iterator> A reverse_iterator who point to the end of the CList.
          */
-        std::reverse_iterator<CIterator> rbegin () noexcept;
+        std::reverse_iterator<iterator> rbegin () noexcept;
 
         /*!
             @fn     rend() noexcept
             @brief  This function construct and return an reverse_iterator to the begin of the CList.
-            @return reverse_iterator<CIterator> A reverse_iterator who point to the begin of the CList.
+            @return reverse_iterator<iterator> A reverse_iterator who point to the begin of the CList.
          */
-        std::reverse_iterator<CIterator> rend () noexcept;
+        std::reverse_iterator<iterator> rend () noexcept;
 
         /*!
             @fn     crbegin() noexcept
             @brief  This function construct and return an const_reverse_iterator to the end of the CList.
-            @return reverse_iterator<CConstIterator> A const_reverse_iterator who point to the end of the CList.
+            @return reverse_iterator<const_iterator> A const_reverse_iterator who point to the end of the CList.
          */
-        std::reverse_iterator<CConstIterator> crbegin () noexcept;
+        std::reverse_iterator<const_iterator> crbegin () noexcept;
 
         /*!
             @fn     crend() noexcept
             @brief  This function construct and return an const_reverse_iterator to the begin of the CList.
-            @return reverse_iterator<CConstIterator> A const_reverse_iterator who point to the begin of the CList.
+            @return reverse_iterator<const_iterator> A const_reverse_iterator who point to the begin of the CList.
          */
-        std::reverse_iterator<CConstIterator> crend () noexcept;
+        std::reverse_iterator<const_iterator> crend () noexcept;
 
 
         // Capacity
@@ -224,15 +224,15 @@ namespace nsSdD
         // Assign
         /*!
            @fn     assign(unsigned n, const T &val) noexcept
-           @brief  This function erase the content and replace the content of the CList with the @p n size and with the @p val value.
+           @brief  This function erase the content of the list and replace the content of the CList with the @p n size and with the @p val value.
            @param[in] n The size of the CList we want.
            @param[in] val The value we want to affect on each element of the new CList.
         */
         void assign (unsigned n, const T &val) noexcept;
 
         /*!
-           @fn     assign() noexcept
-           @brief  This function erase the content and replace the content of the CList with the element between @p first and @p last element.
+           @fn     assign(InputIterator begin, InputIterator last) noexcept
+           @brief  This function erase the content of the list and replace the content of the CList with the element between @p first and @p last element.
            @param[in] begin The first element we want to assign on the list.
            @param[in] last The last element we want to assign on the list.
         */
@@ -274,7 +274,7 @@ namespace nsSdD
         void sort() noexcept;
 
         /*!
-           @fn     sort(Compare comp) noexcept
+           @fn     'template<class Compare> sort(Compare comp) noexcept
            @brief  This function the CList with the comparator @p comp given in parameter.
            @param[in] comp The comparator you want to use to sort the CList.
         */
@@ -283,82 +283,82 @@ namespace nsSdD
 
         // Emplace
         /*!
-           @fn     emplace (CIterator position, Args &&... args) noexcept
+           @fn     emplace (iterator position, Args &&... args) noexcept
            @brief  This function constructs an element with @p args and place it before the @p position.
            @param[in] args The package of arguments you want to use to construct you element.
            @param[in] position The position where you want to insert the new element.
-           @return A CIterator that points to the newly inserted elements.
+           @return A iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace (CIterator position, Args &&... args) noexcept;
+        iterator emplace (iterator position, Args &&... args) noexcept;
 
         /*!
            @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the beginning of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
-           @return A CIterator that points to the newly inserted elements.
+           @return A iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace_front (Args &&... args) noexcept;
+        iterator emplace_front (Args &&... args) noexcept;
 
         /*!
            @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the end of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
-           @return A CIterator that points to the newly inserted elements.
+           @return A iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace_back (Args &&... args) noexcept;
+        iterator emplace_back (Args &&... args) noexcept;
 
         // Insert
         /*!
-           @fn     insert (CIterator position, const T &val) noexcept
+           @fn     insert (iterator position, const T &val) noexcept
            @brief  Inserts element @p val before position @p position.
            @param[in] position The position where you want to insert the new element.
            @param[in] val A const reference to the element you are adding.
-           @return A CIterator that points to the newly inserted element.
+           @return A iterator that points to the newly inserted element.
         */
-        CIterator insert (CIterator position, const T &val) noexcept;
+        iterator insert (iterator position, const T &val) noexcept;
 
         /*!
-           @fn     insert (CIterator position, size_type n, const T &val) noexcept
+           @fn     insert (iterator position, size_type n, const T &val) noexcept
            @brief  Inserts @p n elements @p val before position @p position.
            @param[in] position The position where you want to insert the new element.
            @param[in] val A const reference to the element you are adding.
            @param[in] n The amount of times the element will be added
-           @return A CIterator that points to the first of newly inserted elements.
+           @return A iterator that points to the first of newly inserted elements.
         */
-        CIterator insert (CIterator position, size_type n, const T &val) noexcept;
+        iterator insert (iterator position, size_type n, const T &val) noexcept;
 
         /*!
-           @fn     insert (CIterator position, InputIterator begin, InputInterator end) noexcept
+           @fn     'template<class InputIterator> insert (iterator position, InputIterator begin, InputInterator end) noexcept
            @brief  Inserts the elements in the range from @p begin to @p end starting from position @p position
            @param[in] position The position where you want to insert the new element.
            @param[in] first An iterator to the first element to insert.
            @param[in] last An iterator to the last element to insert.
            @details Any kind of InputIterator is accepted...
-           @return A CIterator that points to the first of newly inserted elements.
+           @return A iterator that points to the first of newly inserted elements.
         */
         template<class InputIterator>
-        CIterator insert (CIterator position, InputIterator first, InputIterator last) noexcept;
+        iterator insert (iterator position, InputIterator first, InputIterator last) noexcept;
 
         // Erase
         /*!
-           @fn     erase (CIterator del) noexcept
-           @brief  This function delete the element pointed by the CIterator @p del.
-           @param[in] del A CIterator who pointing to the element who want to delete .
-            @return CIterator The element that followed the last element erased by the function call.
+           @fn     erase (iterator del) noexcept
+           @brief  This function delete the element pointed by the iterator @p del.
+           @param[in] del A iterator who pointing to the element who want to delete .
+            @return iterator The element that followed the last element erased by the function call.
         */
-        CIterator erase (CIterator del) noexcept;
+        iterator erase (iterator del) noexcept;
 
         /*!
-           @fn     erase (CIterator first, CIterator last) noexcept
-           @brief  This function elements between the @p first and @p last CIterator .
-           @param[in] first A CIterator who pointing to the first element who want to delete .
-           @param[in] last A CIterator who pointing to the last element who want to delete .
-           @return CIterator The element that followed the last element erased by the function call.
+           @fn     erase (iterator first, iterator last) noexcept
+           @brief  This function elements between the @p first and @p last iterator .
+           @param[in] first A iterator who pointing to the first element who want to delete .
+           @param[in] last A iterator who pointing to the last element who want to delete .
+           @return iterator The element that followed the last element erased by the function call.
         */
-        CIterator erase (CIterator first, CIterator last) noexcept;
+        iterator erase (iterator first, iterator last) noexcept;
 
         // Swap
         /*!
@@ -411,7 +411,7 @@ namespace nsSdD
         void unique () noexcept;
 
         /*!
-          @fn     unique (Predicate pred) noexcept
+          @fn     'template<classe Predicate> unique (Predicate pred) noexcept
           @brief  This function removes all element that are duplicated and where the @p pred are true.
           @param[in] pred The predicate we want to use on the CList.
        */
@@ -420,31 +420,31 @@ namespace nsSdD
 
         //Splice
         /*!
-          @fn     splice (CIterator position, CList &x) noexcept
+          @fn     splice (iterator position, CList &x) noexcept
           @brief  This function move the CList @p x to the current CList before @p position.
           @param[in] position The position where we want to insert the other list.
           @param[in] x The CList we want to add on the current CList.
        */
-        void splice (CIterator position, CList &x) noexcept;
+        void splice (iterator position, CList &x) noexcept;
 
         /*!
-          @fn     splice (CIterator position, CList &x, CIterator i) noexcept
+          @fn     splice (iterator position, CList &x, iterator i) noexcept
           @brief  This function move element @p i from the CList @p x to the current CList before @p position.
           @param[in] position The position where we want to insert the other list.
           @param[in] x The CList we want to add on the current CList.
           @param[in] i The iterator who pointing the element who want to move on the current CList.
        */
-        void splice (CIterator position, CList &x, CIterator i) noexcept;
+        void splice (iterator position, CList &x, iterator i) noexcept;
 
         /*!
-          @fn     splice (CIterator position, CList &x,CIterator first, CIterator last) noexcept
+          @fn     splice (iterator position, CList &x,iterator first, iterator last) noexcept
           @brief  This function move elements between @p first and @p last from the CList @p x to the current CList before @p position.
           @param[in] position The position where we want to insert the other list.
           @param[in] x The CList we want to add on the current CList.
           @param[in] first The iterator who pointing the first element who want to move on the current CList.
           @param[in] last The iterator who pointing the last element who want to move on the current CList.
        */
-        void splice (CIterator position, CList &x, CIterator first, CIterator last) noexcept;
+        void splice (iterator position, CList &x, iterator first, iterator last) noexcept;
 
         //Merge
         /*!

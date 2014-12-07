@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 class nsTests::CValueProvider&lt; std::shared_ptr&lt; T &gt; &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="HTML/S/31.html#L46">46</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="HTML/S/31.html#L53">53</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aff143cecb064a504cf828ab46109fb68"></a>
 <div class="memitem">
@@ -152,17 +152,17 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="HTML/S/31.html#L49">49</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            ptrArray.reserve (array.size ());</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">for</span> (T x : array)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                ptrArray.push_back (std::make_shared&lt;T&gt; (x));</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> ptrArray;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="HTML/S/31.html#L56">56</a> of file <a class="el" href="HTML/S/31.html">CValueProvider.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            ptrArray.reserve (array.size ());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">for</span> (T x : array)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                ptrArray.push_back (std::make_shared&lt;T&gt; (x));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> ptrArray;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -175,7 +175,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacens_tests.html">nsTests</a></li><li class="navelem"><a class="el" href="classns_tests_1_1_c_value_provider_3_01std_1_1shared__ptr_3_01_t_01_4_01_4.html">CValueProvider< std::shared_ptr< T > ></a></li>
-    <li class="footer">Generated on Sun Dec 7 2014 22:48:58 for CList by
+    <li class="footer">Generated on Sun Dec 7 2014 22:51:16 for CList by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

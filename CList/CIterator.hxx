@@ -5,7 +5,7 @@
 @version  1.0
 @brief Implementation of the iterator for the CList class.
 
-@mainpage Documention for the class iterartor of "CList"
+@mainpage Documention for the class iterator of "CList"
 This class is a personnal implementation of iterator for our class CList.
 We provide the essential function to work with us.
 We implement bidirectionnal iterator because we choose to use a double-linked list.
