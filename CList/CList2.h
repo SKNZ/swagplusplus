@@ -1,11 +1,11 @@
 /*!
 @file CList2.h
 @author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
-@date 8 décembre 2014
+@date 08/12/2014
 @version  1.0
-@brief Header to the CList class V2.
+@brief Header to the CList class.
 
-@mainpage Documention for the class "CList V2"
+@mainpage Documention for the class "CList"
 */
 
 #pragma once
@@ -23,10 +23,6 @@ namespace nsSdD
         class CIterator;
 
         class CConstIterator;
-
-        class CReverseIterator;
-
-        class CConstReverseIterator;
 
         class CNode;
 
