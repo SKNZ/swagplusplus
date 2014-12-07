@@ -110,9 +110,10 @@ namespace nsSdD
         template<class InputIterator>
         CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
 
-
         // Erase
         CIterator erase (CIterator del) noexcept;
+
+        iterator erase (iterator first, iterator last) noexcept;
 
         // Swap
         void swap (CList &x) noexcept;
@@ -126,6 +127,13 @@ namespace nsSdD
         // Operations
         // Remove
         void remove (const T &val) noexcept;
+
+        //Splice
+        void splice (iterator position, CList& x) noexcept;
+
+        void splice (iterator position, CList& x, iterator i) noexcept;
+
+        void splice (iterator position, CList& x, iterator first, iterator last) noexcept;
 
         template<class Predicate>
         void remove_if (Predicate pred) noexcept;

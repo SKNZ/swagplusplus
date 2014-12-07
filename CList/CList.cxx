@@ -1,6 +1,9 @@
 using namespace std;
 using namespace nsSdD;
 
+/*! @fn CList<T>::CList () noexcept
+    @brief This function creates a Clist object (constructor).
+    */
 template<typename T>
 CList<T>::CList () noexcept : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
                               m_tail (std::make_shared<CNode> (T (), nullptr, m_head))
@@ -8,6 +11,11 @@ CList<T>::CList () noexcept : m_head (std::make_shared<CNode> (T (), nullptr, nu
     m_head->setNext (m_tail);
 }
 
+/*!
+    @fn CList<T>::CList (size_t n) noexcept
+    @brief This function create a CList objet with n CNode.
+    @param[in] n Is a @p size_t parameter for the amount of CNode in the CList .
+    */
 template<typename T>
 CList<T>::CList (size_t n) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
@@ -29,6 +37,12 @@ CList<T>::CList (size_t n) noexcept
     }
 }
 
+/*!
+    @fn CList<T>::CList (size_t n, const T &val) noexcept
+    @brief This function create a CList objet with n CNode.
+    @param[in] n Is a @p size_t parameter for the amount of CNode in the CList .
+    @param[in] val Is a ????????? .
+    */
 template<typename T>
 CList<T>::CList (size_t n, const T &val) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
@@ -51,6 +65,11 @@ CList<T>::CList (size_t n, const T &val) noexcept
     }
 }
 
+/*!
+    @fn CList<T>::CList (const CList<T> &x) noexcept
+    @brief This function create a CList object with the object contents in x.
+    @param[in] x Is a @p CList<T> parameter which contains objects.
+    */
 template<typename T>
 CList<T>::CList (const CList<T> &x) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
@@ -62,6 +81,12 @@ CList<T>::CList (const CList<T> &x) noexcept
         push_back (*itr);
 }
 
+/*!
+    @fn CList<T>::assign (unsigned n, const T &val) noexcept
+    @brief This function delete the chain at the n place and replace it by the chain val .
+    @param[in] n Is a @p unsigned parameter which point the chain to remove.
+    @param[in] v Is a @p T parameter which is the new chain.
+    */
 template<typename T>
 void CList<T>::assign (unsigned n, const T &val) noexcept
 {
@@ -83,6 +108,11 @@ void CList<T>::assign (unsigned n, const T &val) noexcept
     }
 }
 
+/*!
+    @fn CList<T>::emplace_front (T val) noexcept
+    @brief This function insert an element at the val in CList position which is constructed with a variadic template.
+    @param[in] val Is a @p T parameter which indicates the position of the to construct.
+    */
 template<typename T>
 void CList<T>::emplace_front (T val) noexcept
 {
@@ -98,6 +128,10 @@ void CList<T>::emplace_front (T val) noexcept
     ++m_size;
 }
 
+/*!
+    @fn CList<T>::pop_front () noexcept
+    @brief This function remove an element at the beginning of the CList  which is constructed with a variadic template.
+    */
 template<typename T>
 void CList<T>::pop_front () noexcept
 {
@@ -112,6 +146,11 @@ void CList<T>::pop_front () noexcept
     --m_size;
 }
 
+/*!
+    @fn CList<T>::push_front (const T &x) noexcept
+    @brief This function add an element at the beginning of the CList  which is constructed with a variadic template.
+    @param[in] x Is a @p T parameter which indicates the element to add.
+    */
 template<typename T>
 void CList<T>::push_front (const T &x) noexcept
 {
@@ -125,6 +164,11 @@ void CList<T>::push_front (const T &x) noexcept
     ++m_size;
 }
 
+/*!
+    @fn CList<T>::push_back (const T &x) noexcept
+    @brief This function add an element at the end of the CList  which is constructed with a variadic template.
+    @param[in] x Is a @p T parameter which indicates the element to add.
+    */
 template<typename T>
 void CList<T>::push_back (const T &x) noexcept
 {
@@ -140,6 +184,10 @@ void CList<T>::push_back (const T &x) noexcept
     ++m_size;
 }
 
+/*!
+    @fn CList<T>::pop_back () noexcept
+    @brief This function remove an element at the end of the CList  which is constructed with a variadic template.
+    */
 template<typename T>
 void CList<T>::pop_back () noexcept
 {
@@ -154,6 +202,12 @@ void CList<T>::pop_back () noexcept
     --m_size;
 }
 
+/*!
+    @fn CList<T>::emplace (CNodePtr Prec, T val) noexcept
+    @brief This function add an element in the position after Prec in the CList.
+    @param[in] Prec Is a @p CNodePtr parameter which indicates the position of the element before the elment to add.
+    @param[in] val Is a @p T parameter which is the elment to add.
+    */
 template<typename T>
 void CList<T>::emplace (CNodePtr Prec, T val) noexcept
 {

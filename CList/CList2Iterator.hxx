@@ -41,26 +41,26 @@ public:
         return node != other.node;
     }
 
-    CIterator &operator++ () noexcept
+    CIterator operator++ () noexcept
     {
         node = node->getNext ();
         return *this;
     }
 
-    CIterator &operator-- () noexcept
+    CIterator operator-- () noexcept
     {
         node = node->getPrevious ();
         return *this;
     }
 
-    CIterator &operator++ (int) noexcept
+    CIterator operator++ (int) noexcept
     {
         CIterator temp = *this;
         node = node->getNext ();
         return temp;
     }
 
-    CIterator &operator-- (int) noexcept
+    CIterator operator-- (int) noexcept
     {
         CIterator temp = *this;
         node = node->getPrevious ();

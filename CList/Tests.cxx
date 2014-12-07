@@ -194,7 +194,7 @@ namespace
         IZI_ASSERT(list.size () == listSize);
         IZI_ASSERT(!list.empty ());
         IZI_ASSERT(list.begin () != list.end ());
-        cout << "YOLO" << endl;
+
         for (T x : list)
             IZI_ASSERT(x == value)
     }
@@ -472,7 +472,7 @@ namespace
 
         auto itr = list.begin ();
         advance (itr, 2);
-        //itr = list.emplace(itr, data[2], data[2]);
+        itr = list.emplace (itr, data[2], data[2]);
 
         IZI_ASSERT(*itr == make_pair (data[2], data[2]));
 
@@ -588,7 +588,7 @@ namespace
     template<typename T>
     void InsertByValue (const T &x) noexcept
     {
-        const unsigned listSize = rand (0, 20);
+        const typename CTestedList<T>::size_type listSize = rand (0, 20);
         CTestedList<T> list;
 
         list.insert (list.begin (), listSize, x);
@@ -928,8 +928,8 @@ namespace
         for (T x : CValueProvider<T> () (5))
         IZI_SUBTEST(AssignByValue (x));
 
-//        IZI_SUBTEST(EmplaceFront<T>());
-//        IZI_SUBTEST(EmplaceBack<T>());
+        IZI_SUBTEST(EmplaceFront<T> ());
+        IZI_SUBTEST(EmplaceBack<T> ());
         IZI_SUBTEST(Emplace<T> ());
 
         IZI_SUBTEST(PushFront<T> ());
@@ -952,9 +952,9 @@ namespace
 
         IZI_SUBTEST(Clear<T> ());
 
-//        IZI_SUBTEST(SpliceList<T>());
-//        IZI_SUBTEST(SpliceOne<T>());
-//        IZI_SUBTEST(SpliceRange<T>());
+        IZI_SUBTEST(SpliceList<T>());
+        IZI_SUBTEST(SpliceOne<T>());
+        IZI_SUBTEST(SpliceRange<T>());
 
         IZI_SUBTEST(Remove<T> ());
         IZI_SUBTEST(RemoveIf<T> ());

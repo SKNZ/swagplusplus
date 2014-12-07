@@ -214,12 +214,19 @@ void nsSdD::CList<T>::pop_back () noexcept
 template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (nsSdD::CList<T>::iterator del) noexcept
 {
-    del.getNode ()->getNext ()->setPrevious (del.getNode ()->getPrevious ());
-    del.getNode ()->getPrevious ()->setNext (del.getNode ()->getNext ());
-
+    del.getNode ()->remove ();
     --m_size;
 
-    return nsSdD::CList<T>::iterator (del.getNode ()->getNext ());
+    return iterator (del.getNode ()->getNext ());
+}
+
+template<typename T>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (iterator first, iterator last) noexcept
+{
+    for(auto i = first ; i != last ; ++i)
+        erase (i);
+
+    return nsSdD::CList<T>::iterator (last.getNode ());
 }
 
 template<typename T>
@@ -300,13 +307,14 @@ void nsSdD::CList<T>::reverse () noexcept
     {
         CNodePtr node = currentNode;
         currentNode = currentNode->getNext ();
-        std::swap (currentNode->getNext (), currentNode->getPrevious ());
+        std::swap (node->getNext (), node->getPrevious ());
     }
+    std::swap (m_tail->getNext (), m_tail->getPrevious ());
     std::swap (m_tail, m_head);
 }
 
 template<typename T>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CList<T>::iterator position, T const &val) noexcept
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, T const &val) noexcept
 {
     CNodePtr tmp = std::make_shared<CNode> (val);
     tmp->setNext (position.getNode ());
@@ -320,9 +328,8 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
 }
 
 template<typename T>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CList<T>::iterator position, size_type n, T const &val) noexcept
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, size_type n, T const &val) noexcept
 {
-
     CNodePtr nextNode = position.getNode ();
     CNodePtr prevNode = nextNode->getPrevious (), currNode = prevNode;
 
@@ -340,7 +347,7 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
 
 template<typename T>
 template<class InputIterator>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CList<T>::iterator position, InputIterator begin, InputIterator end) noexcept
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, InputIterator begin, InputIterator end) noexcept
 {
     CNodePtr nextNode = position.getNode ();
     CNodePtr prevNode = nextNode->getPrevious ();
@@ -356,11 +363,9 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
 
 template<typename T>
 template<typename... Args>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (typename nsSdD::CList<T>::iterator position, Args &&... args)
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (iterator position, Args &&... args)
 {
-    T newValue (std::forward<Args> (args)...);
-    CNodePtr newNode = position.getNode ()->addBefore (newValue);
-    return iterator (newNode);
+    return insert (position, T (std::forward<Args> (args)...));
 }
 
 template<typename T>
@@ -376,6 +381,29 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... arg
 {
     return emplace (end (), std::forward<Args> (args)...);
 }
+
+template<typename T>
+void nsSdD::CList<T>::splice (iterator position, typename nsSdD::CList<T>& x) noexcept
+{
+    insert (position, x.begin (), x.end ());
+    x.clear ();
+}
+
+template<typename T>
+void nsSdD::CList<T>::splice (iterator position, nsSdD::CList<T> &x, iterator i) noexcept
+{
+    insert (position, *i);
+    x.erase (i);
+}
+
+template<typename T>
+void nsSdD::CList<T>::splice(iterator position, CList& x, iterator first, iterator last) noexcept
+{
+    insert (position, first, last);
+    x.erase (first,last);
+}
+
+
 template <typename T>
 //template <class Compare>
 void nsSdD::CList<T>::sort() noexcept
