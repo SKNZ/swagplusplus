@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['rand',['rand',['../namespacens_tests.html#af0c5572491abb06a35048cac341fee0a',1,'nsTests']]],
-  ['rbegin',['rbegin',['../classns_sd_d_1_1_c_list.html#a763731bf428359807d4c35f21ed1ac4e',1,'nsSdD::CList']]],
-  ['remove',['remove',['../classns_sd_d_1_1_c_list.html#a55651384c55447be5c4d9edd1565ad1f',1,'nsSdD::CList::remove()'],['../classns_sd_d_1_1_c_list_1_1_c_node.html#a3ede1d2dc1fab637b77ae489ddb05c64',1,'nsSdD::CList::CNode::remove()'],['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#ae7120ac1a1734a30a539f8e90c216fcc',1,'anonymous_namespace{CTests.cxx}::Remove()']]],
-  ['remove_5fif',['remove_if',['../classns_sd_d_1_1_c_list.html#a0ad14711538606425a28a357bd1c74bf',1,'nsSdD::CList']]],
-  ['removeif',['RemoveIf',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#ae94bf8079ac1733e52babf1759529ad7',1,'anonymous_namespace{CTests.cxx}']]],
-  ['rend',['rend',['../classns_sd_d_1_1_c_list.html#a971d1f0ea06ae04c61303705f05a4211',1,'nsSdD::CList']]],
-  ['resize',['resize',['../classns_sd_d_1_1_c_list.html#a4e9ff3339d35afb16b7f698c9c7f4fbf',1,'nsSdD::CList::resize()'],['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#ac245ad11ac1c5435c67916fcdb21c2f9',1,'anonymous_namespace{CTests.cxx}::Resize()']]],
-  ['reverse',['reverse',['../classns_sd_d_1_1_c_list.html#a60dbb7a753634838fb2f705ce84764f9',1,'nsSdD::CList::reverse()'],['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#a966c3bba5b1023cfa1a4351b6e29fe0a',1,'anonymous_namespace{CTests.cxx}::Reverse()']]],
-  ['reverse_5fiterator',['reverse_iterator',['../classns_sd_d_1_1_c_list.html#a5582eb88a5f625ef426f534ea5556311',1,'nsSdD::CList']]],
-  ['reverseconstiterate',['ReverseConstIterate',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#a076f88dd2901488ca10c26707b7f92e5',1,'anonymous_namespace{CTests.cxx}']]],
-  ['reverseiterate',['ReverseIterate',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#a0fbe921303e21f63b258dd5f83d8c08f',1,'anonymous_namespace{CTests.cxx}']]],
-  ['runtemplatedtests',['RunTemplatedTests',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#a221d17b7303ca1611dd443c3ef05e52b',1,'anonymous_namespace{CTests.cxx}']]],
-  ['runtests',['RunTests',['../classns_tests_1_1_c_tests.html#aae66713c9bfd5986c8321a954cf1b023',1,'nsTests::CTests']]]
+  ['setinfo',['setInfo',['../classnsSdD_1_1CList_1_1CNode.html#a61db31050887ed51b55b0cc954759c28',1,'nsSdD::CList::CNode']]],
+  ['setnext',['setNext',['../classnsSdD_1_1CList_1_1CNode.html#a4fbf927c2450610ac535f3df31f7c63e',1,'nsSdD::CList::CNode']]],
+  ['setprevious',['setPrevious',['../classnsSdD_1_1CList_1_1CNode.html#a9c39d8affa969f5498f49d6693b61fd5',1,'nsSdD::CList::CNode']]],
+  ['size',['size',['../classnsSdD_1_1CList.html#a108494f68c871f0f1e0a337cfe93ab36',1,'nsSdD::CList']]],
+  ['size_5ftype',['size_type',['../classnsSdD_1_1CList.html#a91d4b6b8c89816da277ee27d32df5478',1,'nsSdD::CList']]],
+  ['sort',['sort',['../classnsSdD_1_1CList.html#abea73e5cb037f3aab4b5626788ef5e0d',1,'nsSdD::CList::sort() noexcept'],['../classnsSdD_1_1CList.html#acef43a041947820896c05b2107d68abf',1,'nsSdD::CList::sort(Compare comp) noexcept']]],
+  ['splice',['splice',['../classnsSdD_1_1CList.html#a987252679b419150d62719f8dabb2ad4',1,'nsSdD::CList::splice(CIterator position, CList &amp;x) noexcept'],['../classnsSdD_1_1CList.html#a68315c715024cccae8905e92a1c58429',1,'nsSdD::CList::splice(CIterator position, CList &amp;x, CIterator i) noexcept'],['../classnsSdD_1_1CList.html#ac34a61185ef426909da583c61f1d3f32',1,'nsSdD::CList::splice(CIterator position, CList &amp;x, CIterator first, CIterator last) noexcept']]],
+  ['swap',['swap',['../classnsSdD_1_1CList.html#ac59d9d1e5bbbe59c5cc549800fd2e49a',1,'nsSdD::CList']]]
 ];

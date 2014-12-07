@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testclass',['TestClass',['../classns_tests_1_1_test_class.html#a7652415ca2125682f509bcdf5912a396',1,'nsTests::TestClass']]],
-  ['testcnode',['TestCNode',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#aaccb4c689a2442f6e38b418ab8ec770d',1,'anonymous_namespace{CTests.cxx}']]]
+  ['unique',['unique',['../classnsSdD_1_1CList.html#abc7b9f069918d17942e8baabccb97a5d',1,'nsSdD::CList::unique() noexcept'],['../classnsSdD_1_1CList.html#acb314c9ce6c108b5c6481284681334f8',1,'nsSdD::CList::unique(Predicate pred) noexcept']]]
 ];
