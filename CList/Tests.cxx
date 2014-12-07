@@ -194,7 +194,7 @@ namespace
         IZI_ASSERT(list.size () == listSize);
         IZI_ASSERT(!list.empty ());
         IZI_ASSERT(list.begin () != list.end ());
-        cout << "YOLO" << endl;
+
         for (T x : list)
             IZI_ASSERT(x == value)
     }
@@ -472,7 +472,7 @@ namespace
 
         auto itr = list.begin ();
         advance (itr, 2);
-        //itr = list.emplace(itr, data[2], data[2]);
+        itr = list.emplace (itr, data[2], data[2]);
 
         IZI_ASSERT(*itr == make_pair (data[2], data[2]));
 
