@@ -890,6 +890,23 @@ namespace
             IZI_ASSERT(*itr <= *++itr)
     }
 
+
+    template<typename T>
+    void SortWithPredicate () noexcept
+    {
+        CTestedList<T> list;
+        CCollection<T> data = CValueProvider<T> () (20);
+
+        list.insert (list.begin (), data.cbegin (), data.cend ());
+        list.sort ([] (const T &a, const T &b)
+        {
+            return b < a;
+        });
+
+        for (auto itr = list.cbegin (); itr != --list.cend ();)
+            IZI_ASSERT(*itr <= *++itr)
+    }
+
     template<typename T>
     void Reverse () noexcept
     {
@@ -959,7 +976,7 @@ namespace
         IZI_SUBTEST(Remove<T> ());
         IZI_SUBTEST(RemoveIf<T> ());
 
-//        IZI_SUBTEST(Unique<T>());
+        IZI_SUBTEST(Unique<T> ());
 //        IZI_SUBTEST(UniqueWithPredicate<T>());
 
 //        IZI_SUBTEST(Merge<T>());

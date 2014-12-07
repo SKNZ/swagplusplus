@@ -126,13 +126,16 @@ namespace nsSdD
         // Remove
         void remove (const T &val) noexcept;
 
+        template<class Predicate>
+        void remove_if (Predicate pred) noexcept;
+
+        // Unique
+        void unique () noexcept;
+
         //Splice
         void splice (iterator position, CList& x) noexcept;
 
         void splice (iterator position, CList& x, iterator i) noexcept;
-
-        template<class Predicate>
-        void remove_if (Predicate pred) noexcept;
 
         // Reverse
         void reverse () noexcept;

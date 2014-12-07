@@ -292,6 +292,17 @@ void nsSdD::CList<T>::remove_if (Predicate pred) noexcept
 }
 
 template<typename T>
+void nsSdD::CList<T>::unique () noexcept
+{
+    for (CNodePtr currNode = m_head; currNode != m_tail; currNode = currNode->getNext ())
+        while (currNode->getInfo () == currNode->getNext ()->getInfo ())
+        {
+            currNode->getNext ()->remove ();
+            --m_size;
+        }
+}
+
+template<typename T>
 void nsSdD::CList<T>::reverse () noexcept
 {
     for (CNodePtr currentNode = m_head; currentNode != m_tail;)

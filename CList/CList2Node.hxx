@@ -14,10 +14,7 @@ private:
     {
     }
 
-    CNode &operator= (const CNode &c) noexcept
-    {
-        // @todo Should this really be empty ?
-    }
+    CNode &operator= (const CNode &c) noexcept = delete;
 
 public:
     CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
