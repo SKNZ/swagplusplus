@@ -15,8 +15,8 @@ namespace
 {
     // C++11 c'est bon, mangez en.
     template<typename T> using CCollection = vector<T>;
-    template<typename T> using CTestedList = list<T>;
-    //template<typename T> using CTestedList = CList<T>;
+    //template<typename T> using CTestedList = list<T>;
+    template<typename T> using CTestedList = CList<T>;
 
     int rand (int min, int max)
     {
@@ -472,7 +472,7 @@ namespace
 
         auto itr = list.begin ();
         advance (itr, 2);
-        itr = list.emplace(itr, data[2], data[2]);
+        //itr = list.emplace(itr, data[2], data[2]);
 
         IZI_ASSERT(*itr == make_pair (data[2], data[2]));
 
@@ -940,6 +940,7 @@ namespace
 
         IZI_SUBTEST(Insert<T> ());
         IZI_SUBTEST(InsertByIterator<T> ());
+
         for (T x : CValueProvider<T> () (5))
         IZI_SUBTEST(InsertByValue<T> (x));
 
@@ -966,6 +967,8 @@ namespace
 //        IZI_SUBTEST(Sort<T>());
 
         IZI_SUBTEST(Reverse<T> ());
+
+        cout << endl;
     }
 }
 

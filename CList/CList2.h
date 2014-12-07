@@ -93,6 +93,12 @@ namespace nsSdD
         template<typename... Args>
         CIterator emplace (CIterator position, Args &&... args);
 
+        template<typename... Args>
+        CIterator emplace_front (Args &&... args);
+
+        template<typename... Args>
+        CIterator emplace_back (Args &&... args);
+
         // Insert
         CIterator insert (CIterator position, const T &val) noexcept;
 

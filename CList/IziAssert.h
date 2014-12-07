@@ -17,7 +17,7 @@
 
 #define IZI_ASSERT(condition) iziAssert(condition, #condition, __FILE__, __LINE__, __func__);
 #define IZI_CALLTEST(call) { cout << "Running test: " << #call << endl; call; }
-#define IZI_SUBTEST(call) { cout << "\tRunning test: " << #call << endl; call; }
+#define IZI_SUBTEST(call) { cout << "\tSubtest: " << #call << endl; call; }
 
 namespace
 {

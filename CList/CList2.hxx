@@ -301,19 +301,6 @@ void nsSdD::CList<T>::swap (nsSdD::CList<T> &x) noexcept
     std::swap (x.m_head, m_head);
     std::swap (x.m_tail, m_tail);
     std::swap (x.m_size, m_size);
-
-//    CNodePtr ptr = m_head->getNext();
-//    m_head->setNext(x.getHead()->getNext());
-//    x.getHead()->setNext(ptr);
-//
-//    ptr = m_tail->getPrevious();
-//    m_tail->setPrevious(x.getTail()->getPrevious());
-//    x.getTail()->setPrevious(ptr);
-//
-//    size_t tmp = m_size;
-//    m_size = x.size();
-//
-//    x.m_size = tmp;
 }
 
 template<typename T>
@@ -332,8 +319,7 @@ void nsSdD::CList<T>::remove (const T &val) noexcept
     {
         if (a->getInfo () == val)
         {
-            a->getPrevious ()->setNext (a->getNext ());
-            a->getNext ()->setPrevious (a->getPrevious ());
+            a->remove ();
             --m_size;
         }
     }
@@ -347,8 +333,7 @@ void nsSdD::CList<T>::remove_if (Predicate pred) noexcept
     {
         if (pred (a->getInfo ()))
         {
-            a->getPrevious ()->setNext (a->getNext ());
-            a->getNext ()->setPrevious (a->getPrevious ());
+            a->remove ();
             --m_size;
         }
     }
@@ -357,18 +342,13 @@ void nsSdD::CList<T>::remove_if (Predicate pred) noexcept
 template<typename T>
 void nsSdD::CList<T>::reverse () noexcept
 {
-    CNodePtr tmp = m_head;
-    m_head->setNext (m_tail->getPrevious ());
-    m_tail->setPrevious (tmp->getNext ());
-
-    for (size_t i = 0; i < m_size; ++i)
+    for (CNodePtr currentNode = m_head; currentNode != m_tail;)
     {
-        CNodePtr ptr = tmp->getNext ()->getPrevious ();
-        tmp->getNext ()->setPrevious (tmp->getNext ()->getNext ());
-        tmp->getNext ()->setNext (ptr);
-
-        tmp = tmp->getNext ();
+        CNodePtr node = currentNode;
+        currentNode = currentNode->getNext ();
+        std::swap (currentNode->getNext (), currentNode->getPrevious ());
     }
+    std::swap (m_tail, m_head);
 }
 
 template<typename T>
@@ -427,4 +407,18 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (typename nsSdD::CLi
     T newValue (std::forward<Args> (args)...);
     CNodePtr newNode = position.getNode ()->addBefore (newValue);
     return iterator (newNode);
+}
+
+template<typename T>
+template<typename... Args>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_front (Args &&... args)
+{
+    return emplace (begin (), std::forward<Args> (args)...);
+}
+
+template<typename T>
+template<typename... Args>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... args)
+{
+    return emplace (end (), std::forward<Args> (args)...);
 }

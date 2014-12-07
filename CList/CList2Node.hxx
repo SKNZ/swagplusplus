@@ -5,10 +5,8 @@
 template<typename T>
 class nsSdD::CList<T>::CNode : public std::enable_shared_from_this<nsSdD::CList<T>::CNode>
 {
-public:
-    T m_info;
-
 private:
+    T m_info;
     CNodePtr m_next;
     CNodePtr m_previous;
 
@@ -32,7 +30,7 @@ public:
     {
     }
 
-    inline T getInfo () noexcept
+    inline T &getInfo () noexcept
     {
         return m_info;
     }
