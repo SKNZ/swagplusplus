@@ -106,8 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Collaboration diagram for nsSdD::CList&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnsSdD_1_1CList__coll__graph.png" border="0" usemap="#nsSdD_1_1CList_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nsSdD_1_1CList_3_01T_01_4_coll__map" id="nsSdD_1_1CList_3_01T_01_4_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -115,7 +113,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a personnal implementation of iterator for our class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. We provide the essential function to work with us. We implement bidirectionnal iterator because we choose to use a double-linked list.  <a href="structnsSdD_1_1CList_1_1CIterator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class permit <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> to use iterators. Because we want to have a stl compliant <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with bidirectional iterators, we implement this on the <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> class.  <a href="structnsSdD_1_1CList_1_1CIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList_1_1CNode.html">CNode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,7 +126,7 @@ typedef size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="separator:a91d4b6b8c89816da277ee27d32df5478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdaca29586106fc15940d8529f4990f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdaca29586106fc15940d8529f4990f8"></a>
 typedef <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a></td></tr>
-<tr class="memdesc:afdaca29586106fc15940d8529f4990f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a></code>. We use it to declare a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> iterator. <br /></td></tr>
+<tr class="memdesc:afdaca29586106fc15940d8529f4990f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a></code>. We use it to declare a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> iterator. <br /></td></tr>
 <tr class="separator:afdaca29586106fc15940d8529f4990f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae323732a26e507146686556fb775767a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae323732a26e507146686556fb775767a"></a>
 typedef <a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ae323732a26e507146686556fb775767a">const_iterator</a></td></tr>
@@ -1670,7 +1668,7 @@ template&lt;class Predicate &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 8 2014 00:09:32 for CList by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 00:13:48 for CList by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>This class is a personnal implementation of iterator for our class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. We provide the essential function to work with us. We implement bidirectionnal iterator because we choose to use a double-linked list.  
+<p>This class permit <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> to use iterators. Because we want to have a stl compliant <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with bidirectional iterators, we implement this on the <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> class.  
  <a href="structnsSdD_1_1CList_1_1CIterator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CIterator_8hxx_source.html">CIterator.hxx</a>&gt;</code></p>
@@ -104,15 +104,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Inheritance diagram for nsSdD::CList&lt; T &gt;::CIterator&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structnsSdD_1_1CList_1_1CIterator__inherit__graph.png" border="0" usemap="#nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_inherit__map" id="nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_inherit__map">
-</map>
 </div>
 <div class="dynheader">
 Collaboration diagram for nsSdD::CList&lt; T &gt;::CIterator&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structnsSdD_1_1CList_1_1CIterator__coll__graph.png" border="0" usemap="#nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_coll__map" id="nsSdD_1_1CList_3_01T_01_4_1_1CIterator_3_01T_01_4_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -132,25 +128,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3153cc52b78734144f0aceb2d6d315c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator = to assign a value to the iterator.  <a href="#a3153cc52b78734144f0aceb2d6d315c3">More...</a><br /></td></tr>
 <tr class="separator:a3153cc52b78734144f0aceb2d6d315c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16afbe0c358f1f88eb9eafe9093228d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#a16afbe0c358f1f88eb9eafe9093228d0">operator==</a> (const <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a> &amp;other) const noexcept</td></tr>
-<tr class="memdesc:a16afbe0c358f1f88eb9eafe9093228d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator == who compare the two node and return true if equal and false otherwise.  <a href="#a16afbe0c358f1f88eb9eafe9093228d0">More...</a><br /></td></tr>
+<tr class="memdesc:a16afbe0c358f1f88eb9eafe9093228d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator == which compare the two node and return true if equal and false otherwise.  <a href="#a16afbe0c358f1f88eb9eafe9093228d0">More...</a><br /></td></tr>
 <tr class="separator:a16afbe0c358f1f88eb9eafe9093228d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade896f4a807e6c8ac4185b3c060f58f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#ade896f4a807e6c8ac4185b3c060f58f8">operator!=</a> (const <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a> &amp;other) const noexcept</td></tr>
-<tr class="memdesc:ade896f4a807e6c8ac4185b3c060f58f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator != who compare the two node and return true if not equal and false otherwise.  <a href="#ade896f4a807e6c8ac4185b3c060f58f8">More...</a><br /></td></tr>
+<tr class="memdesc:ade896f4a807e6c8ac4185b3c060f58f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator != which compare the two node and return true if not equal and false otherwise.  <a href="#ade896f4a807e6c8ac4185b3c060f58f8">More...</a><br /></td></tr>
 <tr class="separator:ade896f4a807e6c8ac4185b3c060f58f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50bdb955c4141339f69853d59d61f838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#a50bdb955c4141339f69853d59d61f838">operator++</a> () noexcept</td></tr>
-<tr class="memdesc:a50bdb955c4141339f69853d59d61f838"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator ++ who pre-increment the iterator, pass to the next node.  <a href="#a50bdb955c4141339f69853d59d61f838">More...</a><br /></td></tr>
+<tr class="memdesc:a50bdb955c4141339f69853d59d61f838"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator ++ who pre-increment the iterator, gave to the next node.  <a href="#a50bdb955c4141339f69853d59d61f838">More...</a><br /></td></tr>
 <tr class="separator:a50bdb955c4141339f69853d59d61f838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0398db8fae3641ab46fe3d8806cd185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#af0398db8fae3641ab46fe3d8806cd185">operator--</a> () noexcept</td></tr>
-<tr class="memdesc:af0398db8fae3641ab46fe3d8806cd185"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator &ndash; who pre-decrement the iterator, pass to the previous node.  <a href="#af0398db8fae3641ab46fe3d8806cd185">More...</a><br /></td></tr>
+<tr class="memdesc:af0398db8fae3641ab46fe3d8806cd185"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator &ndash; who pre-decrement the iterator, gave to the previous node.  <a href="#af0398db8fae3641ab46fe3d8806cd185">More...</a><br /></td></tr>
 <tr class="separator:af0398db8fae3641ab46fe3d8806cd185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8304ea60a13fc7818d943241934e8169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#a8304ea60a13fc7818d943241934e8169">operator++</a> (int) noexcept</td></tr>
-<tr class="memdesc:a8304ea60a13fc7818d943241934e8169"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator ++ who post-increment the iterator, pass to the next node.  <a href="#a8304ea60a13fc7818d943241934e8169">More...</a><br /></td></tr>
+<tr class="memdesc:a8304ea60a13fc7818d943241934e8169"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator ++ who post-increment the iterator, gave to the next node.  <a href="#a8304ea60a13fc7818d943241934e8169">More...</a><br /></td></tr>
 <tr class="separator:a8304ea60a13fc7818d943241934e8169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a74d1ce68a46e0d9d63130b5340a09b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#a3a74d1ce68a46e0d9d63130b5340a09b">operator--</a> (int) noexcept</td></tr>
-<tr class="memdesc:a3a74d1ce68a46e0d9d63130b5340a09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator &ndash; who post-decrement the iterator, pass to the previous node.  <a href="#a3a74d1ce68a46e0d9d63130b5340a09b">More...</a><br /></td></tr>
+<tr class="memdesc:a3a74d1ce68a46e0d9d63130b5340a09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator &ndash; who post-decrement the iterator, gave to the previous node.  <a href="#a3a74d1ce68a46e0d9d63130b5340a09b">More...</a><br /></td></tr>
 <tr class="separator:a3a74d1ce68a46e0d9d63130b5340a09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36b69ff32014bb4669c18c8da9e10d65"><td class="memItemLeft" align="right" valign="top">CIterBase&lt; T &gt;::pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#a36b69ff32014bb4669c18c8da9e10d65">operator-&gt;</a> () noexcept</td></tr>
-<tr class="memdesc:a36b69ff32014bb4669c18c8da9e10d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dereferencement operator -&gt; who return the a pointer to the info of the node.  <a href="#a36b69ff32014bb4669c18c8da9e10d65">More...</a><br /></td></tr>
+<tr class="memdesc:a36b69ff32014bb4669c18c8da9e10d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dereferencement operator -&gt; who return the pointer to the info of the node.  <a href="#a36b69ff32014bb4669c18c8da9e10d65">More...</a><br /></td></tr>
 <tr class="separator:a36b69ff32014bb4669c18c8da9e10d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecbfd6f490eb99c310ef9b57b8df9ea6"><td class="memItemLeft" align="right" valign="top">CIterBase&lt; T &gt;::reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html#aecbfd6f490eb99c310ef9b57b8df9ea6">operator*</a> () noexcept</td></tr>
 <tr class="memdesc:aecbfd6f490eb99c310ef9b57b8df9ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dereferencement operator * who return the a reference to the info of the node.  <a href="#aecbfd6f490eb99c310ef9b57b8df9ea6">More...</a><br /></td></tr>
@@ -167,7 +163,7 @@ Public Member Functions</h2></td></tr>
 template&lt;typename T&gt;<br />
 struct nsSdD::CList&lt; T &gt;::CIterator&lt; T &gt;</h3>
 
-<p>This class is a personnal implementation of iterator for our class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. We provide the essential function to work with us. We implement bidirectionnal iterator because we choose to use a double-linked list. </p>
+<p>This class permit <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> to use iterators. Because we want to have a stl compliant <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with bidirectional iterators, we implement this on the <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a121a102242fccc875b9dfaceffbe9b07"></a>
 <div class="memitem">
@@ -198,7 +194,7 @@ template&lt;typename T &gt; </div>
 <p>The default constructor of the iterator for the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The the node we want to use to construct the iterator. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The p node we want to use to construct the iterator. </td></tr>
   </table>
   </dd>
 </dl>
@@ -271,7 +267,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator != who compare the two node and return true if not equal and false otherwise. </p>
+<p>The operator != which compare the two node and return true if not equal and false otherwise. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The value we want to compare. </td></tr>
@@ -367,8 +363,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator ++ who pre-increment the iterator, pass to the next node. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a> The iterator with the new value. </dd></dl>
+<p>The operator ++ who pre-increment the iterator, gave to the next node. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> The iterator with the new value. </dd></dl>
 
 </div>
 </div>
@@ -398,8 +394,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator ++ who post-increment the iterator, pass to the next node. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a> The iterator with the old value, but iterator are increment. </dd></dl>
+<p>The operator ++ who post-increment the iterator, gave to the next node. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> The iterator with the old value, but iterator are incremented. </dd></dl>
 
 </div>
 </div>
@@ -428,8 +424,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator &ndash; who pre-decrement the iterator, pass to the previous node. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a> The iterator with the new value. </dd></dl>
+<p>The operator &ndash; who pre-decrement the iterator, gave to the previous node. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> The iterator with the new value. </dd></dl>
 
 </div>
 </div>
@@ -459,8 +455,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator &ndash; who post-decrement the iterator, pass to the previous node. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a> The iterator with the old value, but iterator are decrement. </dd></dl>
+<p>The operator &ndash; who post-decrement the iterator, gave to the previous node. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> The iterator with the old value, but iterator are decremented. </dd></dl>
 
 </div>
 </div>
@@ -489,7 +485,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The dereferencement operator -&gt; who return the a pointer to the info of the node. </p>
+<p>The dereferencement operator -&gt; who return the pointer to the info of the node. </p>
 <dl class="section return"><dt>Returns</dt><dd>CIterBase&lt;T&gt;::pointer The pointer to the value of the node. </dd></dl>
 
 </div>
@@ -527,7 +523,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class is a personnal implementation of iterator for our class CList. We provide the essential fu...">CIterator</a> The new value of the iterator. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> The new value of the iterator. </dd></dl>
 
 </div>
 </div>
@@ -557,7 +553,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The operator == who compare the two node and return true if equal and false otherwise. </p>
+<p>The operator == which compare the two node and return true if equal and false otherwise. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The value we want to compare. </td></tr>
@@ -574,7 +570,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 8 2014 00:09:32 for CList by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 00:13:48 for CList by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
