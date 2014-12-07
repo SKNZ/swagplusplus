@@ -890,7 +890,6 @@ namespace
             IZI_ASSERT(*itr <= *++itr)
     }
 
-
     template<typename T>
     void SortWithPredicate () noexcept
     {

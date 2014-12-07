@@ -419,9 +419,9 @@ void nsSdD::CList<T>::sort() noexcept
 {
     // Bubble sort :)
 
-    for(auto i = this->begin (); i != this->end (); ++i)
+    for (iterator i = begin (); i != end (); ++i)
     {
-        for(auto j = i; j != this->end(); ++j)
+        for (iterator j = i; j != end (); ++j)
         {
             if(*j < *i)
                 std::iter_swap(i, j);
@@ -429,15 +429,15 @@ void nsSdD::CList<T>::sort() noexcept
     }
 }
 
-template <class Compare>
 template <typename T>
+template<class Compare>
 void nsSdD::CList<T>::sort(Compare comp) noexcept
 {
     // Bubble sort :)
 
-    for(auto i = this->begin (); i != this->end (); ++i)
+    for (iterator i = begin (); i != end (); ++i)
     {
-        for(auto j = i; j != this->end(); ++j)
+        for (iterator j = i; j != end (); ++j)
         {
             if(comp(*j, *i))
                 std::iter_swap(i, j);

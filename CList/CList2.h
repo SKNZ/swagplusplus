@@ -144,9 +144,6 @@ namespace nsSdD
 
         void splice (iterator position, CList& x, iterator first, iterator last) noexcept;
 
-        template<class Predicate>
-        void remove_if (Predicate pred) noexcept;
-
         // Reverse
         void reverse () noexcept;
 
