@@ -4,6 +4,7 @@
     <option name="PER_PROJECT_SETTINGS">
       <value>
         <Objective-C>
+          <option name="INDENT_VISIBILITY_KEYWORDS" value="2" />
           <option name="NAMESPACE_BRACE_PLACEMENT" value="2" />
           <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
           <option name="BLOCK_BRACE_PLACEMENT" value="2" />
@@ -39,6 +40,8 @@
         <codeStyleSettings language="ObjectiveC">
           <option name="BRACE_STYLE" value="2" />
           <option name="CLASS_BRACE_STYLE" value="2" />
+          <option name="SPACE_BEFORE_METHOD_CALL_PARENTHESES" value="true" />
+          <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
         </codeStyleSettings>
       </value>
     </option>

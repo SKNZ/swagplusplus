@@ -1,6 +1,3 @@
-
-#include "CList.h"
-
 using namespace std;
 using namespace nsSdD;
 
@@ -56,15 +53,13 @@ CList<T>::CList(size_t n, const T &val) noexcept
 
 template<typename T>
 CList<T>::CList(const CList<T> &x) noexcept
+        : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
+          m_tail (std::make_shared<CNode> (T (), nullptr, m_head))
 {
-    m_head = x.getHead();
-    m_tail = x.getTail();
-    m_size = x.size();
+    m_head->setNext (m_tail);
 
-    for (CNodePtr p = x.getHead(); p; p = p->getNext())
-    {
-        CNodePtr temp = std::make_shared<CNode>(p->getInfo(), p->getNext(), p->getPrevious());
-    }
+    for (auto itr = x.cbegin (); itr != x.cend (); ++itr)
+        push_back (*itr);
 }
 
 template<typename T>
@@ -183,15 +178,15 @@ void CList<T>::erase(CNodePtr del) noexcept
 }
 
 template<typename T>
-void CList<T>::resize(unsigned n, const T& val /*= T()*/) noexcept
+void CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 {
-    if(m_size == n)
+    if (m_size == n)
         return;
 
-    if(m_size > n)
+    if (m_size > n)
     {
         CNodePtr ptr = m_head;
-        for(size_t i = 0; i < n; ++i)
+        for (size_t i = 0; i < n; ++i)
             ptr = ptr->getNext();
 
         ptr->setNext(m_tail);
@@ -203,10 +198,10 @@ void CList<T>::resize(unsigned n, const T& val /*= T()*/) noexcept
     }
 
     CNodePtr ptr = m_head;
-    for(size_t i = 0; i < m_size; ++i)
+    for (size_t i = 0; i < m_size; ++i)
         ptr = ptr->getNext();
 
-    for(size_t i = 0; i < n - m_size; ++i)
+    for (size_t i = 0; i < n - m_size; ++i)
     {
         CNodePtr add = make_shared<CNode>(val, ptr, ptr->getNext());
         ptr->setNext(add);
@@ -244,7 +239,7 @@ void CList<T>::clear() noexcept
 }
 
 template<typename T>
-void CList<T>::remove(const T& val) noexcept
+void CList<T>::remove (const T &val) noexcept
 {
     for (CNodePtr a = m_head; a; a = a->getNext())
     {
@@ -265,7 +260,7 @@ void CList<T>::remove_if(Predicate pred) noexcept
 {
     for (CNodePtr a = m_head; a; a = a->getNext())
     {
-        if (! pred(a))
+        if (!pred (a))
         {
             (a->getPrevious())->setNext(a->getNext());
             (a->getNext())->setPrevious(a->getPrevious());
@@ -282,7 +277,7 @@ void CList<T>::reverse() noexcept
     m_head->setNext(m_tail->getPrevious());
     m_tail->setPrevious(tmp->getNext());
 
-    for(size_t i = 0; i < m_size; ++i)
+    for (size_t i = 0; i < m_size; ++i)
     {
         CNodePtr ptr = tmp->getNext()->getPrevious();
         tmp->getNext()->setPrevious(tmp->getNext()->getNext());

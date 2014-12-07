@@ -1,5 +1,4 @@
-#ifndef __CLIST2_H__
-#define __CLIST2_H__
+#pragma once
 
 #include <iterator>
 #include <memory>
@@ -9,18 +8,21 @@ namespace nsSdD
     template<typename T>
     class CList
     {
+      public:
+        typedef size_t size_type;
 
-    private:
+      private:
         class CNode;
+
         typedef std::shared_ptr<CNode> CNodePtr;
-        size_t m_size = 0;
+        size_type m_size = 0;
         CNodePtr m_head = nullptr;
         CNodePtr m_tail = nullptr;
 
-    public:
-        typedef size_t size_type;
-
+      public:
         class iterator;
+
+        CList (const CList<T> &x) noexcept;
 
         explicit CList() noexcept;
 
@@ -28,7 +30,8 @@ namespace nsSdD
 
         explicit CList(size_t n, const T &val) noexcept;
 
-        CList(const CList<T> &x) noexcept;
+        template<class InputIterator>
+        CList (InputIterator begin, InputIterator end) noexcept;
 
         inline CNodePtr getHead() const noexcept
         {
@@ -43,76 +46,81 @@ namespace nsSdD
         class iterator
         {
 
-        private:
+          private:
             CNodePtr node;
 
-        public:
+          public:
             typedef std::forward_iterator_tag iterator_category;
             typedef T value_type;
             typedef int difference_type;
-            typedef T* pointer;
-            typedef T& reference;
+            typedef T *pointer;
+            typedef T &reference;
 
-            iterator(CNodePtr p = nullptr) : node(p){}
-            ~iterator(){}
+            iterator (CNodePtr p = nullptr) : node (p)
+            {
+            }
 
-            iterator& operator=(const iterator& other)
+            ~iterator ()
+            {
+            }
+
+            iterator &operator= (const iterator &other)
             {
                 node = other.node;
                 return (*this);
             }
 
-            iterator& operator=(const T& other)
+            iterator &operator= (const T &other)
             {
                 node->setInfo(other);
                 return (*this);
             }
 
-            bool operator==(const iterator& other)
+            bool operator== (const iterator &other)
             {
-                return(node == other.node);
+                return (node == other.node);
             }
 
-            bool operator!=(const iterator& other)
+            bool operator!= (const iterator &other)
             {
-                return(node != other.node);
+                return (node != other.node);
             }
 
-            iterator& operator++()
+            iterator &operator++ ()
             {
                 if (node->getNext() != nullptr)
                 {
                     node = node->getNext();
                 }
-                return(*this);
+                return (*this);
             }
 
-            iterator& operator--()
+            iterator &operator-- ()
             {
                 if (node->getPrevious() != nullptr)
                 {
                     node = node->getPrevious();
                 }
-                return(*this);
+                return (*this);
             }
 
-            iterator& operator++(int)
+            iterator &operator++ (int)
             {
                 iterator temp(*this);
                 ++(*this);
-                return(temp);
+                return (temp);
             }
 
-            iterator& operator--(int)
+            iterator &operator-- (int)
             {
                 iterator temp(*this);
                 --(*this);
-                return(temp);
+                return (temp);
             }
 
-            T& operator*() const
+            T &operator* () const
             {
-                return  node->m_info;
+                return node->m_info;
             }
 
             const CNodePtr operator->()
@@ -130,66 +138,62 @@ namespace nsSdD
         class const_iterator
         {
 
-        private:
+          private:
             CNodePtr node;
 
-        public:
-
+          public:
             typedef std::forward_iterator_tag iterator_category;
             typedef T value_type;
             typedef int difference_type;
-            typedef T* pointer;
-            typedef T& reference;
+            typedef T *pointer;
+            typedef T &reference;
 
-            const_iterator(CNodePtr p = nullptr) : node(p){}
-            ~const_iterator(){}
-
-            const_iterator& operator=(const const_iterator& other)
+            const_iterator (CNodePtr p = nullptr) : node (p)
             {
-                node = other.node;
-                return (*this);
             }
 
-            bool operator==(const const_iterator& other)
+            ~const_iterator ()
+            {
+            }
+
+            const_iterator &operator= (const const_iterator &other)
+            {
+                node = other.node;
+                return *this;
+            }
+
+            bool operator== (const const_iterator &other)
             {
                 return node == other.node;
             }
 
-            bool operator!=(const const_iterator& other)
+            bool operator!= (const const_iterator &other)
             {
-                return(node != other.node);
+                return node != other.node;
             }
 
-            const_iterator& operator++()
+            const_iterator &operator++ ()
             {
-               // if (node->getNext() != nullptr)
-                {
-                    node = node->getNext();
-                }
-                return(*this);
+                node = node->getNext ();
+                return *this;
             }
 
-            const_iterator& operator--()
+            const_iterator &operator-- ()
             {
-                if (node->getPrevious() != nullptr)
-                {
-                    node = node->getPrevious();
-                }
-                return(*this);
+                node = node->getPrevious ();
+                return *this;
             }
 
-            const_iterator& operator++(int)
+            const_iterator &operator++ (int)
             {
-                const_iterator temp(*this);
-                ++(*this);
-                return(temp);
+                node = node->getNext ();
+                return *this;
             }
 
-            const_iterator& operator--(int)
+            const_iterator &operator-- (int)
             {
-                const_iterator temp(*this);
-                --(*this);
-                return(temp);
+                node = node->getPrevious ();
+                return *--this;
             }
 
             const T operator*() const
@@ -207,20 +211,28 @@ namespace nsSdD
         class reverse_iterator
         {
 
-        private:
+          private:
             iterator it;
 
-        public:
+          public:
 
             typedef std::forward_iterator_tag iterator_category;
             typedef T value_type;
             typedef int difference_type;
-            typedef T* pointer;
-            typedef T& reference;
+            typedef T *pointer;
+            typedef T &reference;
 
-            reverse_iterator(iterator i ) : it(i){}
-            reverse_iterator():it(NULL){}
-            ~reverse_iterator(){}
+            reverse_iterator (iterator i) : it (i)
+            {
+            }
+
+            reverse_iterator () : it (NULL)
+            {
+            }
+
+            ~reverse_iterator ()
+            {
+            }
 
             iterator base() const
             {
@@ -240,37 +252,33 @@ namespace nsSdD
 
             reverse_iterator operator++(int)
             {
-                reverse_iterator tmp = *this;
-                ++*this;
-                return tmp;
+                return *++this;
             }
 
             reverse_iterator operator--(int)
             {
-                reverse_iterator tmp = *this;
-                --*this;
-                return tmp;
+                return *--this;
             }
 
-            bool operator==(const reverse_iterator & other)
+            bool operator== (const reverse_iterator &other)
             {
                 return it == other.it;
             }
 
-            bool operator!=(const reverse_iterator & other)
+            bool operator!= (const reverse_iterator &other)
             {
                 return it != other.it;
             }
 
-            T& operator*() const
+            T &operator* () const
             {
                 return *it;
             }
 
-            reverse_iterator& operator=(const T& other)
+            reverse_iterator &operator= (const T &other)
             {
                 it->setInfo(other);
-                return (*this);
+                return *this;
             }
 
 
@@ -279,20 +287,28 @@ namespace nsSdD
         class const_reverse_iterator
         {
 
-            private:
+          private:
             const_iterator it;
 
-            public:
+          public:
 
             typedef std::forward_iterator_tag iterator_category;
             typedef T value_type;
             typedef int difference_type;
-            typedef T* pointer;
-            typedef T& reference;
+            typedef T *pointer;
+            typedef T &reference;
 
-            const_reverse_iterator(const_iterator i ) : it(i){}
-            const_reverse_iterator():it(NULL){}
-            ~const_reverse_iterator(){}
+            const_reverse_iterator (const_iterator i) : it (i)
+            {
+            }
+
+            const_reverse_iterator () : it (NULL)
+            {
+            }
+
+            ~const_reverse_iterator ()
+            {
+            }
 
             const_reverse_iterator base() const
             {
@@ -312,24 +328,20 @@ namespace nsSdD
 
             const_reverse_iterator operator++(int)
             {
-                const_reverse_iterator tmp = *this;
-                ++*this;
-                return tmp;
+                return *++this;
             }
 
             const_reverse_iterator operator--(int)
             {
-                const_reverse_iterator tmp = *this;
-                --*this;
-                return tmp;
+                return *--this;
             }
 
-            bool operator==(const const_reverse_iterator & other)
+            bool operator== (const const_reverse_iterator &other)
             {
                 return it == other.it;
             }
 
-            bool operator!=(const const_reverse_iterator & other)
+            bool operator!= (const const_reverse_iterator &other)
             {
                 return it != other.it;
             }
@@ -343,42 +355,42 @@ namespace nsSdD
 
         // Iterators
 
-        iterator begin()
+        iterator begin () noexcept
         {
             return iterator(m_head->getNext());
         }
 
-        iterator end()
+        iterator end () noexcept
         {
             return iterator(m_tail);
         }
 
-        reverse_iterator rbegin()
+        reverse_iterator rbegin () noexcept
         {
             return CList::reverse_iterator(m_tail->getPrevious());
         }
 
-        reverse_iterator rend()
+        reverse_iterator rend () noexcept
         {
             return CList::reverse_iterator(m_head);
         }
 
-        const_iterator cbegin() const
+        const_iterator cbegin () const noexcept
         {
             return const_iterator(m_head->getNext());
         }
 
-        const_iterator cend() const
+        const_iterator cend () const noexcept
         {
-            return const_iterator(m_tail->getPrevious());
+            return const_iterator (m_tail);
         }
 
-        const_reverse_iterator crbegin()
+        const_reverse_iterator crbegin () const noexcept
         {
             return const_reverse_iterator(m_tail->getPrevious());
         }
 
-        const_reverse_iterator crend()
+        const_reverse_iterator crend () const noexcept
         {
             return const_reverse_iterator(m_head);
         }
@@ -409,53 +421,58 @@ namespace nsSdD
 
         // Modifiers
 
-        void assign(unsigned n, const T& val) noexcept;
+        void assign (unsigned n, const T &val) noexcept;
 
-        template <class InputIterator>
-        void assign(InputIterator first, InputIterator last);
+        template<class InputIterator>
+        void assign (InputIterator begin, InputIterator last);
 
         void emplace_back(T val) noexcept;
 
-        void push_back(const T& x) noexcept;
+        void push_back (const T &x) noexcept;
 
         void pop_back() noexcept;
 
-        template <class... Args>
-        void emplace_front(Args&&... val) noexcept;
+        template<class... Args>
+        void emplace_front (Args &&... val) noexcept;
 
-        void push_front(const T& x) noexcept;
+        void push_front (const T &x) noexcept;
 
         void pop_front() noexcept;
 
-        void emplace(CNodePtr Prec , T val) noexcept;
+        void emplace (CNodePtr Prec, T val) noexcept;
 
-        iterator insert (iterator position, const T& val) noexcept;
+        iterator insert (iterator position, const T &val) noexcept;
+
+        iterator insert (iterator position, size_type n, const T &val) noexcept;
+
+        template<class InputIterator>
+        iterator insert (iterator position, InputIterator begin, InputIterator end) noexcept;
 
         iterator erase(iterator del) noexcept;
 
-        void swap(CList& x) noexcept;
+        void swap (CList &x) noexcept;
 
-        void resize(unsigned n, const T& val = T()) noexcept;
+        void resize (unsigned n, const T &val = T ()) noexcept;
 
         void clear() noexcept;
 
         // Operations
 
-        void remove(const T& val) noexcept;
+        void remove (const T &val) noexcept;
 
         template<class Predicate>
         void remove_if(Predicate pred) noexcept;
 
         void reverse() noexcept;
 
-    private:
+      private:
 
         class CNode
         {
-        public:
+          public:
             T m_info;
-        private:
 
+          private:
             CNodePtr m_next;
             CNodePtr m_previous;
 
@@ -463,11 +480,12 @@ namespace nsSdD
             {
             }
 
-            CNode &operator=(const CNode &) noexcept
+            CNode &operator= (const CNode &c) noexcept
             {
+                // @todo Should this really be empty ?
             }
 
-        public:
+          public:
             CNode(T info = T(), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
                     : m_info(info), m_next(next),
                       m_previous(previous)
@@ -512,5 +530,3 @@ namespace nsSdD
 }
 
 #include "CList2.hxx"
-
-#endif
