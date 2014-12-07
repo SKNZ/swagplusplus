@@ -3,7 +3,7 @@
 #include "CList2.h"
 
 template<typename T>
-class nsSdD::CList<T>::CNode : public std::enable_shared_from_this<nsSdD::CList<T>::CNode>
+class nsSdD::CList<T>::CNode
 {
 private:
     T m_info;
@@ -68,7 +68,7 @@ public:
 
     inline CNodePtr addBefore (const T &val) noexcept
     {
-        CNodePtr newNode = std::make_shared<CNode> (val, m_previous, this->shared_from_this ());
+        CNodePtr newNode = std::make_shared<CNode> (val, m_previous->m_next, m_previous);
         m_previous->m_next = newNode;
         m_previous = newNode;
         return newNode;
@@ -76,7 +76,7 @@ public:
 
     inline CNodePtr addAfter (const T &val) noexcept
     {
-        CNodePtr newNode = std::make_shared<CNode> (val, this->shared_from_this (), m_next);
+        CNodePtr newNode = std::make_shared<CNode> (val, m_next, m_next->m_previous);
         m_next->m_previous = newNode;
         m_next = newNode;
         return newNode;

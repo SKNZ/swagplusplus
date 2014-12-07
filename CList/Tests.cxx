@@ -194,7 +194,7 @@ namespace
         IZI_ASSERT(list.size () == listSize);
         IZI_ASSERT(!list.empty ());
         IZI_ASSERT(list.begin () != list.end ());
-
+        cout << "YOLO" << endl;
         for (T x : list)
             IZI_ASSERT(x == value)
     }

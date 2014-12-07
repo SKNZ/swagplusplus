@@ -14,41 +14,25 @@ nsSdD::CList<T>::CList () noexcept
 }
 
 template<typename T>
-nsSdD::CList<T>::CList (size_t n) noexcept
+nsSdD::CList<T>::CList (size_type n) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
           m_tail (std::make_shared<CNode> (T (), nullptr, m_head))
 {
     m_head->setNext (m_tail);
 
-    for (size_t i = 0; i < n; i++)
-    {
-        CNodePtr ptr = m_tail->addBefore (T());
-
-        ptr->setNext (m_tail);
-        ptr->setPrevious (m_tail->getPrevious ());
-
-        ++m_size;
-    }
+    for (size_type i = 0; i < n; i++)
+        push_back (T ());
 }
 
 template<typename T>
-nsSdD::CList<T>::CList (size_t n, const T &val) noexcept
+nsSdD::CList<T>::CList (size_type n, const T &val) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
           m_tail (std::make_shared<CNode> (T (), nullptr, m_head))
 {
     m_head->setNext (m_tail);
 
-    for (size_t i = 0; i < n; i++)
-    {
-        CNodePtr ptr = m_tail->addBefore (val);
-        CNodePtr lastCreated = m_tail->getPrevious ();
-
-        ptr->setPrevious (lastCreated);
-
-        lastCreated->setNext (ptr);
-
-        ++m_size;
-    }
+    for (size_type i = 0; i < n; i++)
+        push_back (val);
 }
 
 template<typename T>
@@ -169,20 +153,9 @@ void nsSdD::CList<T>::assign (InputIterator begin, InputIterator last)
 template<typename T>
 void nsSdD::CList<T>::assign (unsigned n, const T &val) noexcept
 {
-    if (this->size () == 0)
-    {
-        for (size_t i = 0; i < n; i++)
-        {
-            CNodePtr ptr = m_tail->addBefore (val);
-            CNodePtr LastCreated = m_tail->getPrevious ();
-
-            ptr->setPrevious (LastCreated);
-
-            LastCreated->setNext (ptr);
-
-            ++m_size;
-        }
-    }
+    clear ();
+    for (int i = 0; i < n; ++i)
+        push_back (val);
 }
 
 template<typename T>
@@ -258,7 +231,7 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
     if (m_size > n) // Reducing
     {
         CNodePtr currentNode = m_head;
-        for (size_t i = 0; i < n; ++i)
+        for (size_type i = 0; i < n; ++i)
             currentNode = currentNode->getNext ();
 
         currentNode->setNext (m_tail);
@@ -351,15 +324,15 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
 {
 
     CNodePtr nextNode = position.getNode ();
-    CNodePtr prevNode = nextNode->getPrevious ();
+    CNodePtr prevNode = nextNode->getPrevious (), currNode = prevNode;
 
     for (int i = 0; i < n; ++i)
     {
         CNodePtr newNode = std::make_shared<CNode> (val, nextNode, prevNode);
-        prevNode->setNext (newNode);
+        currNode->setNext (newNode);
         nextNode->setPrevious (newNode);
         ++m_size;
-        prevNode = newNode;
+        currNode = newNode;
     }
 
     return iterator (prevNode->getNext ());

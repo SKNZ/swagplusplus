@@ -22,7 +22,7 @@ public:
     CIterator &operator= (const CIterator &other) noexcept
     {
         node = other.node;
-        return (*this);
+        return *this;
     }
 
     CIterator &operator= (const T &info) noexcept
