@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Prec</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/26.html#L212'>Prec</a>              212 CList.cxx      void CList&lt;T&gt;::emplace (CNodePtr Prec, T val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L214'>Prec</a>              214 CList.cxx          CNodePtr add = make_shared&lt;CNode&gt; (val, Prec, Prec-&gt;getNext ());</span>
+<span class='curline'><a href='../S/26.html#L216'>Prec</a>              216 CList.cxx          Prec-&gt;getNext ()-&gt;setPrevious (add);</span>
+<span class='curline'><a href='../S/26.html#L217'>Prec</a>              217 CList.cxx          Prec-&gt;setNext (add);</span>
+<span class='curline'><a href='../S/30.html#L70'>Prec</a>               70 CList.h                void emplace (CNodePtr Prec, T val) noexcept;</span>
+</pre>
+</body>
+</html>

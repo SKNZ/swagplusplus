@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>CNodePtr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/26.html#L28'>CNodePtr</a>           28 CList.cxx              CNodePtr ptr = std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L55'>CNodePtr</a>           55 CList.cxx              CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L56'>CNodePtr</a>           56 CList.cxx              CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/26.html#L97'>CNodePtr</a>           97 CList.cxx                  CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L98'>CNodePtr</a>           98 CList.cxx                  CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/26.html#L119'>CNodePtr</a>          119 CList.cxx          CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L138'>CNodePtr</a>          138 CList.cxx          CNodePtr del = m_head-&gt;getNext ();</span>
+<span class='curline'><a href='../S/26.html#L157'>CNodePtr</a>          157 CList.cxx          CNodePtr add = std::make_shared&lt;CNode&gt; (x, nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L175'>CNodePtr</a>          175 CList.cxx          CNodePtr add = std::make_shared&lt;CNode&gt; (x, nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L176'>CNodePtr</a>          176 CList.cxx          CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/26.html#L194'>CNodePtr</a>          194 CList.cxx          CNodePtr del = m_tail-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/26.html#L212'>CNodePtr</a>          212 CList.cxx      void CList&lt;T&gt;::emplace (CNodePtr Prec, T val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L214'>CNodePtr</a>          214 CList.cxx          CNodePtr add = make_shared&lt;CNode&gt; (val, Prec, Prec-&gt;getNext ());</span>
+<span class='curline'><a href='../S/26.html#L227'>CNodePtr</a>          227 CList.cxx      void CList&lt;T&gt;::erase (CNodePtr del) noexcept</span>
+<span class='curline'><a href='../S/26.html#L252'>CNodePtr</a>          252 CList.cxx              CNodePtr ptr = m_head;</span>
+<span class='curline'><a href='../S/26.html#L264'>CNodePtr</a>          264 CList.cxx          CNodePtr ptr = m_head;</span>
+<span class='curline'><a href='../S/26.html#L270'>CNodePtr</a>          270 CList.cxx              CNodePtr add = make_shared&lt;CNode&gt; (val, ptr, ptr-&gt;getNext ());</span>
+<span class='curline'><a href='../S/26.html#L286'>CNodePtr</a>          286 CList.cxx          CNodePtr ptr = m_head;</span>
+<span class='curline'><a href='../S/26.html#L320'>CNodePtr</a>          320 CList.cxx          for (CNodePtr a = m_head; a; a = a-&gt;getNext ())</span>
+<span class='curline'><a href='../S/26.html#L341'>CNodePtr</a>          341 CList.cxx          for (CNodePtr a = m_head; a; a = a-&gt;getNext ())</span>
+<span class='curline'><a href='../S/26.html#L359'>CNodePtr</a>          359 CList.cxx          CNodePtr tmp = m_head;</span>
+<span class='curline'><a href='../S/26.html#L365'>CNodePtr</a>          365 CList.cxx              CNodePtr ptr = tmp-&gt;getNext ()-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/30.html#L16'>CNodePtr</a>           16 CList.h                CNodePtr m_head = nullptr;</span>
+<span class='curline'><a href='../S/30.html#L17'>CNodePtr</a>           17 CList.h                CNodePtr m_tail = nullptr;</span>
+<span class='curline'><a href='../S/30.html#L28'>CNodePtr</a>           28 CList.h                CNodePtr getHead () const noexcept</span>
+<span class='curline'><a href='../S/30.html#L33'>CNodePtr</a>           33 CList.h                CNodePtr getTail () const noexcept</span>
+<span class='curline'><a href='../S/30.html#L70'>CNodePtr</a>           70 CList.h                void emplace (CNodePtr Prec, T val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L72'>CNodePtr</a>           72 CList.h                void erase (CNodePtr del) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L91'>CNodePtr</a>           91 CList.h                    CNodePtr m_next;</span>
+<span class='curline'><a href='../S/30.html#L92'>CNodePtr</a>           92 CList.h                    CNodePtr m_previous;</span>
+<span class='curline'><a href='../S/30.html#L104'>CNodePtr</a>          104 CList.h                    CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
+<span class='curline'><a href='../S/30.html#L124'>CNodePtr</a>          124 CList.h                    inline CNodePtr getNext ()  noexcept</span>
+<span class='curline'><a href='../S/30.html#L129'>CNodePtr</a>          129 CList.h                    inline void setNext (CNodePtr &amp;next) noexcept</span>
+<span class='curline'><a href='../S/30.html#L134'>CNodePtr</a>          134 CList.h                    inline CNodePtr getPrevious ()  noexcept</span>
+<span class='curline'><a href='../S/30.html#L139'>CNodePtr</a>          139 CList.h                    inline void setPrevious (CNodePtr &amp;previous) noexcept</span>
+<span class='curline'><a href='../S/28.html#L114'>CNodePtr</a>          114 CList2.h               inline CNodePtr getHead () const noexcept;</span>
+<span class='curline'><a href='../S/28.html#L121'>CNodePtr</a>          121 CList2.h               inline CNodePtr getTail () const noexcept;</span>
+<span class='curline'><a href='../S/28.html#L464'>CNodePtr</a>          464 CList2.h               CNodePtr m_head = nullptr;</span>
+<span class='curline'><a href='../S/28.html#L470'>CNodePtr</a>          470 CList2.h               CNodePtr m_tail = nullptr;</span>
+<span class='curline'><a href='../S/27.html#L61'>CNodePtr</a>           61 CList2.hxx     typename nsSdD::CList&lt;T&gt;::CNodePtr nsSdD::CList&lt;T&gt;::getHead () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L67'>CNodePtr</a>           67 CList2.hxx     typename nsSdD::CList&lt;T&gt;::CNodePtr nsSdD::CList&lt;T&gt;::getTail () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L269'>CNodePtr</a>          269 CList2.hxx         for (CNodePtr a = m_head-&gt;getNext (); a != m_tail; a = a-&gt;getNext ())</span>
+<span class='curline'><a href='../S/27.html#L292'>CNodePtr</a>          292 CList2.hxx         for (CNodePtr currNode = m_head-&gt;getNext (); currNode != m_tail; currNode = currNode-&gt;getNext ())</span>
+<span class='curline'><a href='../S/27.html#L303'>CNodePtr</a>          303 CList2.hxx         for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode-&gt;getPrevious ())</span>
+<span class='curline'><a href='../S/27.html#L320'>CNodePtr</a>          320 CList2.hxx         CNodePtr nextNode = position.getNode (),</span>
+<span class='curline'><a href='../S/27.html#L337'>CNodePtr</a>          337 CList2.hxx         CNodePtr nextNode = position.getNode ();</span>
+<span class='curline'><a href='../S/27.html#L338'>CNodePtr</a>          338 CList2.hxx         CNodePtr prevNode = nextNode-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/29.html#L11'>CNodePtr</a>           11 CList2ConstIterator.hxx     CNodePtr node;</span>
+<span class='curline'><a href='../S/29.html#L14'>CNodePtr</a>           14 CList2ConstIterator.hxx     CConstIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
+<span class='curline'><a href='../S/29.html#L68'>CNodePtr</a>           68 CList2ConstIterator.hxx     CNodePtr getNode () const noexcept</span>
+<span class='curline'><a href='../S/34.html#L11'>CNodePtr</a>           11 CList2Iterator.hxx     CNodePtr node;</span>
+<span class='curline'><a href='../S/34.html#L14'>CNodePtr</a>           14 CList2Iterator.hxx     CIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
+<span class='curline'><a href='../S/34.html#L78'>CNodePtr</a>           78 CList2Iterator.hxx     CNodePtr getNode () const noexcept</span>
+<span class='curline'><a href='../S/35.html#L19'>CNodePtr</a>           19 CList2Node.hxx     CNodePtr m_next;</span>
+<span class='curline'><a href='../S/35.html#L25'>CNodePtr</a>           25 CList2Node.hxx     CNodePtr m_previous;</span>
+<span class='curline'><a href='../S/35.html#L49'>CNodePtr</a>           49 CList2Node.hxx     explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
+<span class='curline'><a href='../S/35.html#L86'>CNodePtr</a>           86 CList2Node.hxx     inline CNodePtr &amp;getNext ()  noexcept</span>
+<span class='curline'><a href='../S/35.html#L96'>CNodePtr</a>           96 CList2Node.hxx     inline void setNext (CNodePtr next) noexcept</span>
+<span class='curline'><a href='../S/35.html#L105'>CNodePtr</a>          105 CList2Node.hxx     inline CNodePtr &amp;getPrevious ()  noexcept</span>
+<span class='curline'><a href='../S/35.html#L115'>CNodePtr</a>          115 CList2Node.hxx     inline void setPrevious (CNodePtr previous) noexcept</span>
+<span class='curline'><a href='../S/35.html#L135'>CNodePtr</a>          135 CList2Node.hxx     inline CNodePtr addBefore (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/35.html#L137'>CNodePtr</a>          137 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/35.html#L148'>CNodePtr</a>          148 CList2Node.hxx     inline CNodePtr addAfter (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/35.html#L150'>CNodePtr</a>          150 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+</pre>
+</body>
+</html>
