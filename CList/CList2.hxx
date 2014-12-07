@@ -339,15 +339,14 @@ void nsSdD::CList<T>::reverse () noexcept
 template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, T const &val) noexcept
 {
-    CNodePtr tmp = std::make_shared<CNode> (val);
-    tmp->setNext (position.getNode ());
-    tmp->setPrevious (position.getNode ()->getPrevious ());
-    position.getNode ()->getPrevious ()->setNext (tmp);
-    position.getNode ()->setPrevious (tmp);
-
     ++m_size;
-
-    return nsSdD::CList<T>::iterator (tmp);
+    return iterator (
+            position.getNode ()->addBefore (
+                    std::make_shared<CNode> (val,
+                            position.getNode (),
+                            position.getNode ()->getPrevious ())
+            )
+    );
 }
 
 template<typename T>
