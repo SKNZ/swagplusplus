@@ -19,7 +19,15 @@ We implement the most part of the list class functions like emplace, insert, ...
 
 namespace nsSdD
 {
+
     template<typename T>
+    /*!
+       @brief CList is the main class of our work, it's develop in order to be the most close to the original std::list
+              In this idea we choose to make a double-linked list, in that way we can use bidirectional iterator and have
+              a stl compliant CList. During the development process we choose to work in TDD (Test Driven Development) in
+              order to have the least bugs possible.
+
+    */
     class CList
     {
         // Types
