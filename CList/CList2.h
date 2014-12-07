@@ -137,6 +137,9 @@ namespace nsSdD
         // Unique
         void unique () noexcept;
 
+        template<class Predicate>
+        void unique (Predicate pred) noexcept;
+
         //Splice
         void splice (iterator position, CList& x) noexcept;
 

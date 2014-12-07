@@ -42,9 +42,22 @@ namespace
             return m_a < c.m_a;
         }
 
+
+        bool operator> (const TestClass &c) const noexcept
+        {
+            if (m_a == c.m_a)
+                return m_name > c.m_name;
+            return m_a > c.m_a;
+        }
+
         bool operator<= (const TestClass &c) const noexcept
         {
             return *this < c || *this == c;
+        }
+
+        bool operator>= (const TestClass &c) const noexcept
+        {
+            return *this > c || *this == c;
         }
 
         int getA () const noexcept
@@ -903,7 +916,7 @@ namespace
         });
 
         for (auto itr = list.cbegin (); itr != --list.cend ();)
-            IZI_ASSERT(*itr <= *++itr)
+            IZI_ASSERT(*itr >= *++itr)
     }
 
     template<typename T>
@@ -976,11 +989,12 @@ namespace
         IZI_SUBTEST(RemoveIf<T> ());
 
         IZI_SUBTEST(Unique<T> ());
-//        IZI_SUBTEST(UniqueWithPredicate<T>());
+        IZI_SUBTEST(UniqueWithPredicate<T> ());
 
-//        IZI_SUBTEST(Merge<T>());
+        IZI_SUBTEST(Merge<T> ());
 
-//        IZI_SUBTEST(Sort<T>());
+        IZI_SUBTEST(Sort<T> ());
+        IZI_SUBTEST(SortWithPredicate<T> ());
 
         IZI_SUBTEST(Reverse<T> ());
 
