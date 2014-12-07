@@ -41,7 +41,7 @@ CList<T>::CList (size_t n) noexcept
     @fn CList<T>::CList (size_t n, const T &val) noexcept
     @brief This function create a CList objet with n CNode.
     @param[in] n Is a @p size_t parameter for the amount of CNode in the CList .
-    @param[in] val Is a ????????? .
+    @param[in] val is @p T parameter is the default value for the CList
     */
 template<typename T>
 CList<T>::CList (size_t n, const T &val) noexcept
