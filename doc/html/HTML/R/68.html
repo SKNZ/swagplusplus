@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>emplace_back</title>
+<title>emplace</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,8 +9,10 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L303'>emplace_back</a>      303 CList.h                CIterator emplace_back (Args &amp;&amp;... args) noexcept;</span>
-<span class='curline'><a href='../S/31.html#L308'>emplace_back</a>      308 Tests.cxx                  list.emplace_back (x, x);</span>
+<span class='curline'><a href='../S/28.html#L285'>emplace</a>           285 CList.h                CIterator emplace (CIterator position, Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/33.html#L367'>emplace</a>           367 CList.hxx          return emplace (begin (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/33.html#L374'>emplace</a>           374 CList.hxx          return emplace (end (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/35.html#L332'>emplace</a>           332 CTests.cxx             itr = list.emplace (itr, data[2], data[2]);</span>
 </pre>
 </body>
 </html>

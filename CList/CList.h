@@ -101,13 +101,13 @@ namespace nsSdD
         explicit CList (size_t n, const T &val) noexcept;
 
         /*!
-            @fn     explicit CList (InputIterator begin, InputIterator end) noexcept
+            @fn     'template < InputIterator > nsSdD::CList< T >::CList(InputIterator first, InputIterator last) noexcept'
             @brief  This is the constructor who construct a new CList from two CIterator of another CList.
-            @param[in] begin This point to the first element who want to copy.
-            @param[in] end This point to the last element who want to copy.
+            @param[in] first This point to the first element who want to copy.
+            @param[in] last This point to the last element who want to copy.
          */
         template<class InputIterator>
-        explicit CList (InputIterator begin, InputIterator end) noexcept;
+        explicit CList (InputIterator first, InputIterator last) noexcept;
 
         // V1
         /*!
@@ -215,7 +215,7 @@ namespace nsSdD
         // Modifiers
         // Assign
         /*!
-           @fn     assign() noexcept
+           @fn     assign(unsigned n, const T &val) noexcept
            @brief  This function erase the content and replace the content of the CList with the @p n size and with the @p val value.
            @param[in] n The size of the CList we want.
            @param[in] val The value we want to affect on each element of the new CList.

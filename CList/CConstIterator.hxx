@@ -35,7 +35,7 @@ public:
     }
 
     /*!
-        @fn             CConstIterator (const CIterator &)
+        @fn             CConstIterator (const CConstIterator &)
         @brief          The copy-constructor for the const_iterator.
     */
     CConstIterator (const CConstIterator &) = default;

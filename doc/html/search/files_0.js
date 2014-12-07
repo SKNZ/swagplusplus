@@ -6,5 +6,7 @@ var searchData=
   ['clist_2ehxx',['CList.hxx',['../_c_list_8hxx.html',1,'']]],
   ['cnode_2ehxx',['CNode.hxx',['../_c_node_8hxx.html',1,'']]],
   ['ctestclass_2eh',['CTestClass.h',['../_c_test_class_8h.html',1,'']]],
+  ['ctests_2ecxx',['CTests.cxx',['../_c_tests_8cxx.html',1,'']]],
+  ['ctests_2eh',['CTests.h',['../_c_tests_8h.html',1,'']]],
   ['cvalueprovider_2eh',['CValueProvider.h',['../_c_value_provider_8h.html',1,'']]]
 ];

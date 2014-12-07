@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   0: "abcdefgimnoprstu~",
   1: "ct",
   2: "an",
-  3: "cimt",
+  3: "cim",
   4: "abcefgimoprstu~",
   5: "mn",
   6: "cirs",

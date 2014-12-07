@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>m_tail</title>
+<title>m_previous</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,28 +9,16 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L474'>m_tail</a>            474 CList.h                CNodePtr m_tail = nullptr;</span>
-<span class='curline'><a href='../S/34.html#L13'>m_tail</a>             13 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L21'>m_tail</a>             21 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L32'>m_tail</a>             32 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L43'>m_tail</a>             43 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L55'>m_tail</a>             55 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L69'>m_tail</a>             69 CList.hxx          return m_tail;</span>
-<span class='curline'><a href='../S/34.html#L81'>m_tail</a>             81 CList.hxx          return iterator (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L93'>m_tail</a>             93 CList.hxx          return const_iterator (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L141'>m_tail</a>            141 CList.hxx          return m_tail-&gt;getPrevious ()-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/34.html#L181'>m_tail</a>            181 CList.hxx          m_tail-&gt;addBefore (x);</span>
-<span class='curline'><a href='../S/34.html#L190'>m_tail</a>            190 CList.hxx              m_tail-&gt;getPrevious ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/34.html#L227'>m_tail</a>            227 CList.hxx              itr.getNode ()-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L228'>m_tail</a>            228 CList.hxx              m_tail-&gt;setPrevious (itr.getNode ());</span>
-<span class='curline'><a href='../S/34.html#L243'>m_tail</a>            243 CList.hxx          std::swap (x.m_tail, m_tail);</span>
-<span class='curline'><a href='../S/34.html#L250'>m_tail</a>            250 CList.hxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/34.html#L251'>m_tail</a>            251 CList.hxx          m_tail-&gt;setPrevious (m_head);</span>
-<span class='curline'><a href='../S/34.html#L269'>m_tail</a>            269 CList.hxx          for (CNodePtr a = m_head-&gt;getNext (); a != m_tail; a = a-&gt;getNext ())</span>
-<span class='curline'><a href='../S/34.html#L292'>m_tail</a>            292 CList.hxx          for (CNodePtr currNode = m_head-&gt;getNext (); currNode != m_tail; currNode = currNode-&gt;getNext ())</span>
-<span class='curline'><a href='../S/34.html#L303'>m_tail</a>            303 CList.hxx          for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode-&gt;getPrevious ())</span>
-<span class='curline'><a href='../S/34.html#L306'>m_tail</a>            306 CList.hxx          std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/34.html#L307'>m_tail</a>            307 CList.hxx          std::swap (m_tail, m_head);</span>
+<span class='curline'><a href='../S/36.html#L33'>m_previous</a>         33 CNode.hxx          CNodePtr m_previous;</span>
+<span class='curline'><a href='../S/36.html#L115'>m_previous</a>        115 CNode.hxx              return m_previous;</span>
+<span class='curline'><a href='../S/36.html#L125'>m_previous</a>        125 CNode.hxx              m_previous = previous;</span>
+<span class='curline'><a href='../S/36.html#L134'>m_previous</a>        134 CNode.hxx              m_next-&gt;setPrevious (m_previous);</span>
+<span class='curline'><a href='../S/36.html#L135'>m_previous</a>        135 CNode.hxx              m_previous-&gt;setNext (m_next);</span>
+<span class='curline'><a href='../S/36.html#L145'>m_previous</a>        145 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/36.html#L146'>m_previous</a>        146 CNode.hxx              m_previous-&gt;m_next = newNode;</span>
+<span class='curline'><a href='../S/36.html#L147'>m_previous</a>        147 CNode.hxx              m_previous = newNode;</span>
+<span class='curline'><a href='../S/36.html#L158'>m_previous</a>        158 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/36.html#L159'>m_previous</a>        159 CNode.hxx              m_next-&gt;m_previous = newNode;</span>
 </pre>
 </body>
 </html>

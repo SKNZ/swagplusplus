@@ -1,6 +1,6 @@
 <map id="/home/sknz/Development/swagplusplus/CList/CList.hxx" name="/home/sknz/Development/swagplusplus/CList/CList.hxx">
-<area shape="rect" id="node4" href="$_c_list_8h.html" title="CList.h" alt="" coords="221,96,285,123"/>
-<area shape="rect" id="node7" href="$_c_node_8hxx.html" title="CNode.hxx" alt="" coords="467,171,555,197"/>
-<area shape="rect" id="node5" href="$_c_iterator_8hxx.html" title="CIterator.hxx" alt="" coords="344,171,443,197"/>
-<area shape="rect" id="node6" href="$_c_const_iterator_8hxx.html" title="CConstIterator.hxx" alt="" coords="187,171,320,197"/>
+<area shape="rect" id="node4" href="$_c_list_8h.html" title="Header to the CList class. " alt="" coords="221,96,285,123"/>
+<area shape="rect" id="node7" href="$_c_node_8hxx.html" title="CNode class implementation. " alt="" coords="467,171,555,197"/>
+<area shape="rect" id="node5" href="$_c_iterator_8hxx.html" title="Implementation of the iterator for the CList class. " alt="" coords="344,171,443,197"/>
+<area shape="rect" id="node6" href="$_c_const_iterator_8hxx.html" title="Implementation of the const_iterator for the CList class. " alt="" coords="187,171,320,197"/>
 </map>

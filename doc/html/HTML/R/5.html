@@ -11,22 +11,22 @@
 <pre>
 <span class='curline'><a href='../S/28.html#L31'>CNode</a>              31 CList.h                class CNode;</span>
 <span class='curline'><a href='../S/28.html#L38'>CNode</a>              38 CList.h                typedef std::shared_ptr&lt;CNode&gt; CNodePtr;</span>
-<span class='curline'><a href='../S/34.html#L10'>CNode</a>              10 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L11'>CNode</a>              11 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L18'>CNode</a>              18 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L19'>CNode</a>              19 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L29'>CNode</a>              29 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L30'>CNode</a>              30 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L40'>CNode</a>              40 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L41'>CNode</a>              41 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L52'>CNode</a>              52 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L53'>CNode</a>              53 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/36.html#L16'>CNode</a>              16 CNode.hxx      class nsSdD::CList&lt;T&gt;::CNode</span>
-<span class='curline'><a href='../S/36.html#L41'>CNode</a>              41 CNode.hxx          CNode (const CNode &amp;) noexcept</span>
-<span class='curline'><a href='../S/36.html#L49'>CNode</a>              49 CNode.hxx          CNode &amp;operator= (const CNode &amp;c) noexcept = delete;</span>
-<span class='curline'><a href='../S/36.html#L59'>CNode</a>              59 CNode.hxx          explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
-<span class='curline'><a href='../S/36.html#L147'>CNode</a>             147 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
-<span class='curline'><a href='../S/36.html#L160'>CNode</a>             160 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/33.html#L17'>CNode</a>              17 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L18'>CNode</a>              18 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L25'>CNode</a>              25 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L26'>CNode</a>              26 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L36'>CNode</a>              36 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L37'>CNode</a>              37 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L47'>CNode</a>              47 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L48'>CNode</a>              48 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L59'>CNode</a>              59 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L60'>CNode</a>              60 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/36.html#L14'>CNode</a>              14 CNode.hxx      class nsSdD::CList&lt;T&gt;::CNode</span>
+<span class='curline'><a href='../S/36.html#L39'>CNode</a>              39 CNode.hxx          CNode (const CNode &amp;) noexcept</span>
+<span class='curline'><a href='../S/36.html#L47'>CNode</a>              47 CNode.hxx          CNode &amp;operator= (const CNode &amp;c) noexcept = delete;</span>
+<span class='curline'><a href='../S/36.html#L57'>CNode</a>              57 CNode.hxx          explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
+<span class='curline'><a href='../S/36.html#L145'>CNode</a>             145 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/36.html#L158'>CNode</a>             158 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
 </pre>
 </body>
 </html>

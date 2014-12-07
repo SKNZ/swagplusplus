@@ -2,6 +2,5 @@ var searchData=
 [
   ['testclass',['TestClass',['../classns_tests_1_1_test_class.html',1,'nsTests']]],
   ['testclass',['TestClass',['../classns_tests_1_1_test_class.html#a7652415ca2125682f509bcdf5912a396',1,'nsTests::TestClass']]],
-  ['tests_2ecxx',['Tests.cxx',['../_tests_8cxx.html',1,'']]],
-  ['tests_2eh',['Tests.h',['../_tests_8h.html',1,'']]]
+  ['testcnode',['TestCNode',['../namespaceanonymous__namespace_02_c_tests_8cxx_03.html#aaccb4c689a2442f6e38b418ab8ec770d',1,'anonymous_namespace{CTests.cxx}']]]
 ];

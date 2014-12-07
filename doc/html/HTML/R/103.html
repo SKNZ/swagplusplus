@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>swap</title>
+<title>splice</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,14 +9,13 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L361'>swap</a>              361 CList.h                void swap (CList &amp;x) noexcept;</span>
-<span class='curline'><a href='../S/34.html#L242'>swap</a>              242 CList.hxx          std::swap (x.m_head, m_head);</span>
-<span class='curline'><a href='../S/34.html#L243'>swap</a>              243 CList.hxx          std::swap (x.m_tail, m_tail);</span>
-<span class='curline'><a href='../S/34.html#L244'>swap</a>              244 CList.hxx          std::swap (x.m_size, m_size);</span>
-<span class='curline'><a href='../S/34.html#L304'>swap</a>              304 CList.hxx              std::swap (currentNode-&gt;getNext (), currentNode-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/34.html#L306'>swap</a>              306 CList.hxx          std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/34.html#L307'>swap</a>              307 CList.hxx          std::swap (m_tail, m_head);</span>
-<span class='curline'><a href='../S/31.html#L503'>swap</a>              503 Tests.cxx              list1.swap (list2);</span>
+<span class='curline'><a href='../S/28.html#L420'>splice</a>            420 CList.h                void splice (CIterator position, CList &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L429'>splice</a>            429 CList.h                void splice (CIterator position, CList &amp;x, CIterator i) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L439'>splice</a>            439 CList.h                void splice (CIterator position, CList &amp;x, CIterator first, CIterator last) noexcept;</span>
+<span class='curline'><a href='../S/33.html#L420'>splice</a>            420 CList.hxx          splice (end(), x);</span>
+<span class='curline'><a href='../S/35.html#L590'>splice</a>            590 CTests.cxx             list1.splice (itr, list2);</span>
+<span class='curline'><a href='../S/35.html#L608'>splice</a>            608 CTests.cxx                 list1.splice (list1.end (), list2, itr++);</span>
+<span class='curline'><a href='../S/35.html#L632'>splice</a>            632 CTests.cxx             list1.splice (itr, list2, list2.begin (), list2.end ());</span>
 </pre>
 </body>
 </html>

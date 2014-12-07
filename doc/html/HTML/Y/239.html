@@ -10,7 +10,7 @@
 <body>
 <pre>
 <span class='curline'><a href='../S/26.html#L15'>std</a>                15 CConstIterator.hxx template&lt;typename T&gt; using CConstIterBase = std::iterator&lt;std::bidirectional_iterator_tag, const T, std::ptrdiff_t, const T *, const T &amp;&gt;;</span>
-<span class='curline'><a href='../S/32.html#L17'>std</a>                17 CIterator.hxx  template&lt;typename T&gt; using CIterBase = std::iterator&lt;std::bidirectional_iterator_tag, T&gt;;</span>
+<span class='curline'><a href='../S/30.html#L17'>std</a>                17 CIterator.hxx  template&lt;typename T&gt; using CIterBase = std::iterator&lt;std::bidirectional_iterator_tag, T&gt;;</span>
 <span class='curline'><a href='../S/28.html#L38'>std</a>                38 CList.h                typedef std::shared_ptr&lt;CNode&gt; CNodePtr;</span>
 <span class='curline'><a href='../S/28.html#L64'>std</a>                64 CList.h                typedef std::reverse_iterator&lt;iterator&gt; reverse_iterator;</span>
 <span class='curline'><a href='../S/28.html#L70'>std</a>                70 CList.h                typedef std::reverse_iterator&lt;const_iterator&gt; const_reverse_iterator;</span>
@@ -18,56 +18,56 @@
 <span class='curline'><a href='../S/28.html#L168'>std</a>               168 CList.h                std::reverse_iterator&lt;CIterator&gt; rend () noexcept;</span>
 <span class='curline'><a href='../S/28.html#L175'>std</a>               175 CList.h                std::reverse_iterator&lt;CConstIterator&gt; crbegin () noexcept;</span>
 <span class='curline'><a href='../S/28.html#L182'>std</a>               182 CList.h                std::reverse_iterator&lt;CConstIterator&gt; crend () noexcept;</span>
-<span class='curline'><a href='../S/34.html#L10'>std</a>                10 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L11'>std</a>                11 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L18'>std</a>                18 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L19'>std</a>                19 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L29'>std</a>                29 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L30'>std</a>                30 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L40'>std</a>                40 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L41'>std</a>                41 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L52'>std</a>                52 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
-<span class='curline'><a href='../S/34.html#L53'>std</a>                53 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
-<span class='curline'><a href='../S/34.html#L97'>std</a>                97 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rbegin () noexcept</span>
-<span class='curline'><a href='../S/34.html#L99'>std</a>                99 CList.hxx          return std::reverse_iterator&lt;iterator&gt; (end ());</span>
-<span class='curline'><a href='../S/34.html#L103'>std</a>               103 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rend () noexcept</span>
-<span class='curline'><a href='../S/34.html#L105'>std</a>               105 CList.hxx          return std::reverse_iterator&lt;iterator&gt; (begin ());</span>
-<span class='curline'><a href='../S/34.html#L109'>std</a>               109 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crbegin () noexcept</span>
-<span class='curline'><a href='../S/34.html#L111'>std</a>               111 CList.hxx          return std::reverse_iterator&lt;const_iterator&gt; (cend ());</span>
-<span class='curline'><a href='../S/34.html#L115'>std</a>               115 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crend () noexcept</span>
-<span class='curline'><a href='../S/34.html#L117'>std</a>               117 CList.hxx          return std::reverse_iterator&lt;const_iterator&gt; (cbegin ());</span>
-<span class='curline'><a href='../S/34.html#L225'>std</a>               225 CList.hxx              std::advance (itr, n - 1);</span>
-<span class='curline'><a href='../S/34.html#L242'>std</a>               242 CList.hxx          std::swap (x.m_head, m_head);</span>
-<span class='curline'><a href='../S/34.html#L243'>std</a>               243 CList.hxx          std::swap (x.m_tail, m_tail);</span>
-<span class='curline'><a href='../S/34.html#L244'>std</a>               244 CList.hxx          std::swap (x.m_size, m_size);</span>
-<span class='curline'><a href='../S/34.html#L304'>std</a>               304 CList.hxx              std::swap (currentNode-&gt;getNext (), currentNode-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/34.html#L306'>std</a>               306 CList.hxx          std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/34.html#L307'>std</a>               307 CList.hxx          std::swap (m_tail, m_head);</span>
-<span class='curline'><a href='../S/34.html#L353'>std</a>               353 CList.hxx          return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
-<span class='curline'><a href='../S/34.html#L360'>std</a>               360 CList.hxx          return emplace (begin (), std::forward&lt;Args&gt; (args)...);</span>
-<span class='curline'><a href='../S/34.html#L367'>std</a>               367 CList.hxx          return emplace (end (), std::forward&lt;Args&gt; (args)...);</span>
-<span class='curline'><a href='../S/34.html#L407'>std</a>               407 CList.hxx                      std::iter_swap(i, j);</span>
-<span class='curline'><a href='../S/36.html#L147'>std</a>               147 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
-<span class='curline'><a href='../S/36.html#L160'>std</a>               160 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/33.html#L17'>std</a>                17 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L18'>std</a>                18 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L25'>std</a>                25 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L26'>std</a>                26 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L36'>std</a>                36 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L37'>std</a>                37 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L47'>std</a>                47 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L48'>std</a>                48 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L59'>std</a>                59 CList.hxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/33.html#L60'>std</a>                60 CList.hxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/33.html#L104'>std</a>               104 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rbegin () noexcept</span>
+<span class='curline'><a href='../S/33.html#L106'>std</a>               106 CList.hxx          return std::reverse_iterator&lt;iterator&gt; (end ());</span>
+<span class='curline'><a href='../S/33.html#L110'>std</a>               110 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rend () noexcept</span>
+<span class='curline'><a href='../S/33.html#L112'>std</a>               112 CList.hxx          return std::reverse_iterator&lt;iterator&gt; (begin ());</span>
+<span class='curline'><a href='../S/33.html#L116'>std</a>               116 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crbegin () noexcept</span>
+<span class='curline'><a href='../S/33.html#L118'>std</a>               118 CList.hxx          return std::reverse_iterator&lt;const_iterator&gt; (cend ());</span>
+<span class='curline'><a href='../S/33.html#L122'>std</a>               122 CList.hxx      typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crend () noexcept</span>
+<span class='curline'><a href='../S/33.html#L124'>std</a>               124 CList.hxx          return std::reverse_iterator&lt;const_iterator&gt; (cbegin ());</span>
+<span class='curline'><a href='../S/33.html#L232'>std</a>               232 CList.hxx              std::advance (itr, n - 1);</span>
+<span class='curline'><a href='../S/33.html#L249'>std</a>               249 CList.hxx          std::swap (x.m_head, m_head);</span>
+<span class='curline'><a href='../S/33.html#L250'>std</a>               250 CList.hxx          std::swap (x.m_tail, m_tail);</span>
+<span class='curline'><a href='../S/33.html#L251'>std</a>               251 CList.hxx          std::swap (x.m_size, m_size);</span>
+<span class='curline'><a href='../S/33.html#L311'>std</a>               311 CList.hxx              std::swap (currentNode-&gt;getNext (), currentNode-&gt;getPrevious ());</span>
+<span class='curline'><a href='../S/33.html#L313'>std</a>               313 CList.hxx          std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
+<span class='curline'><a href='../S/33.html#L314'>std</a>               314 CList.hxx          std::swap (m_tail, m_head);</span>
+<span class='curline'><a href='../S/33.html#L360'>std</a>               360 CList.hxx          return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
+<span class='curline'><a href='../S/33.html#L367'>std</a>               367 CList.hxx          return emplace (begin (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/33.html#L374'>std</a>               374 CList.hxx          return emplace (end (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/33.html#L414'>std</a>               414 CList.hxx                      std::iter_swap(i, j);</span>
+<span class='curline'><a href='../S/36.html#L145'>std</a>               145 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/36.html#L158'>std</a>               158 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
 <span class='curline'><a href='../S/27.html#L10'>std</a>                10 CTestClass.h           TestClass (int a = 0, const std::string &amp;name = "ALAIN CASALOL") noexcept : m_a (a), m_name (name)</span>
 <span class='curline'><a href='../S/27.html#L48'>std</a>                48 CTestClass.h           std::string getName () const noexcept</span>
 <span class='curline'><a href='../S/27.html#L55'>std</a>                55 CTestClass.h           std::string m_name;</span>
 <span class='curline'><a href='../S/27.html#L58'>std</a>                58 CTestClass.h       std::ostream &amp;operator&lt;&lt; (std::ostream &amp;os, TestClass const &amp;p)</span>
-<span class='curline'><a href='../S/33.html#L11'>std</a>                11 CValueProvider.h         return min + (std::rand () % (max - min + 1));</span>
-<span class='curline'><a href='../S/33.html#L15'>std</a>                15 CValueProvider.h     template&lt;typename T&gt; using CCollection = std::vector&lt;T&gt;;</span>
-<span class='curline'><a href='../S/33.html#L24'>std</a>                24 CValueProvider.h             throw std::runtime_error (std::string ("Value provider for type ") + typeid (T).name () + " does not exist.");</span>
-<span class='curline'><a href='../S/33.html#L46'>std</a>                46 CValueProvider.h     class CValueProvider&lt;std::shared_ptr&lt;T&gt;&gt;</span>
-<span class='curline'><a href='../S/33.html#L49'>std</a>                49 CValueProvider.h         CCollection&lt;std::shared_ptr&lt;T&gt;&gt; operator() (const int valueCount = 0)</span>
-<span class='curline'><a href='../S/33.html#L52'>std</a>                52 CValueProvider.h             CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</span>
-<span class='curline'><a href='../S/33.html#L56'>std</a>                56 CValueProvider.h                 ptrArray.push_back (std::make_shared&lt;T&gt; (x));</span>
-<span class='curline'><a href='../S/33.html#L73'>std</a>                73 CValueProvider.h             array[1] = std::numeric_limits&lt;int&gt;::max ();</span>
-<span class='curline'><a href='../S/33.html#L74'>std</a>                74 CValueProvider.h             array[2] = std::numeric_limits&lt;int&gt;::min ();</span>
-<span class='curline'><a href='../S/33.html#L77'>std</a>                77 CValueProvider.h                 array[i] = std::rand ();</span>
-<span class='curline'><a href='../S/33.html#L97'>std</a>                97 CValueProvider.h                 std::string name;</span>
+<span class='curline'><a href='../S/35.html#L11'>std</a>                11 CTests.cxx     using namespace std;</span>
+<span class='curline'><a href='../S/31.html#L11'>std</a>                11 CValueProvider.h         return min + (std::rand () % (max - min + 1));</span>
+<span class='curline'><a href='../S/31.html#L15'>std</a>                15 CValueProvider.h     template&lt;typename T&gt; using CCollection = std::vector&lt;T&gt;;</span>
+<span class='curline'><a href='../S/31.html#L24'>std</a>                24 CValueProvider.h             throw std::runtime_error (std::string ("Value provider for type ") + typeid (T).name () + " does not exist.");</span>
+<span class='curline'><a href='../S/31.html#L46'>std</a>                46 CValueProvider.h     class CValueProvider&lt;std::shared_ptr&lt;T&gt;&gt;</span>
+<span class='curline'><a href='../S/31.html#L49'>std</a>                49 CValueProvider.h         CCollection&lt;std::shared_ptr&lt;T&gt;&gt; operator() (const int valueCount = 0)</span>
+<span class='curline'><a href='../S/31.html#L52'>std</a>                52 CValueProvider.h             CCollection&lt;std::shared_ptr&lt;T&gt;&gt; ptrArray;</span>
+<span class='curline'><a href='../S/31.html#L56'>std</a>                56 CValueProvider.h                 ptrArray.push_back (std::make_shared&lt;T&gt; (x));</span>
+<span class='curline'><a href='../S/31.html#L73'>std</a>                73 CValueProvider.h             array[1] = std::numeric_limits&lt;int&gt;::max ();</span>
+<span class='curline'><a href='../S/31.html#L74'>std</a>                74 CValueProvider.h             array[2] = std::numeric_limits&lt;int&gt;::min ();</span>
+<span class='curline'><a href='../S/31.html#L77'>std</a>                77 CValueProvider.h                 array[i] = std::rand ();</span>
+<span class='curline'><a href='../S/31.html#L97'>std</a>                97 CValueProvider.h                 std::string name;</span>
 <span class='curline'><a href='../S/25.html#L27'>std</a>                27 IziAssert.h                std::cout &lt;&lt; (success ? "\033[32mASSERTION SUCCESS: \n" : "\033[31mASSERTION FAILED: \n")</span>
 <span class='curline'><a href='../S/25.html#L35'>std</a>                35 IziAssert.h                        &lt;&lt; std::to_string (lineNumber)</span>
 <span class='curline'><a href='../S/25.html#L37'>std</a>                37 IziAssert.h                        &lt;&lt; std::endl;</span>
-<span class='curline'><a href='../S/31.html#L11'>std</a>                11 Tests.cxx      using namespace std;</span>
 </pre>
 </body>
 </html>

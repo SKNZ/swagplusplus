@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>remove</title>
+<title>rbegin</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,13 +9,14 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L388'>remove</a>            388 CList.h                void remove (const T &amp;val) noexcept;</span>
-<span class='curline'><a href='../S/34.html#L166'>remove</a>            166 CList.hxx              m_head-&gt;getNext ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/34.html#L190'>remove</a>            190 CList.hxx              m_tail-&gt;getPrevious ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/34.html#L198'>remove</a>            198 CList.hxx          del.getNode ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/34.html#L273'>remove</a>            273 CList.hxx                  a-&gt;remove ();</span>
-<span class='curline'><a href='../S/34.html#L295'>remove</a>            295 CList.hxx                  currNode-&gt;getNext ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/31.html#L650'>remove</a>            650 Tests.cxx                  list.remove (x);</span>
+<span class='curline'><a href='../S/28.html#L161'>rbegin</a>            161 CList.h                std::reverse_iterator&lt;CIterator&gt; rbegin () noexcept;</span>
+<span class='curline'><a href='../S/35.html#L164'>rbegin</a>            164 CTests.cxx             typename CTestedList&lt;T&gt;::reverse_iterator rbegin = list.rbegin ();</span>
+<span class='curline'><a href='../S/35.html#L167'>rbegin</a>            167 CTests.cxx             for (; rbegin != rend; ++rbegin)</span>
+<span class='curline'><a href='../S/35.html#L169'>rbegin</a>            169 CTests.cxx                 int i = distance (list.rbegin (), rbegin);</span>
+<span class='curline'><a href='../S/35.html#L170'>rbegin</a>            170 CTests.cxx                 IZI_ASSERT(originalData[i] == *rbegin);</span>
+<span class='curline'><a href='../S/35.html#L171'>rbegin</a>            171 CTests.cxx                 *rbegin = newData[i];</span>
+<span class='curline'><a href='../S/35.html#L172'>rbegin</a>            172 CTests.cxx                 IZI_ASSERT(newData[i] == *rbegin);</span>
+<span class='curline'><a href='../S/35.html#L175'>rbegin</a>            175 CTests.cxx             IZI_ASSERT(rbegin == rend);</span>
 </pre>
 </body>
 </html>

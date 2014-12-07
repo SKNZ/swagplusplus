@@ -1,11 +1,9 @@
 /*!
-@file CList2.h
+@file CNode.hxx
 @author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
 @date 08/12/2014
 @version  1.0
-@brief Header to the CNode class.
-
-@mainpage Documention for the class "CNode"
+@brief CNode class implementation
 */
 
 #pragma once
@@ -52,9 +50,9 @@ public:
     /*!
         @fn CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
         @brief This is the constructor of the class CNode
-        @params[in] info This is the info of the CNode
-        @params[in] @p next This is the next CNode
-        @params[in] @p next This is the previous CNode
+        @param[in] info This is the info of the CNode
+        @param[in] @p next This is the next CNode
+        @param[in] @p next This is the previous CNode
      */
     explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
             : m_info (info), m_next (next),

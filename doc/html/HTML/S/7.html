@@ -253,7 +253,7 @@ This source file includes following definitions.
 <a id='L232' name='L232'></a> 232 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/88.html' title='Multiple used in 2 places.'>__OpenBSD__</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/87.html' title='Multiple used in 2 places.'>__OPENBSD</a>)
 <a id='L233' name='L233'></a> 233 <em class='sharp'># define</em> <a href='../R/36.html' title='Multiple referred from 2 places.'>PLATFORM_ID</a> "OpenBSD"
 <a id='L234' name='L234'></a> 234 
-<a id='L235' name='L235'></a> 235 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/132.html' title='Multiple used in 2 places.'>__sun</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/242.html' title='Multiple used in 2 places.'>sun</a>)
+<a id='L235' name='L235'></a> 235 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/132.html' title='Multiple used in 2 places.'>__sun</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/243.html' title='Multiple used in 2 places.'>sun</a>)
 <a id='L236' name='L236'></a> 236 <em class='sharp'># define</em> <a href='../R/36.html' title='Multiple referred from 2 places.'>PLATFORM_ID</a> "SunOS"
 <a id='L237' name='L237'></a> 237 
 <a id='L238' name='L238'></a> 238 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/25.html' title='Multiple used in 2 places.'>_AIX</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/52.html' title='Multiple used in 2 places.'>__AIX</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/53.html' title='Multiple used in 2 places.'>__AIX__</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/110.html' title='Multiple used in 2 places.'>__aix</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/111.html' title='Multiple used in 2 places.'>__aix__</a>)
@@ -295,7 +295,7 @@ This source file includes following definitions.
 <a id='L274' name='L274'></a> 274 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/124.html' title='Multiple used in 2 places.'>__osf</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/125.html' title='Multiple used in 2 places.'>__osf__</a>)
 <a id='L275' name='L275'></a> 275 <em class='sharp'># define</em> <a href='../R/36.html' title='Multiple referred from 2 places.'>PLATFORM_ID</a> "OSF1"
 <a id='L276' name='L276'></a> 276 
-<a id='L277' name='L277'></a> 277 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/42.html' title='Multiple used in 2 places.'>_SCO_SV</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/17.html' title='Multiple used in 2 places.'>SCO_SV</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/234.html' title='Multiple used in 2 places.'>sco_sv</a>)
+<a id='L277' name='L277'></a> 277 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/42.html' title='Multiple used in 2 places.'>_SCO_SV</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/17.html' title='Multiple used in 2 places.'>SCO_SV</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/235.html' title='Multiple used in 2 places.'>sco_sv</a>)
 <a id='L278' name='L278'></a> 278 <em class='sharp'># define</em> <a href='../R/36.html' title='Multiple referred from 2 places.'>PLATFORM_ID</a> "SCO_SV"
 <a id='L279' name='L279'></a> 279 
 <a id='L280' name='L280'></a> 280 <em class='sharp'>#elif</em> <strong class='reserved'>defined</strong>(<a href='../Y/134.html' title='Multiple used in 2 places.'>__ultrix</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/135.html' title='Multiple used in 2 places.'>__ultrix__</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/45.html' title='Multiple used in 2 places.'>_ULTRIX</a>)
@@ -398,15 +398,15 @@ This source file includes following definitions.
 <a id='L377' name='L377'></a> 377 
 <a id='L378' name='L378'></a> 378 <strong class='reserved'>int</strong> main (<strong class='reserved'>int</strong> <a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>, <strong class='reserved'>char</strong> *<a href='../Y/141.html' title='Multiple used in 4 places.'>argv</a>[])
 <a id='L379' name='L379'></a> 379 <em class='brace'>{</em>
-<a id='L380' name='L380'></a> 380     <strong class='reserved'>int</strong> <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a> = 0;
-<a id='L381' name='L381'></a> 381     <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/173.html' title='Multiple used in 4 places.'>info_compiler</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
-<a id='L382' name='L382'></a> 382     <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/174.html' title='Multiple used in 4 places.'>info_platform</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
-<a id='L383' name='L383'></a> 383     <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/172.html' title='Multiple used in 3 places.'>info_arch</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
+<a id='L380' name='L380'></a> 380     <strong class='reserved'>int</strong> <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a> = 0;
+<a id='L381' name='L381'></a> 381     <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/173.html' title='Multiple used in 4 places.'>info_compiler</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
+<a id='L382' name='L382'></a> 382     <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/174.html' title='Multiple used in 4 places.'>info_platform</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
+<a id='L383' name='L383'></a> 383     <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/172.html' title='Multiple used in 3 places.'>info_arch</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
 <a id='L384' name='L384'></a> 384 <em class='sharp'>#ifdef</em> <a href='../D/8.html' title='Multiple defined in 40 places.'>COMPILER_VERSION_MAJOR</a>
-<a id='L385' name='L385'></a> 385   <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/175.html' title='Multiple used in 4 places.'>info_version</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
+<a id='L385' name='L385'></a> 385   <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a> += <a href='../Y/175.html' title='Multiple used in 4 places.'>info_version</a>[<a href='../Y/139.html' title='Multiple used in 9 places.'>argc</a>];
 <a id='L386' name='L386'></a> 386 <em class='sharp'>#endif</em>
 <a id='L387' name='L387'></a> 387     (<strong class='reserved'>void</strong>) <a href='../Y/141.html' title='Multiple used in 4 places.'>argv</a>;
-<a id='L388' name='L388'></a> 388     <strong class='reserved'>return</strong> <a href='../Y/231.html' title='Multiple used in 11 places.'>require</a>;
+<a id='L388' name='L388'></a> 388     <strong class='reserved'>return</strong> <a href='../Y/232.html' title='Multiple used in 11 places.'>require</a>;
 <a id='L389' name='L389'></a> 389 <em class='brace'>}</em>
 <a id='L390' name='L390'></a> 390 
 <a id='L391' name='L391'></a> 391 <em class='sharp'>#endif</em>

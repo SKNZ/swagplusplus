@@ -15,7 +15,7 @@
 <hr />
 <pre>
 <a id='L1' name='L1'></a>   1 <em class='comment'>/*!</em>
-<a id='L2' name='L2'></a>   2 <em class='comment'>@file CList2Iterator.hxx</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'>@file CConstIterator.hxx</em>
 <a id='L3' name='L3'></a>   3 <em class='comment'>@author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.</em>
 <a id='L4' name='L4'></a>   4 <em class='comment'>@date 08/12/2014</em>
 <a id='L5' name='L5'></a>   5 <em class='comment'>@version  1.0</em>
@@ -28,10 +28,10 @@
 <a id='L12' name='L12'></a>  12 
 <a id='L13' name='L13'></a>  13 <em class='sharp'>#include</em> "<a href='28.html'>CList.h</a>"
 <a id='L14' name='L14'></a>  14 
-<a id='L15' name='L15'></a>  15 <strong class='reserved'>template</strong>&lt;<strong class='reserved'>typename</strong> <a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt; <strong class='reserved'>using</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a> = <a href='../Y/239.html' title='Multiple used in 59 places.'>std</a>::<a href='../S/28.html#L52' title='Defined at 52 in CList.h.'>iterator</a>&lt;<a href='../Y/239.html' title='Multiple used in 59 places.'>std</a>::<a href='../Y/145.html' title='Multiple used in 2 places.'>bidirectional_iterator_tag</a>, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>, <a href='../Y/239.html' title='Multiple used in 59 places.'>std</a>::ptrdiff_t, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 372 places.'>T</a> *, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 372 places.'>T</a> &amp;&gt;;
+<a id='L15' name='L15'></a>  15 <strong class='reserved'>template</strong>&lt;<strong class='reserved'>typename</strong> <a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt; <strong class='reserved'>using</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a> = <a href='../Y/240.html' title='Multiple used in 59 places.'>std</a>::<a href='../S/28.html#L52' title='Defined at 52 in CList.h.'>iterator</a>&lt;<a href='../Y/240.html' title='Multiple used in 59 places.'>std</a>::<a href='../Y/145.html' title='Multiple used in 2 places.'>bidirectional_iterator_tag</a>, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>, <a href='../Y/240.html' title='Multiple used in 59 places.'>std</a>::ptrdiff_t, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 378 places.'>T</a> *, <strong class='reserved'>const</strong> <a href='../Y/21.html' title='Multiple used in 378 places.'>T</a> &amp;&gt;;
 <a id='L16' name='L16'></a>  16 
-<a id='L17' name='L17'></a>  17 <strong class='reserved'>template</strong>&lt;<strong class='reserved'>typename</strong> <a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt;
-<a id='L18' name='L18'></a>  18 <strong class='reserved'>struct</strong> <a href='../S/36.html#L16' title='Defined at 16 in CNode.hxx.'>nsSdD</a>::<a href='../Y/7.html' title='Multiple used in 62 places.'>CList</a>&lt;<a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt;::<a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> : <strong class='reserved'>public</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt;
+<a id='L17' name='L17'></a>  17 <strong class='reserved'>template</strong>&lt;<strong class='reserved'>typename</strong> <a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt;
+<a id='L18' name='L18'></a>  18 <strong class='reserved'>struct</strong> <a href='../S/36.html#L14' title='Defined at 14 in CNode.hxx.'>nsSdD</a>::<a href='../Y/7.html' title='Multiple used in 62 places.'>CList</a>&lt;<a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt;::<a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> : <strong class='reserved'>public</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt;
 <a id='L19' name='L19'></a>  19 <em class='brace'>{</em>
 <a id='L20' name='L20'></a>  20 <strong class='reserved'>private</strong>:
 <a id='L21' name='L21'></a>  21     <em class='comment'>/*!</em>
@@ -46,12 +46,12 @@
 <a id='L30' name='L30'></a>  30 <em class='comment'>        @brief          The default constructor of the const_iterator for the CList class.</em>
 <a id='L31' name='L31'></a>  31 <em class='comment'>        @param[in] p    The the node we want to use to construct the iterator.</em>
 <a id='L32' name='L32'></a>  32 <em class='comment'>    */</em>
-<a id='L33' name='L33'></a>  33     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> (<a href='../S/28.html#L38' title='Defined at 38 in CList.h.'>CNodePtr</a> <a href='../Y/217.html' title='Multiple used in 4 places.'>p</a> = <a href='../Y/210.html' title='Multiple used in 15 places.'>nullptr</a>) <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a> : <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> (<a href='../Y/217.html' title='Multiple used in 4 places.'>p</a>)
+<a id='L33' name='L33'></a>  33     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> (<a href='../S/28.html#L38' title='Defined at 38 in CList.h.'>CNodePtr</a> <a href='../Y/217.html' title='Multiple used in 4 places.'>p</a> = <a href='../Y/210.html' title='Multiple used in 15 places.'>nullptr</a>) <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a> : <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> (<a href='../Y/217.html' title='Multiple used in 4 places.'>p</a>)
 <a id='L34' name='L34'></a>  34     <em class='brace'>{</em>
 <a id='L35' name='L35'></a>  35     <em class='brace'>}</em>
 <a id='L36' name='L36'></a>  36 
 <a id='L37' name='L37'></a>  37     <em class='comment'>/*!</em>
-<a id='L38' name='L38'></a>  38 <em class='comment'>        @fn             CConstIterator (const CIterator &amp;)</em>
+<a id='L38' name='L38'></a>  38 <em class='comment'>        @fn             CConstIterator (const CConstIterator &amp;)</em>
 <a id='L39' name='L39'></a>  39 <em class='comment'>        @brief          The copy-constructor for the const_iterator.</em>
 <a id='L40' name='L40'></a>  40 <em class='comment'>    */</em>
 <a id='L41' name='L41'></a>  41     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;) = <strong class='reserved'>default</strong>;
@@ -61,7 +61,7 @@
 <a id='L45' name='L45'></a>  45 <em class='comment'>       @brief          The default operator= for the iterator.</em>
 <a id='L46' name='L46'></a>  46 <em class='comment'>       @return CConstIterator The new value of the const_iterator.</em>
 <a id='L47' name='L47'></a>  47 <em class='comment'>    */</em>
-<a id='L48' name='L48'></a>  48     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>= (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;) <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a> = <strong class='reserved'>default</strong>;
+<a id='L48' name='L48'></a>  48     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>= (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;) <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a> = <strong class='reserved'>default</strong>;
 <a id='L49' name='L49'></a>  49 
 <a id='L50' name='L50'></a>  50     <em class='comment'>/*!</em>
 <a id='L51' name='L51'></a>  51 <em class='comment'>       @fn operator== (const CConstIterator &amp;other) const noexcept</em>
@@ -69,7 +69,7 @@
 <a id='L53' name='L53'></a>  53 <em class='comment'>       @param[in] other The value we want to compare.</em>
 <a id='L54' name='L54'></a>  54 <em class='comment'>       @return  bool If the two iterator are equal.</em>
 <a id='L55' name='L55'></a>  55 <em class='comment'>    */</em>
-<a id='L56' name='L56'></a>  56     <strong class='reserved'>bool</strong> <strong class='reserved'>operator</strong>== (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>) <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L56' name='L56'></a>  56     <strong class='reserved'>bool</strong> <strong class='reserved'>operator</strong>== (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>) <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L57' name='L57'></a>  57     <em class='brace'>{</em>
 <a id='L58' name='L58'></a>  58         <strong class='reserved'>return</strong> <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> == <a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>.<a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>;
 <a id='L59' name='L59'></a>  59     <em class='brace'>}</em>
@@ -80,7 +80,7 @@
 <a id='L64' name='L64'></a>  64 <em class='comment'>       @param[in] other The value we want to compare.</em>
 <a id='L65' name='L65'></a>  65 <em class='comment'>       @return  bool If the two iterator are not equal.</em>
 <a id='L66' name='L66'></a>  66 <em class='comment'>    */</em>
-<a id='L67' name='L67'></a>  67     <strong class='reserved'>bool</strong> <strong class='reserved'>operator</strong>!= (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>) <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L67' name='L67'></a>  67     <strong class='reserved'>bool</strong> <strong class='reserved'>operator</strong>!= (<strong class='reserved'>const</strong> <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>) <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L68' name='L68'></a>  68     <em class='brace'>{</em>
 <a id='L69' name='L69'></a>  69         <strong class='reserved'>return</strong> <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> != <a href='../Y/216.html' title='Multiple used in 8 places.'>other</a>.<a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>;
 <a id='L70' name='L70'></a>  70     <em class='brace'>}</em>
@@ -90,9 +90,9 @@
 <a id='L74' name='L74'></a>  74 <em class='comment'>       @brief The  operator ++ who pre-increment the iterator, pass to the next node.</em>
 <a id='L75' name='L75'></a>  75 <em class='comment'>       @return  CConstterator The iterator with the new value.</em>
 <a id='L76' name='L76'></a>  76 <em class='comment'>    */</em>
-<a id='L77' name='L77'></a>  77     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>++ () <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L77' name='L77'></a>  77     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>++ () <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L78' name='L78'></a>  78     <em class='brace'>{</em>
-<a id='L79' name='L79'></a>  79         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L96' title='Defined at 96 in CNode.hxx.'>getNext</a> ();
+<a id='L79' name='L79'></a>  79         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L94' title='Defined at 94 in CNode.hxx.'>getNext</a> ();
 <a id='L80' name='L80'></a>  80         <strong class='reserved'>return</strong> *<strong class='reserved'>this</strong>;
 <a id='L81' name='L81'></a>  81     <em class='brace'>}</em>
 <a id='L82' name='L82'></a>  82 
@@ -101,9 +101,9 @@
 <a id='L85' name='L85'></a>  85 <em class='comment'>       @brief The  operator -- who pre-decrement the iterator, pass to the previous node.</em>
 <a id='L86' name='L86'></a>  86 <em class='comment'>       @return  CConstterator The iterator with the new value.</em>
 <a id='L87' name='L87'></a>  87 <em class='comment'>    */</em>
-<a id='L88' name='L88'></a>  88     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>-- () <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L88' name='L88'></a>  88     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> &amp;<strong class='reserved'>operator</strong>-- () <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L89' name='L89'></a>  89     <em class='brace'>{</em>
-<a id='L90' name='L90'></a>  90         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L115' title='Defined at 115 in CNode.hxx.'>getPrevious</a> ();
+<a id='L90' name='L90'></a>  90         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L113' title='Defined at 113 in CNode.hxx.'>getPrevious</a> ();
 <a id='L91' name='L91'></a>  91         <strong class='reserved'>return</strong> *<strong class='reserved'>this</strong>;
 <a id='L92' name='L92'></a>  92     <em class='brace'>}</em>
 <a id='L93' name='L93'></a>  93 
@@ -112,11 +112,11 @@
 <a id='L96' name='L96'></a>  96 <em class='comment'>      @brief The  operator ++ who post-increment the iterator, pass to the next node.</em>
 <a id='L97' name='L97'></a>  97 <em class='comment'>      @return  CConstCIterator The iterator with the old value, but iterator are increment.</em>
 <a id='L98' name='L98'></a>  98 <em class='comment'>    */</em>
-<a id='L99' name='L99'></a>  99     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <strong class='reserved'>operator</strong>++ (<strong class='reserved'>int</strong>) <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L99' name='L99'></a>  99     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <strong class='reserved'>operator</strong>++ (<strong class='reserved'>int</strong>) <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L100' name='L100'></a> 100     <em class='brace'>{</em>
-<a id='L101' name='L101'></a> 101         <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <a href='../Y/244.html' title='Multiple used in 8 places.'>temp</a> = *<strong class='reserved'>this</strong>;
-<a id='L102' name='L102'></a> 102         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L96' title='Defined at 96 in CNode.hxx.'>getNext</a> ();
-<a id='L103' name='L103'></a> 103         <strong class='reserved'>return</strong> <a href='../Y/244.html' title='Multiple used in 8 places.'>temp</a>;
+<a id='L101' name='L101'></a> 101         <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <a href='../Y/245.html' title='Multiple used in 8 places.'>temp</a> = *<strong class='reserved'>this</strong>;
+<a id='L102' name='L102'></a> 102         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L94' title='Defined at 94 in CNode.hxx.'>getNext</a> ();
+<a id='L103' name='L103'></a> 103         <strong class='reserved'>return</strong> <a href='../Y/245.html' title='Multiple used in 8 places.'>temp</a>;
 <a id='L104' name='L104'></a> 104     <em class='brace'>}</em>
 <a id='L105' name='L105'></a> 105 
 <a id='L106' name='L106'></a> 106     <em class='comment'>/*!</em>
@@ -124,11 +124,11 @@
 <a id='L108' name='L108'></a> 108 <em class='comment'>       @brief The  operator -- who post-decrement the iterator, pass to the previous node.</em>
 <a id='L109' name='L109'></a> 109 <em class='comment'>       @return  CConstterator The iterator with the old value, but iterator are decrement.</em>
 <a id='L110' name='L110'></a> 110 <em class='comment'>    */</em>
-<a id='L111' name='L111'></a> 111     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <strong class='reserved'>operator</strong>-- (<strong class='reserved'>int</strong>) <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L111' name='L111'></a> 111     <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <strong class='reserved'>operator</strong>-- (<strong class='reserved'>int</strong>) <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L112' name='L112'></a> 112     <em class='brace'>{</em>
-<a id='L113' name='L113'></a> 113         <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <a href='../Y/244.html' title='Multiple used in 8 places.'>temp</a> = *<strong class='reserved'>this</strong>;
-<a id='L114' name='L114'></a> 114         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L115' title='Defined at 115 in CNode.hxx.'>getPrevious</a> ();
-<a id='L115' name='L115'></a> 115         <strong class='reserved'>return</strong> <a href='../Y/244.html' title='Multiple used in 8 places.'>temp</a>;
+<a id='L113' name='L113'></a> 113         <a href='../Y/4.html' title='Multiple used in 18 places.'>CConstIterator</a> <a href='../Y/245.html' title='Multiple used in 8 places.'>temp</a> = *<strong class='reserved'>this</strong>;
+<a id='L114' name='L114'></a> 114         <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a> = <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L113' title='Defined at 113 in CNode.hxx.'>getPrevious</a> ();
+<a id='L115' name='L115'></a> 115         <strong class='reserved'>return</strong> <a href='../Y/245.html' title='Multiple used in 8 places.'>temp</a>;
 <a id='L116' name='L116'></a> 116     <em class='brace'>}</em>
 <a id='L117' name='L117'></a> 117 
 <a id='L118' name='L118'></a> 118     <em class='comment'>/*!</em>
@@ -136,9 +136,9 @@
 <a id='L120' name='L120'></a> 120 <em class='comment'>       @brief The dereferencement operator -&gt; who return the a pointer to the info of the node.</em>
 <a id='L121' name='L121'></a> 121 <em class='comment'>       @return  CIterBase&lt;T&gt;::pointer The pointer to the value of the node.</em>
 <a id='L122' name='L122'></a> 122 <em class='comment'>    */</em>
-<a id='L123' name='L123'></a> 123     <strong class='reserved'>typename</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt;::<a href='../Y/219.html' title='Multiple used in 2 places.'>pointer</a> <strong class='reserved'>operator</strong>-&gt; () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L123' name='L123'></a> 123     <strong class='reserved'>typename</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt;::<a href='../Y/219.html' title='Multiple used in 2 places.'>pointer</a> <strong class='reserved'>operator</strong>-&gt; () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L124' name='L124'></a> 124     <em class='brace'>{</em>
-<a id='L125' name='L125'></a> 125         <strong class='reserved'>return</strong> &amp;<a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L77' title='Defined at 77 in CNode.hxx.'>getInfo</a> ();
+<a id='L125' name='L125'></a> 125         <strong class='reserved'>return</strong> &amp;<a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L75' title='Defined at 75 in CNode.hxx.'>getInfo</a> ();
 <a id='L126' name='L126'></a> 126     <em class='brace'>}</em>
 <a id='L127' name='L127'></a> 127 
 <a id='L128' name='L128'></a> 128     <em class='comment'>/*!</em>
@@ -146,9 +146,9 @@
 <a id='L130' name='L130'></a> 130 <em class='comment'>       @brief The dereferencement operator * who return the a reference to the info of the node.</em>
 <a id='L131' name='L131'></a> 131 <em class='comment'>       @return  CIterBase&lt;T&gt;::reference The reference to the value of the node.</em>
 <a id='L132' name='L132'></a> 132 <em class='comment'>    */</em>
-<a id='L133' name='L133'></a> 133     <strong class='reserved'>typename</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 372 places.'>T</a>&gt;::<a href='../Y/229.html' title='Multiple used in 3 places.'>reference</a> <strong class='reserved'>operator</strong>* () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L133' name='L133'></a> 133     <strong class='reserved'>typename</strong> <a href='../Y/3.html' title='Multiple used in 4 places.'>CConstIterBase</a>&lt;<a href='../Y/21.html' title='Multiple used in 378 places.'>T</a>&gt;::<a href='../Y/230.html' title='Multiple used in 3 places.'>reference</a> <strong class='reserved'>operator</strong>* () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L134' name='L134'></a> 134     <em class='brace'>{</em>
-<a id='L135' name='L135'></a> 135         <strong class='reserved'>return</strong> <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L77' title='Defined at 77 in CNode.hxx.'>getInfo</a> ();
+<a id='L135' name='L135'></a> 135         <strong class='reserved'>return</strong> <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>-&gt;<a href='../S/36.html#L75' title='Defined at 75 in CNode.hxx.'>getInfo</a> ();
 <a id='L136' name='L136'></a> 136     <em class='brace'>}</em>
 <a id='L137' name='L137'></a> 137 
 <a id='L138' name='L138'></a> 138     <em class='comment'>/*!</em>
@@ -156,7 +156,7 @@
 <a id='L140' name='L140'></a> 140 <em class='comment'>       @brief The function return the node of the pointer.</em>
 <a id='L141' name='L141'></a> 141 <em class='comment'>       @return  CNodePtr The node of the pointer.</em>
 <a id='L142' name='L142'></a> 142 <em class='comment'>    */</em>
-<a id='L143' name='L143'></a> 143     <a href='../S/28.html#L38' title='Defined at 38 in CList.h.'>CNodePtr</a> <a href='../Y/169.html' title='Multiple used in 10 places.'>getNode</a> () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 185 places.'>noexcept</a>
+<a id='L143' name='L143'></a> 143     <a href='../S/28.html#L38' title='Defined at 38 in CList.h.'>CNodePtr</a> <a href='../Y/169.html' title='Multiple used in 10 places.'>getNode</a> () <strong class='reserved'>const</strong> <a href='../Y/208.html' title='Multiple used in 186 places.'>noexcept</a>
 <a id='L144' name='L144'></a> 144     <em class='brace'>{</em>
 <a id='L145' name='L145'></a> 145         <strong class='reserved'>return</strong> <a href='../Y/207.html' title='Multiple used in 24 places.'>node</a>;
 <a id='L146' name='L146'></a> 146     <em class='brace'>}</em>
