@@ -1004,7 +1004,7 @@ namespace
 
 void CTests::RunTests () noexcept
 {
-    cout << "Starting tests..." << endl;
+    cout << "Starting tests..." << endl << endl;
 
     srand (time (NULL));
     IZI_CALLTEST(RunTemplatedTests<int> ());

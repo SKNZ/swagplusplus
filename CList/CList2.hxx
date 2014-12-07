@@ -326,12 +326,9 @@ void nsSdD::CList<T>::unique (Compare comp) noexcept
 template<typename T>
 void nsSdD::CList<T>::reverse () noexcept
 {
-    for (CNodePtr currentNode = m_head; currentNode != m_tail;)
-    {
-        CNodePtr node = currentNode;
-        currentNode = currentNode->getNext ();
-        std::swap (node->getNext (), node->getPrevious ());
-    }
+    for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode->getPrevious ())
+        std::swap (currentNode->getNext (), currentNode->getPrevious ());
+
     std::swap (m_tail->getNext (), m_tail->getPrevious ());
     std::swap (m_tail, m_head);
 }
@@ -340,28 +337,20 @@ template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, T const &val) noexcept
 {
     ++m_size;
-    return iterator (
-            position.getNode ()->addBefore (
-                    std::make_shared<CNode> (val,
-                            position.getNode (),
-                            position.getNode ()->getPrevious ())
-            )
-    );
+    return iterator (position.getNode ()->addBefore (val));
 }
 
 template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, size_type n, T const &val) noexcept
 {
-    CNodePtr nextNode = position.getNode ();
-    CNodePtr prevNode = nextNode->getPrevious (), currNode = prevNode;
+    CNodePtr nextNode = position.getNode (),
+            prevNode = nextNode->getPrevious (),
+            currNode = prevNode;
 
     for (int i = 0; i < n; ++i)
     {
-        CNodePtr newNode = std::make_shared<CNode> (val, nextNode, prevNode);
-        currNode->setNext (newNode);
-        nextNode->setPrevious (newNode);
+        currNode = nextNode->addBefore (val);
         ++m_size;
-        currNode = newNode;
     }
 
     return iterator (prevNode->getNext ());
@@ -459,8 +448,6 @@ void nsSdD::CList<T>::sort(Compare comp) noexcept
 template<typename T>
 void  nsSdD::CList<T>::merge (nsSdD::CList<T>& x) noexcept
 {
-    sort();
-    x.sort ();
     splice (end(), x);
     sort();
 }
