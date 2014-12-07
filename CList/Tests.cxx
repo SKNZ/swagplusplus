@@ -952,8 +952,8 @@ namespace
 
         IZI_SUBTEST(Clear<T> ());
 
-//        IZI_SUBTEST(SpliceList<T>());
-//        IZI_SUBTEST(SpliceOne<T>());
+        IZI_SUBTEST(SpliceList<T>());
+        IZI_SUBTEST(SpliceOne<T>());
 //        IZI_SUBTEST(SpliceRange<T>());
 
         IZI_SUBTEST(Remove<T> ());
@@ -966,7 +966,7 @@ namespace
 
 //        IZI_SUBTEST(Sort<T>());
 
-        IZI_SUBTEST(Reverse<T> ());
+//        IZI_SUBTEST(Reverse<T> ());
 
         cout << endl;
     }

@@ -376,6 +376,22 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... arg
 {
     return emplace (end (), std::forward<Args> (args)...);
 }
+
+template<typename T>
+void nsSdD::CList<T>::splice (iterator position, typename nsSdD::CList<T>& x) noexcept
+{
+    this->insert (position, x.begin (), x.end());
+    x.clear ();
+}
+
+template<typename T>
+void nsSdD::CList<T>::splice (iterator position, typename nsSdD::CList<T>& x, iterator i) noexcept
+{
+    this->insert (position, i, i);
+    x.erase (i);
+}
+
+
 template <typename T>
 //template <class Compare>
 void nsSdD::CList<T>::sort() noexcept
