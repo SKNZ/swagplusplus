@@ -20,9 +20,9 @@ namespace nsSdD
     {
         // Types
     private:
-        class CIterator;
+        struct CIterator;
 
-        class CConstIterator;
+        struct CConstIterator;
 
         class CNode;
 

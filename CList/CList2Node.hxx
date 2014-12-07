@@ -46,7 +46,7 @@ public:
                     @p next This is the next CNode
                     @p next This is the previous CNode
      */
-    CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
+    explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
             : m_info (info), m_next (next),
               m_previous (previous)
     {

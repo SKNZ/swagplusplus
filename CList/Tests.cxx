@@ -13,7 +13,7 @@ using namespace nsSdD;
 
 namespace
 {
-    // C++11 c'est bon, mangez en.
+    // C++11 c'est bon, mangez-en.
     template<typename T> using CCollection = vector<T>;
     //template<typename T> using CTestedList = list<T>;
     template<typename T> using CTestedList = CList<T>;
@@ -296,7 +296,6 @@ namespace
 
         for (; cbegin != cend; ++cbegin)
             IZI_ASSERT(t[distance (list.cbegin (), cbegin)] == *cbegin);
-
 
         IZI_ASSERT(cbegin == cend);
     }

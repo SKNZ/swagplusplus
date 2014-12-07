@@ -216,6 +216,9 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
     if (m_size == n)
         return;
 
+    if (0 == n)
+        clear ();
+
     if (m_size > n) // Reducing
     {
         iterator itr = begin ();
@@ -236,7 +239,6 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 template<typename T>
 void nsSdD::CList<T>::swap (nsSdD::CList<T> &x) noexcept
 {
-    // Is this even legit ?
     std::swap (x.m_head, m_head);
     std::swap (x.m_tail, m_tail);
     std::swap (x.m_size, m_size);

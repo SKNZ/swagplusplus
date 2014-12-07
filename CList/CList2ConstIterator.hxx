@@ -2,72 +2,71 @@
 
 #include "CList2.h"
 
-template<typename T>
-class nsSdD::CList<T>::CConstIterator
-{
+template<typename T> using CConstIterBase = std::iterator<std::bidirectional_iterator_tag, const T, std::ptrdiff_t, const T *, const T &>;
 
+template<typename T>
+struct nsSdD::CList<T>::CConstIterator : public CConstIterBase<T>
+{
 private:
     CNodePtr node;
 
 public:
-    typedef std::bidirectional_iterator_tag iterator_category;
-    typedef const T value_type;
-    typedef int difference_type;
-    typedef T const *pointer;
-    typedef const T &reference;
-
-    CConstIterator (CNodePtr p = nullptr) : node (p)
+    CConstIterator (CNodePtr p = nullptr) noexcept : node (p)
     {
     }
 
-    CConstIterator &operator= (const CConstIterator &other)
-    {
-        node = other.node;
-        return *this;
-    }
+    CConstIterator (const CConstIterator &) = default;
 
-    bool operator== (const CConstIterator &other)
+    CConstIterator &operator= (const CConstIterator &) noexcept = default;
+
+    bool operator== (const CConstIterator &other) const noexcept
     {
         return node == other.node;
     }
 
-    bool operator!= (const CConstIterator &other)
+    bool operator!= (const CConstIterator &other) const noexcept
     {
         return node != other.node;
     }
 
-    CConstIterator operator++ ()
+    CConstIterator &operator++ () noexcept
     {
         node = node->getNext ();
         return *this;
     }
 
-    CConstIterator operator-- ()
+    CConstIterator &operator-- () noexcept
     {
         node = node->getPrevious ();
         return *this;
     }
 
-    CConstIterator operator++ (int)
+    CConstIterator operator++ (int) noexcept
     {
+        CConstIterator temp = *this;
         node = node->getNext ();
-        return *this;
+        return temp;
     }
 
-    CConstIterator operator-- (int)
+    CConstIterator operator-- (int) noexcept
     {
+        CConstIterator temp = *this;
         node = node->getPrevious ();
-        return *--this;
+        return temp;
     }
 
-    reference operator* () const
-    {
-        return node->getInfo ();
-    }
-
-    pointer operator-> ()
+    typename CConstIterBase<T>::pointer operator-> () const noexcept
     {
         return &node->getInfo ();
     }
 
+    typename CConstIterBase<T>::reference operator* () const noexcept
+    {
+        return node->getInfo ();
+    }
+
+    CNodePtr getNode () noexcept
+    {
+        return node;
+    }
 };

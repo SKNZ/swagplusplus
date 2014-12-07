@@ -2,52 +2,45 @@
 
 #include "CList2.h"
 
+template<typename T> using CIterBase = std::iterator<std::bidirectional_iterator_tag, T>;
+
 template<typename T>
-class nsSdD::CList<T>::CIterator
+struct nsSdD::CList<T>::CIterator : public CIterBase<T>
 {
 private:
     CNodePtr node;
 
 public:
-    typedef std::bidirectional_iterator_tag iterator_category;
-    typedef T value_type;
-    typedef int difference_type;
-    typedef T *pointer;
-    typedef T &reference;
-
     CIterator (CNodePtr p = nullptr) noexcept : node (p)
     {
     }
 
-    CIterator &operator= (const CIterator &other) noexcept
-    {
-        node = other.node;
-        return *this;
-    }
+    CIterator (const CIterator &) = default;
 
+    CIterator &operator= (const CIterator &) noexcept = default;
     CIterator &operator= (const T &info) noexcept
     {
         node->setInfo (info);
         return *this;
     }
 
-    bool operator== (const CIterator &other) noexcept
+    bool operator== (const CIterator &other) const noexcept
     {
         return node == other.node;
     }
 
-    bool operator!= (const CIterator &other) noexcept
+    bool operator!= (const CIterator &other) const noexcept
     {
         return node != other.node;
     }
 
-    CIterator operator++ () noexcept
+    CIterator &operator++ () noexcept
     {
         node = node->getNext ();
         return *this;
     }
 
-    CIterator operator-- () noexcept
+    CIterator &operator-- () noexcept
     {
         node = node->getPrevious ();
         return *this;
@@ -67,12 +60,17 @@ public:
         return temp;
     }
 
-    pointer operator-> () noexcept
+    typename CIterBase<T>::pointer operator-> () noexcept
     {
         return &node->getInfo ();
     }
 
-    reference operator* () const noexcept
+    typename CIterBase<T>::reference operator* () noexcept
+    {
+        return node->getInfo ();
+    }
+
+    typename CIterBase<T>::reference operator* () const noexcept
     {
         return node->getInfo ();
     }
