@@ -205,7 +205,7 @@ void CList<T>::pop_back () noexcept
 /*!
     @fn CList<T>::emplace (CNodePtr Prec, T val) noexcept
     @brief This function add an element in the position after Prec in the CList.
-    @param[in] Prec Is a @p CNodePtr parameter which indicates the position of the element before the elment to add.
+    @param[in] Prec Is a @p CNodePtr parameter which indicates the position of the element before the element to add.
     @param[in] val Is a @p T parameter which is the elment to add.
     */
 template<typename T>
@@ -218,7 +218,11 @@ void CList<T>::emplace (CNodePtr Prec, T val) noexcept
 
     ++m_size;
 }
-
+/*!
+    @fn CList<T>::erase (CNodePtr Prec) noexcept
+    @brief This function erase an element in the CList
+    @param[in] del is @p CNodePtr parameter which indicates the element to delete
+ */
 template<typename T>
 void CList<T>::erase (CNodePtr del) noexcept
 {
@@ -230,7 +234,13 @@ void CList<T>::erase (CNodePtr del) noexcept
 
     --m_size;
 }
-
+/*!
+    @fn CList<T>::resize (unsigned n, const T &val) noexcept
+    @brief This function resize at n size, it add a default value (val) if n is greater than the CList size
+           and delete the old values if n is smaller than the CList size
+    @param[in] n is @p unsigned parameter which indicates the new size of the CList
+    @param[in] val is @p T parameter which indicates the default value if n is greater than the CList size
+ */
 template<typename T>
 void CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 {
@@ -265,7 +275,11 @@ void CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 
     m_size = n;
 }
-
+/*!
+    @fn CList<T>::swap(nsSdD::CList <T> &x) noexcept
+    @brief This function swap the head and the tail of the CList
+    @param[in] x is @p nsSdD::CList <T> parameter which indicate the CList that need to be swap
+ */
 template<typename T>
 void CList<T>::swap (nsSdD::CList <T> &x) noexcept
 {
@@ -282,7 +296,11 @@ void CList<T>::swap (nsSdD::CList <T> &x) noexcept
 
     x.m_size = tmp;
 }
-
+/*!
+    @fn CList<T>::clear() noexcept
+    @brief This function "clear" the CList by removing all the elements between the head and the tail
+           and destroys them.
+ */
 template<typename T>
 void CList<T>::clear () noexcept
 {
@@ -291,7 +309,11 @@ void CList<T>::clear () noexcept
 
     m_size = 0;
 }
-
+/*!
+   @fn CList<T>::remove (const T &val) noexcept
+   @brief This function delete the value in parameter on the CList
+   @param[in] val is @p T parameter which indicate the value to delete on the CList
+ */
 template<typename T>
 void CList<T>::remove (const T &val) noexcept
 {
@@ -307,7 +329,11 @@ void CList<T>::remove (const T &val) noexcept
         }
     }
 }
-
+/*!
+    @fn CList<T>::remove_if (Predicate pred) noexcept
+    @brief Remove all the values in the list which don't respond to the predicate in parameter
+    @param[in] pref is @p Predicate parameter which indicate the condition to respect
+ */
 template<typename T>
 template<class Predicate>
 void CList<T>::remove_if (Predicate pred) noexcept
@@ -323,7 +349,10 @@ void CList<T>::remove_if (Predicate pred) noexcept
         }
     }
 }
-
+/*!
+    @fn CList<T>::reverse () noexcept
+    @brief Reverse all the elements of the CList (the first element will be the last, etc.)
+ */
 template<typename T>
 void CList<T>::reverse () noexcept
 {
