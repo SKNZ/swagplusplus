@@ -382,14 +382,12 @@ void nsSdD::CList<T>::sort() noexcept
 {
     // Bubble sort :)
 
-    nsSdD::CList<T>::iterator i, j;
-
-    for(i = this->begin (); i != this->end (); ++i)
+    for(auto i = this->begin (); i != this->end (); ++i)
     {
-        for(j = this->begin(); j != i; ++j)
+        for(auto j = i; j != this->end(); ++j)
         {
-            if(*i < *j)
-                std::swap(i, j);
+            if(*j < *i)
+                std::iter_swap(i, j);
         }
     }
 }
