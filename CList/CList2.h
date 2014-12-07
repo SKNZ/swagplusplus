@@ -107,14 +107,15 @@ namespace nsSdD
 
         // V1
         /*!
-            @fn     getHead() noexcept
+            @fn     getHead() const noexcept
             @brief  This function return the head of the CList.
             @return CNodePtr A pointer to the head of the Clist.
          */
         inline CNodePtr getHead () const noexcept;
 
         /*!
-            @fn     getTail() noexcept
+
+            @fn     getTail() const noexcept
             @brief  This function return the tail of the CList.
             @return CNodePtr A pointer to the tail of the Clist.
          */
@@ -299,13 +300,6 @@ namespace nsSdD
         CIterator emplace_back (Args &&... args) noexcept;
 
         // Insert
-
-        /*!
-           @fn     insert (CIterator position, const T &val) noexcept
-           @brief  This function construct an element with @p args and place at the beginning of the CList.
-           @param[in] args The package of arguments you want to use to construct you element.
-           @return An CIterator that points to the newly inserted elements.
-        */
         CIterator insert (CIterator position, const T &val) noexcept;
 
         CIterator insert (CIterator position, size_type n, const T &val) noexcept;
@@ -381,25 +375,75 @@ namespace nsSdD
        */
         void unique () noexcept;
 
+        /*!
+          @fn     unique (Predicate pred) noexcept
+          @brief  This function removes all element that are duplicated and where the @p pred are true.
+          @param[in] pred The predicate we want to use on the CList.
+       */
         template<class Predicate>
         void unique (Predicate pred) noexcept;
 
         //Splice
+        /*!
+          @fn     splice (CIterator position, CList &x) noexcept
+          @brief  This function move the CList @p x to the current CList before @p position.
+          @param[in] position The position where we want to insert the other list.
+          @param[in] x The CList we want to add on the current CList.
+       */
         void splice (CIterator position, CList &x) noexcept;
 
+        /*!
+          @fn     splice (CIterator position, CList &x, CIterator i) noexcept
+          @brief  This function move element @p i from the CList @p x to the current CList before @p position.
+          @param[in] position The position where we want to insert the other list.
+          @param[in] x The CList we want to add on the current CList.
+          @param[in] i The iterator who pointing the element who want to move on the current CList.
+       */
         void splice (CIterator position, CList &x, CIterator i) noexcept;
 
+        /*!
+          @fn     splice (CIterator position, CList &x,CIterator first, CIterator last) noexcept
+          @brief  This function move elements between @p first and @p last from the CList @p x to the current CList before @p position.
+          @param[in] position The position where we want to insert the other list.
+          @param[in] x The CList we want to add on the current CList.
+          @param[in] first The iterator who pointing the first element who want to move on the current CList.
+          @param[in] last The iterator who pointing the last element who want to move on the current CList.
+       */
         void splice (CIterator position, CList &x, CIterator first, CIterator last) noexcept;
 
         //Merge
+        /*!
+          @fn     merge (CList<T>& x) noexcept
+          @brief  This function merge two sorted list @p x after the current CList.
+          @param[in] position The sorted list we want to merge with the current CList.
+       */
         void merge (CList<T>& x) noexcept;
 
         // Reverse
+        /*!
+          @fn     reverse () noexcept
+          @brief  This function reverse the head and the tail of the CList.
+       */
         void reverse () noexcept;
 
     private:
+
+        /*!
+          @var     m_size
+          @brief  The size of the CList.
+       */
         size_type m_size = 0;
+
+        /*!
+          @var     m_head
+          @brief  A pointer the head of the CList.
+       */
         CNodePtr m_head = nullptr;
+
+        /*!
+          @var     m_tail
+          @brief  A pointer the tail of the CList.
+       */
         CNodePtr m_tail = nullptr;
     };
 }
