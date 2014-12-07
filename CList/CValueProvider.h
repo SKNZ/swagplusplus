@@ -3,7 +3,6 @@
 @author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
 @date 08/12/2014
 @version  1.0
-@brief Provides semi-random values for tested classes...
 */
 #pragma once
 
@@ -22,6 +21,9 @@ namespace nsTests
     template<typename T> using CCollection = std::vector<T>;
 
     template<typename T>
+    /*!
+        @brief CValueProvider provides semi-random values for tested classes...
+     */
     class CValueProvider
     {
     public:

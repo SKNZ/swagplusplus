@@ -1,0 +1,795 @@
+\hypertarget{classnsSdD_1_1CList}{\section{ns\+Sd\+D\+:\+:C\+List$<$ T $>$ Class Template Reference}
+\label{classnsSdD_1_1CList}\index{ns\+Sd\+D\+::\+C\+List$<$ T $>$@{ns\+Sd\+D\+::\+C\+List$<$ T $>$}}
+}
+
+
+\hyperlink{classnsSdD_1_1CList}{C\+List} is the main class of our work, it's develop in order to be the most close to the original std\+::list In this idea we choose to make a double-\/linked list, in that way we can use bidirectional iterator and have a stl compliant \hyperlink{classnsSdD_1_1CList}{C\+List}. During the development process we choose to work in T\+D\+D (Test Driven Development) in order to have the least bugs possible.  
+
+
+
+
+{\ttfamily \#include $<$C\+List.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator}
+\item 
+struct \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator}
+\begin{DoxyCompactList}\small\item\em This class is a personnal implementation of iterator for our class \hyperlink{classnsSdD_1_1CList}{C\+List}. We provide the essential function to work with us. We implement bidirectionnal iterator because we choose to use a double-\/linked list. \end{DoxyCompactList}\item 
+class \hyperlink{classnsSdD_1_1CList_1_1CNode}{C\+Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}{typedef size\+\_\+t \hyperlink{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}{size\+\_\+type}}\label{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}
+
+\begin{DoxyCompactList}\small\item\em This define a {\ttfamily size\+\_\+t}. We use it because it's a std\+::list standard. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{typedef \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator}}\label{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}
+
+\begin{DoxyCompactList}\small\item\em This define a {\ttfamily \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator}}. We use it to declare a \hyperlink{classnsSdD_1_1CList}{C\+List} iterator. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_ae323732a26e507146686556fb775767a}{typedef \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} \hyperlink{classnsSdD_1_1CList_ae323732a26e507146686556fb775767a}{const\+\_\+iterator}}\label{classnsSdD_1_1CList_ae323732a26e507146686556fb775767a}
+
+\begin{DoxyCompactList}\small\item\em This define a {\ttfamily \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator}}. We use it to declare a \hyperlink{classnsSdD_1_1CList}{C\+List} const iterator. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a5582eb88a5f625ef426f534ea5556311}{typedef std\+::reverse\+\_\+iterator\\*
+$<$ \hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} $>$ \hyperlink{classnsSdD_1_1CList_a5582eb88a5f625ef426f534ea5556311}{reverse\+\_\+iterator}}\label{classnsSdD_1_1CList_a5582eb88a5f625ef426f534ea5556311}
+
+\begin{DoxyCompactList}\small\item\em This define a {\ttfamily C\+Reverse\+Iterator}. We use it to declare a \hyperlink{classnsSdD_1_1CList}{C\+List} reverse\+\_\+iterator. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a43f361676af43c355821d20da82ad401}{typedef std\+::reverse\+\_\+iterator\\*
+$<$ \hyperlink{classnsSdD_1_1CList_ae323732a26e507146686556fb775767a}{const\+\_\+iterator} $>$ \hyperlink{classnsSdD_1_1CList_a43f361676af43c355821d20da82ad401}{const\+\_\+reverse\+\_\+iterator}}\label{classnsSdD_1_1CList_a43f361676af43c355821d20da82ad401}
+
+\begin{DoxyCompactList}\small\item\em This define a {\ttfamily C\+Const\+Reverse\+Iterator}. We use it to declare a \hyperlink{classnsSdD_1_1CList}{C\+List} const reverse iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnsSdD_1_1CList_aad7088db9f8120c6e6c1a2f39022fa8f}{C\+List} (const \hyperlink{classnsSdD_1_1CList}{C\+List}$<$ T $>$ \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This is the copy-\/constructor of the class \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{classnsSdD_1_1CList_ae319d81f9a81a4d4aa5427f013fe8dae}{C\+List} () noexcept
+\begin{DoxyCompactList}\small\item\em This is the default of the class \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{classnsSdD_1_1CList_a0dc3fc05ef1e765313814baf2be139c1}{C\+List} (size\+\_\+t n) noexcept
+\begin{DoxyCompactList}\small\item\em This is the constructor by the size ({\ttfamily size\+\_\+t} n) \hyperlink{classnsSdD_1_1CList}{C\+List} we want. The constructor create a \hyperlink{classnsSdD_1_1CList}{C\+List} of n elements. \end{DoxyCompactList}\item 
+\hyperlink{classnsSdD_1_1CList_a09fd13d9614defdb880fdab1ae0b33ca}{C\+List} (size\+\_\+t n, const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em This is the constructor by the size ({\ttfamily size\+\_\+t} n) \hyperlink{classnsSdD_1_1CList}{C\+List} we want. The constructor create a \hyperlink{classnsSdD_1_1CList}{C\+List} of n elements with {\ttfamily T} val in each element. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a6558a45c50021a28a54ea3e48fd1ed4b}{{\footnotesize template$<$class Input\+Iterator $>$ }\\{\bfseries C\+List} (Input\+Iterator first, Input\+Iterator last) noexcept}\label{classnsSdD_1_1CList_a6558a45c50021a28a54ea3e48fd1ed4b}
+
+\item 
+C\+Node\+Ptr \hyperlink{classnsSdD_1_1CList_ac196a16661fe4cba73b339a4e2fcfb73}{get\+Head} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return the head of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+C\+Node\+Ptr \hyperlink{classnsSdD_1_1CList_a05c986208bf4f4a9ede4731df50ed8d0}{get\+Tail} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return the tail of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_aa388b52d241c12737c4e5b2a36c767c3}{begin} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_ae1ed05415dfeb92174e030f9de754dc2}{end} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} \hyperlink{classnsSdD_1_1CList_a65cc2b6af1a489f45d2a3354c67fca39}{cbegin} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return a \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} \hyperlink{classnsSdD_1_1CList_a6fafea01ba64eb323ebe32e0eb6e6e6e}{cend} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return a \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+std\+::reverse\+\_\+iterator$<$ \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} $>$ \hyperlink{classnsSdD_1_1CList_a763731bf428359807d4c35f21ed1ac4e}{rbegin} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return an reverse\+\_\+iterator to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+std\+::reverse\+\_\+iterator$<$ \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} $>$ \hyperlink{classnsSdD_1_1CList_a971d1f0ea06ae04c61303705f05a4211}{rend} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return an reverse\+\_\+iterator to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+std\+::reverse\+\_\+iterator\\*
+$<$ \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} $>$ \hyperlink{classnsSdD_1_1CList_a2a94cede3e75928a314fd6943a07c867}{crbegin} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return an const\+\_\+reverse\+\_\+iterator to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+std\+::reverse\+\_\+iterator\\*
+$<$ \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} $>$ \hyperlink{classnsSdD_1_1CList_a9c0b9c73483ef340921ac38aa3674d25}{crend} () noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and return an const\+\_\+reverse\+\_\+iterator to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+bool \hyperlink{classnsSdD_1_1CList_ad9c0ecbdedb0a8ad28625874f3c11c4d}{empty} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return true if the \hyperlink{classnsSdD_1_1CList}{C\+List} is empty , false otherwise. \end{DoxyCompactList}\item 
+\hyperlink{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}{size\+\_\+type} \hyperlink{classnsSdD_1_1CList_a108494f68c871f0f1e0a337cfe93ab36}{size} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return the size of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+T \hyperlink{classnsSdD_1_1CList_a2666d99b91b6bf301d3f9a980200c5df}{front} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return value of the first element in the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+T \hyperlink{classnsSdD_1_1CList_ab85483872c2daff13f17bdf3327ce7c0}{back} () const noexcept
+\begin{DoxyCompactList}\small\item\em This function return value of the last element in the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a27b48887bd136140f3f79192b79f8897}{assign} (unsigned n, const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em This function erase the content and replace the content of the \hyperlink{classnsSdD_1_1CList}{C\+List} with the {\ttfamily n} size and with the {\ttfamily val} value. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a11db16b0200f115876884342e232d8b4}{{\footnotesize template$<$class Input\+Iterator $>$ }\\void {\bfseries assign} (Input\+Iterator \hyperlink{classnsSdD_1_1CList_aa388b52d241c12737c4e5b2a36c767c3}{begin}, Input\+Iterator last) noexcept}\label{classnsSdD_1_1CList_a11db16b0200f115876884342e232d8b4}
+
+\item 
+void \hyperlink{classnsSdD_1_1CList_a4ea0f842488c5f564430e842ee648348}{push\+\_\+back} (const T \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and add {\ttfamily x} value at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a67071b474142b24a096da24db211de4b}{void \hyperlink{classnsSdD_1_1CList_a67071b474142b24a096da24db211de4b}{pop\+\_\+back} () noexcept}\label{classnsSdD_1_1CList_a67071b474142b24a096da24db211de4b}
+
+\begin{DoxyCompactList}\small\item\em This function delete the last element of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a88394296072d50b2547dd843aa4a0069}{push\+\_\+front} (const T \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This function construct and add {\ttfamily x} value at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a16e16405d804c9f8c20c61a8acd45ece}{void \hyperlink{classnsSdD_1_1CList_a16e16405d804c9f8c20c61a8acd45ece}{pop\+\_\+front} () noexcept}\label{classnsSdD_1_1CList_a16e16405d804c9f8c20c61a8acd45ece}
+
+\begin{DoxyCompactList}\small\item\em This function delete the first element of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_abea73e5cb037f3aab4b5626788ef5e0d}{void \hyperlink{classnsSdD_1_1CList_abea73e5cb037f3aab4b5626788ef5e0d}{sort} () noexcept}\label{classnsSdD_1_1CList_abea73e5cb037f3aab4b5626788ef5e0d}
+
+\begin{DoxyCompactList}\small\item\em This function the \hyperlink{classnsSdD_1_1CList}{C\+List} in ascending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Compare $>$ }\\void \hyperlink{classnsSdD_1_1CList_acef43a041947820896c05b2107d68abf}{sort} (Compare comp) noexcept
+\begin{DoxyCompactList}\small\item\em This function the \hyperlink{classnsSdD_1_1CList}{C\+List} with the comparator {\ttfamily comp} given in parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_a49f58c34b74458b09b8108ed373853eb}{emplace} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, Args \&\&...args) noexcept
+\begin{DoxyCompactList}\small\item\em This function constructs an element with {\ttfamily args} and place it before the {\ttfamily position}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_ab844fdde0b92d0dd585036a1a1fbfbae}{{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} {\bfseries emplace\+\_\+front} (Args \&\&...args) noexcept}\label{classnsSdD_1_1CList_ab844fdde0b92d0dd585036a1a1fbfbae}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_ab7f5a029be59e05e79cf1ea033b8171b}{{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} {\bfseries emplace\+\_\+back} (Args \&\&...args) noexcept}\label{classnsSdD_1_1CList_ab7f5a029be59e05e79cf1ea033b8171b}
+
+\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_a31b19e63631b2e095e6d81ebb2630db4}{insert} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em Inserts element {\ttfamily val} before position {\ttfamily position}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_aa423a9841e74ff8ad11c2b41bc1d698e}{insert} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, \hyperlink{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}{size\+\_\+type} n, const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em Inserts {\ttfamily n} elements {\ttfamily val} before position {\ttfamily position}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a9c5fe15f062d696743c99319d4fe1368}{{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} {\bfseries insert} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, Input\+Iterator first, Input\+Iterator last) noexcept}\label{classnsSdD_1_1CList_a9c5fe15f062d696743c99319d4fe1368}
+
+\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_afe12f69415482120c58b59ae7baaa434}{erase} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} del) noexcept
+\begin{DoxyCompactList}\small\item\em This function delete the element pointed by the \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} {\ttfamily del}. \end{DoxyCompactList}\item 
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} \hyperlink{classnsSdD_1_1CList_a11cda22711d403a4ae5dbb4a921a03d4}{erase} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} first, \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} last) noexcept
+\begin{DoxyCompactList}\small\item\em This function elements between the {\ttfamily first} and {\ttfamily last} \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} . \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_ac59d9d1e5bbbe59c5cc549800fd2e49a}{swap} (\hyperlink{classnsSdD_1_1CList}{C\+List} \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This function swap the two C\+Lists . \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a4e9ff3339d35afb16b7f698c9c7f4fbf}{resize} (unsigned n, const T \&val=T()) noexcept
+\begin{DoxyCompactList}\small\item\em This function resize the \hyperlink{classnsSdD_1_1CList}{C\+List} if the {\ttfamily n} value is under the current size of the \hyperlink{classnsSdD_1_1CList}{C\+List} the function delete element at end to reduce at the {\ttfamily n} size. If you want to expand the size the new element are construct with the {\ttfamily val} value. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_abc30f88bfb8854dff3fa4544e4bf5450}{void \hyperlink{classnsSdD_1_1CList_abc30f88bfb8854dff3fa4544e4bf5450}{clear} () noexcept}\label{classnsSdD_1_1CList_abc30f88bfb8854dff3fa4544e4bf5450}
+
+\begin{DoxyCompactList}\small\item\em This function delete all the element of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a55651384c55447be5c4d9edd1565ad1f}{remove} (const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em This function delete {\ttfamily val} element of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a0ad14711538606425a28a357bd1c74bf}{{\footnotesize template$<$class Predicate $>$ }\\void {\bfseries remove\+\_\+if} (Predicate pred) noexcept}\label{classnsSdD_1_1CList_a0ad14711538606425a28a357bd1c74bf}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_abc7b9f069918d17942e8baabccb97a5d}{void \hyperlink{classnsSdD_1_1CList_abc7b9f069918d17942e8baabccb97a5d}{unique} () noexcept}\label{classnsSdD_1_1CList_abc7b9f069918d17942e8baabccb97a5d}
+
+\begin{DoxyCompactList}\small\item\em This function removes all element that are duplicated. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Predicate $>$ }\\void \hyperlink{classnsSdD_1_1CList_acb314c9ce6c108b5c6481284681334f8}{unique} (Predicate pred) noexcept
+\begin{DoxyCompactList}\small\item\em This function removes all element that are duplicated and where the {\ttfamily pred} are true. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a987252679b419150d62719f8dabb2ad4}{splice} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, \hyperlink{classnsSdD_1_1CList}{C\+List} \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This function move the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a68315c715024cccae8905e92a1c58429}{splice} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, \hyperlink{classnsSdD_1_1CList}{C\+List} \&x, \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} i) noexcept
+\begin{DoxyCompactList}\small\item\em This function move element {\ttfamily i} from the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_ac34a61185ef426909da583c61f1d3f32}{splice} (\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} position, \hyperlink{classnsSdD_1_1CList}{C\+List} \&x, \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} first, \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} last) noexcept
+\begin{DoxyCompactList}\small\item\em This function move elements between {\ttfamily first} and {\ttfamily last} from the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. \end{DoxyCompactList}\item 
+void \hyperlink{classnsSdD_1_1CList_a6f41b4a08e34f5081aaa69a4b00474ec}{merge} (\hyperlink{classnsSdD_1_1CList}{C\+List}$<$ T $>$ \&x) noexcept
+\begin{DoxyCompactList}\small\item\em This function merge two sorted list {\ttfamily x} after the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_a60dbb7a753634838fb2f705ce84764f9}{void \hyperlink{classnsSdD_1_1CList_a60dbb7a753634838fb2f705ce84764f9}{reverse} () noexcept}\label{classnsSdD_1_1CList_a60dbb7a753634838fb2f705ce84764f9}
+
+\begin{DoxyCompactList}\small\item\em This function reverse the head and the tail of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \end{DoxyCompactList}\item 
+\hypertarget{classnsSdD_1_1CList_afa271b480c0498942afb039342557687}{{\footnotesize template$<$class Compare $>$ }\\void {\bfseries unique} (Compare comp) noexcept}\label{classnsSdD_1_1CList_afa271b480c0498942afb039342557687}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_a40896846d4660f4f76b7078b84e5c7c8}{{\footnotesize template$<$typename T$>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries insert} (\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} position, T const \&val) noexcept}\label{classnsSdD_1_1CList_a40896846d4660f4f76b7078b84e5c7c8}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_a4ba5eeb4a306375f6c68a441e1e0da9e}{{\footnotesize template$<$typename T$>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries insert} (\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} position, \hyperlink{classnsSdD_1_1CList_a91d4b6b8c89816da277ee27d32df5478}{size\+\_\+type} n, T const \&val) noexcept}\label{classnsSdD_1_1CList_a4ba5eeb4a306375f6c68a441e1e0da9e}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_a19a9ef6e137eb6e2ceb05e7a95e5037f}{{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries insert} (\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} position, Input\+Iterator \hyperlink{classnsSdD_1_1CList_aa388b52d241c12737c4e5b2a36c767c3}{begin}, Input\+Iterator \hyperlink{classnsSdD_1_1CList_ae1ed05415dfeb92174e030f9de754dc2}{end}) noexcept}\label{classnsSdD_1_1CList_a19a9ef6e137eb6e2ceb05e7a95e5037f}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_a1d2f50927ea9f6bf2894890e7acc0ab2}{{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries emplace} (\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} position, Args \&\&...args) noexcept}\label{classnsSdD_1_1CList_a1d2f50927ea9f6bf2894890e7acc0ab2}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_ac838590e674e7f73357e721c14357051}{{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries emplace\+\_\+front} (Args \&\&...args) noexcept}\label{classnsSdD_1_1CList_ac838590e674e7f73357e721c14357051}
+
+\item 
+\hypertarget{classnsSdD_1_1CList_abf3d896577558cac038f8af9a788c673}{{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classnsSdD_1_1CList}{ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::\hyperlink{classnsSdD_1_1CList_afdaca29586106fc15940d8529f4990f8}{iterator} {\bfseries emplace\+\_\+back} (Args \&\&...args) noexcept}\label{classnsSdD_1_1CList_abf3d896577558cac038f8af9a788c673}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class ns\+Sd\+D\+::\+C\+List$<$ T $>$}
+
+\hyperlink{classnsSdD_1_1CList}{C\+List} is the main class of our work, it's develop in order to be the most close to the original std\+::list In this idea we choose to make a double-\/linked list, in that way we can use bidirectional iterator and have a stl compliant \hyperlink{classnsSdD_1_1CList}{C\+List}. During the development process we choose to work in T\+D\+D (Test Driven Development) in order to have the least bugs possible. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnsSdD_1_1CList_aad7088db9f8120c6e6c1a2f39022fa8f}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!C\+List@{C\+List}}
+\index{C\+List@{C\+List}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{C\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf C\+List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+List}$<$ T $>$ \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_aad7088db9f8120c6e6c1a2f39022fa8f}
+
+
+This is the copy-\/constructor of the class \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em } & p C\+List$<$\+T$>$ this is the list who want to copy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_ae319d81f9a81a4d4aa5427f013fe8dae}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!C\+List@{C\+List}}
+\index{C\+List@{C\+List}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{C\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf C\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ae319d81f9a81a4d4aa5427f013fe8dae}
+
+
+This is the default of the class \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a0dc3fc05ef1e765313814baf2be139c1}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!C\+List@{C\+List}}
+\index{C\+List@{C\+List}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{C\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf C\+List} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a0dc3fc05ef1e765313814baf2be139c1}
+
+
+This is the constructor by the size ({\ttfamily size\+\_\+t} n) \hyperlink{classnsSdD_1_1CList}{C\+List} we want. The constructor create a \hyperlink{classnsSdD_1_1CList}{C\+List} of n elements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The size of the \hyperlink{classnsSdD_1_1CList}{C\+List} we want. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a09fd13d9614defdb880fdab1ae0b33ca}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!C\+List@{C\+List}}
+\index{C\+List@{C\+List}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{C\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf C\+List} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{n, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a09fd13d9614defdb880fdab1ae0b33ca}
+
+
+This is the constructor by the size ({\ttfamily size\+\_\+t} n) \hyperlink{classnsSdD_1_1CList}{C\+List} we want. The constructor create a \hyperlink{classnsSdD_1_1CList}{C\+List} of n elements with {\ttfamily T} val in each element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The size of the \hyperlink{classnsSdD_1_1CList}{C\+List} we want. \\
+\hline
+\mbox{\tt in}  & {\em val} & The value we want to insert in the element of \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnsSdD_1_1CList_a27b48887bd136140f3f79192b79f8897}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!assign@{assign}}
+\index{assign@{assign}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{n, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a27b48887bd136140f3f79192b79f8897}
+
+
+This function erase the content and replace the content of the \hyperlink{classnsSdD_1_1CList}{C\+List} with the {\ttfamily n} size and with the {\ttfamily val} value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The size of the \hyperlink{classnsSdD_1_1CList}{C\+List} we want. \\
+\hline
+\mbox{\tt in}  & {\em val} & The value we want to affect on each element of the new \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_ab85483872c2daff13f17bdf3327ce7c0}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!back@{back}}
+\index{back@{back}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ab85483872c2daff13f17bdf3327ce7c0}
+
+
+This function return value of the last element in the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+T The value of the last element in the list. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_aa388b52d241c12737c4e5b2a36c767c3}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!begin@{begin}}
+\index{begin@{begin}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf iterator} {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_aa388b52d241c12737c4e5b2a36c767c3}
+
+
+This function construct and return A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who point to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a65cc2b6af1a489f45d2a3354c67fca39}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{cbegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf const\+\_\+iterator} {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a65cc2b6af1a489f45d2a3354c67fca39}
+
+
+This function construct and return a \hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who point to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a6fafea01ba64eb323ebe32e0eb6e6e6e}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!cend@{cend}}
+\index{cend@{cend}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{cend}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf const\+\_\+iterator} {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a6fafea01ba64eb323ebe32e0eb6e6e6e}
+
+
+This function construct and return a \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CConstIterator}{C\+Const\+Iterator} A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who point to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a2a94cede3e75928a314fd6943a07c867}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{crbegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::reverse\+\_\+iterator$<$ typename {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf const\+\_\+iterator} $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a2a94cede3e75928a314fd6943a07c867}
+
+
+This function construct and return an const\+\_\+reverse\+\_\+iterator to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+reverse\+\_\+iterator$<$\+C\+Const\+Iterator$>$ A const\+\_\+reverse\+\_\+iterator who point to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a9c0b9c73483ef340921ac38aa3674d25}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!crend@{crend}}
+\index{crend@{crend}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{crend}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::reverse\+\_\+iterator$<$ typename {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf const\+\_\+iterator} $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a9c0b9c73483ef340921ac38aa3674d25}
+
+
+This function construct and return an const\+\_\+reverse\+\_\+iterator to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+reverse\+\_\+iterator$<$\+C\+Const\+Iterator$>$ A const\+\_\+reverse\+\_\+iterator who point to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a49f58c34b74458b09b8108ed373853eb}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!emplace@{emplace}}
+\index{emplace@{emplace}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{emplace}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename... Args$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::emplace (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a49f58c34b74458b09b8108ed373853eb}
+
+
+This function constructs an element with {\ttfamily args} and place it before the {\ttfamily position}. 
+
+This function construct an element with {\ttfamily args} and place at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}.
+
+This function construct an element with {\ttfamily args} and place at the beginning of the \hyperlink{classnsSdD_1_1CList}{C\+List}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em args} & The package of arguments you want to use to construct you element. \\
+\hline
+\mbox{\tt in}  & {\em position} & The position where you want to insert the new element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} that points to the newly inserted elements.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em args} & The package of arguments you want to use to construct you element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} that points to the newly inserted elements. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_ad9c0ecbdedb0a8ad28625874f3c11c4d}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!empty@{empty}}
+\index{empty@{empty}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ad9c0ecbdedb0a8ad28625874f3c11c4d}
+
+
+This function return true if the \hyperlink{classnsSdD_1_1CList}{C\+List} is empty , false otherwise. 
+
+\begin{DoxyReturn}{Returns}
+bool If the \hyperlink{classnsSdD_1_1CList}{C\+List} is empty or not. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_ae1ed05415dfeb92174e030f9de754dc2}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!end@{end}}
+\index{end@{end}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf iterator} {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ae1ed05415dfeb92174e030f9de754dc2}
+
+
+This function construct and return A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who point to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_afe12f69415482120c58b59ae7baaa434}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!erase@{erase}}
+\index{erase@{erase}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{del}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_afe12f69415482120c58b59ae7baaa434}
+
+
+This function delete the element pointed by the \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} {\ttfamily del}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em del} & A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who pointing to the element who want to delete . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} The element that followed the last element erased by the function call. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a11cda22711d403a4ae5dbb4a921a03d4}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!erase@{erase}}
+\index{erase@{erase}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{first, }
+\item[{{\bf C\+Iterator}}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a11cda22711d403a4ae5dbb4a921a03d4}
+
+
+This function elements between the {\ttfamily first} and {\ttfamily last} \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who pointing to the first element who want to delete . \\
+\hline
+\mbox{\tt in}  & {\em last} & A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} who pointing to the last element who want to delete . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} The element that followed the last element erased by the function call. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a2666d99b91b6bf301d3f9a980200c5df}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!front@{front}}
+\index{front@{front}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a2666d99b91b6bf301d3f9a980200c5df}
+
+
+This function return value of the first element in the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+T The value of the first element in the list. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_ac196a16661fe4cba73b339a4e2fcfb73}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!get\+Head@{get\+Head}}
+\index{get\+Head@{get\+Head}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{get\+Head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::C\+Node\+Ptr {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::get\+Head (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ac196a16661fe4cba73b339a4e2fcfb73}
+
+
+This function return the head of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+C\+Node\+Ptr A pointer to the head of the Clist. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a05c986208bf4f4a9ede4731df50ed8d0}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!get\+Tail@{get\+Tail}}
+\index{get\+Tail@{get\+Tail}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{get\+Tail}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::C\+Node\+Ptr {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::get\+Tail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a05c986208bf4f4a9ede4731df50ed8d0}
+
+
+This function return the tail of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+C\+Node\+Ptr A pointer to the tail of the Clist. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a31b19e63631b2e095e6d81ebb2630db4}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!insert@{insert}}
+\index{insert@{insert}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a31b19e63631b2e095e6d81ebb2630db4}
+
+
+Inserts element {\ttfamily val} before position {\ttfamily position}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position where you want to insert the new element. \\
+\hline
+\mbox{\tt in}  & {\em val} & A const reference to the element you are adding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} that points to the newly inserted element. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_aa423a9841e74ff8ad11c2b41bc1d698e}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!insert@{insert}}
+\index{insert@{insert}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{{\bf size\+\_\+type}}]{n, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_aa423a9841e74ff8ad11c2b41bc1d698e}
+
+
+Inserts {\ttfamily n} elements {\ttfamily val} before position {\ttfamily position}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position where you want to insert the new element. \\
+\hline
+\mbox{\tt in}  & {\em val} & A const reference to the element you are adding. \\
+\hline
+\mbox{\tt in}  & {\em n} & The amount of times the element will be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structnsSdD_1_1CList_1_1CIterator}{C\+Iterator} that points to the first of newly inserted elements. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a6f41b4a08e34f5081aaa69a4b00474ec}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!merge@{merge}}
+\index{merge@{merge}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::merge (
+\begin{DoxyParamCaption}
+\item[{{\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$ \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a6f41b4a08e34f5081aaa69a4b00474ec}
+
+
+This function merge two sorted list {\ttfamily x} after the current \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The sorted list we want to merge with the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a4ea0f842488c5f564430e842ee648348}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{push\+\_\+back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a4ea0f842488c5f564430e842ee648348}
+
+
+This function construct and add {\ttfamily x} value at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em T} & The value we want to insert at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a88394296072d50b2547dd843aa4a0069}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{push\+\_\+front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::push\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a88394296072d50b2547dd843aa4a0069}
+
+
+This function construct and add {\ttfamily x} value at the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The value we want to insert at the beginning of the \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a763731bf428359807d4c35f21ed1ac4e}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{rbegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::reverse\+\_\+iterator$<$ typename {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf iterator} $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a763731bf428359807d4c35f21ed1ac4e}
+
+
+This function construct and return an reverse\+\_\+iterator to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+reverse\+\_\+iterator$<$\+C\+Iterator$>$ A reverse\+\_\+iterator who point to the end of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a55651384c55447be5c4d9edd1565ad1f}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!remove@{remove}}
+\index{remove@{remove}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a55651384c55447be5c4d9edd1565ad1f}
+
+
+This function delete {\ttfamily val} element of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+This function delete all element of the \hyperlink{classnsSdD_1_1CList}{C\+List} who not respect the {\ttfamily pred} constraint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em val} & The element you want to remove of the \hyperlink{classnsSdD_1_1CList}{C\+List}.\\
+\hline
+\mbox{\tt in}  & {\em pred} & The predicate we want to use to remove the elements who not respect the predicate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a971d1f0ea06ae04c61303705f05a4211}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!rend@{rend}}
+\index{rend@{rend}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{rend}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::reverse\+\_\+iterator$<$ typename {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf iterator} $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a971d1f0ea06ae04c61303705f05a4211}
+
+
+This function construct and return an reverse\+\_\+iterator to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+reverse\+\_\+iterator$<$\+C\+Iterator$>$ A reverse\+\_\+iterator who point to the begin of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_a4e9ff3339d35afb16b7f698c9c7f4fbf}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!resize@{resize}}
+\index{resize@{resize}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::resize (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{n, }
+\item[{const T \&}]{val = {\ttfamily T~()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a4e9ff3339d35afb16b7f698c9c7f4fbf}
+
+
+This function resize the \hyperlink{classnsSdD_1_1CList}{C\+List} if the {\ttfamily n} value is under the current size of the \hyperlink{classnsSdD_1_1CList}{C\+List} the function delete element at end to reduce at the {\ttfamily n} size. If you want to expand the size the new element are construct with the {\ttfamily val} value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The new size we want to have with the \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\mbox{\tt in}  & {\em val} & The val we want to assign to new value if you expand the size. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a108494f68c871f0f1e0a337cfe93ab36}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!size@{size}}
+\index{size@{size}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::{\bf size\+\_\+type} {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a108494f68c871f0f1e0a337cfe93ab36}
+
+
+This function return the size of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type The size of the \hyperlink{classnsSdD_1_1CList}{C\+List}. 
+\end{DoxyReturn}
+\hypertarget{classnsSdD_1_1CList_acef43a041947820896c05b2107d68abf}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!sort@{sort}}
+\index{sort@{sort}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$class Compare $>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::sort (
+\begin{DoxyParamCaption}
+\item[{Compare}]{comp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_acef43a041947820896c05b2107d68abf}
+
+
+This function the \hyperlink{classnsSdD_1_1CList}{C\+List} with the comparator {\ttfamily comp} given in parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em comp} & The comparator you want to use to sort the \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a987252679b419150d62719f8dabb2ad4}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!splice@{splice}}
+\index{splice@{splice}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{splice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::splice (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{{\bf C\+List}$<$ T $>$ \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a987252679b419150d62719f8dabb2ad4}
+
+
+This function move the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position where we want to insert the other list. \\
+\hline
+\mbox{\tt in}  & {\em x} & The \hyperlink{classnsSdD_1_1CList}{C\+List} we want to add on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_a68315c715024cccae8905e92a1c58429}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!splice@{splice}}
+\index{splice@{splice}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{splice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::splice (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{{\bf C\+List}$<$ T $>$ \&}]{x, }
+\item[{{\bf C\+Iterator}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_a68315c715024cccae8905e92a1c58429}
+
+
+This function move element {\ttfamily i} from the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position where we want to insert the other list. \\
+\hline
+\mbox{\tt in}  & {\em x} & The \hyperlink{classnsSdD_1_1CList}{C\+List} we want to add on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\mbox{\tt in}  & {\em i} & The iterator who pointing the element who want to move on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_ac34a61185ef426909da583c61f1d3f32}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!splice@{splice}}
+\index{splice@{splice}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{splice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::splice (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Iterator}}]{position, }
+\item[{{\bf C\+List}$<$ T $>$ \&}]{x, }
+\item[{{\bf C\+Iterator}}]{first, }
+\item[{{\bf C\+Iterator}}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ac34a61185ef426909da583c61f1d3f32}
+
+
+This function move elements between {\ttfamily first} and {\ttfamily last} from the \hyperlink{classnsSdD_1_1CList}{C\+List} {\ttfamily x} to the current \hyperlink{classnsSdD_1_1CList}{C\+List} before {\ttfamily position}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position where we want to insert the other list. \\
+\hline
+\mbox{\tt in}  & {\em x} & The \hyperlink{classnsSdD_1_1CList}{C\+List} we want to add on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\mbox{\tt in}  & {\em first} & The iterator who pointing the first element who want to move on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\mbox{\tt in}  & {\em last} & The iterator who pointing the last element who want to move on the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_ac59d9d1e5bbbe59c5cc549800fd2e49a}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!swap@{swap}}
+\index{swap@{swap}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+List}$<$ T $>$ \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_ac59d9d1e5bbbe59c5cc549800fd2e49a}
+
+
+This function swap the two C\+Lists . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The \hyperlink{classnsSdD_1_1CList}{C\+List} we want to swap with the current \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classnsSdD_1_1CList_acb314c9ce6c108b5c6481284681334f8}{\index{ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}!unique@{unique}}
+\index{unique@{unique}!ns\+Sd\+D\+::\+C\+List@{ns\+Sd\+D\+::\+C\+List}}
+\subsubsection[{unique}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$class Predicate $>$ {\bf ns\+Sd\+D\+::\+C\+List}$<$ T $>$\+::unique (
+\begin{DoxyParamCaption}
+\item[{Predicate}]{pred}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{classnsSdD_1_1CList_acb314c9ce6c108b5c6481284681334f8}
+
+
+This function removes all element that are duplicated and where the {\ttfamily pred} are true. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pred} & The predicate we want to use on the \hyperlink{classnsSdD_1_1CList}{C\+List}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CList_8h}{C\+List.\+h}\item 
+\hyperlink{CList_8hxx}{C\+List.\+hxx}\end{DoxyCompactItemize}

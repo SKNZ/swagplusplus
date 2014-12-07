@@ -4,11 +4,6 @@
 @date 08/12/2014
 @version  1.0
 @brief Implementation of the iterator for the CList class.
-
-@mainpage Documention for the class iterator of "CList"
-This class is a personnal implementation of iterator for our class CList.
-We provide the essential function to work with us.
-We implement bidirectionnal iterator because we choose to use a double-linked list.
 */
 #pragma once
 
@@ -16,7 +11,11 @@ We implement bidirectionnal iterator because we choose to use a double-linked li
 
 template<typename T> using CIterBase = std::iterator<std::bidirectional_iterator_tag, T>;
 
-
+/*!
+    @brief This class is a personnal implementation of iterator for our class CList.
+           We provide the essential function to work with us.
+           We implement bidirectionnal iterator because we choose to use a double-linked list.
+ */
 template<typename T>
 struct nsSdD::CList<T>::CIterator : public CIterBase<T>
 {
