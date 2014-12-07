@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Args</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/28.html#L280'>Args</a>              280 CList2.h               template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/28.html#L281'>Args</a>              281 CList2.h               CIterator emplace (CIterator position, Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L289'>Args</a>              289 CList2.h               template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/28.html#L290'>Args</a>              290 CList2.h               CIterator emplace_front (Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L298'>Args</a>              298 CList2.h               template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/28.html#L299'>Args</a>              299 CList2.h               CIterator emplace_back (Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/27.html#L350'>Args</a>              350 CList2.hxx     template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/27.html#L351'>Args</a>              351 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace (iterator position, Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L353'>Args</a>              353 CList2.hxx         return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
+<span class='curline'><a href='../S/27.html#L357'>Args</a>              357 CList2.hxx     template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/27.html#L358'>Args</a>              358 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_front (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L360'>Args</a>              360 CList2.hxx         return emplace (begin (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/27.html#L364'>Args</a>              364 CList2.hxx     template&lt;typename... Args&gt;</span>
+<span class='curline'><a href='../S/27.html#L365'>Args</a>              365 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_back (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L367'>Args</a>              367 CList2.hxx         return emplace (end (), std::forward&lt;Args&gt; (args)...);</span>
+</pre>
+</body>
+</html>

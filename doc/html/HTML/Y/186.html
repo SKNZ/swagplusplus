@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>list2</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/33.html#L652'>list2</a>             652 Tests.cxx              CTestedList&lt;T&gt; list1 (listSize / 2), list2 (listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L656'>list2</a>             656 Tests.cxx              copy (data.cbegin () + listSize / 2, data.cend (), list2.begin ());</span>
+<span class='curline'><a href='../S/33.html#L658'>list2</a>             658 Tests.cxx              list1.swap (list2);</span>
+<span class='curline'><a href='../S/33.html#L663'>list2</a>             663 Tests.cxx              for (auto itr = list2.cbegin (); itr != list2.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L664'>list2</a>             664 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list2.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L733'>list2</a>             733 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L738'>list2</a>             738 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L741'>list2</a>             741 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/33.html#L745'>list2</a>             745 Tests.cxx              list1.splice (itr, list2);</span>
+<span class='curline'><a href='../S/33.html#L747'>list2</a>             747 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
+<span class='curline'><a href='../S/33.html#L757'>list2</a>             757 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L760'>list2</a>             760 Tests.cxx              list2.insert (list2.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L762'>list2</a>             762 Tests.cxx              for (auto itr = list2.begin (); itr != list2.end ();)</span>
+<span class='curline'><a href='../S/33.html#L763'>list2</a>             763 Tests.cxx                  list1.splice (list1.end (), list2, itr++);</span>
+<span class='curline'><a href='../S/33.html#L775'>list2</a>             775 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L780'>list2</a>             780 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L783'>list2</a>             783 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/33.html#L787'>list2</a>             787 Tests.cxx              list1.splice (itr, list2, list2.begin (), list2.end ());</span>
+<span class='curline'><a href='../S/33.html#L789'>list2</a>             789 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
+<span class='curline'><a href='../S/33.html#L870'>list2</a>             870 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L879'>list2</a>             879 Tests.cxx                  list2.push_back (data[i]);</span>
+<span class='curline'><a href='../S/33.html#L881'>list2</a>             881 Tests.cxx              IZI_ASSERT(list2.size () == list1.size () &amp;&amp; list1.size () == data.size () / 2);</span>
+<span class='curline'><a href='../S/33.html#L883'>list2</a>             883 Tests.cxx              list1.merge (list2);</span>
+<span class='curline'><a href='../S/33.html#L886'>list2</a>             886 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
+</pre>
+</body>
+</html>

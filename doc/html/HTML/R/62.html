@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cbegin</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/26.html#L80'>cbegin</a>             80 CList.cxx          for (auto itr = x.cbegin (); itr != x.cend (); ++itr)</span>
+<span class='curline'><a href='../S/28.html#L143'>cbegin</a>            143 CList2.h               CConstIterator cbegin () const noexcept;</span>
+<span class='curline'><a href='../S/27.html#L45'>cbegin</a>             45 CList2.hxx         for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/27.html#L117'>cbegin</a>            117 CList2.hxx         return std::reverse_iterator&lt;const_iterator&gt; (cbegin ());</span>
+<span class='curline'><a href='../S/33.html#L182'>cbegin</a>            182 Tests.cxx              IZI_ASSERT(list.cbegin () == list.cend ());</span>
+<span class='curline'><a href='../S/33.html#L294'>cbegin</a>            294 Tests.cxx              typename CTestedList&lt;T&gt;::const_iterator cbegin = list.cbegin ();</span>
+<span class='curline'><a href='../S/33.html#L297'>cbegin</a>            297 Tests.cxx              for (; cbegin != cend; ++cbegin)</span>
+<span class='curline'><a href='../S/33.html#L298'>cbegin</a>            298 Tests.cxx                  IZI_ASSERT(t[distance (list.cbegin (), cbegin)] == *cbegin);</span>
+<span class='curline'><a href='../S/33.html#L300'>cbegin</a>            300 Tests.cxx              IZI_ASSERT(cbegin == cend);</span>
+<span class='curline'><a href='../S/33.html#L412'>cbegin</a>            412 Tests.cxx              list.assign (data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L416'>cbegin</a>            416 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L418'>cbegin</a>            418 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L447'>cbegin</a>            447 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L449'>cbegin</a>            449 Tests.cxx                  int i = distance (list.cbegin (), itr);</span>
+<span class='curline'><a href='../S/33.html#L465'>cbegin</a>            465 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L467'>cbegin</a>            467 Tests.cxx                  int i = distance (list.cbegin (), itr);</span>
+<span class='curline'><a href='../S/33.html#L509'>cbegin</a>            509 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L511'>cbegin</a>            511 Tests.cxx                  int i = distance (list.cbegin (), itr);</span>
+<span class='curline'><a href='../S/33.html#L527'>cbegin</a>            527 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L529'>cbegin</a>            529 Tests.cxx                  int i = distance (list.cbegin (), itr);</span>
+<span class='curline'><a href='../S/33.html#L620'>cbegin</a>            620 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L622'>cbegin</a>            622 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L623'>cbegin</a>            623 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L655'>cbegin</a>            655 Tests.cxx              copy (data.cbegin (), data.cbegin () + listSize / 2, list1.begin ());</span>
+<span class='curline'><a href='../S/33.html#L656'>cbegin</a>            656 Tests.cxx              copy (data.cbegin () + listSize / 2, data.cend (), list2.begin ());</span>
+<span class='curline'><a href='../S/33.html#L660'>cbegin</a>            660 Tests.cxx              for (auto itr = list1.cbegin (); itr != list1.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L661'>cbegin</a>            661 Tests.cxx                  IZI_ASSERT(*itr == data[listSize / 2 + distance (list1.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L663'>cbegin</a>            663 Tests.cxx              for (auto itr = list2.cbegin (); itr != list2.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L664'>cbegin</a>            664 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list2.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L675'>cbegin</a>            675 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L680'>cbegin</a>            680 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L681'>cbegin</a>            681 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L686'>cbegin</a>            686 Tests.cxx              IZI_ASSERT(list.cbegin () == list.cend ());</span>
+<span class='curline'><a href='../S/33.html#L696'>cbegin</a>            696 Tests.cxx              IZI_ASSERT(list.cbegin () == list.cend ());</span>
+<span class='curline'><a href='../S/33.html#L713'>cbegin</a>            713 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L722'>cbegin</a>            722 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L736'>cbegin</a>            736 Tests.cxx              list1.insert (list1.begin (), data.cbegin (), data.cbegin () + listSize / 4);</span>
+<span class='curline'><a href='../S/33.html#L737'>cbegin</a>            737 Tests.cxx              list1.insert (list1.end (), data.cbegin () + listSize / 2, data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L738'>cbegin</a>            738 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L760'>cbegin</a>            760 Tests.cxx              list2.insert (list2.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L778'>cbegin</a>            778 Tests.cxx              list1.insert (list1.begin (), data.cbegin (), data.cbegin () + listSize / 4);</span>
+<span class='curline'><a href='../S/33.html#L779'>cbegin</a>            779 Tests.cxx              list1.insert (list1.end (), data.cbegin () + listSize / 2, data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L780'>cbegin</a>            780 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L801'>cbegin</a>            801 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L816'>cbegin</a>            816 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L841'>cbegin</a>            841 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L842'>cbegin</a>            842 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L863'>cbegin</a>            863 Tests.cxx              for (auto itr = list.cbegin (); itr != list.cend (); ++itr)</span>
+<span class='curline'><a href='../S/33.html#L864'>cbegin</a>            864 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/33.html#L888'>cbegin</a>            888 Tests.cxx              for (auto itr = list1.cbegin (); itr != --list1.cend ();)</span>
+<span class='curline'><a href='../S/33.html#L898'>cbegin</a>            898 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L901'>cbegin</a>            901 Tests.cxx              for (auto itr = list.cbegin (); itr != --list.cend ();)</span>
+<span class='curline'><a href='../S/33.html#L911'>cbegin</a>            911 Tests.cxx              list.insert (list.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L917'>cbegin</a>            917 Tests.cxx              for (auto itr = list.cbegin (); itr != --list.cend ();)</span>
+<span class='curline'><a href='../S/33.html#L925'>cbegin</a>            925 Tests.cxx              CTestedList&lt;T&gt; list (data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L928'>cbegin</a>            928 Tests.cxx              for (auto itrList = list.cbegin (), itrData = data.crbegin (); itrList != list.cend () &amp;&amp; itrData != data.crend (); ++itrList, ++itrData)</span>
+</pre>
+</body>
+</html>

@@ -114,7 +114,6 @@ namespace nsSdD
         inline CNodePtr getHead () const noexcept;
 
         /*!
-
             @fn     getTail() const noexcept
             @brief  This function return the tail of the CList.
             @return CNodePtr A pointer to the tail of the Clist.
@@ -124,14 +123,14 @@ namespace nsSdD
         // CIterators
         /*!
             @fn     begin() noexcept
-            @brief  This function construct and return an CIterator to the begin of the CList.
+            @brief  This function construct and return A CIterator to the begin of the CList.
             @return CIterator A CIterator who point to the begin of the CList.
          */
         CIterator begin () noexcept;
 
         /*!
             @fn     end() noexcept
-            @brief  This function construct and return an CIterator to the end of the CList.
+            @brief  This function construct and return A CIterator to the end of the CList.
             @return CIterator A CIterator who point to the end of the CList.
          */
         CIterator end () noexcept;
@@ -276,7 +275,7 @@ namespace nsSdD
            @brief  This function constructs an element with @p args and place it before the @p position.
            @param[in] args The package of arguments you want to use to construct you element.
            @param[in] position The position where you want to insert the new element.
-           @return An CIterator that points to the newly inserted elements.
+           @return A CIterator that points to the newly inserted elements.
         */
         template<typename... Args>
         CIterator emplace (CIterator position, Args &&... args) noexcept;
@@ -285,7 +284,7 @@ namespace nsSdD
            @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the beginning of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
-           @return An CIterator that points to the newly inserted elements.
+           @return A CIterator that points to the newly inserted elements.
         */
         template<typename... Args>
         CIterator emplace_front (Args &&... args) noexcept;
@@ -294,18 +293,42 @@ namespace nsSdD
            @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the end of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
-           @return An CIterator that points to the newly inserted elements.
+           @return A CIterator that points to the newly inserted elements.
         */
         template<typename... Args>
         CIterator emplace_back (Args &&... args) noexcept;
 
         // Insert
+        /*!
+           @fn     insert (CIterator position, const T &val) noexcept
+           @brief  Inserts element @p val before position @p position.
+           @param[in] position The position where you want to insert the new element.
+           @param[in] val A const reference to the element you are adding.
+           @return A CIterator that points to the newly inserted element.
+        */
         CIterator insert (CIterator position, const T &val) noexcept;
 
+        /*!
+           @fn     insert (CIterator position, size_type n, const T &val) noexcept
+           @brief  Inserts @p n elements @p val before position @p position.
+           @param[in] position The position where you want to insert the new element.
+           @param[in] val A const reference to the element you are adding.
+           @param[in] n The amount of times the element will be added
+           @return A CIterator that points to the first of newly inserted elements.
+        */
         CIterator insert (CIterator position, size_type n, const T &val) noexcept;
 
+        /*!
+           @fn     insert (CIterator position, InputIterator begin, InputInterator end) noexcept
+           @brief  Inserts the elements in the range from @p begin to @p end starting from position @p position
+           @param[in] position The position where you want to insert the new element.
+           @param[in] first An iterator to the first element to insert.
+           @param[in] last An iterator to the last element to insert.
+           @details Any kind of InputIterator is accepted...
+           @return A CIterator that points to the first of newly inserted elements.
+        */
         template<class InputIterator>
-        CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
+        CIterator insert (CIterator position, InputIterator first, InputIterator last) noexcept;
 
         // Erase
         /*!

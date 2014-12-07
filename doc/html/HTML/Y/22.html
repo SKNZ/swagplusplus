@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>T</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/26.html#L7'>T</a>                   7 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L8'>T</a>                   8 CList.cxx      CList&lt;T&gt;::CList () noexcept : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/26.html#L9'>T</a>                   9 CList.cxx                                    m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/26.html#L19'>T</a>                  19 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L20'>T</a>                  20 CList.cxx      CList&lt;T&gt;::CList (size_t n) noexcept</span>
+<span class='curline'><a href='../S/26.html#L21'>T</a>                  21 CList.cxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/26.html#L22'>T</a>                  22 CList.cxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/26.html#L28'>T</a>                  28 CList.cxx              CNodePtr ptr = std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr);</span>
+<span class='curline'><a href='../S/26.html#L46'>T</a>                  46 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L47'>T</a>                  47 CList.cxx      CList&lt;T&gt;::CList (size_t n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L48'>T</a>                  48 CList.cxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/26.html#L49'>T</a>                  49 CList.cxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/26.html#L73'>T</a>                  73 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L74'>T</a>                  74 CList.cxx      CList&lt;T&gt;::CList (const CList&lt;T&gt; &amp;x) noexcept</span>
+<span class='curline'><a href='../S/26.html#L75'>T</a>                  75 CList.cxx              : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/26.html#L76'>T</a>                  76 CList.cxx                m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/26.html#L90'>T</a>                  90 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L91'>T</a>                  91 CList.cxx      void CList&lt;T&gt;::assign (unsigned n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L116'>T</a>                 116 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L117'>T</a>                 117 CList.cxx      void CList&lt;T&gt;::emplace_front (T val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L135'>T</a>                 135 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L136'>T</a>                 136 CList.cxx      void CList&lt;T&gt;::pop_front () noexcept</span>
+<span class='curline'><a href='../S/26.html#L154'>T</a>                 154 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L155'>T</a>                 155 CList.cxx      void CList&lt;T&gt;::push_front (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/26.html#L172'>T</a>                 172 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L173'>T</a>                 173 CList.cxx      void CList&lt;T&gt;::push_back (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/26.html#L191'>T</a>                 191 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L192'>T</a>                 192 CList.cxx      void CList&lt;T&gt;::pop_back () noexcept</span>
+<span class='curline'><a href='../S/26.html#L211'>T</a>                 211 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L212'>T</a>                 212 CList.cxx      void CList&lt;T&gt;::emplace (CNodePtr Prec, T val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L226'>T</a>                 226 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L227'>T</a>                 227 CList.cxx      void CList&lt;T&gt;::erase (CNodePtr del) noexcept</span>
+<span class='curline'><a href='../S/26.html#L244'>T</a>                 244 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L245'>T</a>                 245 CList.cxx      void CList&lt;T&gt;::resize (unsigned n, const T &amp;val /*= T()*/) noexcept</span>
+<span class='curline'><a href='../S/26.html#L283'>T</a>                 283 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L284'>T</a>                 284 CList.cxx      void CList&lt;T&gt;::swap (nsSdD::CList &lt;T&gt; &amp;x) noexcept</span>
+<span class='curline'><a href='../S/26.html#L304'>T</a>                 304 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L305'>T</a>                 305 CList.cxx      void CList&lt;T&gt;::clear () noexcept</span>
+<span class='curline'><a href='../S/26.html#L317'>T</a>                 317 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L318'>T</a>                 318 CList.cxx      void CList&lt;T&gt;::remove (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/26.html#L337'>T</a>                 337 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L339'>T</a>                 339 CList.cxx      void CList&lt;T&gt;::remove_if (Predicate pred) noexcept</span>
+<span class='curline'><a href='../S/26.html#L356'>T</a>                 356 CList.cxx      template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/26.html#L357'>T</a>                 357 CList.cxx      void CList&lt;T&gt;::reverse () noexcept</span>
+<span class='curline'><a href='../S/30.html#L7'>T</a>                   7 CList.h            template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/30.html#L24'>T</a>                  24 CList.h                explicit CList (size_t n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L26'>T</a>                  26 CList.h                CList (const CList&lt;T&gt; &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L48'>T</a>                  48 CList.h                T &amp;front () noexcept</span>
+<span class='curline'><a href='../S/30.html#L53'>T</a>                  53 CList.h                T &amp;back () noexcept</span>
+<span class='curline'><a href='../S/30.html#L58'>T</a>                  58 CList.h                void assign (unsigned n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L60'>T</a>                  60 CList.h                void emplace_front (T val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L62'>T</a>                  62 CList.h                void push_back (const T &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L66'>T</a>                  66 CList.h                void push_front (const T &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L70'>T</a>                  70 CList.h                void emplace (CNodePtr Prec, T val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L76'>T</a>                  76 CList.h                void resize (unsigned n, const T &amp;val = T ()) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L80'>T</a>                  80 CList.h                void remove (const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/30.html#L90'>T</a>                  90 CList.h                    T m_info;</span>
+<span class='curline'><a href='../S/30.html#L104'>T</a>                 104 CList.h                    CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
+<span class='curline'><a href='../S/30.html#L114'>T</a>                 114 CList.h                    inline T getInfo () const noexcept</span>
+<span class='curline'><a href='../S/30.html#L119'>T</a>                 119 CList.h                    inline void setInfo (T info) noexcept</span>
+<span class='curline'><a href='../S/28.html#L18'>T</a>                  18 CList2.h           template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/28.html#L73'>T</a>                  73 CList2.h               CList (const CList&lt;T&gt; &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L97'>T</a>                  97 CList2.h               explicit CList (size_t n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L202'>T</a>                 202 CList2.h               inline T front () const noexcept;</span>
+<span class='curline'><a href='../S/28.html#L209'>T</a>                 209 CList2.h               inline T back () const noexcept;</span>
+<span class='curline'><a href='../S/28.html#L219'>T</a>                 219 CList2.h               void assign (unsigned n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L236'>T</a>                 236 CList2.h               void push_back (const T &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L249'>T</a>                 249 CList2.h               void push_front (const T &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L309'>T</a>                 309 CList2.h               CIterator insert (CIterator position, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L319'>T</a>                 319 CList2.h               CIterator insert (CIterator position, size_type n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L368'>T</a>                 368 CList2.h               void resize (unsigned n, const T &amp;val = T ()) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L384'>T</a>                 384 CList2.h               void remove (const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L443'>T</a>                 443 CList2.h               void merge (CList&lt;T&gt;&amp; x) noexcept;</span>
+<span class='curline'><a href='../S/27.html#L8'>T</a>                   8 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L9'>T</a>                   9 CList2.hxx     nsSdD::CList&lt;T&gt;::CList () noexcept</span>
+<span class='curline'><a href='../S/27.html#L10'>T</a>                  10 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/27.html#L11'>T</a>                  11 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/27.html#L16'>T</a>                  16 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L17'>T</a>                  17 CList2.hxx     nsSdD::CList&lt;T&gt;::CList (size_type n) noexcept</span>
+<span class='curline'><a href='../S/27.html#L18'>T</a>                  18 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/27.html#L19'>T</a>                  19 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/27.html#L24'>T</a>                  24 CList2.hxx             push_back (T ());</span>
+<span class='curline'><a href='../S/27.html#L27'>T</a>                  27 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L28'>T</a>                  28 CList2.hxx     nsSdD::CList&lt;T&gt;::CList (size_type n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/27.html#L29'>T</a>                  29 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/27.html#L30'>T</a>                  30 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/27.html#L38'>T</a>                  38 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L39'>T</a>                  39 CList2.hxx     nsSdD::CList&lt;T&gt;::CList (const nsSdD::CList&lt;T&gt; &amp;list) noexcept</span>
+<span class='curline'><a href='../S/27.html#L40'>T</a>                  40 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/27.html#L41'>T</a>                  41 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/27.html#L49'>T</a>                  49 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L51'>T</a>                  51 CList2.hxx     nsSdD::CList&lt;T&gt;::CList (InputIterator begin, InputIterator end) noexcept</span>
+<span class='curline'><a href='../S/27.html#L52'>T</a>                  52 CList2.hxx             : m_head (std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr)),</span>
+<span class='curline'><a href='../S/27.html#L53'>T</a>                  53 CList2.hxx               m_tail (std::make_shared&lt;CNode&gt; (T (), nullptr, m_head))</span>
+<span class='curline'><a href='../S/27.html#L60'>T</a>                  60 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L61'>T</a>                  61 CList2.hxx     typename nsSdD::CList&lt;T&gt;::CNodePtr nsSdD::CList&lt;T&gt;::getHead () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L66'>T</a>                  66 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L67'>T</a>                  67 CList2.hxx     typename nsSdD::CList&lt;T&gt;::CNodePtr nsSdD::CList&lt;T&gt;::getTail () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L72'>T</a>                  72 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L73'>T</a>                  73 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::begin () noexcept</span>
+<span class='curline'><a href='../S/27.html#L78'>T</a>                  78 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L79'>T</a>                  79 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::end () noexcept</span>
+<span class='curline'><a href='../S/27.html#L84'>T</a>                  84 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L85'>T</a>                  85 CList2.hxx     typename nsSdD::CList&lt;T&gt;::const_iterator nsSdD::CList&lt;T&gt;::cbegin () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L90'>T</a>                  90 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L91'>T</a>                  91 CList2.hxx     typename nsSdD::CList&lt;T&gt;::const_iterator nsSdD::CList&lt;T&gt;::cend () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L96'>T</a>                  96 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L97'>T</a>                  97 CList2.hxx     typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rbegin () noexcept</span>
+<span class='curline'><a href='../S/27.html#L102'>T</a>                 102 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L103'>T</a>                 103 CList2.hxx     typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::iterator&gt; nsSdD::CList&lt;T&gt;::rend () noexcept</span>
+<span class='curline'><a href='../S/27.html#L108'>T</a>                 108 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L109'>T</a>                 109 CList2.hxx     typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crbegin () noexcept</span>
+<span class='curline'><a href='../S/27.html#L114'>T</a>                 114 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L115'>T</a>                 115 CList2.hxx     typename std::reverse_iterator&lt;typename nsSdD::CList&lt;T&gt;::const_iterator&gt; nsSdD::CList&lt;T&gt;::crend () noexcept</span>
+<span class='curline'><a href='../S/27.html#L120'>T</a>                 120 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L121'>T</a>                 121 CList2.hxx     bool nsSdD::CList&lt;T&gt;::empty () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L126'>T</a>                 126 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L127'>T</a>                 127 CList2.hxx     typename nsSdD::CList&lt;T&gt;::size_type nsSdD::CList&lt;T&gt;::size () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L132'>T</a>                 132 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L133'>T</a>                 133 CList2.hxx     T nsSdD::CList&lt;T&gt;::front () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L138'>T</a>                 138 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L139'>T</a>                 139 CList2.hxx     T nsSdD::CList&lt;T&gt;::back () const noexcept</span>
+<span class='curline'><a href='../S/27.html#L144'>T</a>                 144 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L146'>T</a>                 146 CList2.hxx     void nsSdD::CList&lt;T&gt;::assign (InputIterator begin, InputIterator last) noexcept</span>
+<span class='curline'><a href='../S/27.html#L153'>T</a>                 153 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L154'>T</a>                 154 CList2.hxx     void nsSdD::CList&lt;T&gt;::assign (unsigned n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/27.html#L161'>T</a>                 161 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L162'>T</a>                 162 CList2.hxx     void nsSdD::CList&lt;T&gt;::pop_front () noexcept</span>
+<span class='curline'><a href='../S/27.html#L171'>T</a>                 171 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L172'>T</a>                 172 CList2.hxx     void nsSdD::CList&lt;T&gt;::push_front (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/27.html#L178'>T</a>                 178 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L179'>T</a>                 179 CList2.hxx     void nsSdD::CList&lt;T&gt;::push_back (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/27.html#L185'>T</a>                 185 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L186'>T</a>                 186 CList2.hxx     void nsSdD::CList&lt;T&gt;::pop_back () noexcept</span>
+<span class='curline'><a href='../S/27.html#L195'>T</a>                 195 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L196'>T</a>                 196 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::erase (nsSdD::CList&lt;T&gt;::iterator del) noexcept</span>
+<span class='curline'><a href='../S/27.html#L204'>T</a>                 204 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L205'>T</a>                 205 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::erase (iterator first, iterator last) noexcept</span>
+<span class='curline'><a href='../S/27.html#L213'>T</a>                 213 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L214'>T</a>                 214 CList2.hxx     void nsSdD::CList&lt;T&gt;::resize (unsigned n, const T &amp;val /*= T()*/) noexcept</span>
+<span class='curline'><a href='../S/27.html#L239'>T</a>                 239 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L240'>T</a>                 240 CList2.hxx     void nsSdD::CList&lt;T&gt;::swap (nsSdD::CList&lt;T&gt; &amp;x) noexcept</span>
+<span class='curline'><a href='../S/27.html#L247'>T</a>                 247 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L248'>T</a>                 248 CList2.hxx     void nsSdD::CList&lt;T&gt;::clear () noexcept</span>
+<span class='curline'><a href='../S/27.html#L256'>T</a>                 256 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L257'>T</a>                 257 CList2.hxx     void nsSdD::CList&lt;T&gt;::remove (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/27.html#L259'>T</a>                 259 CList2.hxx         remove_if ([val] (const T &amp;x)</span>
+<span class='curline'><a href='../S/27.html#L265'>T</a>                 265 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L267'>T</a>                 267 CList2.hxx     void nsSdD::CList&lt;T&gt;::remove_if (Predicate pred) noexcept</span>
+<span class='curline'><a href='../S/27.html#L279'>T</a>                 279 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L280'>T</a>                 280 CList2.hxx     void nsSdD::CList&lt;T&gt;::unique () noexcept</span>
+<span class='curline'><a href='../S/27.html#L282'>T</a>                 282 CList2.hxx         unique ([] (const T &amp;a, const T &amp;b)</span>
+<span class='curline'><a href='../S/27.html#L288'>T</a>                 288 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L290'>T</a>                 290 CList2.hxx     void nsSdD::CList&lt;T&gt;::unique (Compare comp) noexcept</span>
+<span class='curline'><a href='../S/27.html#L300'>T</a>                 300 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L301'>T</a>                 301 CList2.hxx     void nsSdD::CList&lt;T&gt;::reverse () noexcept</span>
+<span class='curline'><a href='../S/27.html#L310'>T</a>                 310 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L311'>T</a>                 311 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, T const &amp;val) noexcept</span>
+<span class='curline'><a href='../S/27.html#L317'>T</a>                 317 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L318'>T</a>                 318 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, size_type n, T const &amp;val) noexcept</span>
+<span class='curline'><a href='../S/27.html#L333'>T</a>                 333 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L335'>T</a>                 335 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, InputIterator begin, InputIterator end) noexcept</span>
+<span class='curline'><a href='../S/27.html#L349'>T</a>                 349 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L351'>T</a>                 351 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace (iterator position, Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L353'>T</a>                 353 CList2.hxx         return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
+<span class='curline'><a href='../S/27.html#L356'>T</a>                 356 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L358'>T</a>                 358 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_front (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L363'>T</a>                 363 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L365'>T</a>                 365 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_back (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L370'>T</a>                 370 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L371'>T</a>                 371 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice (iterator position, typename nsSdD::CList&lt;T&gt;&amp; x) noexcept</span>
+<span class='curline'><a href='../S/27.html#L377'>T</a>                 377 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L378'>T</a>                 378 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice (iterator position, nsSdD::CList&lt;T&gt; &amp;x, iterator i) noexcept</span>
+<span class='curline'><a href='../S/27.html#L384'>T</a>                 384 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L385'>T</a>                 385 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice(iterator position, CList&amp; x, iterator first, iterator last) noexcept</span>
+<span class='curline'><a href='../S/27.html#L391'>T</a>                 391 CList2.hxx     template &lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L392'>T</a>                 392 CList2.hxx     void nsSdD::CList&lt;T&gt;::sort() noexcept</span>
+<span class='curline'><a href='../S/27.html#L394'>T</a>                 394 CList2.hxx         sort ([] (const T &amp;a, const T &amp;b)</span>
+<span class='curline'><a href='../S/27.html#L400'>T</a>                 400 CList2.hxx     template &lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L402'>T</a>                 402 CList2.hxx     void nsSdD::CList&lt;T&gt;::sort(Compare comp) noexcept</span>
+<span class='curline'><a href='../S/27.html#L410'>T</a>                 410 CList2.hxx     template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/27.html#L411'>T</a>                 411 CList2.hxx     void  nsSdD::CList&lt;T&gt;::merge (nsSdD::CList&lt;T&gt;&amp; x) noexcept</span>
+<span class='curline'><a href='../S/29.html#L5'>T</a>                   5 CList2ConstIterator.hxx template&lt;typename T&gt; using CConstIterBase = std::iterator&lt;std::bidirectional_iterator_tag, const T, std::ptrdiff_t, const T *, const T &amp;&gt;;</span>
+<span class='curline'><a href='../S/29.html#L7'>T</a>                   7 CList2ConstIterator.hxx template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/29.html#L8'>T</a>                   8 CList2ConstIterator.hxx struct nsSdD::CList&lt;T&gt;::CConstIterator : public CConstIterBase&lt;T&gt;</span>
+<span class='curline'><a href='../S/29.html#L58'>T</a>                  58 CList2ConstIterator.hxx     typename CConstIterBase&lt;T&gt;::pointer operator-&gt; () const noexcept</span>
+<span class='curline'><a href='../S/29.html#L63'>T</a>                  63 CList2ConstIterator.hxx     typename CConstIterBase&lt;T&gt;::reference operator* () const noexcept</span>
+<span class='curline'><a href='../S/34.html#L5'>T</a>                   5 CList2Iterator.hxx template&lt;typename T&gt; using CIterBase = std::iterator&lt;std::bidirectional_iterator_tag, T&gt;;</span>
+<span class='curline'><a href='../S/34.html#L7'>T</a>                   7 CList2Iterator.hxx template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/34.html#L8'>T</a>                   8 CList2Iterator.hxx struct nsSdD::CList&lt;T&gt;::CIterator : public CIterBase&lt;T&gt;</span>
+<span class='curline'><a href='../S/34.html#L21'>T</a>                  21 CList2Iterator.hxx     CIterator &amp;operator= (const T &amp;info) noexcept</span>
+<span class='curline'><a href='../S/34.html#L63'>T</a>                  63 CList2Iterator.hxx     typename CIterBase&lt;T&gt;::pointer operator-&gt; () noexcept</span>
+<span class='curline'><a href='../S/34.html#L68'>T</a>                  68 CList2Iterator.hxx     typename CIterBase&lt;T&gt;::reference operator* () noexcept</span>
+<span class='curline'><a href='../S/34.html#L73'>T</a>                  73 CList2Iterator.hxx     typename CIterBase&lt;T&gt;::reference operator* () const noexcept</span>
+<span class='curline'><a href='../S/35.html#L5'>T</a>                   5 CList2Node.hxx template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/35.html#L6'>T</a>                   6 CList2Node.hxx class nsSdD::CList&lt;T&gt;::CNode</span>
+<span class='curline'><a href='../S/35.html#L13'>T</a>                  13 CList2Node.hxx     T m_info;</span>
+<span class='curline'><a href='../S/35.html#L49'>T</a>                  49 CList2Node.hxx     explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept</span>
+<span class='curline'><a href='../S/35.html#L67'>T</a>                  67 CList2Node.hxx     inline T &amp;getInfo () noexcept</span>
+<span class='curline'><a href='../S/35.html#L77'>T</a>                  77 CList2Node.hxx     inline void setInfo (T info) noexcept</span>
+<span class='curline'><a href='../S/35.html#L135'>T</a>                 135 CList2Node.hxx     inline CNodePtr addBefore (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/35.html#L148'>T</a>                 148 CList2Node.hxx     inline CNodePtr addAfter (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/33.html#L17'>T</a>                  17 Tests.cxx          template&lt;typename T&gt; using CCollection = vector&lt;T&gt;;</span>
+<span class='curline'><a href='../S/33.html#L19'>T</a>                  19 Tests.cxx          template&lt;typename T&gt; using CTestedList = CList&lt;T&gt;;</span>
+<span class='curline'><a href='../S/33.html#L83'>T</a>                  83 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L87'>T</a>                  87 Tests.cxx              CCollection&lt;T&gt; operator() (const int /*valueCount*/ = 0)</span>
+<span class='curline'><a href='../S/33.html#L90'>T</a>                  90 Tests.cxx                  throw runtime_error (string ("Value provider for type ") + typeid (T).name () + " does not exist.");</span>
+<span class='curline'><a href='../S/33.html#L94'>T</a>                  94 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L95'>T</a>                  95 Tests.cxx          class CValueProvider&lt;T *&gt;</span>
+<span class='curline'><a href='../S/33.html#L98'>T</a>                  98 Tests.cxx              CCollection&lt;T *&gt; operator() (const int valueCount = 0)</span>
+<span class='curline'><a href='../S/33.html#L100'>T</a>                 100 Tests.cxx                  CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
+<span class='curline'><a href='../S/33.html#L101'>T</a>                 101 Tests.cxx                  CCollection&lt;T *&gt; ptrArray;</span>
+<span class='curline'><a href='../S/33.html#L104'>T</a>                 104 Tests.cxx                  for (T x : array)</span>
+<span class='curline'><a href='../S/33.html#L105'>T</a>                 105 Tests.cxx                      ptrArray.push_back (new T (x));</span>
+<span class='curline'><a href='../S/33.html#L111'>T</a>                 111 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L112'>T</a>                 112 Tests.cxx          class CValueProvider&lt;shared_ptr&lt;T&gt;&gt;</span>
+<span class='curline'><a href='../S/33.html#L115'>T</a>                 115 Tests.cxx              CCollection&lt;shared_ptr&lt;T&gt;&gt; operator() (const int valueCount = 0)</span>
+<span class='curline'><a href='../S/33.html#L117'>T</a>                 117 Tests.cxx                  CCollection&lt;T&gt; array = CValueProvider&lt;T&gt; () (valueCount);</span>
+<span class='curline'><a href='../S/33.html#L118'>T</a>                 118 Tests.cxx                  CCollection&lt;shared_ptr&lt;T&gt;&gt; ptrArray;</span>
+<span class='curline'><a href='../S/33.html#L121'>T</a>                 121 Tests.cxx                  for (T x : array)</span>
+<span class='curline'><a href='../S/33.html#L122'>T</a>                 122 Tests.cxx                      ptrArray.push_back (make_shared&lt;T&gt; (x));</span>
+<span class='curline'><a href='../S/33.html#L174'>T</a>                 174 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L177'>T</a>                 177 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L185'>T</a>                 185 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L188'>T</a>                 188 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10);</span>
+<span class='curline'><a href='../S/33.html#L190'>T</a>                 190 Tests.cxx              CTestedList&lt;T&gt; list (listSize);</span>
+<span class='curline'><a href='../S/33.html#L196'>T</a>                 196 Tests.cxx              for (T x : list)</span>
+<span class='curline'><a href='../S/33.html#L197'>T</a>                 197 Tests.cxx                  IZI_ASSERT(x == T ());</span>
+<span class='curline'><a href='../S/33.html#L200'>T</a>                 200 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L201'>T</a>                 201 Tests.cxx          void CreateSizeListWithValue (const T &amp;value) noexcept</span>
+<span class='curline'><a href='../S/33.html#L203'>T</a>                 203 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10);</span>
+<span class='curline'><a href='../S/33.html#L205'>T</a>                 205 Tests.cxx              CTestedList&lt;T&gt; list (listSize, value);</span>
+<span class='curline'><a href='../S/33.html#L211'>T</a>                 211 Tests.cxx              for (T x : list)</span>
+<span class='curline'><a href='../S/33.html#L215'>T</a>                 215 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L218'>T</a>                 218 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10000);</span>
+<span class='curline'><a href='../S/33.html#L220'>T</a>                 220 Tests.cxx              CTestedList&lt;T&gt; referenceList;</span>
+<span class='curline'><a href='../S/33.html#L221'>T</a>                 221 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (listSize))</span>
+<span class='curline'><a href='../S/33.html#L224'>T</a>                 224 Tests.cxx              CTestedList&lt;T&gt; copiedList (referenceList);</span>
+<span class='curline'><a href='../S/33.html#L236'>T</a>                 236 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L239'>T</a>                 239 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10000);</span>
+<span class='curline'><a href='../S/33.html#L241'>T</a>                 241 Tests.cxx              CTestedList&lt;T&gt; referenceList;</span>
+<span class='curline'><a href='../S/33.html#L242'>T</a>                 242 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (listSize))</span>
+<span class='curline'><a href='../S/33.html#L245'>T</a>                 245 Tests.cxx              CTestedList&lt;T&gt; copiedList = referenceList;</span>
+<span class='curline'><a href='../S/33.html#L257'>T</a>                 257 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L260'>T</a>                 260 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
+<span class='curline'><a href='../S/33.html#L262'>T</a>                 262 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L263'>T</a>                 263 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L264'>T</a>                 264 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L265'>T</a>                 265 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
+<span class='curline'><a href='../S/33.html#L267'>T</a>                 267 Tests.cxx              for (T x : originalData)</span>
+<span class='curline'><a href='../S/33.html#L270'>T</a>                 270 Tests.cxx              typename CTestedList&lt;T&gt;::iterator begin = list.begin ();</span>
+<span class='curline'><a href='../S/33.html#L271'>T</a>                 271 Tests.cxx              typename CTestedList&lt;T&gt;::iterator end = list.end ();</span>
+<span class='curline'><a href='../S/33.html#L284'>T</a>                 284 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L287'>T</a>                 287 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
+<span class='curline'><a href='../S/33.html#L289'>T</a>                 289 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L290'>T</a>                 290 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L291'>T</a>                 291 Tests.cxx              for (T x : t)</span>
+<span class='curline'><a href='../S/33.html#L294'>T</a>                 294 Tests.cxx              typename CTestedList&lt;T&gt;::const_iterator cbegin = list.cbegin ();</span>
+<span class='curline'><a href='../S/33.html#L295'>T</a>                 295 Tests.cxx              typename CTestedList&lt;T&gt;::const_iterator cend = list.cend ();</span>
+<span class='curline'><a href='../S/33.html#L303'>T</a>                 303 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L306'>T</a>                 306 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
+<span class='curline'><a href='../S/33.html#L308'>T</a>                 308 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L309'>T</a>                 309 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L310'>T</a>                 310 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L311'>T</a>                 311 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
+<span class='curline'><a href='../S/33.html#L313'>T</a>                 313 Tests.cxx              for (T x : originalData)</span>
+<span class='curline'><a href='../S/33.html#L319'>T</a>                 319 Tests.cxx              typename CTestedList&lt;T&gt;::reverse_iterator rbegin = list.rbegin ();</span>
+<span class='curline'><a href='../S/33.html#L320'>T</a>                 320 Tests.cxx              typename CTestedList&lt;T&gt;::reverse_iterator rend = list.rend ();</span>
+<span class='curline'><a href='../S/33.html#L333'>T</a>                 333 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L336'>T</a>                 336 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
+<span class='curline'><a href='../S/33.html#L338'>T</a>                 338 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L339'>T</a>                 339 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L340'>T</a>                 340 Tests.cxx              for (T x : t)</span>
+<span class='curline'><a href='../S/33.html#L345'>T</a>                 345 Tests.cxx              typename CTestedList&lt;T&gt;::const_reverse_iterator crbegin = list.crbegin ();</span>
+<span class='curline'><a href='../S/33.html#L346'>T</a>                 346 Tests.cxx              typename CTestedList&lt;T&gt;::const_reverse_iterator crend = list.crend ();</span>
+<span class='curline'><a href='../S/33.html#L354'>T</a>                 354 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L357'>T</a>                 357 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L360'>T</a>                 360 Tests.cxx              list.push_back (T ());</span>
+<span class='curline'><a href='../S/33.html#L366'>T</a>                 366 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L369'>T</a>                 369 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L373'>T</a>                 373 Tests.cxx              list.push_front (T ());</span>
+<span class='curline'><a href='../S/33.html#L380'>T</a>                 380 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L383'>T</a>                 383 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L384'>T</a>                 384 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L386'>T</a>                 386 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L392'>T</a>                 392 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L395'>T</a>                 395 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L396'>T</a>                 396 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L398'>T</a>                 398 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L404'>T</a>                 404 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L409'>T</a>                 409 Tests.cxx              CTestedList&lt;T&gt; list (2 * listSize);</span>
+<span class='curline'><a href='../S/33.html#L410'>T</a>                 410 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L423'>T</a>                 423 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L424'>T</a>                 424 Tests.cxx          void AssignByValue (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/33.html#L428'>T</a>                 428 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L432'>T</a>                 432 Tests.cxx              for (T val : list)</span>
+<span class='curline'><a href='../S/33.html#L436'>T</a>                 436 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L439'>T</a>                 439 Tests.cxx              CTestedList&lt;pair&lt;T, T&gt;&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L440'>T</a>                 440 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L442'>T</a>                 442 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L456'>T</a>                 456 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L459'>T</a>                 459 Tests.cxx              CTestedList&lt;pair&lt;T, T&gt;&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L460'>T</a>                 460 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L462'>T</a>                 462 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L474'>T</a>                 474 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L477'>T</a>                 477 Tests.cxx              CTestedList&lt;pair&lt;T, T&gt;&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L478'>T</a>                 478 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
+<span class='curline'><a href='../S/33.html#L498'>T</a>                 498 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L501'>T</a>                 501 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L502'>T</a>                 502 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L504'>T</a>                 504 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L518'>T</a>                 518 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L521'>T</a>                 521 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L522'>T</a>                 522 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L524'>T</a>                 524 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L536'>T</a>                 536 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L539'>T</a>                 539 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L540'>T</a>                 540 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L542'>T</a>                 542 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L554'>T</a>                 554 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L557'>T</a>                 557 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L558'>T</a>                 558 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L560'>T</a>                 560 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L574'>T</a>                 574 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L577'>T</a>                 577 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L578'>T</a>                 578 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (5);</span>
+<span class='curline'><a href='../S/33.html#L600'>T</a>                 600 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L601'>T</a>                 601 Tests.cxx          void InsertByValue (const T &amp;x) noexcept</span>
+<span class='curline'><a href='../S/33.html#L603'>T</a>                 603 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = rand (0, 20);</span>
+<span class='curline'><a href='../S/33.html#L604'>T</a>                 604 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L608'>T</a>                 608 Tests.cxx              for (T val : list)</span>
+<span class='curline'><a href='../S/33.html#L614'>T</a>                 614 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L617'>T</a>                 617 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L618'>T</a>                 618 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L628'>T</a>                 628 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L631'>T</a>                 631 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L632'>T</a>                 632 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L634'>T</a>                 634 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L647'>T</a>                 647 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L652'>T</a>                 652 Tests.cxx              CTestedList&lt;T&gt; list1 (listSize / 2), list2 (listSize / 2);</span>
+<span class='curline'><a href='../S/33.html#L653'>T</a>                 653 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L667'>T</a>                 667 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L672'>T</a>                 672 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L673'>T</a>                 673 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L690'>T</a>                 690 Tests.cxx              for (T x : list)</span>
+<span class='curline'><a href='../S/33.html#L691'>T</a>                 691 Tests.cxx                  IZI_ASSERT(x == T ());</span>
+<span class='curline'><a href='../S/33.html#L699'>T</a>                 699 Tests.cxx              for (T x : list)</span>
+<span class='curline'><a href='../S/33.html#L704'>T</a>                 704 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L707'>T</a>                 707 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L708'>T</a>                 708 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L729'>T</a>                 729 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L733'>T</a>                 733 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L734'>T</a>                 734 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L753'>T</a>                 753 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L757'>T</a>                 757 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L758'>T</a>                 758 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L771'>T</a>                 771 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L775'>T</a>                 775 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L776'>T</a>                 776 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
+<span class='curline'><a href='../S/33.html#L795'>T</a>                 795 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L798'>T</a>                 798 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L799'>T</a>                 799 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L804'>T</a>                 804 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L810'>T</a>                 810 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L813'>T</a>                 813 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L814'>T</a>                 814 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L819'>T</a>                 819 Tests.cxx              list.remove_if ([data] (const T &amp;x)</span>
+<span class='curline'><a href='../S/33.html#L827'>T</a>                 827 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L830'>T</a>                 830 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L831'>T</a>                 831 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L834'>T</a>                 834 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L845'>T</a>                 845 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L848'>T</a>                 848 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L849'>T</a>                 849 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L853'>T</a>                 853 Tests.cxx              for (T x : data)</span>
+<span class='curline'><a href='../S/33.html#L857'>T</a>                 857 Tests.cxx              list.unique ([] (const T &amp;a, const T &amp;b)</span>
+<span class='curline'><a href='../S/33.html#L867'>T</a>                 867 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L870'>T</a>                 870 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/33.html#L871'>T</a>                 871 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L892'>T</a>                 892 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L895'>T</a>                 895 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L896'>T</a>                 896 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L905'>T</a>                 905 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L908'>T</a>                 908 Tests.cxx              CTestedList&lt;T&gt; list;</span>
+<span class='curline'><a href='../S/33.html#L909'>T</a>                 909 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (20);</span>
+<span class='curline'><a href='../S/33.html#L912'>T</a>                 912 Tests.cxx              list.sort ([] (const T &amp;a, const T &amp;b)</span>
+<span class='curline'><a href='../S/33.html#L921'>T</a>                 921 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L924'>T</a>                 924 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () ();</span>
+<span class='curline'><a href='../S/33.html#L925'>T</a>                 925 Tests.cxx              CTestedList&lt;T&gt; list (data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/33.html#L932'>T</a>                 932 Tests.cxx          template&lt;typename T&gt;</span>
+<span class='curline'><a href='../S/33.html#L935'>T</a>                 935 Tests.cxx              IZI_SUBTEST(CreateEmptyList&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L936'>T</a>                 936 Tests.cxx              IZI_SUBTEST(CreateSizedList&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L938'>T</a>                 938 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (5))</span>
+<span class='curline'><a href='../S/33.html#L939'>T</a>                 939 Tests.cxx              IZI_SUBTEST(CreateSizeListWithValue&lt;T&gt; (x));</span>
+<span class='curline'><a href='../S/33.html#L941'>T</a>                 941 Tests.cxx              IZI_SUBTEST(CreateListByExplicitCopy&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L942'>T</a>                 942 Tests.cxx              IZI_SUBTEST(CreateListByImplicitCopy&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L944'>T</a>                 944 Tests.cxx              IZI_SUBTEST(Iterate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L945'>T</a>                 945 Tests.cxx              IZI_SUBTEST(ConstIterate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L946'>T</a>                 946 Tests.cxx              IZI_SUBTEST(ReverseIterate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L947'>T</a>                 947 Tests.cxx              IZI_SUBTEST(ReverseConstIterate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L949'>T</a>                 949 Tests.cxx              IZI_SUBTEST(IsEmpty&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L950'>T</a>                 950 Tests.cxx              IZI_SUBTEST(Size&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L952'>T</a>                 952 Tests.cxx              IZI_SUBTEST(Front&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L953'>T</a>                 953 Tests.cxx              IZI_SUBTEST(Back&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L955'>T</a>                 955 Tests.cxx              IZI_SUBTEST(AssignByIterator&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L956'>T</a>                 956 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (5))</span>
+<span class='curline'><a href='../S/33.html#L959'>T</a>                 959 Tests.cxx              IZI_SUBTEST(EmplaceFront&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L960'>T</a>                 960 Tests.cxx              IZI_SUBTEST(EmplaceBack&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L961'>T</a>                 961 Tests.cxx              IZI_SUBTEST(Emplace&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L963'>T</a>                 963 Tests.cxx              IZI_SUBTEST(PushFront&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L964'>T</a>                 964 Tests.cxx              IZI_SUBTEST(PushBack&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L966'>T</a>                 966 Tests.cxx              IZI_SUBTEST(PopFront&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L967'>T</a>                 967 Tests.cxx              IZI_SUBTEST(PopBack&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L969'>T</a>                 969 Tests.cxx              IZI_SUBTEST(Insert&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L970'>T</a>                 970 Tests.cxx              IZI_SUBTEST(InsertByIterator&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L972'>T</a>                 972 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (5))</span>
+<span class='curline'><a href='../S/33.html#L973'>T</a>                 973 Tests.cxx              IZI_SUBTEST(InsertByValue&lt;T&gt; (x));</span>
+<span class='curline'><a href='../S/33.html#L975'>T</a>                 975 Tests.cxx              IZI_SUBTEST(Erase&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L977'>T</a>                 977 Tests.cxx              IZI_SUBTEST(Swap&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L979'>T</a>                 979 Tests.cxx              IZI_SUBTEST(Resize&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L981'>T</a>                 981 Tests.cxx              IZI_SUBTEST(Clear&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L983'>T</a>                 983 Tests.cxx              IZI_SUBTEST(SpliceList&lt;T&gt;());</span>
+<span class='curline'><a href='../S/33.html#L984'>T</a>                 984 Tests.cxx              IZI_SUBTEST(SpliceOne&lt;T&gt;());</span>
+<span class='curline'><a href='../S/33.html#L985'>T</a>                 985 Tests.cxx              IZI_SUBTEST(SpliceRange&lt;T&gt;());</span>
+<span class='curline'><a href='../S/33.html#L987'>T</a>                 987 Tests.cxx              IZI_SUBTEST(Remove&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L988'>T</a>                 988 Tests.cxx              IZI_SUBTEST(RemoveIf&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L990'>T</a>                 990 Tests.cxx              IZI_SUBTEST(Unique&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L991'>T</a>                 991 Tests.cxx              IZI_SUBTEST(UniqueWithPredicate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L993'>T</a>                 993 Tests.cxx              IZI_SUBTEST(Merge&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L995'>T</a>                 995 Tests.cxx              IZI_SUBTEST(Sort&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L996'>T</a>                 996 Tests.cxx              IZI_SUBTEST(SortWithPredicate&lt;T&gt; ());</span>
+<span class='curline'><a href='../S/33.html#L998'>T</a>                 998 Tests.cxx              IZI_SUBTEST(Reverse&lt;T&gt; ());</span>
+</pre>
+</body>
+</html>

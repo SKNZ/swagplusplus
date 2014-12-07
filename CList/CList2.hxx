@@ -143,7 +143,7 @@ T nsSdD::CList<T>::back () const noexcept
 
 template<typename T>
 template<class InputIterator>
-void nsSdD::CList<T>::assign (InputIterator begin, InputIterator last)
+void nsSdD::CList<T>::assign (InputIterator begin, InputIterator last) noexcept
 {
     clear ();
     for (; begin != last; ++begin)
@@ -348,21 +348,21 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (iterator position, I
 
 template<typename T>
 template<typename... Args>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (iterator position, Args &&... args)
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (iterator position, Args &&... args) noexcept
 {
     return insert (position, T (std::forward<Args> (args)...));
 }
 
 template<typename T>
 template<typename... Args>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_front (Args &&... args)
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_front (Args &&... args) noexcept
 {
     return emplace (begin (), std::forward<Args> (args)...);
 }
 
 template<typename T>
 template<typename... Args>
-typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... args)
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... args) noexcept
 {
     return emplace (end (), std::forward<Args> (args)...);
 }

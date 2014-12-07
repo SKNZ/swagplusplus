@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>args</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/28.html#L281'>args</a>              281 CList2.h               CIterator emplace (CIterator position, Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L290'>args</a>              290 CList2.h               CIterator emplace_front (Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L299'>args</a>              299 CList2.h               CIterator emplace_back (Args &amp;&amp;... args) noexcept;</span>
+<span class='curline'><a href='../S/27.html#L351'>args</a>              351 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace (iterator position, Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L353'>args</a>              353 CList2.hxx         return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
+<span class='curline'><a href='../S/27.html#L358'>args</a>              358 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_front (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L360'>args</a>              360 CList2.hxx         return emplace (begin (), std::forward&lt;Args&gt; (args)...);</span>
+<span class='curline'><a href='../S/27.html#L365'>args</a>              365 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace_back (Args &amp;&amp;... args) noexcept</span>
+<span class='curline'><a href='../S/27.html#L367'>args</a>              367 CList2.hxx         return emplace (end (), std::forward&lt;Args&gt; (args)...);</span>
+</pre>
+</body>
+</html>
