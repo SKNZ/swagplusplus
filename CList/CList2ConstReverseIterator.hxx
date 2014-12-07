@@ -6,10 +6,10 @@ template<typename T>
 class nsSdD::CList<T>::CConstReverseIterator
 {
 
-  private:
+private:
     CConstIterator it;
 
-  public:
+public:
 
     typedef std::forward_iterator_tag iterator_category;
     typedef T value_type;

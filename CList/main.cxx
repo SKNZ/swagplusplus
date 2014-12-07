@@ -3,8 +3,8 @@
 
 using namespace nsTests;
 
-int main()
+int main ()
 {
-    CTests::RunTests();
+    CTests::RunTests ();
     return 0;
 }

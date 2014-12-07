@@ -6,10 +6,10 @@ namespace nsTests
 {
     class CTests
     {
-      public:
-        static void RunTests() noexcept;
+    public:
+        static void RunTests () noexcept;
 
-      private:
-        CTests() = delete;
+    private:
+        CTests () = delete;
     };
 }

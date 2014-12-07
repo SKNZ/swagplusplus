@@ -5,10 +5,10 @@
 template<typename T>
 class nsSdD::CList<T>::CNode : public std::enable_shared_from_this<nsSdD::CList<T>::CNode>
 {
-  public:
+public:
     T m_info;
 
-  private:
+private:
     CNodePtr m_next;
     CNodePtr m_previous;
 
@@ -21,7 +21,7 @@ class nsSdD::CList<T>::CNode : public std::enable_shared_from_this<nsSdD::CList<
         // @todo Should this really be empty ?
     }
 
-  public:
+public:
     CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
             : m_info (info), m_next (next),
               m_previous (previous)

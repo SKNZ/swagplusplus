@@ -5,10 +5,10 @@
 template<typename T>
 class nsSdD::CList<T>::CReverseIterator
 {
-  private:
+private:
     CIterator it;
 
-  public:
+public:
     typedef std::bidirectional_iterator_tag iterator_category;
     typedef T value_type;
     typedef int difference_type;

@@ -5,10 +5,10 @@
 template<typename T>
 class nsSdD::CList<T>::CIterator
 {
-  private:
+private:
     CNodePtr node;
 
-  public:
+public:
     typedef std::bidirectional_iterator_tag iterator_category;
     typedef T value_type;
     typedef int difference_type;
@@ -74,12 +74,11 @@ class nsSdD::CList<T>::CIterator
 
     reference operator* () const noexcept
     {
-        return node->m_info;
+        return node->getInfo ();
     }
 
     CNodePtr getNode () noexcept
     {
         return node;
     }
-
 };

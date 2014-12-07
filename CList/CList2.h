@@ -8,67 +8,70 @@ namespace nsSdD
     template<typename T>
     class CList
     {
-      // Types
-      private:
-      class CIterator;
+        // Types
+    private:
+        class CIterator;
 
-      class CConstIterator;
+        class CConstIterator;
 
-      class CReverseIterator;
+        class CReverseIterator;
 
-      class CConstReverseIterator;
+        class CConstReverseIterator;
 
-      class CNode;
+        class CNode;
 
-      typedef std::shared_ptr<CNode> CNodePtr;
+        typedef std::shared_ptr<CNode> CNodePtr;
 
-      public:
+    public:
         typedef size_t size_type;
-      typedef CIterator iterator;
-      typedef CConstIterator const_iterator;
-      typedef CReverseIterator reverse_iterator;
-      typedef CConstReverseIterator const_reverse_iterator;
+        typedef CIterator iterator;
+        typedef CConstIterator const_iterator;
+        typedef CReverseIterator reverse_iterator;
+        typedef CConstReverseIterator const_reverse_iterator;
 
-      public:
-      // Constructors
+        // Constructors
         CList (const CList<T> &x) noexcept;
-        explicit CList() noexcept;
-        explicit CList(size_t n) noexcept;
-        explicit CList(size_t n, const T &val) noexcept;
+
+        explicit CList () noexcept;
+
+        explicit CList (size_t n) noexcept;
+
+        explicit CList (size_t n, const T &val) noexcept;
+
         template<class InputIterator>
         explicit CList (InputIterator begin, InputIterator end) noexcept;
 
-      // V1
-      inline CNodePtr getHead () const noexcept;
+        // V1
+        inline CNodePtr getHead () const noexcept;
 
-      inline CNodePtr getTail () const noexcept;
+        inline CNodePtr getTail () const noexcept;
 
         // Iterators
         CIterator begin () noexcept;
 
-      CIterator end () noexcept;
+        CIterator end () noexcept;
 
-      CConstIterator cbegin () const noexcept;
+        CConstIterator cbegin () const noexcept;
 
-      CConstIterator cend () const noexcept;
+        CConstIterator cend () const noexcept;
 
-      CReverseIterator rbegin () noexcept;
+        CReverseIterator rbegin () noexcept;
 
-      CReverseIterator rend () noexcept;
+        CReverseIterator rend () noexcept;
 
-      CConstReverseIterator crbegin () const noexcept;
+        CConstReverseIterator crbegin () const noexcept;
 
-      CConstReverseIterator crend () const noexcept;
+        CConstReverseIterator crend () const noexcept;
 
         // Capacity
         inline bool empty () const noexcept;
 
-      inline size_type size () const noexcept;
+        inline size_type size () const noexcept;
 
         // Element access
         inline T front () const noexcept;
 
-      inline T back () const noexcept;
+        inline T back () const noexcept;
 
         // Modifiers
         // Assign
@@ -77,48 +80,53 @@ namespace nsSdD
         template<class InputIterator>
         void assign (InputIterator begin, InputIterator last);
 
-      // Push/pop
+        // Push/pop
         void push_back (const T &x) noexcept;
-        void pop_back() noexcept;
+
+        void pop_back () noexcept;
+
         void push_front (const T &x) noexcept;
-        void pop_front() noexcept;
 
-      // Emplace
-      template<typename... Args>
-      CIterator emplace (CIterator position, Args &&... args);
+        void pop_front () noexcept;
 
-      // Insert
-      CIterator insert (CIterator position, const T &val) noexcept;
+        // Emplace
+        template<typename... Args>
+        CIterator emplace (CIterator position, Args &&... args);
 
-      CIterator insert (CIterator position, size_type n, const T &val) noexcept;
+        // Insert
+        CIterator insert (CIterator position, const T &val) noexcept;
+
+        CIterator insert (CIterator position, size_type n, const T &val) noexcept;
+
         template<class InputIterator>
         CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
 
-      // Erase
-      CIterator erase (CIterator del) noexcept;
+        // Erase
+        CIterator erase (CIterator del) noexcept;
 
-      // Swap
+        // Swap
         void swap (CList &x) noexcept;
 
-      // Resize
+        // Resize
         void resize (unsigned n, const T &val = T ()) noexcept;
 
-      // Clear
-        void clear() noexcept;
+        // Clear
+        void clear () noexcept;
 
         // Operations
         // Remove
         void remove (const T &val) noexcept;
+
         template<class Predicate>
-        void remove_if(Predicate pred) noexcept;
+        void remove_if (Predicate pred) noexcept;
 
-      // Reverse
-        void reverse() noexcept;
+        // Reverse
+        void reverse () noexcept;
 
-      private:
-      size_type m_size = 0;
-      CNodePtr m_head = nullptr;
-      CNodePtr m_tail = nullptr;
+    private:
+        size_type m_size = 0;
+        CNodePtr m_head = nullptr;
+        CNodePtr m_tail = nullptr;
     };
 }
 
