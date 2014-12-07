@@ -1,6 +1,6 @@
 #include "Tests.h"
 #include "IziAssert.h"
-#include "CList2.h"
+#include "CList.h"
 #include "CTestClass.h"
 #include "CValueProvider.h"
 

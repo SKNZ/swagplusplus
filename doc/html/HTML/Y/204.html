@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>node</title>
+<title>newNode</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,30 +9,14 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/29.html#L11'>node</a>               11 CList2ConstIterator.hxx     CNodePtr node;</span>
-<span class='curline'><a href='../S/29.html#L14'>node</a>               14 CList2ConstIterator.hxx     CConstIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
-<span class='curline'><a href='../S/29.html#L24'>node</a>               24 CList2ConstIterator.hxx         return node == other.node;</span>
-<span class='curline'><a href='../S/29.html#L29'>node</a>               29 CList2ConstIterator.hxx         return node != other.node;</span>
-<span class='curline'><a href='../S/29.html#L34'>node</a>               34 CList2ConstIterator.hxx         node = node-&gt;getNext ();</span>
-<span class='curline'><a href='../S/29.html#L40'>node</a>               40 CList2ConstIterator.hxx         node = node-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/29.html#L47'>node</a>               47 CList2ConstIterator.hxx         node = node-&gt;getNext ();</span>
-<span class='curline'><a href='../S/29.html#L54'>node</a>               54 CList2ConstIterator.hxx         node = node-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/29.html#L60'>node</a>               60 CList2ConstIterator.hxx         return &amp;node-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/29.html#L65'>node</a>               65 CList2ConstIterator.hxx         return node-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/29.html#L70'>node</a>               70 CList2ConstIterator.hxx         return node;</span>
-<span class='curline'><a href='../S/34.html#L11'>node</a>               11 CList2Iterator.hxx     CNodePtr node;</span>
-<span class='curline'><a href='../S/34.html#L14'>node</a>               14 CList2Iterator.hxx     CIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
-<span class='curline'><a href='../S/34.html#L23'>node</a>               23 CList2Iterator.hxx         node-&gt;setInfo (info);</span>
-<span class='curline'><a href='../S/34.html#L29'>node</a>               29 CList2Iterator.hxx         return node == other.node;</span>
-<span class='curline'><a href='../S/34.html#L34'>node</a>               34 CList2Iterator.hxx         return node != other.node;</span>
-<span class='curline'><a href='../S/34.html#L39'>node</a>               39 CList2Iterator.hxx         node = node-&gt;getNext ();</span>
-<span class='curline'><a href='../S/34.html#L45'>node</a>               45 CList2Iterator.hxx         node = node-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/34.html#L52'>node</a>               52 CList2Iterator.hxx         node = node-&gt;getNext ();</span>
-<span class='curline'><a href='../S/34.html#L59'>node</a>               59 CList2Iterator.hxx         node = node-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/34.html#L65'>node</a>               65 CList2Iterator.hxx         return &amp;node-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/34.html#L70'>node</a>               70 CList2Iterator.hxx         return node-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/34.html#L75'>node</a>               75 CList2Iterator.hxx         return node-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/34.html#L80'>node</a>               80 CList2Iterator.hxx         return node;</span>
+<span class='curline'><a href='../S/34.html#L147'>newNode</a>           147 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/34.html#L148'>newNode</a>           148 CList2Node.hxx         m_previous-&gt;m_next = newNode;</span>
+<span class='curline'><a href='../S/34.html#L149'>newNode</a>           149 CList2Node.hxx         m_previous = newNode;</span>
+<span class='curline'><a href='../S/34.html#L150'>newNode</a>           150 CList2Node.hxx         return newNode;</span>
+<span class='curline'><a href='../S/34.html#L160'>newNode</a>           160 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/34.html#L161'>newNode</a>           161 CList2Node.hxx         m_next-&gt;m_previous = newNode;</span>
+<span class='curline'><a href='../S/34.html#L162'>newNode</a>           162 CList2Node.hxx         m_next = newNode;</span>
+<span class='curline'><a href='../S/34.html#L163'>newNode</a>           163 CList2Node.hxx         return newNode;</span>
 </pre>
 </body>
 </html>

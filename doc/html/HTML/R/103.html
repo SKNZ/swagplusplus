@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>setNext</title>
+<title>swap</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,49 +9,14 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/26.html#L11'>setNext</a>            11 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L24'>setNext</a>            24 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L30'>setNext</a>            30 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L33'>setNext</a>            33 CList.cxx              m_tail-&gt;getPrevious ()-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L51'>setNext</a>            51 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L58'>setNext</a>            58 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L61'>setNext</a>            61 CList.cxx              LastCreated-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L78'>setNext</a>            78 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L100'>setNext</a>           100 CList.cxx                  ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L103'>setNext</a>           103 CList.cxx                  LastCreated-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L122'>setNext</a>           122 CList.cxx          ptr-&gt;setNext (m_head-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L126'>setNext</a>           126 CList.cxx          m_head-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L139'>setNext</a>           139 CList.cxx          m_head-&gt;setNext (del-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L144'>setNext</a>           144 CList.cxx          del-&gt;setNext (nullptr);</span>
-<span class='curline'><a href='../S/26.html#L159'>setNext</a>           159 CList.cxx          add-&gt;setNext (m_head-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L162'>setNext</a>           162 CList.cxx          m_head-&gt;setNext (add);</span>
-<span class='curline'><a href='../S/26.html#L178'>setNext</a>           178 CList.cxx          add-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L181'>setNext</a>           181 CList.cxx          LastCreated-&gt;setNext (add);</span>
-<span class='curline'><a href='../S/26.html#L197'>setNext</a>           197 CList.cxx          del-&gt;getPrevious ()-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L200'>setNext</a>           200 CList.cxx          del-&gt;setNext (nullptr);</span>
-<span class='curline'><a href='../S/26.html#L217'>setNext</a>           217 CList.cxx          Prec-&gt;setNext (add);</span>
-<span class='curline'><a href='../S/26.html#L230'>setNext</a>           230 CList.cxx          del-&gt;getPrevious ()-&gt;setNext (del-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L233'>setNext</a>           233 CList.cxx          del-&gt;setNext (nullptr);</span>
-<span class='curline'><a href='../S/26.html#L256'>setNext</a>           256 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L271'>setNext</a>           271 CList.cxx              ptr-&gt;setNext (add);</span>
-<span class='curline'><a href='../S/26.html#L287'>setNext</a>           287 CList.cxx          m_head-&gt;setNext (x.getHead ()-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L288'>setNext</a>           288 CList.cxx          x.getHead ()-&gt;setNext (ptr-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L307'>setNext</a>           307 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L324'>setNext</a>           324 CList.cxx                  (a-&gt;getPrevious ())-&gt;setNext (a-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L326'>setNext</a>           326 CList.cxx                  a-&gt;setNext (nullptr);</span>
-<span class='curline'><a href='../S/26.html#L345'>setNext</a>           345 CList.cxx                  (a-&gt;getPrevious ())-&gt;setNext (a-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L347'>setNext</a>           347 CList.cxx                  a-&gt;setNext (nullptr);</span>
-<span class='curline'><a href='../S/26.html#L360'>setNext</a>           360 CList.cxx          m_head-&gt;setNext (m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L367'>setNext</a>           367 CList.cxx              tmp-&gt;getNext ()-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/30.html#L129'>setNext</a>           129 CList.h                    inline void setNext (CNodePtr &amp;next) noexcept</span>
-<span class='curline'><a href='../S/27.html#L13'>setNext</a>            13 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L21'>setNext</a>            21 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L32'>setNext</a>            32 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L43'>setNext</a>            43 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L55'>setNext</a>            55 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L227'>setNext</a>           227 CList2.hxx             itr.getNode ()-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L250'>setNext</a>           250 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/35.html#L127'>setNext</a>           127 CList2Node.hxx         m_previous-&gt;setNext (m_next);</span>
+<span class='curline'><a href='../S/28.html#L361'>swap</a>              361 CList2.h               void swap (CList &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/26.html#L242'>swap</a>              242 CList2.hxx         std::swap (x.m_head, m_head);</span>
+<span class='curline'><a href='../S/26.html#L243'>swap</a>              243 CList2.hxx         std::swap (x.m_tail, m_tail);</span>
+<span class='curline'><a href='../S/26.html#L244'>swap</a>              244 CList2.hxx         std::swap (x.m_size, m_size);</span>
+<span class='curline'><a href='../S/26.html#L304'>swap</a>              304 CList2.hxx             std::swap (currentNode-&gt;getNext (), currentNode-&gt;getPrevious ());</span>
+<span class='curline'><a href='../S/26.html#L306'>swap</a>              306 CList2.hxx         std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
+<span class='curline'><a href='../S/26.html#L307'>swap</a>              307 CList2.hxx         std::swap (m_tail, m_head);</span>
+<span class='curline'><a href='../S/32.html#L503'>swap</a>              503 Tests.cxx              list1.swap (list2);</span>
 </pre>
 </body>
 </html>

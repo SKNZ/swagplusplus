@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>make_pair</title>
+<title>m_next</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,14 +9,17 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/33.html#L450'>make_pair</a>         450 Tests.cxx                  IZI_ASSERT(make_pair (data[i], data[i]) == *itr)</span>
-<span class='curline'><a href='../S/33.html#L468'>make_pair</a>         468 Tests.cxx                  IZI_ASSERT(make_pair (data[i], data[i]) == *itr)</span>
-<span class='curline'><a href='../S/33.html#L480'>make_pair</a>         480 Tests.cxx              list.push_back (make_pair (data[0], data[0]));</span>
-<span class='curline'><a href='../S/33.html#L481'>make_pair</a>         481 Tests.cxx              list.push_back (make_pair (data[1], data[1]));</span>
-<span class='curline'><a href='../S/33.html#L482'>make_pair</a>         482 Tests.cxx              list.push_back (make_pair (data[3], data[3]));</span>
-<span class='curline'><a href='../S/33.html#L483'>make_pair</a>         483 Tests.cxx              list.push_back (make_pair (data[4], data[4]));</span>
-<span class='curline'><a href='../S/33.html#L489'>make_pair</a>         489 Tests.cxx              IZI_ASSERT(*itr == make_pair (data[2], data[2]));</span>
-<span class='curline'><a href='../S/33.html#L494'>make_pair</a>         494 Tests.cxx                  IZI_ASSERT(*itr == make_pair (data[i], data[i]));</span>
+<span class='curline'><a href='../S/34.html#L29'>m_next</a>             29 CList2Node.hxx     CNodePtr m_next;</span>
+<span class='curline'><a href='../S/34.html#L60'>m_next</a>             60 CList2Node.hxx             : m_info (info), m_next (next),</span>
+<span class='curline'><a href='../S/34.html#L98'>m_next</a>             98 CList2Node.hxx         return m_next;</span>
+<span class='curline'><a href='../S/34.html#L108'>m_next</a>            108 CList2Node.hxx         m_next = next;</span>
+<span class='curline'><a href='../S/34.html#L136'>m_next</a>            136 CList2Node.hxx         m_next-&gt;setPrevious (m_previous);</span>
+<span class='curline'><a href='../S/34.html#L137'>m_next</a>            137 CList2Node.hxx         m_previous-&gt;setNext (m_next);</span>
+<span class='curline'><a href='../S/34.html#L147'>m_next</a>            147 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/34.html#L148'>m_next</a>            148 CList2Node.hxx         m_previous-&gt;m_next = newNode;</span>
+<span class='curline'><a href='../S/34.html#L160'>m_next</a>            160 CList2Node.hxx         CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/34.html#L161'>m_next</a>            161 CList2Node.hxx         m_next-&gt;m_previous = newNode;</span>
+<span class='curline'><a href='../S/34.html#L162'>m_next</a>            162 CList2Node.hxx         m_next = newNode;</span>
 </pre>
 </body>
 </html>

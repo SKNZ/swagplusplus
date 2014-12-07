@@ -2,8 +2,8 @@
 
 #include <memory>
 #include <iterator>
-#include "CList2.h"
-#include "CList2Node.hxx"
+#include "CList.h"
+#include "CNode.hxx"
 
 template<typename T>
 nsSdD::CList<T>::CList () noexcept

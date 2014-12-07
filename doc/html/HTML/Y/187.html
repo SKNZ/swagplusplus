@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>listSize</title>
+<title>list2</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,65 +9,30 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/33.html#L188'>listSize</a>          188 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10);</span>
-<span class='curline'><a href='../S/33.html#L190'>listSize</a>          190 Tests.cxx              CTestedList&lt;T&gt; list (listSize);</span>
-<span class='curline'><a href='../S/33.html#L192'>listSize</a>          192 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
-<span class='curline'><a href='../S/33.html#L203'>listSize</a>          203 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10);</span>
-<span class='curline'><a href='../S/33.html#L205'>listSize</a>          205 Tests.cxx              CTestedList&lt;T&gt; list (listSize, value);</span>
-<span class='curline'><a href='../S/33.html#L207'>listSize</a>          207 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
-<span class='curline'><a href='../S/33.html#L218'>listSize</a>          218 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10000);</span>
-<span class='curline'><a href='../S/33.html#L221'>listSize</a>          221 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (listSize))</span>
-<span class='curline'><a href='../S/33.html#L239'>listSize</a>          239 Tests.cxx              typename CTestedList&lt;T&gt;::size_type listSize = rand (1, 10000);</span>
-<span class='curline'><a href='../S/33.html#L242'>listSize</a>          242 Tests.cxx              for (T x : CValueProvider&lt;T&gt; () (listSize))</span>
-<span class='curline'><a href='../S/33.html#L260'>listSize</a>          260 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L263'>listSize</a>          263 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L264'>listSize</a>          264 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L265'>listSize</a>          265 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
-<span class='curline'><a href='../S/33.html#L287'>listSize</a>          287 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L290'>listSize</a>          290 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L306'>listSize</a>          306 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L309'>listSize</a>          309 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L310'>listSize</a>          310 Tests.cxx              CCollection&lt;T&gt; originalData (t.begin (), t.begin () + listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L311'>listSize</a>          311 Tests.cxx              CCollection&lt;T&gt; newData (t.begin () + listSize / 2, t.end ());</span>
-<span class='curline'><a href='../S/33.html#L336'>listSize</a>          336 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L339'>listSize</a>          339 Tests.cxx              CCollection&lt;T&gt; t = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L407'>listSize</a>          407 Tests.cxx              const int listSize = 10;</span>
-<span class='curline'><a href='../S/33.html#L409'>listSize</a>          409 Tests.cxx              CTestedList&lt;T&gt; list (2 * listSize);</span>
-<span class='curline'><a href='../S/33.html#L410'>listSize</a>          410 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L426'>listSize</a>          426 Tests.cxx              const unsigned listSize = 10;</span>
-<span class='curline'><a href='../S/33.html#L429'>listSize</a>          429 Tests.cxx              list.assign (listSize, x);</span>
-<span class='curline'><a href='../S/33.html#L431'>listSize</a>          431 Tests.cxx              IZI_ASSERT(listSize == list.size ());</span>
-<span class='curline'><a href='../S/33.html#L603'>listSize</a>          603 Tests.cxx              const typename CTestedList&lt;T&gt;::size_type listSize = rand (0, 20);</span>
-<span class='curline'><a href='../S/33.html#L606'>listSize</a>          606 Tests.cxx              list.insert (list.begin (), listSize, x);</span>
-<span class='curline'><a href='../S/33.html#L611'>listSize</a>          611 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
-<span class='curline'><a href='../S/33.html#L650'>listSize</a>          650 Tests.cxx              const int listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L652'>listSize</a>          652 Tests.cxx              CTestedList&lt;T&gt; list1 (listSize / 2), list2 (listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L653'>listSize</a>          653 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L655'>listSize</a>          655 Tests.cxx              copy (data.cbegin (), data.cbegin () + listSize / 2, list1.begin ());</span>
-<span class='curline'><a href='../S/33.html#L656'>listSize</a>          656 Tests.cxx              copy (data.cbegin () + listSize / 2, data.cend (), list2.begin ());</span>
-<span class='curline'><a href='../S/33.html#L661'>listSize</a>          661 Tests.cxx                  IZI_ASSERT(*itr == data[listSize / 2 + distance (list1.cbegin (), itr)]);</span>
-<span class='curline'><a href='../S/33.html#L670'>listSize</a>          670 Tests.cxx              const int listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L673'>listSize</a>          673 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L676'>listSize</a>          676 Tests.cxx              list.resize (listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L678'>listSize</a>          678 Tests.cxx              IZI_ASSERT(list.size () == listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L688'>listSize</a>          688 Tests.cxx              list.resize (listSize);</span>
-<span class='curline'><a href='../S/33.html#L692'>listSize</a>          692 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
-<span class='curline'><a href='../S/33.html#L698'>listSize</a>          698 Tests.cxx              list.resize (listSize, data[0]);</span>
-<span class='curline'><a href='../S/33.html#L701'>listSize</a>          701 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
-<span class='curline'><a href='../S/33.html#L732'>listSize</a>          732 Tests.cxx              const int listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L734'>listSize</a>          734 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L736'>listSize</a>          736 Tests.cxx              list1.insert (list1.begin (), data.cbegin (), data.cbegin () + listSize / 4);</span>
-<span class='curline'><a href='../S/33.html#L737'>listSize</a>          737 Tests.cxx              list1.insert (list1.end (), data.cbegin () + listSize / 2, data.cend ());</span>
-<span class='curline'><a href='../S/33.html#L738'>listSize</a>          738 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L744'>listSize</a>          744 Tests.cxx              advance (itr, listSize / 4);</span>
-<span class='curline'><a href='../S/33.html#L756'>listSize</a>          756 Tests.cxx              const int listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L758'>listSize</a>          758 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L774'>listSize</a>          774 Tests.cxx              const int listSize = 20;</span>
-<span class='curline'><a href='../S/33.html#L776'>listSize</a>          776 Tests.cxx              CCollection&lt;T&gt; data = CValueProvider&lt;T&gt; () (listSize);</span>
-<span class='curline'><a href='../S/33.html#L778'>listSize</a>          778 Tests.cxx              list1.insert (list1.begin (), data.cbegin (), data.cbegin () + listSize / 4);</span>
-<span class='curline'><a href='../S/33.html#L779'>listSize</a>          779 Tests.cxx              list1.insert (list1.end (), data.cbegin () + listSize / 2, data.cend ());</span>
-<span class='curline'><a href='../S/33.html#L780'>listSize</a>          780 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L786'>listSize</a>          786 Tests.cxx              advance (itr, listSize / 4);</span>
+<span class='curline'><a href='../S/32.html#L497'>list2</a>             497 Tests.cxx              CTestedList&lt;T&gt; list1 (listSize / 2), list2 (listSize / 2);</span>
+<span class='curline'><a href='../S/32.html#L501'>list2</a>             501 Tests.cxx              copy (data.cbegin () + listSize / 2, data.cend (), list2.begin ());</span>
+<span class='curline'><a href='../S/32.html#L503'>list2</a>             503 Tests.cxx              list1.swap (list2);</span>
+<span class='curline'><a href='../S/32.html#L508'>list2</a>             508 Tests.cxx              for (auto itr = list2.cbegin (); itr != list2.cend (); ++itr)</span>
+<span class='curline'><a href='../S/32.html#L509'>list2</a>             509 Tests.cxx                  IZI_ASSERT(*itr == data[distance (list2.cbegin (), itr)]);</span>
+<span class='curline'><a href='../S/32.html#L578'>list2</a>             578 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/32.html#L583'>list2</a>             583 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/32.html#L586'>list2</a>             586 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L590'>list2</a>             590 Tests.cxx              list1.splice (itr, list2);</span>
+<span class='curline'><a href='../S/32.html#L592'>list2</a>             592 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
+<span class='curline'><a href='../S/32.html#L602'>list2</a>             602 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/32.html#L605'>list2</a>             605 Tests.cxx              list2.insert (list2.begin (), data.cbegin (), data.cend ());</span>
+<span class='curline'><a href='../S/32.html#L607'>list2</a>             607 Tests.cxx              for (auto itr = list2.begin (); itr != list2.end ();)</span>
+<span class='curline'><a href='../S/32.html#L608'>list2</a>             608 Tests.cxx                  list1.splice (list1.end (), list2, itr++);</span>
+<span class='curline'><a href='../S/32.html#L620'>list2</a>             620 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/32.html#L625'>list2</a>             625 Tests.cxx              list2.insert (list2.begin (), data.cbegin () + listSize / 4, data.cbegin () + listSize / 2);</span>
+<span class='curline'><a href='../S/32.html#L628'>list2</a>             628 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L632'>list2</a>             632 Tests.cxx              list1.splice (itr, list2, list2.begin (), list2.end ());</span>
+<span class='curline'><a href='../S/32.html#L634'>list2</a>             634 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
+<span class='curline'><a href='../S/32.html#L715'>list2</a>             715 Tests.cxx              CTestedList&lt;T&gt; list1, list2;</span>
+<span class='curline'><a href='../S/32.html#L724'>list2</a>             724 Tests.cxx                  list2.push_back (data[i]);</span>
+<span class='curline'><a href='../S/32.html#L726'>list2</a>             726 Tests.cxx              IZI_ASSERT(list2.size () == list1.size () &amp;&amp; list1.size () == data.size () / 2);</span>
+<span class='curline'><a href='../S/32.html#L728'>list2</a>             728 Tests.cxx              list1.merge (list2);</span>
+<span class='curline'><a href='../S/32.html#L731'>list2</a>             731 Tests.cxx              IZI_ASSERT(list2.empty ());</span>
 </pre>
 </body>
 </html>

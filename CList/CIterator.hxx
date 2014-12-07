@@ -12,7 +12,7 @@ We implement bidirectionnal iterator because we choose to use a double-linked li
 */
 #pragma once
 
-#include "CList2.h"
+#include "CList.h"
 
 template<typename T> using CIterBase = std::iterator<std::bidirectional_iterator_tag, T>;
 

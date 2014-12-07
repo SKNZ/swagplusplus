@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>position</title>
+<title>p</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,27 +9,10 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/28.html#L281'>position</a>          281 CList2.h               CIterator emplace (CIterator position, Args &amp;&amp;... args) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L309'>position</a>          309 CList2.h               CIterator insert (CIterator position, const T &amp;val) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L319'>position</a>          319 CList2.h               CIterator insert (CIterator position, size_type n, const T &amp;val) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L331'>position</a>          331 CList2.h               CIterator insert (CIterator position, InputIterator first, InputIterator last) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L416'>position</a>          416 CList2.h               void splice (CIterator position, CList &amp;x) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L425'>position</a>          425 CList2.h               void splice (CIterator position, CList &amp;x, CIterator i) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L435'>position</a>          435 CList2.h               void splice (CIterator position, CList &amp;x, CIterator first, CIterator last) noexcept;</span>
-<span class='curline'><a href='../S/27.html#L311'>position</a>          311 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, T const &amp;val) noexcept</span>
-<span class='curline'><a href='../S/27.html#L314'>position</a>          314 CList2.hxx         return iterator (position.getNode ()-&gt;addBefore (val));</span>
-<span class='curline'><a href='../S/27.html#L318'>position</a>          318 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, size_type n, T const &amp;val) noexcept</span>
-<span class='curline'><a href='../S/27.html#L320'>position</a>          320 CList2.hxx         CNodePtr nextNode = position.getNode (),</span>
-<span class='curline'><a href='../S/27.html#L335'>position</a>          335 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, InputIterator begin, InputIterator end) noexcept</span>
-<span class='curline'><a href='../S/27.html#L337'>position</a>          337 CList2.hxx         CNodePtr nextNode = position.getNode ();</span>
-<span class='curline'><a href='../S/27.html#L351'>position</a>          351 CList2.hxx     typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::emplace (iterator position, Args &amp;&amp;... args) noexcept</span>
-<span class='curline'><a href='../S/27.html#L353'>position</a>          353 CList2.hxx         return insert (position, T (std::forward&lt;Args&gt; (args)...));</span>
-<span class='curline'><a href='../S/27.html#L371'>position</a>          371 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice (iterator position, typename nsSdD::CList&lt;T&gt;&amp; x) noexcept</span>
-<span class='curline'><a href='../S/27.html#L373'>position</a>          373 CList2.hxx         insert (position, x.begin (), x.end ());</span>
-<span class='curline'><a href='../S/27.html#L378'>position</a>          378 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice (iterator position, nsSdD::CList&lt;T&gt; &amp;x, iterator i) noexcept</span>
-<span class='curline'><a href='../S/27.html#L380'>position</a>          380 CList2.hxx         insert (position, *i);</span>
-<span class='curline'><a href='../S/27.html#L385'>position</a>          385 CList2.hxx     void nsSdD::CList&lt;T&gt;::splice(iterator position, CList&amp; x, iterator first, iterator last) noexcept</span>
-<span class='curline'><a href='../S/27.html#L387'>position</a>          387 CList2.hxx         insert (position, first, last);</span>
+<span class='curline'><a href='../S/29.html#L33'>p</a>                  33 CList2ConstIterator.hxx     CConstIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
+<span class='curline'><a href='../S/33.html#L36'>p</a>                  36 CList2Iterator.hxx     CIterator (CNodePtr p = nullptr) noexcept : node (p)</span>
+<span class='curline'><a href='../S/27.html#L58'>p</a>                  58 CTestClass.h       std::ostream &amp;operator&lt;&lt; (std::ostream &amp;os, TestClass const &amp;p)</span>
+<span class='curline'><a href='../S/27.html#L60'>p</a>                  60 CTestClass.h           return os &lt;&lt; "PERS. " &lt;&lt; p.getName () &lt;&lt; ". " &lt;&lt; p.getA ();</span>
 </pre>
 </body>
 </html>

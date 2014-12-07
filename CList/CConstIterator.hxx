@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "CList2.h"
+#include "CList.h"
 
 template<typename T> using CConstIterBase = std::iterator<std::bidirectional_iterator_tag, const T, std::ptrdiff_t, const T *, const T &>;
 

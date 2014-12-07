@@ -1,9 +1,11 @@
 <map id="/home/sknz/Development/swagplusplus/CList/Tests.cxx" name="/home/sknz/Development/swagplusplus/CList/Tests.cxx">
-<area shape="rect" id="node2" href="$_tests_8h.html" title="Tests.h" alt="" coords="92,96,159,123"/>
-<area shape="rect" id="node4" href="$_izi_assert_8h.html" title="IZI_ASSERT. " alt="" coords="267,96,352,123"/>
-<area shape="rect" id="node6" href="$_c_list2_8h.html" title="Header to the CList class. " alt="" coords="419,96,489,123"/>
-<area shape="rect" id="node9" href="$_c_list2_8hxx.html" title="CList2.hxx" alt="" coords="552,171,637,197"/>
-<area shape="rect" id="node10" href="$_c_list2_node_8hxx.html" title="CList2Node.hxx" alt="" coords="679,245,795,272"/>
-<area shape="rect" id="node11" href="$_c_list2_iterator_8hxx.html" title="CList2Iterator.hxx" alt="" coords="165,171,291,197"/>
-<area shape="rect" id="node12" href="$_c_list2_const_iterator_8hxx.html" title="CList2ConstIterator.hxx" alt="" coords="315,171,476,197"/>
+<area shape="rect" id="node2" href="$_tests_8h.html" title="Tests.h" alt="" coords="52,96,119,123"/>
+<area shape="rect" id="node4" href="$_izi_assert_8h.html" title="IZI_ASSERT. " alt="" coords="204,96,289,123"/>
+<area shape="rect" id="node6" href="$_c_list2_8h.html" title="Header to the CList class. " alt="" coords="435,96,505,123"/>
+<area shape="rect" id="node13" href="$_c_test_class_8h.html" title="CTestClass.h" alt="" coords="787,171,889,197"/>
+<area shape="rect" id="node15" href="$_c_value_provider_8h.html" title="CValueProvider.h" alt="" coords="777,96,900,123"/>
+<area shape="rect" id="node9" href="$_c_list2_8hxx.html" title="CList2.hxx" alt="" coords="576,171,661,197"/>
+<area shape="rect" id="node10" href="$_c_list2_node_8hxx.html" title="CList2Node.hxx" alt="" coords="131,245,247,272"/>
+<area shape="rect" id="node11" href="$_c_list2_iterator_8hxx.html" title="Implementation of the const_iterator for the CList class. " alt="" coords="239,171,365,197"/>
+<area shape="rect" id="node12" href="$_c_list2_const_iterator_8hxx.html" title="CList2ConstIterator.hxx" alt="" coords="390,171,551,197"/>
 </map>

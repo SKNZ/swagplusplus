@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "CList2.h"
+#include "CList.h"
 
 template<typename T>
 class nsSdD::CList<T>::CNode

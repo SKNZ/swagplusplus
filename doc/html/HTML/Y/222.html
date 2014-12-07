@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>ptr</title>
+<title>prevNode</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,41 +9,11 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/26.html#L28'>ptr</a>                28 CList.cxx              CNodePtr ptr = std::make_shared&lt;CNode&gt; (T (), nullptr, nullptr);</span>
-<span class='curline'><a href='../S/26.html#L30'>ptr</a>                30 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L31'>ptr</a>                31 CList.cxx              ptr-&gt;setPrevious (m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L33'>ptr</a>                33 CList.cxx              m_tail-&gt;getPrevious ()-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L34'>ptr</a>                34 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L55'>ptr</a>                55 CList.cxx              CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
-<span class='curline'><a href='../S/26.html#L58'>ptr</a>                58 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L59'>ptr</a>                59 CList.cxx              ptr-&gt;setPrevious (LastCreated);</span>
-<span class='curline'><a href='../S/26.html#L61'>ptr</a>                61 CList.cxx              LastCreated-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L62'>ptr</a>                62 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L97'>ptr</a>                97 CList.cxx                  CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
-<span class='curline'><a href='../S/26.html#L100'>ptr</a>               100 CList.cxx                  ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L101'>ptr</a>               101 CList.cxx                  ptr-&gt;setPrevious (LastCreated);</span>
-<span class='curline'><a href='../S/26.html#L103'>ptr</a>               103 CList.cxx                  LastCreated-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L104'>ptr</a>               104 CList.cxx                  m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L119'>ptr</a>               119 CList.cxx          CNodePtr ptr = std::make_shared&lt;CNode&gt; (val, nullptr, nullptr);</span>
-<span class='curline'><a href='../S/26.html#L121'>ptr</a>               121 CList.cxx          ptr-&gt;setPrevious (m_head);</span>
-<span class='curline'><a href='../S/26.html#L122'>ptr</a>               122 CList.cxx          ptr-&gt;setNext (m_head-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L124'>ptr</a>               124 CList.cxx          (m_head-&gt;getNext ())-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L126'>ptr</a>               126 CList.cxx          m_head-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L252'>ptr</a>               252 CList.cxx              CNodePtr ptr = m_head;</span>
-<span class='curline'><a href='../S/26.html#L254'>ptr</a>               254 CList.cxx                  ptr = ptr-&gt;getNext ();</span>
-<span class='curline'><a href='../S/26.html#L256'>ptr</a>               256 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L257'>ptr</a>               257 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L264'>ptr</a>               264 CList.cxx          CNodePtr ptr = m_head;</span>
-<span class='curline'><a href='../S/26.html#L266'>ptr</a>               266 CList.cxx              ptr = ptr-&gt;getNext ();</span>
-<span class='curline'><a href='../S/26.html#L270'>ptr</a>               270 CList.cxx              CNodePtr add = make_shared&lt;CNode&gt; (val, ptr, ptr-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L271'>ptr</a>               271 CList.cxx              ptr-&gt;setNext (add);</span>
-<span class='curline'><a href='../S/26.html#L273'>ptr</a>               273 CList.cxx              ptr = add;</span>
-<span class='curline'><a href='../S/26.html#L286'>ptr</a>               286 CList.cxx          CNodePtr ptr = m_head;</span>
-<span class='curline'><a href='../S/26.html#L288'>ptr</a>               288 CList.cxx          x.getHead ()-&gt;setNext (ptr-&gt;getNext ());</span>
-<span class='curline'><a href='../S/26.html#L290'>ptr</a>               290 CList.cxx          ptr = m_tail;</span>
-<span class='curline'><a href='../S/26.html#L292'>ptr</a>               292 CList.cxx          x.getTail ()-&gt;setPrevious (ptr-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L365'>ptr</a>               365 CList.cxx              CNodePtr ptr = tmp-&gt;getNext ()-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/26.html#L367'>ptr</a>               367 CList.cxx              tmp-&gt;getNext ()-&gt;setNext (ptr);</span>
+<span class='curline'><a href='../S/26.html#L321'>prevNode</a>          321 CList2.hxx                 prevNode = nextNode-&gt;getPrevious (),</span>
+<span class='curline'><a href='../S/26.html#L322'>prevNode</a>          322 CList2.hxx                 currNode = prevNode;</span>
+<span class='curline'><a href='../S/26.html#L330'>prevNode</a>          330 CList2.hxx         return iterator (prevNode-&gt;getNext ());</span>
+<span class='curline'><a href='../S/26.html#L338'>prevNode</a>          338 CList2.hxx         CNodePtr prevNode = nextNode-&gt;getPrevious ();</span>
+<span class='curline'><a href='../S/26.html#L346'>prevNode</a>          346 CList2.hxx         return iterator (prevNode-&gt;getNext ());</span>
 </pre>
 </body>
 </html>

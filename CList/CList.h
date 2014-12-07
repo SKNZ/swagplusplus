@@ -475,7 +475,7 @@ namespace nsSdD
     };
 }
 
-#include "CList2.hxx"
-#include "CList2Iterator.hxx"
-#include "CList2ConstIterator.hxx"
-#include "CList2Node.hxx"
+#include "CList.hxx"
+#include "CIterator.hxx"
+#include "CConstIterator.hxx"
+#include "CNode.hxx"

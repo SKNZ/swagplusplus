@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>resize</title>
+<title>size</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,13 +9,57 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/30.html#L76'>resize</a>             76 CList.h                void resize (unsigned n, const T &amp;val = T ()) noexcept;</span>
-<span class='curline'><a href='../S/28.html#L368'>resize</a>            368 CList2.h               void resize (unsigned n, const T &amp;val = T ()) noexcept;</span>
-<span class='curline'><a href='../S/33.html#L676'>resize</a>            676 Tests.cxx              list.resize (listSize / 2);</span>
-<span class='curline'><a href='../S/33.html#L683'>resize</a>            683 Tests.cxx              list.resize (0);</span>
-<span class='curline'><a href='../S/33.html#L688'>resize</a>            688 Tests.cxx              list.resize (listSize);</span>
-<span class='curline'><a href='../S/33.html#L694'>resize</a>            694 Tests.cxx              list.resize (0);</span>
-<span class='curline'><a href='../S/33.html#L698'>resize</a>            698 Tests.cxx              list.resize (listSize, data[0]);</span>
+<span class='curline'><a href='../S/28.html#L198'>size</a>              198 CList2.h               inline size_type size () const noexcept;</span>
+<span class='curline'><a href='../S/35.html#L36'>size</a>               36 CValueProvider.h             ptrArray.reserve (array.size ());</span>
+<span class='curline'><a href='../S/35.html#L53'>size</a>               53 CValueProvider.h             ptrArray.reserve (array.size ());</span>
+<span class='curline'><a href='../S/35.html#L95'>size</a>               95 CValueProvider.h             for (int i = array.size (); i &lt; arraySize; ++i)</span>
+<span class='curline'><a href='../S/32.html#L24'>size</a>               24 Tests.cxx              IZI_ASSERT(list.size () == 0);</span>
+<span class='curline'><a href='../S/32.html#L37'>size</a>               37 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
+<span class='curline'><a href='../S/32.html#L52'>size</a>               52 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
+<span class='curline'><a href='../S/32.html#L71'>size</a>               71 Tests.cxx              IZI_ASSERT(referenceList.size () == copiedList.size ());</span>
+<span class='curline'><a href='../S/32.html#L92'>size</a>               92 Tests.cxx              IZI_ASSERT(referenceList.size () == copiedList.size ());</span>
+<span class='curline'><a href='../S/32.html#L216'>size</a>              216 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L219'>size</a>              219 Tests.cxx              IZI_ASSERT(1 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L222'>size</a>              222 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L259'>size</a>              259 Tests.cxx              IZI_ASSERT(data.size () == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L276'>size</a>              276 Tests.cxx              IZI_ASSERT(listSize == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L298'>size</a>              298 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L316'>size</a>              316 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L360'>size</a>              360 Tests.cxx              IZI_ASSERT(data.size () == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L378'>size</a>              378 Tests.cxx              IZI_ASSERT(data.size () == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L390'>size</a>              390 Tests.cxx              for (int i = 0; i &lt; data.size (); ++i)</span>
+<span class='curline'><a href='../S/32.html#L410'>size</a>              410 Tests.cxx              for (int i = 0; i &lt; data.size (); ++i)</span>
+<span class='curline'><a href='../S/32.html#L442'>size</a>              442 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L456'>size</a>              456 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
+<span class='curline'><a href='../S/32.html#L470'>size</a>              470 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L489'>size</a>              489 Tests.cxx              IZI_ASSERT(list.size () == data.size () - 2);</span>
+<span class='curline'><a href='../S/32.html#L523'>size</a>              523 Tests.cxx              IZI_ASSERT(list.size () == listSize / 2);</span>
+<span class='curline'><a href='../S/32.html#L530'>size</a>              530 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L537'>size</a>              537 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
+<span class='curline'><a href='../S/32.html#L540'>size</a>              540 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L546'>size</a>              546 Tests.cxx              IZI_ASSERT(list.size () == listSize);</span>
+<span class='curline'><a href='../S/32.html#L556'>size</a>              556 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L559'>size</a>              559 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L562'>size</a>              562 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L565'>size</a>              565 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L568'>size</a>              568 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L571'>size</a>              571 Tests.cxx              IZI_ASSERT(0 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L585'>size</a>              585 Tests.cxx              IZI_ASSERT(list1.size () == 3 * data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L586'>size</a>              586 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L593'>size</a>              593 Tests.cxx              IZI_ASSERT(list1.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L613'>size</a>              613 Tests.cxx              IZI_ASSERT(list1.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L627'>size</a>              627 Tests.cxx              IZI_ASSERT(list1.size () == 3 * data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L628'>size</a>              628 Tests.cxx              IZI_ASSERT(list2.size () == data.size () / 4);</span>
+<span class='curline'><a href='../S/32.html#L635'>size</a>              635 Tests.cxx              IZI_ASSERT(list1.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L648'>size</a>              648 Tests.cxx              IZI_ASSERT(list.size ());</span>
+<span class='curline'><a href='../S/32.html#L652'>size</a>              652 Tests.cxx              IZI_ASSERT(!list.size ());</span>
+<span class='curline'><a href='../S/32.html#L669'>size</a>              669 Tests.cxx              IZI_ASSERT(9 == list.size ());</span>
+<span class='curline'><a href='../S/32.html#L685'>size</a>              685 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L707'>size</a>              707 Tests.cxx              IZI_ASSERT(list.size () == data.size ());</span>
+<span class='curline'><a href='../S/32.html#L720'>size</a>              720 Tests.cxx              for (int i = 0; i &lt; data.size (); i += 2)</span>
+<span class='curline'><a href='../S/32.html#L723'>size</a>              723 Tests.cxx              for (int i = 1; i &lt; data.size (); i += 2)</span>
+<span class='curline'><a href='../S/32.html#L726'>size</a>              726 Tests.cxx              IZI_ASSERT(list2.size () == list1.size () &amp;&amp; list1.size () == data.size () / 2);</span>
+<span class='curline'><a href='../S/32.html#L730'>size</a>              730 Tests.cxx              IZI_ASSERT(list1.size () == data.size ());</span>
 </pre>
 </body>
 </html>

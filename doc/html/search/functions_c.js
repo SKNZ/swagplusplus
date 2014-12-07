@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['testclass',['TestClass',['../classanonymous__namespace_02_tests_8cxx_03_1_1_test_class.html#a08f6e2ccb7625734ca40164d71706430',1,'anonymous_namespace{Tests.cxx}::TestClass']]]
+  ['testclass',['TestClass',['../classns_tests_1_1_test_class.html#a7652415ca2125682f509bcdf5912a396',1,'nsTests::TestClass']]]
 ];

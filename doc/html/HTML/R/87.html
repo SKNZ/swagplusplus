@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-<title>m_tail</title>
+<title>push_back</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name='generator' content='GLOBAL-6.2.9' />
 <meta http-equiv='Content-Style-Type' content='text/css' />
@@ -9,60 +9,41 @@
 </head>
 <body>
 <pre>
-<span class='curline'><a href='../S/26.html#L11'>m_tail</a>             11 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L24'>m_tail</a>             24 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L30'>m_tail</a>             30 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L31'>m_tail</a>             31 CList.cxx              ptr-&gt;setPrevious (m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L33'>m_tail</a>             33 CList.cxx              m_tail-&gt;getPrevious ()-&gt;setNext (ptr);</span>
-<span class='curline'><a href='../S/26.html#L34'>m_tail</a>             34 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L51'>m_tail</a>             51 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L56'>m_tail</a>             56 CList.cxx              CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/26.html#L58'>m_tail</a>             58 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L62'>m_tail</a>             62 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L78'>m_tail</a>             78 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L98'>m_tail</a>             98 CList.cxx                  CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/26.html#L100'>m_tail</a>            100 CList.cxx                  ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L104'>m_tail</a>            104 CList.cxx                  m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L176'>m_tail</a>            176 CList.cxx          CNodePtr LastCreated = m_tail-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/26.html#L178'>m_tail</a>            178 CList.cxx          add-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L182'>m_tail</a>            182 CList.cxx          m_tail-&gt;setPrevious (add);</span>
-<span class='curline'><a href='../S/26.html#L194'>m_tail</a>            194 CList.cxx          CNodePtr del = m_tail-&gt;getPrevious ();</span>
-<span class='curline'><a href='../S/26.html#L195'>m_tail</a>            195 CList.cxx          m_tail-&gt;setPrevious (del-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L197'>m_tail</a>            197 CList.cxx          del-&gt;getPrevious ()-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L256'>m_tail</a>            256 CList.cxx              ptr-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L257'>m_tail</a>            257 CList.cxx              m_tail-&gt;setPrevious (ptr);</span>
-<span class='curline'><a href='../S/26.html#L272'>m_tail</a>            272 CList.cxx              m_tail-&gt;setPrevious (add);</span>
-<span class='curline'><a href='../S/26.html#L290'>m_tail</a>            290 CList.cxx          ptr = m_tail;</span>
-<span class='curline'><a href='../S/26.html#L291'>m_tail</a>            291 CList.cxx          m_tail-&gt;setPrevious (x.getTail ()-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L307'>m_tail</a>            307 CList.cxx          m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/26.html#L308'>m_tail</a>            308 CList.cxx          m_tail-&gt;setPrevious (m_head);</span>
-<span class='curline'><a href='../S/26.html#L360'>m_tail</a>            360 CList.cxx          m_head-&gt;setNext (m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/26.html#L361'>m_tail</a>            361 CList.cxx          m_tail-&gt;setPrevious (tmp-&gt;getNext ());</span>
-<span class='curline'><a href='../S/30.html#L17'>m_tail</a>             17 CList.h                CNodePtr m_tail = nullptr;</span>
-<span class='curline'><a href='../S/30.html#L35'>m_tail</a>             35 CList.h                    return m_tail;</span>
-<span class='curline'><a href='../S/30.html#L55'>m_tail</a>             55 CList.h                    return m_tail-&gt;getNext ()-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/28.html#L470'>m_tail</a>            470 CList2.h               CNodePtr m_tail = nullptr;</span>
-<span class='curline'><a href='../S/27.html#L13'>m_tail</a>             13 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L21'>m_tail</a>             21 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L32'>m_tail</a>             32 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L43'>m_tail</a>             43 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L55'>m_tail</a>             55 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L69'>m_tail</a>             69 CList2.hxx         return m_tail;</span>
-<span class='curline'><a href='../S/27.html#L81'>m_tail</a>             81 CList2.hxx         return iterator (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L93'>m_tail</a>             93 CList2.hxx         return const_iterator (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L141'>m_tail</a>            141 CList2.hxx         return m_tail-&gt;getPrevious ()-&gt;getInfo ();</span>
-<span class='curline'><a href='../S/27.html#L181'>m_tail</a>            181 CList2.hxx         m_tail-&gt;addBefore (x);</span>
-<span class='curline'><a href='../S/27.html#L190'>m_tail</a>            190 CList2.hxx             m_tail-&gt;getPrevious ()-&gt;remove ();</span>
-<span class='curline'><a href='../S/27.html#L227'>m_tail</a>            227 CList2.hxx             itr.getNode ()-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L228'>m_tail</a>            228 CList2.hxx             m_tail-&gt;setPrevious (itr.getNode ());</span>
-<span class='curline'><a href='../S/27.html#L243'>m_tail</a>            243 CList2.hxx         std::swap (x.m_tail, m_tail);</span>
-<span class='curline'><a href='../S/27.html#L250'>m_tail</a>            250 CList2.hxx         m_head-&gt;setNext (m_tail);</span>
-<span class='curline'><a href='../S/27.html#L251'>m_tail</a>            251 CList2.hxx         m_tail-&gt;setPrevious (m_head);</span>
-<span class='curline'><a href='../S/27.html#L269'>m_tail</a>            269 CList2.hxx         for (CNodePtr a = m_head-&gt;getNext (); a != m_tail; a = a-&gt;getNext ())</span>
-<span class='curline'><a href='../S/27.html#L292'>m_tail</a>            292 CList2.hxx         for (CNodePtr currNode = m_head-&gt;getNext (); currNode != m_tail; currNode = currNode-&gt;getNext ())</span>
-<span class='curline'><a href='../S/27.html#L303'>m_tail</a>            303 CList2.hxx         for (CNodePtr currentNode = m_head; currentNode != m_tail; currentNode = currentNode-&gt;getPrevious ())</span>
-<span class='curline'><a href='../S/27.html#L306'>m_tail</a>            306 CList2.hxx         std::swap (m_tail-&gt;getNext (), m_tail-&gt;getPrevious ());</span>
-<span class='curline'><a href='../S/27.html#L307'>m_tail</a>            307 CList2.hxx         std::swap (m_tail, m_head);</span>
+<span class='curline'><a href='../S/28.html#L240'>push_back</a>         240 CList2.h               void push_back (const T &amp;x) noexcept;</span>
+<span class='curline'><a href='../S/26.html#L24'>push_back</a>          24 CList2.hxx             push_back (T ());</span>
+<span class='curline'><a href='../S/26.html#L35'>push_back</a>          35 CList2.hxx             push_back (val);</span>
+<span class='curline'><a href='../S/26.html#L46'>push_back</a>          46 CList2.hxx             push_back (*itr);</span>
+<span class='curline'><a href='../S/26.html#L150'>push_back</a>         150 CList2.hxx             push_back (*begin);</span>
+<span class='curline'><a href='../S/26.html#L158'>push_back</a>         158 CList2.hxx             push_back (val);</span>
+<span class='curline'><a href='../S/26.html#L235'>push_back</a>         235 CList2.hxx                 push_back (val);</span>
+<span class='curline'><a href='../S/35.html#L39'>push_back</a>          39 CValueProvider.h                 ptrArray.push_back (new T (x));</span>
+<span class='curline'><a href='../S/35.html#L56'>push_back</a>          56 CValueProvider.h                 ptrArray.push_back (std::make_shared&lt;T&gt; (x));</span>
+<span class='curline'><a href='../S/35.html#L93'>push_back</a>          93 CValueProvider.h             array.push_back (TestClass (4654, "MARQUE LA PORTE"));</span>
+<span class='curline'><a href='../S/35.html#L101'>push_back</a>         101 CValueProvider.h                 array.push_back (TestClass (rand (0, 30), name));</span>
+<span class='curline'><a href='../S/32.html#L67'>push_back</a>          67 Tests.cxx                  referenceList.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L88'>push_back</a>          88 Tests.cxx                  referenceList.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L113'>push_back</a>         113 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L137'>push_back</a>         137 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L159'>push_back</a>         159 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L186'>push_back</a>         186 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L205'>push_back</a>         205 Tests.cxx              list.push_back (T ());</span>
+<span class='curline'><a href='../S/32.html#L232'>push_back</a>         232 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L244'>push_back</a>         244 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L325'>push_back</a>         325 Tests.cxx              list.push_back (make_pair (data[0], data[0]));</span>
+<span class='curline'><a href='../S/32.html#L326'>push_back</a>         326 Tests.cxx              list.push_back (make_pair (data[1], data[1]));</span>
+<span class='curline'><a href='../S/32.html#L327'>push_back</a>         327 Tests.cxx              list.push_back (make_pair (data[3], data[3]));</span>
+<span class='curline'><a href='../S/32.html#L328'>push_back</a>         328 Tests.cxx              list.push_back (make_pair (data[4], data[4]));</span>
+<span class='curline'><a href='../S/32.html#L370'>push_back</a>         370 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L388'>push_back</a>         388 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L406'>push_back</a>         406 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L425'>push_back</a>         425 Tests.cxx              list.push_back (data[1]);</span>
+<span class='curline'><a href='../S/32.html#L426'>push_back</a>         426 Tests.cxx              list.push_back (data[2]);</span>
+<span class='curline'><a href='../S/32.html#L427'>push_back</a>         427 Tests.cxx              list.push_back (data[4]);</span>
+<span class='curline'><a href='../S/32.html#L480'>push_back</a>         480 Tests.cxx                  list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L681'>push_back</a>         681 Tests.cxx                      list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L700'>push_back</a>         700 Tests.cxx                      list.push_back (x);</span>
+<span class='curline'><a href='../S/32.html#L721'>push_back</a>         721 Tests.cxx                  list1.push_back (data[i]);</span>
+<span class='curline'><a href='../S/32.html#L724'>push_back</a>         724 Tests.cxx                  list2.push_back (data[i]);</span>
 </pre>
 </body>
 </html>
