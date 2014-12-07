@@ -774,6 +774,37 @@ namespace
             IZI_ASSERT(*itrList == *itrData);
     }
 
+    template <class T>
+    void TestCNode () noexcept
+    {
+        CCollection<T> data = CValueProvider<T> () ();
+        CTestedList<T> list (data.cbegin (), data.cend ());
+
+        IZI_ASSERT(list.getHead ()->getInfo () == 0);
+        IZI_ASSERT(list.getTail ()->getInfo () == 0);
+
+        auto ptr = list.getHead ();
+        for(T x : data)
+        {
+            ptr = ptr->getNext ();
+            IZI_ASSERT(x == ptr->getInfo ());
+        }
+
+        ptr = list.getTail ();
+        reverse (data.begin (), data.end ());
+        for (T x : data)
+        {
+            ptr = ptr->getPrevious ();
+            IZI_ASSERT(x == ptr->getInfo ());
+        }
+
+        ptr->addAfter (data[0]);
+        IZI_ASSERT(ptr->getNext ()->getInfo () == data[0]);
+
+        ptr->addBefore (data[0]);
+        IZI_ASSERT(ptr->getPrevious ()->getInfo () == data[0]);
+    }
+
     template<typename T>
     void RunTemplatedTests () noexcept
     {
@@ -841,6 +872,8 @@ namespace
         IZI_SUBTEST(SortWithPredicate<T> ());
 
         IZI_SUBTEST(Reverse<T> ());
+
+        IZI_SUBTEST(TestCNode<T> ());
 
         cout << endl;
     }
