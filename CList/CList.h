@@ -7,9 +7,18 @@
 
 @mainpage Documention for the class "CList"
 
-This class have for goal to approach the most class list from the STL.
-So for this reason we choose to implement a double-linked list and we think it's easier for users to work with double linked list.
-We implement the most part of the list class functions like emplace, insert, ... and we implement iterator to provide a simple way to browse the list.
+The goal of this class is reproduce the behaviour of the STL container std::list.
+For this reason, we chose to implement a doubly linked list and bidirectional iterators.
+Doubly linked list are easier to browse and more convenient to use.
+They have the disavantage of being more complex, however by using two sentinels their complexity is grealt reduced.
+
+Since our CList is made to be "plug and play" with the std list, we chose to respect their conventions to best of our ability.
+
+As requested, the Allocator part is not supported.
+Performance tests have not been run, but we know that our implementation is sub par.
+
+Thank you for reading this notice. We hope you find our code pleasant ;)
+
 */
 
 #pragma once
