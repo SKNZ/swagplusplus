@@ -156,6 +156,11 @@ public:
         return node->getInfo ();
     }
 
+    /*!
+      @fn getNode () const oexcept
+      @brief The function return the node of the pointer.
+      @return  CNodePtr The node of the pointer.
+   */
     CNodePtr getNode () const noexcept
     {
         return node;
