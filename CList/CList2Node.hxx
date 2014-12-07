@@ -42,9 +42,9 @@ public:
     /*!
         @fn CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
         @brief This is the constructor of the class CNode
-        @params[in] @p info This is the info of the CNode
-                    @p next This is the next CNode
-                    @p next This is the previous CNode
+        @params[in] info This is the info of the CNode
+        @params[in] @p next This is the next CNode
+        @params[in] @p next This is the previous CNode
      */
     explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
             : m_info (info), m_next (next),
@@ -72,7 +72,7 @@ public:
     /*!
         @fn inline void setInfo (T info) noexcept
         @brief This is the setter of info
-        @param[in] @p info This is the info that you liked to define
+        @param[in] info This is the info that you liked to define
      */
     inline void setInfo (T info) noexcept
     {
@@ -91,7 +91,7 @@ public:
     /*!
         @fn inline void setNext (CNodePtr next) noexcept
         @brief This is the setter of the next CNode
-        @param[in] @p next This is the next CNode that you liked to define
+        @param[in] next This is the next CNode that you liked to define
      */
     inline void setNext (CNodePtr next) noexcept
     {
@@ -110,7 +110,7 @@ public:
     /*!
         @fn inline void setPrevious (CNodePtr previous) noexcept
         @brief This is the setter of the previous CNode
-        @param[in] @p previous This is the previous CNode that you liked to define
+        @param[in] previous This is the previous CNode that you liked to define
      */
     inline void setPrevious (CNodePtr previous) noexcept
     {
@@ -130,7 +130,7 @@ public:
     /*!
         @fn inline CNodePtr addBefore (const T &val) noexcept
         @brief This function adds a CNode before
-        @param[in] @p val This is the value of the CNode that you want to add
+        @param[in] val This is the value of the CNode that you want to add
      */
     inline CNodePtr addBefore (const T &val) noexcept
     {
@@ -143,7 +143,7 @@ public:
     /*!
         @fn inline CNodePtr addAfter (const T &val) noexcept
         @brief This function adds a CNode after
-        @param[in] @p val This is the value of the CNode that you want to add
+        @param[in] val This is the value of the CNode that you want to add
      */
     inline CNodePtr addAfter (const T &val) noexcept
     {

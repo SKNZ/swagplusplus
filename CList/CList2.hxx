@@ -219,7 +219,7 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
     if (0 == n)
         clear ();
 
-    if (m_size > n) // Reducing
+    if (m_size > n) // Reducing the CList to n
     {
         iterator itr = begin ();
         std::advance (itr, n - 1);
@@ -229,7 +229,7 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 
         m_size = n;
     }
-    else // Expanding
+    else // Expanding the CList to n
     {
         for (; n != 0; --n)
             push_back (val);
