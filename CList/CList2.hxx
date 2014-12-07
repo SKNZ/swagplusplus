@@ -3,6 +3,7 @@
 #include <memory>
 #include <iterator>
 #include "CList2.h"
+#include "CList2Node.hxx"
 
 template<typename T>
 nsSdD::CList<T>::CList () noexcept
@@ -78,6 +79,90 @@ nsSdD::CList<T>::CList (InputIterator begin, InputIterator end) noexcept
 }
 
 template<typename T>
+typename nsSdD::CList<T>::CNodePtr nsSdD::CList<T>::getHead () const noexcept
+{
+    return m_head;
+}
+
+template<typename T>
+typename nsSdD::CList<T>::CNodePtr nsSdD::CList<T>::getTail () const noexcept
+{
+    return m_tail;
+}
+
+template<typename T>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::begin () noexcept
+{
+    return iterator (m_head->getNext ());
+}
+
+template<typename T>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::end () noexcept
+{
+    return iterator (m_tail);
+}
+
+template<typename T>
+typename nsSdD::CList<T>::const_iterator nsSdD::CList<T>::cbegin () const noexcept
+{
+    return const_iterator (m_head->getNext ());
+}
+
+template<typename T>
+typename nsSdD::CList<T>::const_iterator nsSdD::CList<T>::cend () const noexcept
+{
+    return const_iterator (m_tail);
+}
+
+template<typename T>
+typename nsSdD::CList<T>::reverse_iterator nsSdD::CList<T>::rbegin () noexcept
+{
+    return reverse_iterator (m_head);
+}
+
+template<typename T>
+typename nsSdD::CList<T>::reverse_iterator nsSdD::CList<T>::rend () noexcept
+{
+    return reverse_iterator (m_tail->getPrevious ());
+}
+
+template<typename T>
+typename nsSdD::CList<T>::const_reverse_iterator nsSdD::CList<T>::crbegin () const noexcept
+{
+    return const_reverse_iterator (m_head);
+}
+
+template<typename T>
+typename nsSdD::CList<T>::const_reverse_iterator nsSdD::CList<T>::crend () const noexcept
+{
+    return const_reverse_iterator (m_tail->getPrevious ());
+}
+
+template<typename T>
+bool nsSdD::CList<T>::empty () const noexcept
+{
+    return m_size == 0;
+}
+
+template<typename T>
+typename nsSdD::CList<T>::size_type nsSdD::CList<T>::size () const noexcept
+{
+    return m_size;
+}
+
+template<typename T>
+T nsSdD::CList<T>::front () const noexcept
+{
+    return m_head->getNext ()->getInfo ();
+}
+
+template<typename T>
+T nsSdD::CList<T>::back () const noexcept
+{
+    return m_tail->getPrevious ()->getInfo ();
+}
+
+template<typename T>
 template<class InputIterator>
 void nsSdD::CList<T>::assign (InputIterator begin, InputIterator last)
 {
@@ -105,22 +190,6 @@ void nsSdD::CList<T>::assign (unsigned n, const T &val) noexcept
             ++m_size;
         }
     }
-}
-
-template<typename T>
-template<class... Args>
-void nsSdD::CList<T>::emplace_front (Args &&... val) noexcept
-{
-    CNodePtr ptr = std::make_shared<CNode>(val..., nullptr, nullptr);
-
-    ptr->setPrevious(m_head);
-    ptr->setNext(m_head->getNext());
-
-    (m_head->getNext())->setPrevious(ptr);
-
-    m_head->setNext(ptr);
-
-    ++m_size;
 }
 
 template<typename T>
@@ -189,25 +258,14 @@ void nsSdD::CList<T>::pop_back () noexcept
 }
 
 template<typename T>
-void nsSdD::CList<T>::emplace (CNodePtr Prec, T val) noexcept
-{
-    CNodePtr add = std::make_shared<CNode>(val, Prec, Prec->getNext());
-
-    Prec->getNext()->setPrevious(add);
-    Prec->setNext(add);
-
-    ++m_size;
-}
-
-template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (nsSdD::CList<T>::iterator del) noexcept
 {
-    del->getNext()->setPrevious(del->getPrevious());
-    del->getPrevious()->setNext(del->getNext());
+    del.getNode ()->getNext ()->setPrevious (del.getNode ()->getPrevious ());
+    del.getNode ()->getPrevious ()->setNext (del.getNode ()->getNext ());
 
     --m_size;
 
-    return nsSdD::CList<T>::iterator (del->getNext ());
+    return nsSdD::CList<T>::iterator (del.getNode ()->getNext ());
 }
 
 template<typename T>
@@ -314,23 +372,13 @@ void nsSdD::CList<T>::reverse () noexcept
 }
 
 template<typename T>
-void nsSdD::CList<T>::emplace_back (T val) noexcept
-{
-    CNodePtr a = std::make_shared<CNode>(val, m_tail->getPrevious(), m_tail);
-    m_tail->getPrevious ()->setNext (a);
-    m_tail->setPrevious(a);
-
-    ++m_size;
-}
-
-template<typename T>
 typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CList<T>::iterator position, T const &val) noexcept
 {
     CNodePtr tmp = std::make_shared<CNode>(val);
     tmp->setNext(position.getNode());
-    tmp->setPrevious(position->getPrevious());
-    position->getPrevious ()->setNext (tmp);
-    position->setPrevious(tmp);
+    tmp->setPrevious (position.getNode ()->getPrevious ());
+    position.getNode ()->getPrevious ()->setNext (tmp);
+    position.getNode ()->setPrevious (tmp);
 
     ++m_size;
 
@@ -353,7 +401,7 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
         prevNode = newNode;
     }
 
-    return ++position;
+    return iterator (prevNode->getNext ());
 }
 
 template<typename T>
@@ -365,13 +413,18 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::insert (typename nsSdD::CLis
 
     for (; begin != end; ++begin)
     {
-        CNodePtr newNode = std::make_shared<CNode> (*begin, nextNode, prevNode);
-        prevNode->setNext (newNode);
-        nextNode->setPrevious (newNode);
+        nextNode->addBefore (*begin);
         ++m_size;
-        prevNode = newNode;
     }
 
-    return ++position;
+    return iterator (prevNode->getNext ());
 }
 
+template<typename T>
+template<typename... Args>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace (typename nsSdD::CList<T>::iterator position, Args &&... args)
+{
+    T newValue (std::forward<Args> (args)...);
+    CNodePtr newNode = position.getNode ()->addBefore (newValue);
+    return iterator (newNode);
+}

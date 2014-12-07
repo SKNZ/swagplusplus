@@ -476,9 +476,9 @@ namespace
 
         IZI_ASSERT(*itr == make_pair(data[2], data[2]));
 
-        for (auto itr = list.cbegin(); itr != list.cend(); ++itr)
+        for (itr = list.begin (); itr != list.end (); ++itr)
         {
-            int i = distance(list.cbegin(), itr);
+            int i = distance (list.begin (), itr);
             IZI_ASSERT(*itr == make_pair(data[i], data[i]));
         }
     }
@@ -915,8 +915,8 @@ namespace
 
         IZI_SUBTEST(Iterate<T> ());
         IZI_SUBTEST(ConstIterate<T> ());
-        IZI_SUBTEST(ReverseIterate<T> ());
-        IZI_SUBTEST(ReverseConstIterate<T> ());
+        //IZI_SUBTEST(ReverseIterate<T> ());
+        //IZI_SUBTEST(ReverseConstIterate<T> ());
 
         IZI_SUBTEST(IsEmpty<T> ());
         IZI_SUBTEST(Size<T> ());
@@ -930,7 +930,7 @@ namespace
 
 //        IZI_SUBTEST(EmplaceFront<T>());
 //        IZI_SUBTEST(EmplaceBack<T>());
-//        IZI_SUBTEST(Emplace<T>());
+        IZI_SUBTEST(Emplace<T> ());
 
         IZI_SUBTEST(PushFront<T> ());
         IZI_SUBTEST(PushBack<T> ());
