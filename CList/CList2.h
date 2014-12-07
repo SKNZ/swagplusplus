@@ -20,9 +20,9 @@ namespace nsSdD
     {
         // Types
     private:
-        struct CIterator;
+        struct iterator;
 
-        struct CConstIterator;
+        struct const_iterator;
 
         class CNode;
 
@@ -43,15 +43,15 @@ namespace nsSdD
 
         /*!
             @typedef iterator
-            @brief This define a @p CIterator. We use it to declare a CList iterator
+            @brief This define a @p iterator. We use it to declare a CList iterator
          */
-        typedef CIterator iterator;
+        typedef iterator iterator;
 
         /*!
             @typedef const_iterator
-            @brief This define a @p CConstIterator. We use it to declare a CList const iterator
+            @brief This define a @p const_iterator. We use it to declare a CList const iterator
          */
-        typedef CConstIterator const_iterator;
+        typedef const_iterator const_iterator;
 
         /*!
             @typedef reverse_iterator
@@ -271,14 +271,14 @@ namespace nsSdD
 
         // Emplace
         /*!
-           @fn     emplace (CIterator position, Args &&... args)
-           @brief  This function construct an element with @p args and place it before the @p position.
+           @fn     emplace (iterator position, Args &&... args)
+           @brief  This function constructs an element with @p args and place it before the @p position.
            @param[in] args The package of arguments you want to use to construct you element.
            @param[in] position The position where you want to insert the new element.
            @return An iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace (CIterator position, Args &&... args);
+        iterator emplace (iterator position, Args &&... args);
 
         /*!
            @fn     emplace ( Args &&... args)
@@ -287,7 +287,7 @@ namespace nsSdD
            @return An iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace_front (Args &&... args);
+        iterator emplace_front (Args &&... args);
 
         /*!
            @fn     emplace ( Args &&... args)
@@ -296,19 +296,26 @@ namespace nsSdD
            @return An iterator that points to the newly inserted elements.
         */
         template<typename... Args>
-        CIterator emplace_back (Args &&... args);
+        iterator emplace_back (Args &&... args);
 
         // Insert
-        CIterator insert (CIterator position, const T &val) noexcept;
 
-        CIterator insert (CIterator position, size_type n, const T &val) noexcept;
+        /*!
+           @fn     insert (C Args &&... args)
+           @brief  This function construct an element with @p args and place at the beginning of the CList.
+           @param[in] args The package of arguments you want to use to construct you element.
+           @return An iterator that points to the newly inserted elements.
+        */
+        iterator insert (iterator position, const T &val) noexcept;
+
+        iterator insert (iterator position, size_type n, const T &val) noexcept;
 
         template<class InputIterator>
-        CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
+        iterator insert (iterator position, InputIterator begin, InputIterator end) noexcept;
 
         // Erase
         /*!
-           @fn     erase (CIterator del) noexcept
+           @fn     erase (iterator del) noexcept
            @brief  This function delete the element pointed by the iterator @p del.
            @param[in] del A iterator who pointing to the element who want to delete .
             @return iterator The element that followed the last element erased by the function call.
