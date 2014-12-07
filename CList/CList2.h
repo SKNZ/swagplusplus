@@ -92,6 +92,9 @@ namespace nsSdD
         // Sort
         void sort() noexcept;
 
+        template <class Compare>
+        void sort(Compare comp) noexcept;
+
         // Emplace
         template<typename... Args>
         CIterator emplace (CIterator position, Args &&... args);
