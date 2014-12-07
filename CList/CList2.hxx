@@ -185,7 +185,6 @@ template<typename T>
 void nsSdD::CList<T>::push_front (const T &x) noexcept
 {
     m_head->addAfter (x);
-
     ++m_size;
 }
 
@@ -193,7 +192,6 @@ template<typename T>
 void nsSdD::CList<T>::push_back (const T &x) noexcept
 {
     m_tail->addBefore (x);
-
     ++m_size;
 }
 
@@ -418,16 +416,10 @@ template <typename T>
 template<class Compare>
 void nsSdD::CList<T>::sort(Compare comp) noexcept
 {
-    // Bubble sort :)
-
     for (iterator i = begin (); i != end (); ++i)
-    {
         for (iterator j = i; j != end (); ++j)
-        {
             if(comp(*j, *i))
                 std::iter_swap(i, j);
-        }
-    }
 }
 
 template<typename T>
