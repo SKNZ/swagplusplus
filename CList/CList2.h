@@ -144,6 +144,9 @@ namespace nsSdD
 
         void splice (iterator position, CList& x, iterator first, iterator last) noexcept;
 
+        //Merge
+        void merge (CList<T>& x) noexcept;
+
         // Reverse
         void reverse () noexcept;
 

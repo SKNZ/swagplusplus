@@ -444,3 +444,12 @@ void nsSdD::CList<T>::sort(Compare comp) noexcept
         }
     }
 }
+
+template<typename T>
+void  nsSdD::CList<T>::merge (nsSdD::CList<T>& x) noexcept
+{
+    sort();
+    x.sort ();
+    splice (end(), x);
+    sort();
+}
