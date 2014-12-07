@@ -36,13 +36,13 @@ nsSdD::CList<T>::CList (size_type n, const T &val) noexcept
 }
 
 template<typename T>
-nsSdD::CList<T>::CList (const nsSdD::CList<T> &x) noexcept
+nsSdD::CList<T>::CList (const nsSdD::CList<T> &list) noexcept
         : m_head (std::make_shared<CNode> (T (), nullptr, nullptr)),
           m_tail (std::make_shared<CNode> (T (), nullptr, m_head))
 {
     m_head->setNext (m_tail);
 
-    for (auto itr = x.cbegin (); itr != x.cend (); ++itr)
+    for (auto itr = list.cbegin (); itr != list.cend (); ++itr)
         push_back (*itr);
 }
 
@@ -226,7 +226,7 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (iterator first, itera
     for(auto i = first ; i != last ; ++i)
         erase (i);
 
-    return nsSdD::CList<T>::iterator (last.getNode ());
+    return iterator (last.getNode ());
 }
 
 template<typename T>
@@ -237,14 +237,11 @@ void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 
     if (m_size > n) // Reducing
     {
-        CNodePtr currentNode = m_head;
-        for (size_type i = 0; i < n; ++i)
-            currentNode = currentNode->getNext ();
+        iterator itr = begin ();
+        std::advance (itr, n - 1);
 
-        currentNode->setNext (m_tail);
-        m_tail->setPrevious (currentNode);
-        if (n == 0)
-            IZI_ASSERT(m_head->getNext () == m_tail);
+        itr.getNode ()->setNext (m_tail);
+        m_tail->setPrevious (itr.getNode ());
 
         m_size = n;
     }
@@ -276,14 +273,10 @@ void nsSdD::CList<T>::clear () noexcept
 template<typename T>
 void nsSdD::CList<T>::remove (const T &val) noexcept
 {
-    for (CNodePtr a = m_head->getNext (); a != m_tail; a = a->getNext ())
+    remove_if ([val] (const T &x)
     {
-        if (a->getInfo () == val)
-        {
-            a->remove ();
-            --m_size;
-        }
-    }
+        return x == val;
+    });
 }
 
 template<typename T>
@@ -303,12 +296,10 @@ void nsSdD::CList<T>::remove_if (Predicate pred) noexcept
 template<typename T>
 void nsSdD::CList<T>::unique () noexcept
 {
-    for (CNodePtr currNode = m_head->getNext (); currNode != m_tail; currNode = currNode->getNext ())
-        while (currNode->getInfo () == currNode->getNext ()->getInfo ())
-        {
-            currNode->getNext ()->remove ();
-            --m_size;
-        }
+    unique ([] (const T &a, const T &b)
+    {
+        return a == b;
+    });
 }
 
 template<typename T>
@@ -417,16 +408,10 @@ void nsSdD::CList<T>::splice(iterator position, CList& x, iterator first, iterat
 template <typename T>
 void nsSdD::CList<T>::sort() noexcept
 {
-    // Bubble sort :)
-
-    for (iterator i = begin (); i != end (); ++i)
+    sort ([] (const T &a, const T &b)
     {
-        for (iterator j = i; j != end (); ++j)
-        {
-            if(*j < *i)
-                std::iter_swap(i, j);
-        }
-    }
+        return a < b;
+    });
 }
 
 template <typename T>

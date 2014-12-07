@@ -30,7 +30,7 @@ namespace nsSdD
         typedef CConstReverseIterator const_reverse_iterator;
 
         // Constructors
-        CList (const CList<T> &x) noexcept;
+        CList (const CList<T> &list) noexcept;
 
         explicit CList () noexcept;
 
