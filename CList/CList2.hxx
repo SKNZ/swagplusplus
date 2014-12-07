@@ -22,13 +22,10 @@ nsSdD::CList<T>::CList (size_t n) noexcept
 
     for (size_t i = 0; i < n; i++)
     {
-        CNodePtr ptr = std::make_shared<CNode> (T (), nullptr, nullptr);
+        CNodePtr ptr = m_tail->addBefore (T());
 
         ptr->setNext (m_tail);
         ptr->setPrevious (m_tail->getPrevious ());
-
-        m_tail->getPrevious ()->setNext (ptr);
-        m_tail->setPrevious (ptr);
 
         ++m_size;
     }
@@ -43,14 +40,12 @@ nsSdD::CList<T>::CList (size_t n, const T &val) noexcept
 
     for (size_t i = 0; i < n; i++)
     {
-        CNodePtr ptr = std::make_shared<CNode> (val, nullptr, nullptr);
+        CNodePtr ptr = m_tail->addBefore (val);
         CNodePtr lastCreated = m_tail->getPrevious ();
 
-        ptr->setNext (m_tail);
         ptr->setPrevious (lastCreated);
 
         lastCreated->setNext (ptr);
-        m_tail->setPrevious (ptr);
 
         ++m_size;
     }
@@ -178,14 +173,12 @@ void nsSdD::CList<T>::assign (unsigned n, const T &val) noexcept
     {
         for (size_t i = 0; i < n; i++)
         {
-            CNodePtr ptr = std::make_shared<CNode> (val, nullptr, nullptr);
+            CNodePtr ptr = m_tail->addBefore (val);
             CNodePtr LastCreated = m_tail->getPrevious ();
 
-            ptr->setNext (m_tail);
             ptr->setPrevious (LastCreated);
 
             LastCreated->setNext (ptr);
-            m_tail->setPrevious (ptr);
 
             ++m_size;
         }
@@ -218,12 +211,7 @@ void nsSdD::CList<T>::pop_front () noexcept
 template<typename T>
 void nsSdD::CList<T>::push_front (const T &x) noexcept
 {
-    CNodePtr add = std::make_shared<CNode> (x, nullptr, nullptr);
-
-    add->setNext (m_head->getNext ());
-    add->setPrevious (m_head);
-    add->getNext ()->setPrevious (add);
-    m_head->setNext (add);
+    m_head->addAfter (x);
 
     ++m_size;
 }
@@ -231,14 +219,7 @@ void nsSdD::CList<T>::push_front (const T &x) noexcept
 template<typename T>
 void nsSdD::CList<T>::push_back (const T &x) noexcept
 {
-    CNodePtr add = std::make_shared<CNode> (x, nullptr, nullptr);
-    CNodePtr LastCreated = m_tail->getPrevious ();
-
-    add->setNext (m_tail);
-    add->setPrevious (LastCreated);
-
-    LastCreated->setNext (add);
-    m_tail->setPrevious (add);
+    m_tail->addBefore (x);
 
     ++m_size;
 }

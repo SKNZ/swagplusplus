@@ -75,4 +75,12 @@ public:
         m_previous = newNode;
         return newNode;
     }
+
+    inline CNodePtr addAfter (const T &val) noexcept
+    {
+        CNodePtr newNode = std::make_shared<CNode> (val, this->shared_from_this (), m_next);
+        m_next->m_previous = newNode;
+        m_next = newNode;
+        return newNode;
+    }
 };
