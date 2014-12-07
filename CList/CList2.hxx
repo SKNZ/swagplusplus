@@ -376,3 +376,20 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::emplace_back (Args &&... arg
 {
     return emplace (end (), std::forward<Args> (args)...);
 }
+template <typename T>
+//template <class Compare>
+void nsSdD::CList<T>::sort() noexcept
+{
+    // Bubble sort :)
+
+    nsSdD::CList<T>::iterator i, j;
+
+    for(i = this->begin (); i != this->end (); ++i)
+    {
+        for(j = this->begin(); j != i; ++j)
+        {
+            if(*i < *j)
+                std::swap(i, j);
+        }
+    }
+}
