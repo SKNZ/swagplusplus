@@ -89,6 +89,9 @@ namespace nsSdD
 
         void pop_front () noexcept;
 
+        // Sort
+        void sort() noexcept;
+
         // Emplace
         template<typename... Args>
         CIterator emplace (CIterator position, Args &&... args);
@@ -106,6 +109,7 @@ namespace nsSdD
 
         template<class InputIterator>
         CIterator insert (CIterator position, InputIterator begin, InputIterator end) noexcept;
+
 
         // Erase
         CIterator erase (CIterator del) noexcept;
