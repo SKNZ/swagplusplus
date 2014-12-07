@@ -161,24 +161,11 @@ void nsSdD::CList<T>::assign (unsigned n, const T &val) noexcept
 template<typename T>
 void nsSdD::CList<T>::pop_front () noexcept
 {
-    CNodePtr del = m_head->getNext ();
-    if (del != m_tail)
+    if (m_size != 0)
     {
-        CNodePtr a = del->getNext ();
-        m_head->setNext (a);
-
-        a->setPrevious (m_head);
-
-        del->setPrevious (nullptr);
-        del->setNext (nullptr);
-
+        m_head->getNext ()->remove ();
         --m_size;
     }
-    else
-    {
-        m_size = 0;
-    }
-
 }
 
 template<typename T>
@@ -198,15 +185,11 @@ void nsSdD::CList<T>::push_back (const T &x) noexcept
 template<typename T>
 void nsSdD::CList<T>::pop_back () noexcept
 {
-    CNodePtr del = m_tail->getPrevious ();
-    m_tail->setPrevious (del->getPrevious ());
-
-    del->getPrevious ()->setNext (m_tail);
-
-    del->setPrevious (nullptr);
-    del->setNext (nullptr);
-
-    --m_size;
+    if (m_size != 0)
+    {
+        m_tail->getPrevious ()->remove ();
+        --m_size;
+    }
 }
 
 template<typename T>
