@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>val</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.2.9' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/28.html#L101'>val</a>               101 CList.h                explicit CList (size_t n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L223'>val</a>               223 CList.h                void assign (unsigned n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L313'>val</a>               313 CList.h                CIterator insert (CIterator position, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L323'>val</a>               323 CList.h                CIterator insert (CIterator position, size_type n, const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L372'>val</a>               372 CList.h                void resize (unsigned n, const T &amp;val = T ()) noexcept;</span>
+<span class='curline'><a href='../S/28.html#L388'>val</a>               388 CList.h                void remove (const T &amp;val) noexcept;</span>
+<span class='curline'><a href='../S/34.html#L28'>val</a>                28 CList.hxx      nsSdD::CList&lt;T&gt;::CList (size_type n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/34.html#L35'>val</a>                35 CList.hxx              push_back (val);</span>
+<span class='curline'><a href='../S/34.html#L154'>val</a>               154 CList.hxx      void nsSdD::CList&lt;T&gt;::assign (unsigned n, const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/34.html#L158'>val</a>               158 CList.hxx              push_back (val);</span>
+<span class='curline'><a href='../S/34.html#L214'>val</a>               214 CList.hxx      void nsSdD::CList&lt;T&gt;::resize (unsigned n, const T &amp;val /*= T()*/) noexcept</span>
+<span class='curline'><a href='../S/34.html#L235'>val</a>               235 CList.hxx                  push_back (val);</span>
+<span class='curline'><a href='../S/34.html#L257'>val</a>               257 CList.hxx      void nsSdD::CList&lt;T&gt;::remove (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/34.html#L259'>val</a>               259 CList.hxx          remove_if ([val] (const T &amp;x)</span>
+<span class='curline'><a href='../S/34.html#L261'>val</a>               261 CList.hxx              return x == val;</span>
+<span class='curline'><a href='../S/34.html#L311'>val</a>               311 CList.hxx      typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, T const &amp;val) noexcept</span>
+<span class='curline'><a href='../S/34.html#L314'>val</a>               314 CList.hxx          return iterator (position.getNode ()-&gt;addBefore (val));</span>
+<span class='curline'><a href='../S/34.html#L318'>val</a>               318 CList.hxx      typename nsSdD::CList&lt;T&gt;::iterator nsSdD::CList&lt;T&gt;::insert (iterator position, size_type n, T const &amp;val) noexcept</span>
+<span class='curline'><a href='../S/34.html#L326'>val</a>               326 CList.hxx              currNode = nextNode-&gt;addBefore (val);</span>
+<span class='curline'><a href='../S/36.html#L145'>val</a>               145 CNode.hxx          inline CNodePtr addBefore (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/36.html#L147'>val</a>               147 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_previous-&gt;m_next, m_previous);</span>
+<span class='curline'><a href='../S/36.html#L158'>val</a>               158 CNode.hxx          inline CNodePtr addAfter (const T &amp;val) noexcept</span>
+<span class='curline'><a href='../S/36.html#L160'>val</a>               160 CNode.hxx              CNodePtr newNode = std::make_shared&lt;CNode&gt; (val, m_next, m_next-&gt;m_previous);</span>
+<span class='curline'><a href='../S/31.html#L277'>val</a>               277 Tests.cxx              for (T val : list)</span>
+<span class='curline'><a href='../S/31.html#L278'>val</a>               278 Tests.cxx                  IZI_ASSERT(val == x);</span>
+<span class='curline'><a href='../S/31.html#L453'>val</a>               453 Tests.cxx              for (T val : list)</span>
+<span class='curline'><a href='../S/31.html#L454'>val</a>               454 Tests.cxx                  IZI_ASSERT(val == x);</span>
+</pre>
+</body>
+</html>
