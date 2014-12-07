@@ -221,6 +221,15 @@ typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (nsSdD::CList<T>::iter
 }
 
 template<typename T>
+typename nsSdD::CList<T>::iterator nsSdD::CList<T>::erase (iterator first, iterator last) noexcept
+{
+    for(auto i = first ; i != last ; ++i)
+        erase (i);
+
+    return nsSdD::CList<T>::iterator (last.getNode ());
+}
+
+template<typename T>
 void nsSdD::CList<T>::resize (unsigned n, const T &val /*= T()*/) noexcept
 {
     if (m_size == n)
@@ -385,6 +394,13 @@ void nsSdD::CList<T>::splice (iterator position, nsSdD::CList<T> &x, iterator i)
 {
     insert (position, *i);
     x.erase (i);
+}
+
+template<typename T>
+void nsSdD::CList<T>::splice(iterator position, CList& x, iterator first, iterator last) noexcept
+{
+    insert (position, first, last);
+    x.erase (first,last);
 }
 
 
