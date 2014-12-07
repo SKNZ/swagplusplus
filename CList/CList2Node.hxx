@@ -1,3 +1,13 @@
+/*!
+@file CList2.h
+@author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
+@date 08/12/2014
+@version  1.0
+@brief Header to the CNode class.
+
+@mainpage Documention for the class "CNode"
+*/
+
 #pragma once
 
 #include "CList2.h"
