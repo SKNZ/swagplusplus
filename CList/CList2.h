@@ -1,3 +1,13 @@
+/*!
+@file CList2.h
+@author Anthony L., Loïck M., Thomas M., Floran N., Loïc P.
+@date 8 décembre 2014
+@version  1.0
+@brief Header to the CList class V2.
+
+@mainpage Documention for the class "CList V2"
+*/
+
 #pragma once
 
 #include <iterator>
@@ -20,6 +30,11 @@ namespace nsSdD
 
         class CNode;
 
+        /*!
+            @typedef CNodePtr
+            @brief This define a @p std::shared_ptr<CNode> like a CNodePtr. We use
+                    it to declare the content of the list
+        */
         typedef std::shared_ptr<CNode> CNodePtr;
 
     public:
@@ -29,11 +44,25 @@ namespace nsSdD
         typedef CReverseIterator reverse_iterator;
         typedef CConstReverseIterator const_reverse_iterator;
 
-        // Constructors
+        /*!
+            @fn CList (const CList<T> &x) noexcept
+            @brief This is the copy-constructor of the class CList
+            @param[in] @p CList<T> this is the list who want to copy.
+        */
         CList (const CList<T> &x) noexcept;
 
+        /*!
+            @fn explicit CList () noexcept
+            @brief This is the default of the class CList
+            @param[in] No parameters.
+        */
         explicit CList () noexcept;
 
+        /*!
+            @fn explicit CList (size_t n) noexcept
+            @brief This is the default of the class CList
+            @param[in] No parameters.
+        */
         explicit CList (size_t n) noexcept;
 
         explicit CList (size_t n, const T &val) noexcept;
