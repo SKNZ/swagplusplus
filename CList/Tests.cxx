@@ -944,8 +944,8 @@ namespace
 
         IZI_SUBTEST(Iterate<T> ());
         IZI_SUBTEST(ConstIterate<T> ());
-        //IZI_SUBTEST(ReverseIterate<T> ());
-        //IZI_SUBTEST(ReverseConstIterate<T> ());
+        IZI_SUBTEST(ReverseIterate<T> ());
+        IZI_SUBTEST(ReverseConstIterate<T> ());
 
         IZI_SUBTEST(IsEmpty<T> ());
         IZI_SUBTEST(Size<T> ());

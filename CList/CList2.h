@@ -61,13 +61,13 @@ namespace nsSdD
             @typedef reverse_iterator
             @brief This define a @p CReverseIterator. We use it to declare a CList reverse_iterator
          */
-        typedef CReverseIterator reverse_iterator;
+        typedef std::reverse_iterator<iterator> reverse_iterator;
 
         /*!
             @typedef const_reverse_iterator
             @brief This define a @p CConstReverseIterator. We use it to declare a CList const reverse iterator
          */
-        typedef CConstReverseIterator const_reverse_iterator;
+        typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
         /*!
             @fn CList (const CList<T> &x) noexcept
@@ -101,21 +101,22 @@ namespace nsSdD
         inline CNodePtr getTail () const noexcept;
 
         // Iterators
-        CIterator begin () noexcept;
+        iterator begin () noexcept;
 
-        CIterator end () noexcept;
+        iterator end () noexcept;
 
-        CConstIterator cbegin () const noexcept;
+        const_iterator cbegin () const noexcept;
 
-        CConstIterator cend () const noexcept;
+        const_iterator cend () const noexcept;
 
-        CReverseIterator rbegin () noexcept;
+        std::reverse_iterator<iterator> rbegin () noexcept;
 
-        CReverseIterator rend () noexcept;
+        std::reverse_iterator<iterator> rend () noexcept;
 
-        CConstReverseIterator crbegin () const noexcept;
+        std::reverse_iterator<const_iterator> crbegin () noexcept;
 
-        CConstReverseIterator crend () const noexcept;
+        std::reverse_iterator<const_iterator> crend () noexcept;
+
 
         // Capacity
         inline bool empty () const noexcept;

@@ -94,27 +94,27 @@ typename nsSdD::CList<T>::const_iterator nsSdD::CList<T>::cend () const noexcept
 }
 
 template<typename T>
-typename nsSdD::CList<T>::reverse_iterator nsSdD::CList<T>::rbegin () noexcept
+typename std::reverse_iterator<typename nsSdD::CList<T>::iterator> nsSdD::CList<T>::rbegin () noexcept
 {
-    return reverse_iterator (m_head);
+    return std::reverse_iterator<iterator> (begin ());
 }
 
 template<typename T>
-typename nsSdD::CList<T>::reverse_iterator nsSdD::CList<T>::rend () noexcept
+typename std::reverse_iterator<typename nsSdD::CList<T>::iterator> nsSdD::CList<T>::rend () noexcept
 {
-    return reverse_iterator (m_tail->getPrevious ());
+    return std::reverse_iterator<iterator> (end ());
 }
 
 template<typename T>
-typename nsSdD::CList<T>::const_reverse_iterator nsSdD::CList<T>::crbegin () const noexcept
+typename std::reverse_iterator<typename nsSdD::CList<T>::const_iterator> nsSdD::CList<T>::crbegin () noexcept
 {
-    return const_reverse_iterator (m_head);
+    return std::reverse_iterator<const_iterator> (cbegin ());
 }
 
 template<typename T>
-typename nsSdD::CList<T>::const_reverse_iterator nsSdD::CList<T>::crend () const noexcept
+typename std::reverse_iterator<typename nsSdD::CList<T>::const_iterator> nsSdD::CList<T>::crend () noexcept
 {
-    return const_reverse_iterator (m_tail->getPrevious ());
+    return std::reverse_iterator<const_iterator> (cend ());
 }
 
 template<typename T>
