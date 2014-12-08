@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -73,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>nsSdD</b></li><li class="navelem"><a class="el" href="classnsSdD_1_1CList.html">CList</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacensSdD.html">nsSdD</a></li><li class="navelem"><a class="el" href="classnsSdD_1_1CList.html">CList</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -111,11 +112,13 @@ Collaboration diagram for nsSdD::CList&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sister const class to <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a>.  <a href="structnsSdD_1_1CList_1_1CConstIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class permit <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> to use iterators. Because we want to have a stl compliant <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with bidirectional iterators, we implement this on the <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a> class.  <a href="structnsSdD_1_1CList_1_1CIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList_1_1CNode.html">CNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a node in the doubly linked list, holding a value of type T Also contains methods for insertion and removal. Be careful to keep count in CList.m_size when using those.  <a href="classnsSdD_1_1CList_1_1CNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -130,7 +133,7 @@ typedef <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html">CIterator</a
 <tr class="separator:afdaca29586106fc15940d8529f4990f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae323732a26e507146686556fb775767a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae323732a26e507146686556fb775767a"></a>
 typedef <a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ae323732a26e507146686556fb775767a">const_iterator</a></td></tr>
-<tr class="memdesc:ae323732a26e507146686556fb775767a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a></code>. We use it to declare a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const iterator. <br /></td></tr>
+<tr class="memdesc:ae323732a26e507146686556fb775767a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This define a <code><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html" title="Sister const class to CIterator. ">CConstIterator</a></code>. We use it to declare a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> const iterator. <br /></td></tr>
 <tr class="separator:ae323732a26e507146686556fb775767a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5582eb88a5f625ef426f534ea5556311"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5582eb88a5f625ef426f534ea5556311"></a>
 typedef std::reverse_iterator<br class="typebreak" />
@@ -148,8 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#aad7088db9f8120c6e6c1a2f39022fa8f">CList</a> (const <a class="el" href="classnsSdD_1_1CList.html">CList</a>&lt; T &gt; &amp;x) noexcept</td></tr>
 <tr class="memdesc:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy-constructor of the class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#aad7088db9f8120c6e6c1a2f39022fa8f">More...</a><br /></td></tr>
 <tr class="separator:aad7088db9f8120c6e6c1a2f39022fa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ae319d81f9a81a4d4aa5427f013fe8dae">CList</a> () noexcept</td></tr>
-<tr class="memdesc:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default of the class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ae319d81f9a81a4d4aa5427f013fe8dae">More...</a><br /></td></tr>
+<tr class="memitem:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae319d81f9a81a4d4aa5427f013fe8dae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ae319d81f9a81a4d4aa5427f013fe8dae">CList</a> () noexcept</td></tr>
+<tr class="memdesc:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default of the class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. <br /></td></tr>
 <tr class="separator:ae319d81f9a81a4d4aa5427f013fe8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc3fc05ef1e765313814baf2be139c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a0dc3fc05ef1e765313814baf2be139c1">CList</a> (size_t n) noexcept</td></tr>
 <tr class="memdesc:a0dc3fc05ef1e765313814baf2be139c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements.  <a href="#a0dc3fc05ef1e765313814baf2be139c1">More...</a><br /></td></tr>
@@ -157,9 +161,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09fd13d9614defdb880fdab1ae0b33ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a09fd13d9614defdb880fdab1ae0b33ca">CList</a> (size_t n, const T &amp;val) noexcept</td></tr>
 <tr class="memdesc:a09fd13d9614defdb880fdab1ae0b33ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor by the size (<code>size_t</code> n) <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. The constructor create a <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> of n elements with <code>T</code> val in each element.  <a href="#a09fd13d9614defdb880fdab1ae0b33ca">More...</a><br /></td></tr>
 <tr class="separator:a09fd13d9614defdb880fdab1ae0b33ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6558a45c50021a28a54ea3e48fd1ed4b"></a>
-template&lt;class InputIterator &gt; </td></tr>
-<tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CList</b> (InputIterator first, InputIterator last) noexcept</td></tr>
+<tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplParams" colspan="2">template&lt;class InputIterator &gt; </td></tr>
+<tr class="memitem:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a6558a45c50021a28a54ea3e48fd1ed4b">CList</a> (InputIterator first, InputIterator last) noexcept</td></tr>
+<tr class="memdesc:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor who construct a new <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> from two iterator of another <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a6558a45c50021a28a54ea3e48fd1ed4b">More...</a><br /></td></tr>
 <tr class="separator:a6558a45c50021a28a54ea3e48fd1ed4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac196a16661fe4cba73b339a4e2fcfb73"><td class="memItemLeft" align="right" valign="top">CNodePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ac196a16661fe4cba73b339a4e2fcfb73">getHead</a> () const noexcept</td></tr>
 <tr class="memdesc:ac196a16661fe4cba73b339a4e2fcfb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the head of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ac196a16661fe4cba73b339a4e2fcfb73">More...</a><br /></td></tr>
@@ -234,17 +238,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:acef43a041947820896c05b2107d68abf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#acef43a041947820896c05b2107d68abf">sort</a> (Compare comp) noexcept</td></tr>
 <tr class="memdesc:acef43a041947820896c05b2107d68abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> with the comparator <code>comp</code> given in parameter.  <a href="#acef43a041947820896c05b2107d68abf">More...</a><br /></td></tr>
 <tr class="separator:acef43a041947820896c05b2107d68abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5909d765433cb8fd2b9706229cfc9feb"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a5909d765433cb8fd2b9706229cfc9feb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a5909d765433cb8fd2b9706229cfc9feb">emplace</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, Args &amp;&amp;...args) noexcept</td></tr>
-<tr class="memdesc:a5909d765433cb8fd2b9706229cfc9feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function constructs an element with <code>args</code> and place it before the <code>position</code>.  <a href="#a5909d765433cb8fd2b9706229cfc9feb">More...</a><br /></td></tr>
-<tr class="separator:a5909d765433cb8fd2b9706229cfc9feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ed40bdbc813658193defa7e55b94d0"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac6ed40bdbc813658193defa7e55b94d0"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ac6ed40bdbc813658193defa7e55b94d0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace_front</b> (Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memitem:aef008f6b0cd75aa5c5e455df86bdeda6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aef008f6b0cd75aa5c5e455df86bdeda6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#aef008f6b0cd75aa5c5e455df86bdeda6">emplace</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memdesc:aef008f6b0cd75aa5c5e455df86bdeda6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function constructs an element with <code>args</code> and place it before the <code>position</code>.  <a href="#aef008f6b0cd75aa5c5e455df86bdeda6">More...</a><br /></td></tr>
+<tr class="separator:aef008f6b0cd75aa5c5e455df86bdeda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ed40bdbc813658193defa7e55b94d0"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ac6ed40bdbc813658193defa7e55b94d0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ac6ed40bdbc813658193defa7e55b94d0">emplace_front</a> (Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memdesc:ac6ed40bdbc813658193defa7e55b94d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct an element with <code>args</code> and place at the beginning of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#ac6ed40bdbc813658193defa7e55b94d0">More...</a><br /></td></tr>
 <tr class="separator:ac6ed40bdbc813658193defa7e55b94d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0ebfc3b0a8eae9e41806a0c26ff5c219"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace_back</b> (Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memitem:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a0ebfc3b0a8eae9e41806a0c26ff5c219">emplace_back</a> (Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memdesc:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function construct an element with <code>args</code> and place at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a0ebfc3b0a8eae9e41806a0c26ff5c219">More...</a><br /></td></tr>
 <tr class="separator:a0ebfc3b0a8eae9e41806a0c26ff5c219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad7db72cc1e9eff7ddf8f086887a62d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#aaad7db72cc1e9eff7ddf8f086887a62d">insert</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, const T &amp;val) noexcept</td></tr>
 <tr class="memdesc:aaad7db72cc1e9eff7ddf8f086887a62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts element <code>val</code> before position <code>position</code>.  <a href="#aaad7db72cc1e9eff7ddf8f086887a62d">More...</a><br /></td></tr>
@@ -252,13 +256,13 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ae0e7df830769f973caa2e394e9707a6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#ae0e7df830769f973caa2e394e9707a6c">insert</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, <a class="el" href="classnsSdD_1_1CList.html#a91d4b6b8c89816da277ee27d32df5478">size_type</a> n, const T &amp;val) noexcept</td></tr>
 <tr class="memdesc:ae0e7df830769f973caa2e394e9707a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts <code>n</code> elements <code>val</code> before position <code>position</code>.  <a href="#ae0e7df830769f973caa2e394e9707a6c">More...</a><br /></td></tr>
 <tr class="separator:ae0e7df830769f973caa2e394e9707a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af636dccd2876418963d37484e9c0c4e4"><td class="memTemplParams" colspan="2"><a class="anchor" id="af636dccd2876418963d37484e9c0c4e4"></a>
-template&lt;class InputIterator &gt; </td></tr>
-<tr class="memitem:af636dccd2876418963d37484e9c0c4e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insert</b> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, InputIterator first, InputIterator last) noexcept</td></tr>
+<tr class="memitem:af636dccd2876418963d37484e9c0c4e4"><td class="memTemplParams" colspan="2">template&lt;class InputIterator &gt; </td></tr>
+<tr class="memitem:af636dccd2876418963d37484e9c0c4e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#af636dccd2876418963d37484e9c0c4e4">insert</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, InputIterator first, InputIterator last) noexcept</td></tr>
+<tr class="memdesc:af636dccd2876418963d37484e9c0c4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the elements in the range from <code>begin</code> to <code>end</code> starting from position <code>position</code>.  <a href="#af636dccd2876418963d37484e9c0c4e4">More...</a><br /></td></tr>
 <tr class="separator:af636dccd2876418963d37484e9c0c4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ca689422c8549a74e2ef0899512dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a12ca689422c8549a74e2ef0899512dae">erase</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> del) noexcept</td></tr>
-<tr class="memdesc:a12ca689422c8549a74e2ef0899512dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the element pointed by the iterator <code>del</code>.  <a href="#a12ca689422c8549a74e2ef0899512dae">More...</a><br /></td></tr>
-<tr class="separator:a12ca689422c8549a74e2ef0899512dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa235a3273103e76c13c58d54a1cdf3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#afa235a3273103e76c13c58d54a1cdf3c">erase</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> del) noexcept</td></tr>
+<tr class="memdesc:afa235a3273103e76c13c58d54a1cdf3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete the element pointed by the iterator <code>del</code>.  <a href="#afa235a3273103e76c13c58d54a1cdf3c">More...</a><br /></td></tr>
+<tr class="separator:afa235a3273103e76c13c58d54a1cdf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cb7fe2e6e4d3189b3a87f43ec6d4961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a4cb7fe2e6e4d3189b3a87f43ec6d4961">erase</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> first, <a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> last) noexcept</td></tr>
 <tr class="memdesc:a4cb7fe2e6e4d3189b3a87f43ec6d4961"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function elements between the <code>first</code> and <code>last</code> iterator .  <a href="#a4cb7fe2e6e4d3189b3a87f43ec6d4961">More...</a><br /></td></tr>
 <tr class="separator:a4cb7fe2e6e4d3189b3a87f43ec6d4961"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,18 +279,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a55651384c55447be5c4d9edd1565ad1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a55651384c55447be5c4d9edd1565ad1f">remove</a> (const T &amp;val) noexcept</td></tr>
 <tr class="memdesc:a55651384c55447be5c4d9edd1565ad1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete <code>val</code> element of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.  <a href="#a55651384c55447be5c4d9edd1565ad1f">More...</a><br /></td></tr>
 <tr class="separator:a55651384c55447be5c4d9edd1565ad1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0ad14711538606425a28a357bd1c74bf"></a>
-template&lt;class Predicate &gt; </td></tr>
-<tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>remove_if</b> (Predicate pred) noexcept</td></tr>
+<tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplParams" colspan="2">template&lt;class Predicate &gt; </td></tr>
+<tr class="memitem:a0ad14711538606425a28a357bd1c74bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a0ad14711538606425a28a357bd1c74bf">remove_if</a> (Predicate pred) noexcept</td></tr>
+<tr class="memdesc:a0ad14711538606425a28a357bd1c74bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function delete all element of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> who not respect the <code>pred</code> constraint.  <a href="#a0ad14711538606425a28a357bd1c74bf">More...</a><br /></td></tr>
 <tr class="separator:a0ad14711538606425a28a357bd1c74bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7b9f069918d17942e8baabccb97a5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc7b9f069918d17942e8baabccb97a5d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#abc7b9f069918d17942e8baabccb97a5d">unique</a> () noexcept</td></tr>
 <tr class="memdesc:abc7b9f069918d17942e8baabccb97a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes all element that are duplicated. <br /></td></tr>
 <tr class="separator:abc7b9f069918d17942e8baabccb97a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6ef8aadfdbf09c5301c7ac68e91a64"><td class="memTemplParams" colspan="2">template&lt;class Predicate &gt; </td></tr>
-<tr class="memitem:abc6ef8aadfdbf09c5301c7ac68e91a64"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#abc6ef8aadfdbf09c5301c7ac68e91a64">unique</a> (Predicate pred) noexcept</td></tr>
-<tr class="memdesc:abc6ef8aadfdbf09c5301c7ac68e91a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes all element that are duplicated and where the <code>pred</code> are true.  <a href="#abc6ef8aadfdbf09c5301c7ac68e91a64">More...</a><br /></td></tr>
-<tr class="separator:abc6ef8aadfdbf09c5301c7ac68e91a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c6c84c9b24709862d0339e75c33de5"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
+<tr class="memitem:a09c6c84c9b24709862d0339e75c33de5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a09c6c84c9b24709862d0339e75c33de5">unique</a> (Compare pred) noexcept</td></tr>
+<tr class="memdesc:a09c6c84c9b24709862d0339e75c33de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes all element that are duplicated and where the <code>pred</code> are true.  <a href="#a09c6c84c9b24709862d0339e75c33de5">More...</a><br /></td></tr>
+<tr class="separator:a09c6c84c9b24709862d0339e75c33de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77681795747faa38097f2d9b9435321c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a77681795747faa38097f2d9b9435321c">splice</a> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, <a class="el" href="classnsSdD_1_1CList.html">CList</a> &amp;x) noexcept</td></tr>
 <tr class="memdesc:a77681795747faa38097f2d9b9435321c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function move the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> <code>x</code> to the current <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> before <code>position</code>.  <a href="#a77681795747faa38097f2d9b9435321c">More...</a><br /></td></tr>
 <tr class="separator:a77681795747faa38097f2d9b9435321c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,14 +307,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnsSdD_1_1CList.html#a60dbb7a753634838fb2f705ce84764f9">reverse</a> () noexcept</td></tr>
 <tr class="memdesc:a60dbb7a753634838fb2f705ce84764f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function reverse the head and the tail of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. <br /></td></tr>
 <tr class="separator:a60dbb7a753634838fb2f705ce84764f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa271b480c0498942afb039342557687"><td class="memTemplParams" colspan="2"><a class="anchor" id="afa271b480c0498942afb039342557687"></a>
-template&lt;class Compare &gt; </td></tr>
-<tr class="memitem:afa271b480c0498942afb039342557687"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>unique</b> (Compare comp) noexcept</td></tr>
-<tr class="separator:afa271b480c0498942afb039342557687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a9ef6e137eb6e2ceb05e7a95e5037f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a19a9ef6e137eb6e2ceb05e7a95e5037f"></a>
+<tr class="memitem:a48fc16069d00670d514caaec44b5fbfa"><td class="memTemplParams" colspan="2"><a class="anchor" id="a48fc16069d00670d514caaec44b5fbfa"></a>
 template&lt;class InputIterator &gt; </td></tr>
-<tr class="memitem:a19a9ef6e137eb6e2ceb05e7a95e5037f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insert</b> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, InputIterator <a class="el" href="classnsSdD_1_1CList.html#aa388b52d241c12737c4e5b2a36c767c3">begin</a>, InputIterator <a class="el" href="classnsSdD_1_1CList.html#ae1ed05415dfeb92174e030f9de754dc2">end</a>) noexcept</td></tr>
-<tr class="separator:a19a9ef6e137eb6e2ceb05e7a95e5037f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fc16069d00670d514caaec44b5fbfa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insert</b> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, InputIterator first, InputIterator last) noexcept</td></tr>
+<tr class="separator:a48fc16069d00670d514caaec44b5fbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2f50927ea9f6bf2894890e7acc0ab2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1d2f50927ea9f6bf2894890e7acc0ab2"></a>
 template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a1d2f50927ea9f6bf2894890e7acc0ab2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> position, Args &amp;&amp;...args) noexcept</td></tr>
@@ -358,39 +358,6 @@ template&lt;typename T&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname"></td><td>p CList&lt;T&gt; this is the list who want to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ae319d81f9a81a4d4aa5427f013fe8dae"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html">CList</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This is the default of the class <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">No</td><td>parameters. </td></tr>
   </table>
   </dd>
 </dl>
@@ -470,6 +437,53 @@ template&lt;typename T&gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The size of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> we want. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The value we want to insert in the element of <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6558a45c50021a28a54ea3e48fd1ed4b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;class InputIterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html">CList</a> </td>
+          <td>(</td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the constructor who construct a new <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> from two iterator of another <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>This point to the first element who want to copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>This point to the last element who want to copy. </td></tr>
   </table>
   </dd>
 </dl>
@@ -737,7 +751,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5909d765433cb8fd2b9706229cfc9feb"></a>
+<a class="anchor" id="aef008f6b0cd75aa5c5e455df86bdeda6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -749,7 +763,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::emplace </td>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::emplace </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -774,8 +788,6 @@ template&lt;typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>This function constructs an element with <code>args</code> and place it before the <code>position</code>. </p>
-<p>This function construct an element with <code>args</code> and place at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</p>
-<p>This function construct an element with <code>args</code> and place at the beginning of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>The package of arguments you want to use to construct you element. </td></tr>
@@ -783,7 +795,74 @@ template&lt;typename... Args&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A iterator that points to the newly inserted elements.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A iterator that points to the newly inserted elements. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ebfc3b0a8eae9e41806a0c26ff5c219"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::emplace_back </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function construct an element with <code>args</code> and place at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>The package of arguments you want to use to construct you element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A iterator that points to the newly inserted elements. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6ed40bdbc813658193defa7e55b94d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::emplace_front </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function construct an element with <code>args</code> and place at the beginning of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>The package of arguments you want to use to construct you element. </td></tr>
@@ -850,17 +929,17 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a12ca689422c8549a74e2ef0899512dae"></a>
+<a class="anchor" id="afa235a3273103e76c13c58d54a1cdf3c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::erase </td>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::<a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::erase </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td>
           <td class="paramname"><em>del</em></td><td>)</td>
@@ -882,6 +961,15 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>iterator The element that followed the last element erased by the function call. </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnsSdD_1_1CList_afa235a3273103e76c13c58d54a1cdf3c_cgraph.png" border="0" usemap="#classnsSdD_1_1CList_afa235a3273103e76c13c58d54a1cdf3c_cgraph" alt=""/></div>
+<map name="classnsSdD_1_1CList_afa235a3273103e76c13c58d54a1cdf3c_cgraph" id="classnsSdD_1_1CList_afa235a3273103e76c13c58d54a1cdf3c_cgraph">
+<area shape="rect" id="node2" href="structnsSdD_1_1CList_1_1CIterator.html#a9c99745d084ce7e1fa1b304fd527e9e7" title="The function return the node of the pointer. " alt="" coords="200,5,367,47"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -1123,6 +1211,61 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="af636dccd2876418963d37484e9c0c4e4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a> <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnsSdD_1_1CList.html#afdaca29586106fc15940d8529f4990f8">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts the elements in the range from <code>begin</code> to <code>end</code> starting from position <code>position</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The position where you want to insert the new element. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>An iterator to the first element to insert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>An iterator to the last element to insert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Any kind of InputIterator is accepted... </p><dl class="section return"><dt>Returns</dt><dd>A iterator that points to the first of newly inserted elements. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6f41b4a08e34f5081aaa69a4b00474ec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1150,7 +1293,7 @@ template&lt;typename T&gt; </div>
 <p>This function merge two sorted list <code>x</code> after the current <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The sorted list we want to merge with the current <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The sorted list we want to merge with the current <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1184,7 +1327,7 @@ template&lt;typename T&gt; </div>
 <p>This function construct and add <code>x</code> value at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">T</td><td>The value we want to insert at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The value we want to insert at the end of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1278,10 +1421,44 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>This function delete <code>val</code> element of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </p>
-<p>This function delete all element of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> who not respect the <code>pred</code> constraint.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The element you want to remove of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The element you want to remove of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ad14711538606425a28a357bd1c74bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;class Predicate &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::remove_if </td>
+          <td>(</td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function delete all element of the <a class="el" href="classnsSdD_1_1CList.html" title="CList is the main class of our work, it&#39;s develop in order to be the most close to the original std::...">CList</a> who not respect the <code>pred</code> constraint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pred</td><td>The predicate we want to use to remove the elements who not respect the predicate. </td></tr>
   </table>
   </dd>
@@ -1625,21 +1802,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abc6ef8aadfdbf09c5301c7ac68e91a64"></a>
+<a class="anchor" id="a09c6c84c9b24709862d0339e75c33de5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
-template&lt;class Predicate &gt; </div>
+template&lt;class Compare &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">template&lt; classe Predicate &gt; <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::unique </td>
+          <td class="memname">void <a class="el" href="classnsSdD_1_1CList.html">nsSdD::CList</a>&lt; T &gt;::unique </td>
           <td>(</td>
-          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramtype">Compare&#160;</td>
           <td class="paramname"><em>pred</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1668,7 +1845,7 @@ template&lt;class Predicate &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 8 2014 00:50:31 for CList by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 09:29:14 for CList by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
