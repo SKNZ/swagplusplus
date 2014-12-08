@@ -9,14 +9,24 @@
 
 #include <list>
 
+/*!
+    @brief Regroups everything related to tests.
+ */
 namespace nsTests
 {
+    /*!
+        @brief Test caller runnable
+     */
     class CTests
     {
     public:
+        /*!
+            @brief Run all the tests....
+         */
         static void RunTests () noexcept;
 
     private:
+        // Remove the default construcot (C++11 :))
         CTests () = delete;
     };
 }

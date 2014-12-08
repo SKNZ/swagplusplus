@@ -4,6 +4,9 @@
 
 namespace nsTests
 {
+    /*!
+        @brief Dummy class for CList object testing
+     */
     class TestClass
     {
     public:

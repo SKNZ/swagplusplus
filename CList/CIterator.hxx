@@ -9,6 +9,9 @@
 
 #include "CList.h"
 
+/*!
+    @brief Makes our iterators compatible with std algorithms
+ */
 template<typename T> using CIterBase = std::iterator<std::bidirectional_iterator_tag, T>;
 
 /*!

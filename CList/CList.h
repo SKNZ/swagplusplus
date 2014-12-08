@@ -26,6 +26,9 @@ Thank you for reading this notice. We hope you find our code pleasant ;)
 #include <iterator>
 #include <memory>
 
+/*!
+    @brief Regroups everything related to data structures.
+ */
 namespace nsSdD
 {
 
@@ -96,7 +99,6 @@ namespace nsSdD
         /*!
             @fn explicit CList () noexcept
             @brief This is the default of the class CList
-            @param[in] No parameters.
         */
         explicit CList () noexcept;
 
@@ -118,7 +120,6 @@ namespace nsSdD
         explicit CList (size_t n, const T &val) noexcept;
 
         /*!
-            @fn     'template < InputIterator > nsSdD::CList< T >::CList(InputIterator first, InputIterator last) noexcept'
             @brief  This is the constructor who construct a new CList from two iterator of another CList.
             @param[in] first This point to the first element who want to copy.
             @param[in] last This point to the last element who want to copy.
@@ -252,7 +253,7 @@ namespace nsSdD
         /*!
            @fn     push_back() noexcept
            @brief  This function construct and add @p x value at the end of the CList.
-           @param[in] T The value we want to insert at the end of the CList.
+           @param[in] x The value we want to insert at the end of the CList.
         */
         void push_back (const T &x) noexcept;
 
@@ -292,7 +293,6 @@ namespace nsSdD
 
         // Emplace
         /*!
-           @fn     emplace (iterator position, Args &&... args) noexcept
            @brief  This function constructs an element with @p args and place it before the @p position.
            @param[in] args The package of arguments you want to use to construct you element.
            @param[in] position The position where you want to insert the new element.
@@ -302,7 +302,6 @@ namespace nsSdD
         iterator emplace (iterator position, Args &&... args) noexcept;
 
         /*!
-           @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the beginning of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
            @return A iterator that points to the newly inserted elements.
@@ -311,7 +310,6 @@ namespace nsSdD
         iterator emplace_front (Args &&... args) noexcept;
 
         /*!
-           @fn     emplace ( Args &&... args) noexcept
            @brief  This function construct an element with @p args and place at the end of the CList.
            @param[in] args The package of arguments you want to use to construct you element.
            @return A iterator that points to the newly inserted elements.
@@ -340,7 +338,6 @@ namespace nsSdD
         iterator insert (iterator position, size_type n, const T &val) noexcept;
 
         /*!
-           @fn     'template<class InputIterator> insert (iterator position, InputIterator begin, InputInterator end) noexcept
            @brief  Inserts the elements in the range from @p begin to @p end starting from position @p position
            @param[in] position The position where you want to insert the new element.
            @param[in] first An iterator to the first element to insert.
@@ -405,7 +402,7 @@ namespace nsSdD
         void remove (const T &val) noexcept;
 
         /*!
-          @fn     remove (Predicate pred) noexcept
+          @fn     remove_if (Predicate pred) noexcept
           @brief  This function delete all element of the CList who not respect the @p pred constraint.
           @param[in] pred The predicate we want to use to remove the elements who not respect the predicate.
        */
@@ -420,12 +417,11 @@ namespace nsSdD
         void unique () noexcept;
 
         /*!
-          @fn     'template<classe Predicate> unique (Predicate pred) noexcept
           @brief  This function removes all element that are duplicated and where the @p pred are true.
           @param[in] pred The predicate we want to use on the CList.
        */
-        template<class Predicate>
-        void unique (Predicate pred) noexcept;
+        template<class Compare>
+        void unique (Compare pred) noexcept;
 
         //Splice
         /*!
@@ -459,7 +455,7 @@ namespace nsSdD
         /*!
           @fn     merge (CList<T>& x) noexcept
           @brief  This function merge two sorted list @p x after the current CList.
-          @param[in] position The sorted list we want to merge with the current CList.
+          @param[in] x The sorted list we want to merge with the current CList.
        */
         void merge (CList<T>& x) noexcept;
 

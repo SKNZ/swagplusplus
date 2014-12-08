@@ -387,7 +387,7 @@ namespace
         for (T x : data)
             list.push_back (x);
 
-        for (int i = 0; i < data.size (); ++i)
+        for (typename CTestedList<T>::size_type i = 0; i < data.size (); ++i)
         {
             IZI_ASSERT(list.front () == data[i]);
             list.pop_front ();
@@ -407,7 +407,7 @@ namespace
 
         reverse (data.begin (), data.end ());
 
-        for (int i = 0; i < data.size (); ++i)
+        for (typename CTestedList<T>::size_type i = 0; i < data.size (); ++i)
         {
             IZI_ASSERT(list.back () == data[i]);
             list.pop_back ();
@@ -717,10 +717,10 @@ namespace
 
         sort (data.begin (), data.end ());
 
-        for (int i = 0; i < data.size (); i += 2)
+        for (typename CTestedList<T>::size_type i = 0; i < data.size (); i += 2)
             list1.push_back (data[i]);
 
-        for (int i = 1; i < data.size (); i += 2)
+        for (typename CTestedList<T>::size_type i = 1; i < data.size (); i += 2)
             list2.push_back (data[i]);
 
         IZI_ASSERT(list2.size () == list1.size () && list1.size () == data.size () / 2);

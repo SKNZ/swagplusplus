@@ -10,6 +10,11 @@
 
 #include "CList.h"
 
+/*!
+    @brief Represents a node in the doubly linked list, holding a value of type T
+            Also contains methods for insertion and removal.
+            Be careful to keep count in CList.m_size when using those.
+ */
 template<typename T>
 class nsSdD::CList<T>::CNode
 {
@@ -51,8 +56,8 @@ public:
         @fn CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
         @brief This is the constructor of the class CNode
         @param[in] info This is the info of the CNode
-        @param[in] @p next This is the next CNode
-        @param[in] @p next This is the previous CNode
+        @param[in] previous This is the next CNode
+        @param[in] next This is the previous CNode
      */
     explicit CNode (T info = T (), CNodePtr next = nullptr, CNodePtr previous = nullptr) noexcept
             : m_info (info), m_next (next),

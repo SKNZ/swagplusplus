@@ -10,8 +10,14 @@
 
 #include "CList.h"
 
+/*!
+    @brief Makes our iterators compatible with std algorithms
+ */
 template<typename T> using CConstIterBase = std::iterator<std::bidirectional_iterator_tag, const T, std::ptrdiff_t, const T *, const T &>;
 
+/*!
+    @brief Sister const class to CIterator
+ */
 template<typename T>
 struct nsSdD::CList<T>::CConstIterator : public CConstIterBase<T>
 {
