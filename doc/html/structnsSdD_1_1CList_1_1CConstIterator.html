@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -73,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>nsSdD</b></li><li class="navelem"><a class="el" href="classnsSdD_1_1CList.html">CList</a></li><li class="navelem"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacensSdD.html">nsSdD</a></li><li class="navelem"><a class="el" href="classnsSdD_1_1CList.html">CList</a></li><li class="navelem"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,6 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">nsSdD::CList&lt; T &gt;::CConstIterator&lt; T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Sister const class to <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a>.  
+ <a href="structnsSdD_1_1CList_1_1CConstIterator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="CConstIterator_8hxx_source.html">CConstIterator.hxx</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for nsSdD::CList&lt; T &gt;::CConstIterator&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -136,17 +142,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66443d7e5935d1b9703f477d49f2cdc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#a66443d7e5935d1b9703f477d49f2cdc8">operator--</a> (int) noexcept</td></tr>
 <tr class="memdesc:a66443d7e5935d1b9703f477d49f2cdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operator &ndash; who post-decrement the iterator, pass to the previous node.  <a href="#a66443d7e5935d1b9703f477d49f2cdc8">More...</a><br /></td></tr>
 <tr class="separator:a66443d7e5935d1b9703f477d49f2cdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee6015666c2eea5b396f1b1800b9b41d"><td class="memItemLeft" align="right" valign="top">CConstIterBase&lt; T &gt;::pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#aee6015666c2eea5b396f1b1800b9b41d">operator-&gt;</a> () const noexcept</td></tr>
+<tr class="memitem:aee6015666c2eea5b396f1b1800b9b41d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CConstIterator_8hxx.html#a607cf1a230add2cd7429e51069c6a0bc">CConstIterBase</a>&lt; T &gt;::pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#aee6015666c2eea5b396f1b1800b9b41d">operator-&gt;</a> () const noexcept</td></tr>
 <tr class="memdesc:aee6015666c2eea5b396f1b1800b9b41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dereferencement operator -&gt; who return the a pointer to the info of the node.  <a href="#aee6015666c2eea5b396f1b1800b9b41d">More...</a><br /></td></tr>
 <tr class="separator:aee6015666c2eea5b396f1b1800b9b41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3bac52765a92e2ab2e964bf5df5e72"><td class="memItemLeft" align="right" valign="top">CConstIterBase&lt; T &gt;::reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#a9c3bac52765a92e2ab2e964bf5df5e72">operator*</a> () const noexcept</td></tr>
+<tr class="memitem:a9c3bac52765a92e2ab2e964bf5df5e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CConstIterator_8hxx.html#a607cf1a230add2cd7429e51069c6a0bc">CConstIterBase</a>&lt; T &gt;::reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#a9c3bac52765a92e2ab2e964bf5df5e72">operator*</a> () const noexcept</td></tr>
 <tr class="memdesc:a9c3bac52765a92e2ab2e964bf5df5e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dereferencement operator * who return the a reference to the info of the node.  <a href="#a9c3bac52765a92e2ab2e964bf5df5e72">More...</a><br /></td></tr>
 <tr class="separator:a9c3bac52765a92e2ab2e964bf5df5e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a856f2ce0a4334188f7f5131159b24143"><td class="memItemLeft" align="right" valign="top">CNodePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html#a856f2ce0a4334188f7f5131159b24143">getNode</a> () const noexcept</td></tr>
 <tr class="memdesc:a856f2ce0a4334188f7f5131159b24143"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function return the node of the pointer.  <a href="#a856f2ce0a4334188f7f5131159b24143">More...</a><br /></td></tr>
 <tr class="separator:a856f2ce0a4334188f7f5131159b24143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+template&lt;typename T&gt;<br />
+struct nsSdD::CList&lt; T &gt;::CConstIterator&lt; T &gt;</h3>
+
+<p>Sister const class to <a class="el" href="structnsSdD_1_1CList_1_1CIterator.html" title="This class permit CList to use iterators. Because we want to have a stl compliant CList with bidirect...">CIterator</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2a5d916c0ecc7397ade18c0e612f8b8a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +472,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>The default operator= for the iterator. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html">CConstIterator</a> The new value of the const_iterator. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnsSdD_1_1CList_1_1CConstIterator.html" title="Sister const class to CIterator. ">CConstIterator</a> The new value of the const_iterator. </dd></dl>
 
 </div>
 </div>
@@ -507,7 +519,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 8 2014 00:50:31 for CList by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 09:29:14 for CList by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
